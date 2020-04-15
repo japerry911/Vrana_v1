@@ -7,11 +7,14 @@ import './fonts/Avenir-Medium.otf';
 import './fonts/AvenirNextLTPro-Bold.otf';
 import './fonts/AvenirNextLTPro-It.otf';
 import './fonts/AvenirNextLTPro-Regular.otf';
+import { BrowseRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowseRouter>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </BrowseRouter>,
   document.getElementById('root')
 );
 
