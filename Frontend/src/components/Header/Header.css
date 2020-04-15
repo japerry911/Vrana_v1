@@ -1,9 +1,24 @@
 .description-label {
     color: #E3E2E2;
-    font-family: 'Avenir-Italicize';
+    font-family: 'Avenir-Medium';
+    font-size: 1em;
+    margin-left: 1em;
 }
 
 .header-div {
     background-color: #4B4A4A;
     height: 5em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.icon-image {
+    height: auto;
+    width: 1em;
+}
+
+.sub-header-div {
+    margin-left: 5em;
+    height: auto;
 }
