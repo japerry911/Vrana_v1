@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './fonts/Avenir-Medium.otf';
+import './fonts/AvenirNextLTPro-Bold.otf';
+import './fonts/AvenirNextLTPro-It.otf';
+import './fonts/AvenirNextLTPro-Regular.otf';
 
 ReactDOM.render(
   <React.StrictMode>

@@ -1,8 +1,34 @@
+@font-face {
+  font-family: 'Avenir';
+  src: 
+    local('Avenir-Regular'),
+    url('./fonts/AvenirNextLTPro-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: 
+    local('Avenir-Medium'),
+    url('./fonts/Avenir-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Bold';
+  src:
+    local('Avenir-Bold'),
+    url('./fonts/AvenirNextLTPro-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Avenir-Italicize';
+  src:
+    local('Avenir-Italicize'),
+    url('./fonts/AvenirNextLTPro-It.otf') format('opentype');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Avenir';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
