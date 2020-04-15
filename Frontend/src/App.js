@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Services from './pages/Services/Services';
@@ -14,8 +15,9 @@ import ContactUs from './pages/ContactUs/ContactUs';
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <Header />
+      <Navigation />
 
       <Switch>
         <Route
