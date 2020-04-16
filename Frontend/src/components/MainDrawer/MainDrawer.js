@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const MainDrawer = ({ open, handleDrawerClose, handleTitle }) => {
+const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();
 
     return (
@@ -60,7 +60,7 @@ const MainDrawer = ({ open, handleDrawerClose, handleTitle }) => {
                                 key={index}
                                 component={Link}
                                 to={key}
-                                onClick={() => handleTitle(ROUTES_OBJECT[key])}
+                                onClick={() => handleDrawerClose()}
                             >
                                 <ListItemText primary={ROUTES_OBJECT[key]} />
                             </ListItem>
