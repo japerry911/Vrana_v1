@@ -1,111 +1,8 @@
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-
-const useStyles = makeStyles(theme => ({
-    greetingDiv: {
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://lh3.googleusercontent.com/4gK95BUovgvu5cge3KhxMJiAp_kcgbbRM1mhQxQdnZCq7RQXTwJCglzEYTN1yDAZ36mSBHr2VtD4RXLFZZ5jt47-EY0x8E_O7zy2dX_h0_YkfhQc2bDyNvZQRcbsIjvcddqAzAHYOqKmftZ8E7RfyJNVQcGY7KCxfSQR9OKUALw8BCtNdfNM1ZwW9eUjNgRTlfS41vEDJSy-eS5yPl97qgAF16FWApZ9dAtkK_q9Mz5VqVVAT44aXZticvJqskwdq1aIn3cnDmjNEXp5qKcOiJWZ6FLMoeDhJyjuo6rC0C_eKhiLiLR5PaiASfGkknB8E4MxDjq7hnSF3Z89ND0ffPE--5zv7ewKlCcgZsDA78vf6SJo6QMSJhnL3jE3wU4NDK0YeCun49Cc7eYBk7VqFMQ4Sh8kdhaLl8nkT7lxgaOhFlSJlJf38qyf_4YcUyGaiMXeKS910007ylf1TCS4dlmxNd_fE0V8VXDygCfNZO9OZ1lMaS0ABSL4dnNFrO_Tjj0O9VeIcRO85bu-k1Ma-lSubBcwiP1mLLQ-rSG2qBc8NCk6F6Gz837RxoSxFKAwfHtstxnpGV3ljLB4Z39KWIZ_vMyRbVV-yxVnIt18BnuK0ipES3eJXqJhcS6y5bRHcOm74KYV138EMqDWxNOnKL9RsPJCGjr5GNuin7BH01sCHwFI1o7E68oxq8oUJw=w864-h576-no')`,
-        minHeight: '50em',
-        width: 'auto',
-        backgroundSize: 'cover',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'space-evenly',
-        paddingBottom: '5em'
-    },
-    greetingHeaderTextStyle: {
-        fontFamily: 'Avenir-Bold',
-        color: theme.colors.textWhite,
-        width: '40%',
-        textAlign: 'center'
-    },
-    greetingSubtitleTextStyle: {
-        fontFamily: 'Avenir-Medium',
-        color: theme.colors.textWhite,
-        width: '40%',
-        textAlign: 'center'
-    },
-    buttonsDivStyle: {
-        display: 'flex',
-        width: '50%',
-        justifyContent: 'space-between'
-    },
-    learnMoreButtonStyle: {
-        color: theme.colors.textWhite,
-        backgroundColor: theme.colors.vranaRed,
-        height: '5em',
-        width: '15em',
-        borderRadius: 10,
-        fontFamily: 'Avenir-Bold',
-        opacity: .77,
-        borderColor: theme.colors.nonTextWhite,
-        borderWidth: '1pt',
-        borderStyle: 'solid',
-    },
-    ourProjectsButtonStyle: {
-        color: theme.colors.textWhite,
-        backgroundColor: theme.colors.darkGrey,
-        height: '5em',
-        width: '15em',
-        borderRadius: 10,
-        fontFamily: 'Avenir-Bold',
-        borderColor: theme.colors.nonTextWhite,
-        borderWidth: '1pt',
-        borderStyle: 'solid',
-        opacity: .77
-    },
-    offerImageStyle: {
-        height: '10em',
-        maxWidth: 'auto',
-        borderRadius: 10
-    },
-    offerExTitleStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium',
-        width: '50%',
-        marginTop: '1em'
-    },
-    offerExDescStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir',
-        width: '50%'
-    },
-    redSubtitleTextStyle: {
-        color: theme.colors.vranaRed,
-        width: '100%',
-        fontFamily: 'Avenir-Medium',
-        textAlign: 'center',
-        marginTop: '3em'
-    },
-    greyTitleTextStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium',
-        width: '100%',
-        textAlign: 'center'
-    },
-    offerContainerStyle: {
-        marginTop: '2em'
-    },
-    whiteTitleTextStyle: {
-        color: theme.colors.textWhite,
-        fontFamily: 'Avenir-Medium',
-        width: '100%',
-        textAlign: 'center'
-    },
-    containerGreyStyle: {
-        backgroundColor: theme.colors.darkGrey,
-        width: '100%',
-        marginTop: '5em',
-        paddingBottom: '2em'
-    },
-    projectsImageStyle: {
-        width: '100%',
-        height: '100%'
-    }
-}));
+import { useStyles } from './HomeStyles';
 
 const Home = () => {
     const classes = useStyles();
@@ -260,6 +157,84 @@ const Home = () => {
                             src='https://lh3.googleusercontent.com/X_9UBwzkg1AN2kOUXwjIe7hMzVcHOjyfmB5hepeeng06pGd8ZCpGHmygbViTP04WAyvtnguItqQg7FDz-bz4Kw3Om8EFHgQRmDtsiepo8uTOpBXHXQ_wSrIeet-SvE9Eho3kmW9jbijugkrttWPt5onwHyuWp8sjJyUTzCAohLI_pN3kYsmynONZ8pta53eiQ8YXZbTOuZjzrWeaRT-RJMvI3GKCZrrtXTplA1L6Me381iYTtCXGiGAma09-35eDVdQpzZ12FIALdtJgnxVgTU_7ObJDNJrlTWZsoXHflJgTkXSMUkOTttHzA0A6-OvwRhBrtPt64z4Jz9cDRRVDi4GMkRtUNEOLcPow7cqL17bsZpU917ujv4I81HGAN8rUxgA_TkOAVA0jin88O48zdcAn1vHHm5ec38F9fADAg8FZdfWx3ovaBlRMkEaZ26qh3xXG-h8MRh6t0hrDA3B2QWusaUfavkEyQNL_pu071LE1dGuKV9Y8swzQqDI42cywA3v8IfNdRwqnN1E7R8BeHj-RE6b2CbNS-iCS-n7xE9TyBsdYje5A3tVc7_j8VBkfP_SUsQR8m0CdPO9ajcswpEiTr0AGke-DNp5dPcPI2tjhSfyBU2NgtgbEL5jNKu6Osp6RdbUDOgzuH1YEjnCCW1R7Wu7zPkfm54vaurpkuKJdKWD3ihlI_1nds4x22g=w348-h214-no'
                             alt='Finished Interstate/Highway'
                         />
+                    </Grid>
+                </Grid>
+                <Grid container spacing={0} className={classes.greyContainerStyle}>
+                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Grid container spacing={0} className={classes.ourReasonContainerStyle} direction='column'>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
+                            <Typography
+                                variant='body1' 
+                                className={classes.redSubtitleTextNoAlignStyle}
+                            >
+                                OUR REASON
+                            </Typography>
+                            <Typography 
+                                variant='h3'
+                                className={classes.greyBoldTitle}
+                            >
+                                WHY CHOOSE US
+                            </Typography>
+                            <img
+                                alt='Divider lines'
+                                src='https://lh3.googleusercontent.com/-WoIRoCsWbNn-w5PicmSo4KQxfX_mnQDYasYHFp046d7lTMlP4Kv6ikQokgzCV9HTazoBaCVP9HRswIbFO8NJD6MKjAwgCa6DaCnVLc9DmrxaphFgetCyAl39GBUN2Zw8fACkDY0nlkPwXkVY16Gk902bUdX_nThviMO6Jn6EOqBTQyNNEJjPDURjtdPtcfVnHdyqrCd8Ua_B9s14ljmpIdbNq9y3Uq5A-rN6LbtsL8DqL7rjdriKqHl72PEnmoW5EqjUXo83SAc0zEoRhvQs733GCkKcDV_W6EgVMX-C4gZ5EXoHbsKVaH2vFBpW0qwM1yiYXXeBChJC_dKAYJBUkC7DJPjnQTMrLcEl0-FlzFzwyYICmQqOylq37VeAqnJrViUfLd9jCOv6nMcPX5SGkRqFts9a8rKJ8V_xue4Pc69ubcgMepachZiyeW01WblpUvA2CXMC-5OkyHPTfLBEMV0vysxrQ_Chye7Pd4hT2GeLmqftj1Ka_JGSf0H8WWdIuphGj0wfXtUcVEktY0bN8pVAjYf2eE8i_asf0lwTKO_FViI3wA17l6nQcD5KVZeM0FUB8P3kNMnULQ_1fbcHMqeHG3yBsJboZh2uOb0YO0nh6-7j04A38sbs58l7IndjwwGwnBM3C7XsVZ0PXCuKtOwGGxL70pUezlJb7OLP9njGNNHHth-5ndF4yCcmw=w79-h6-no'
+                            />
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
+                            <div className={classes.ourReasonDiv}>
+                                <img
+                                    alt='Constructor worker icon'
+                                    src='https://lh3.googleusercontent.com/Z98xbIKWB8Xudx6oqnf66Xx3DThSG_4Zfw5mYyvJOmYy3qHKvlsyspnWPcfh_BF7r-L4L9p-7ddAmxzkbPUD1oR1wVtopNvvaOiqrkCcP-N6u2daIDS2vMbwgxfhVVH3CLlX1uJrKWbzStzcqFOBdxstVEf2w2ZS6wIIXfTj0VVyhMCtZgLwPjtp1i8EXzag5K_Lamx0LJ7CPBngHwj39VsQZXMnKFLLVKXpv5i4WJSeMcweAHnqPOnu3aRtMM5WzazcL8_ANL_L0_zjhC0vQZXJ0_a-mj6PrjgCj5GGJ-_FmNG447WFpsTiuf8ynMyadjVDnAD8CXNaxh-_9w6mLO8lViQh3vSZJlTRE4Wy-IcfilKlQYGvS7l2kJ3KOYHsnG0mA4Vwtj9eoOVcZfPav_AjDTzhKN2irVZkdFGe9FT7NmP66jslzaaUWg7KJbdklCB87zAXr37iznV8hT24IDFdlOTNokevYFlTDGJiP_qe96zzINX9bShHf3TiSoIo7Wrt8LPZz5R3quweSqc7oO4e2ub1b5u1m7l6voSbXqiylnZOFwShfHCkFCWf-cdwB9ibd3IfRumruljzcuHPUFH-2Z5U0Trf-8ZWA2Ut5BXDZkH9MWP9K1vi9tql3pf7AYXHgcDq-eHBA2laj0qD8Svlb9whNwx9ZGFbRwGynL3QIkvZxbfvsJFxERnJwg=s286-no'
+                                    className={classes.ourReasonIconsStyle}
+                                />
+                                <div>
+                                <Typography variant='h6' className={classes.ourReasonHeaderStyle}>
+                                    OVER 100 YEARS EXPERIENCE
+                                </Typography>
+                                <Typography variant='body1' className={classes.ourReasonDescStyle}>
+                                    We're one of the largest and most successful general construction firms in the midwest. Our qualified team has 
+                                    experience in all types of construction.
+                                </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
+                            <div className={classes.ourReasonDiv}>
+                                <img
+                                    alt='Wrench icon'
+                                    src='https://lh3.googleusercontent.com/wF98EONd1PFm3bbM4UCmn8NOQ0jquxzXzY36ApC0IZOjDK0qfKbqRRDqUb58xOYRNM1FAV09cCqz_Lw9HO7dwPfe4nmfiR9Zwno3LVHa77spc1VY4nWhkPvBR9lana36b-NQxF9WCN-nvPvKxQNbZZGMu_vvP_PcjRtEgItNkeIy6q6EzVrM-NdOt5PzCEV72DK01cHDB1Z3t6WZysC89-3twgWFRJZZzWUaXXRshZLeHSBIp5f11st13MoVLV-xfdi1_dHvXCqWiRqbMuFqWz7dKJFpKUPNUiaf9PzJCjeoX7umZb5VJTxj8exI-2qyWxSZ7oYrBwD3bh6cFzlbf66_6mwNpDyVAoqwkiGMq8eK6eXaBCeKU8mamtxRAIqQ9oCijghreSBDY2lNOUdgc_CKj4M_qGFSc1mMpCEb2OSne28eAqEoMvkidoqhgt5YP1bQhfcLBsO41qVE5VuIeoUmuEVMB4Ow9rdPG5EjZZmwIl62xLOgmCij_D6spjQ8fnwIotjE36qDvX1AG-5BCXp3LDbxClAUZtuI2djmCYKMD-ONc90-RZUW7nC-pfKmzd3KZk6gbMBIJQXBop8xSw2hTnCgKwACCf5lpIpPIbGiDWyEsMt6zVhY8BAZ7h2IIF6u9Lt9RvNuvOGmRDlvNylHSH906c_chPUNYYigx103NvE3uKDfIEZEu252Sw=s286-no'
+                                    className={classes.ourReasonIconsStyle}
+                                />
+                                <div>
+                                <Typography variant='h6' className={classes.ourReasonHeaderStyle}>
+                                    OVER 100 YEARS EXPERIENCE
+                                </Typography>
+                                <Typography variant='body1' className={classes.ourReasonDescStyle}>
+                                    We're one of the largest and most successful general construction firms in the midwest. Our qualified team has 
+                                    experience in all types of construction.
+                                </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
+                            <div className={classes.ourReasonDiv}>
+                                <img
+                                    alt='Pair of Tools icon'
+                                    src='https://lh3.googleusercontent.com/t1xs9kme0bDsytmERRX15Rj1Lx5NwUDQwCXGc0ajxvOWyS3QsCaOWtjtb4LnbfkFj6Onen55sqSCk7rRIQ4YLNlePOJ4_nls7iu3ENgNW1mrD7Qn2LCar0la3bTkKHq8Ro05ZWMv8ix5o1e2jUcu2DE7b8dNLFNSwMVGNe3d5p4GnHPCwjpLtY3WqZw2qUgBEU4JVmt2P9s4UTAkQQoJHh4Nzv40w5hj6mbNwydAZGJK_DPANiSlxf5VX0t8GXBSpSibQ-KyVHj-iZKETh3zBExrm532IqEEVg1ZgJtiwCF_apJKbipqtT2N81y6YfUoPOpUcrquakPxnr6TR5GX8s8w_OvbQXwW8apvIx4ZQArejiPxtzc6f_S8IYKQED6o819Z843Sx7yiClKByKShY6aNt34ODG_o8QDXny9q3WdI0UxTGZs9xmk0-TLSv-v0m1EiwQjYwry9tDveHbrp2iR6cUFLXnP_FvBH3bHgRS6saqxa_adWL4MR4bLVouXSD6bhofZW5ozJOo8PxVh1Y5Wji3bK1bZBj_yJ3ncI0pIpwUdL_nA_wUue0w0_8MxKzWKwFda93AKpYbIbtywSHOGNDeuRxZrl2sBLEihcu60WNenfcV-ypsYPgP5gpLToWEOvqiW0b6isvanAoDCB99oBgkwWHrhxPkvhaj7lvfpZ2ohmgjuI50qIPJ88hg=s286-no'
+                                    className={classes.ourReasonIconsStyle}
+                                />
+                                <div>
+                                <Typography variant='h6' className={classes.ourReasonHeaderStyle}>
+                                    OVER 100 YEARS EXPERIENCE
+                                </Typography>
+                                <Typography variant='body1' className={classes.ourReasonDescStyle}>
+                                    We're one of the largest and most successful general construction firms in the midwest. Our qualified team has 
+                                    experience in all types of construction.
+                                </Typography>
+                                </div>
+                            </div>
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>
