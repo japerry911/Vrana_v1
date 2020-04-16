@@ -35,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const MainAppBar = ({ handleDrawerOpen, title, location }) => {
+const MainAppBar = ({ handleDrawerOpen, location }) => {
     const classes = useStyles();
 
     return (

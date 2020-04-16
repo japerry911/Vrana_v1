@@ -147,7 +147,7 @@ const Home = () => {
                 <Grid container spacing={1} className={classes.offerContainerStyle}>
                     <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
                         <img
-                            alt='Picture of finished building'
+                            alt='Finished building'
                             className={classes.offerImageStyle}
                             src='https://lh3.googleusercontent.com/Up28m-Krvje8BjxVjM9rbwg7xO68f7wv1iQsFYQf9bPRpYJ1k8EwlpWU3iKkQfMgsc-2S9OFTEL_V_k6AkoRlELny5JPThu4NRv3WtFMAbHiWP6gxkwmW3NOWhB2WGjEDhiw_vWO7GzTBWjwQS3ZEDEZ9UCql3IfFkh9tNQJTguwLcSEmYxI0rkq8ZfdggjMEqcGwXdt0Hgawx2lmk33olI3IvphVWCN85P1s_msuGcW9k6Sr_o7k-OlRC33vc5h0S4m6bO6F401z6Y_vpNIDfrORaFjmvtbjuVtzFGSvntzkxj11xpaSloa_SqwQ9iTUan9zxxZ0kq_DLpm8cl_cpyAOeCaRzXvnDVU72jBPUngV7SmHLJ9dxU7hSgXwezoXrq2Y-qTI8S-JO38wwJ7Z74zuGLX6PddnUIWCKe9RdSs4IjTZvxnLwSI7HeHTjcGlQ18IU5iUadS5pmwvOdO5se2NCSpt-Gd5XSeXTgDVGnm7gPqFlj59tTA2DNde05K1Zfj4s7ae52xMG1pw6-WF01I6QY9-B7eXaexJeJ-vcF8a3gcnZ5pLX_uTwqrEpT_y7zhd47s1RlsbfvBKrnLG2QIZHBUi3g1Ipf40VxqmQBtXGkRKkrrflkA5bDto93U5u1GPeTycPn3Pyk49v2QfqOIuX4PqMrQP4Y7bV04e0KS7Ldek7GZUPB3As_b7A=w275-h183-no'
                         />
@@ -188,7 +188,7 @@ const Home = () => {
                         </Typography>
                     </Grid>
                 </Grid>
-                <Grid container spacing={0} class={classes.containerGreyStyle}>
+                <Grid container spacing={0} className={classes.containerGreyStyle}>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                         <Typography variant='body1' className={classes.redSubtitleTextStyle}>
                             PORTFOLIO
@@ -203,28 +203,28 @@ const Home = () => {
                     </Grid>
                 </Grid>
                 <Grid container spacing={0}>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/N7ta4x_ds0bAmeZN2I4B6SzQa4azprUz8BPxVbyktnN4e6wBqijOdUzIgmWlIGsppCPIaIo0h0dEKyJPSUR8PusjdmoFZ5gFHn3-oLf_nSh-xiAnAKAChL2zt1NzKrDH8CHTm3g0pu8MkNR9s2VNYdDs845YNde7JXXBwj_AXii0OXv46vtLqq25UyuBcLjEq1mzzfF6TlwNpswjUOWMFe_h81sSiVHMLS0G2FbDgLpFiTGQI5MLX_8cEkkvO4l6WBKOTyttotRzEPTCcBYo0cYOZSIdShko0s3iGnmC_6SLdsaaUFlmSCXS0OERWBe8Pd7dwmArD92EFjmue8hAYmEzNxescKI9snyHFfl0ajmP51eQ0PjRbBG1T8t7y9aeq86IdxN7egkBLahveZVqOuOotsOonwcUI5OXaX_DTr55_DEek0u80WSm8rBX5GxqxtY-CK8oxPXD7OX3UxvmWwrQ8izVY88bupy_dhbn3XXKkclpAkaf6Tk12t6OdgJIZH7Ky8JoItG1f8Y-iCoEaXEczp5SJrPEFGxjbyT-9KVfUucgolAO4bt5nYInN8SqOeWnRlZ1NOfEmet8VlKHHT9Ovvb9hap2KpCb8GfsgFBm7WD7YDpJa0rr9NC3cuJaVT5uPkGMg3p3_Il3lm3okuklJHXkf6-VG4BB3ry41jqjJzEoLoNeTWdzobGP6g=w356-h212-no'
                             alt='Omaha Steaks Finished Building'
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img 
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/ZiORZhqrnFZ_yRkMTinD5Wazrvanyg7hpmuuB1yXm7x9xhI3rcBFVty8GndN0eqFiyw8vaFeDGPyR1KsWoLSSlgbjo486G9nfzERIjZ45w6x-KFIGoJpxt_ud4C6h2PHtwnoR6Cr_v9f_Huule8VNq96BIEVmWUnWVV81hi42coz1nB6fm8Uccby0v5QyWGKkfMTqLpCFI4pLN8BOfRQx7ynB168Z4OxUYYNH54AbhydWj_8r-YxEqsbcno995ZZcRUXxd8SNG9PEmzYVsQYXdm94TQTOZMC577KBUEXL-9nSOp2nIWdjYrACG3sq-zibWdxxVjPf3NuldEv-phpzxpf4BpMxLdTSqi35ENq2ZdIgi3DrUdyWAPVjTTiG58QSMPSEIvEgrPZ-gRwPonue9pNhOcsV4Mz8qdGSfpdXn6pt4Vr0QbW5pTD3Ht_-afBX6E28iMfiNQkqmio0ZWNfR0Mv66xhaHoDMQNAS9FykZmH08Rt0oBjyRus7JYLVmaJ3eEGyZmpRVsy5s-261MZWfHtaku2nbWm0o-NTfOmn1d7ViF-6NbNrr35DSqBokzip8n2QGJkGechvfFIn61sPfLev8kMMkfOEalHSjNA6paVPPdgVTp4t_9l9q737JETFIvvtQJfIpEDCv99tb6VNZjVA1pMkoCZ0-rNmZ-V-kX8VFlVGR7VH2fzcn8fA=w362-h214-no'
                             alt="Children's Hospital Finished Building"
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img 
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/0DP2WIpsn0z-pydJu2opwqLYbd9UAiQmVHKFXhOFhrfOAbzlcXIzch7d7EngPcW5Vw8pLN2Xn5ocdwpXPb52Am4x1kWNgBEnExV88UBCCvBHhtZxKHf-fnDZAjVDdM70vJCPKWNdkWt8LC3mbFniC2wcalN7gdIcVW-gDjkz6q5ytPOcPXUuSRAcMm_XgMJdyk04UIK12JmPZ82imfE_tcKOoO_laaJ8WJM235po7V7qMcHOBM1w8u-JmDF_1hB6ncA-ftgYGdX71cORiAuOYa_43efkan4mh2RWRWtiqkiM-LQvRHY--mJ_pxTpLrcltBl6qIVnVoGbsU7aFbUbVS5p0pPcGWa6sIi8RGzyDSdey6ZiCVF24gxaOlKt_TaVvm_vrxo3xliReYYfeU1gcnZdJwkb0VUmB9brdIlmNXObWO44DBUHJq7pV591PYf2_RYlf3guAd9Yt2SpzBscMtyakUeGbi5zjQV7Ufg7_GHM2KZj0RqDhg-UWpDMeKt7oXonw7Z_iDJM2nvzETKL4G_VbHmIg2An-x5I6doTPZ__vRO_UlSlJ7vIkUw4sE-5NDw_-__haIbNMqakw9FFRqFatgGJ0KF6cQPAWuLffIMw8i8rJGxNv57wWfyW99k_WAUVyZF4E3fHveZV6mgDyY1URhpy46dg8YtIFGMPgIQ63RzSXBiOVRFfBvJVuw=w358-h214-no'
                             alt="Baker's Finished Building"
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/8ui7sV15fA0VO88OLBqqwclNWsOujVv5xnCUX5GIOEU-E-4C0nxu5_MvalGihS-H20dzbPc8iUIqhmEGp63yaum7VaPfdhrI_p4A-7ysHN9S5k5MhkacI_GUgDEV4fVn3PpjEYhmTyEydxxAiLpXzkDCKtq7S78FSLqA_Y_G2TKqqYI3vCQ6nquAwWUi01f3xHxJk0uryxcLA-BHg0GaPz4W01MVKI7_SAnLVm1Akr7vXztlwzeHsG1rG6biD5HBNjBXc4hnU5ht837hO7jQrFCtKzmV56pzdcUYCa3O2k4CTBJVwg2ea4PcJtP5NiUWXZzHf3Y8Oz2kRGqA3MX6B6mk74L3Dc9Xw5EXH-4f-dd22b4FqwmIOBBkLvvWggqOMojpwR7h597qDk7E9U5lLFMOP59R9qHXibx3pPxkYyFLNiOHNFUmOePFdYzlUKKETnvGOr0WR_qyyYTeLf_lttlfv2n0RjbfAaPNmUaxgArG8AWQlKQHSUDjwDEu9Lc-dP2iuT6-4wutyBi7JPUGLK0nxL_Ae7DweAsQiWNaH_WoDAIbi1P3qKCjyv0cHOErIgL1QT7OVtUDTozow8Z5pNWzhICbJIgZ9dG3EgFOXhNBDdER49Bf6MJlaVCfUI-VUvg4qBz0bMUlokyt4XKICorHik5R9o36WUEEl4XSsotgabrPOwtrMpg2d4BnoQ=w340-h214-no'
@@ -233,28 +233,28 @@ const Home = () => {
                     </Grid>
                 </Grid>
                 <Grid container spacing={0}>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/VAZCWvhElW_bSw1p385WxcnoUNCQZ_z_uJ4XRdvITzy_IGu1ICaVkVcI3GIwY18LbxWXX1St-mlJjWBp-saNbvmzPm0z0o_3Sp3DP58Hkw1XT_K3H3ejQIgPjgL1kCsvyQ7jh5hNmViKf2-c6acsGjhQTLRPbebLj9sRjFUA1nfLK6op_6TfAqxlbcvHt9btArsy1_N7tDh8QrVbZKk3B3wZ_8VudHvQI4Kil0GS3tZVEfELXsAwvHL7c8hM6nmiljUVi8lrdHXs79Rp5ASCYf4w9WecYCy3IkncU6MBdqKprpfGfQWf2eSYnnpg40QtZSfQVFhtxm-4bNjyt-oqo_jzV9fiLSsWlKA1zcxlfCqnShnx3ixURAvBUS3CI03ViNoczDMXS5sNazilC2Iz6obeDgqLUxEC4sLdW7a1tVlAlITstr1-v_kIspuIIcFen-gY2PI4Rby6v74AeyKJBc7DQlbQwiDaCFpT9BdmS0dtg1t4VEMThuiAXRfpPmnTAVxor3sU2T7irsQfmTCH4L1Yx8S1YjVDoCo3cvvble0ZM0YBVvkKF9jDcQ6fizEiYO2A36qSbat2mBV3S2FepRrNaL2FqpkxG6hG4ckirtzrbP4tGn6-LH2pL78CT6Kc_CQ3Kc0x1nXWPUFV4tXe19j5YFehHYNUGw1ncsOixUgUEep6n8lzFcb0b3kZkA=w366-h218-no'
                             alt='Finished Office Building'
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img 
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/JKrV_uK_CqxLnuFO6I4K6kHKfQ_-3aSaP9uPF5uh8n2hmNfSVXhQ-hUIlPyB6EKMHjqL7FKc_YaFaEnWj925mja-7onJN0pQwaUZYyVnzvtHlSy1DnVmxNPD9bDeZmM9JNAHFzwkjALPHRW16ix-wMiREdzaL7oSVfeePKZF2FeOs9Gcy6mfbg7c8m8Q6Li4jR_3OnxXf6v32trXDgTiEZfQlheseig-5aAXNx6BQv64v-b4yFgJHVHmkRx-m5IsNNz385WIlmZ6Gtef0r2ZwATYMeLybtsiobjSROgR0nLPc9Ula83S1GVCFGRKpa_e9GvFaMTdCSdIFiT17mIDxdKKFV-qR1eFcbC9_oTsoE8pf2TwsFy2CXVj8K6a1g4EJ5Wdb2d4PfP2Usa5Cm58PsjKA2ZTCRzKExLnuSwIdExl3r2abXGFr0Q-UGJWbjp-DWb7u2rE3rQzl5kYrZSLiRYExF8nVLCz3CUm_pawa8rJIPkHEMHdiG-N-1xBZVJ6EAf10hR6YzweoNnXHJG2QcbHETOLt_O4pbm-msnKLwFDNPBg8hwuS7WZEd8xTIltjcquLQSiHl-YvSOKrXlSbjhYiPutfbXWs7MGLF8ChFo5n5s0NJu4w7_fh1D8ZLUuD9itnw_8k3WcglwP-f2qqqx8WOzmnMAtvOx08fUHsvVUQxbQje3mkvylKEPvLQ=w364-h212-no'
                             alt='Finished Church'
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img 
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/XUwbPysE_hctCgZWLPI8B5bIoAHb3eQYJzQti2he4XN6R-htGYa_xy0VzUXRW7MvpUw8M7qhHrP30NtmSd_ql3guDrhD_m9ksYU-BwC9wtGOvtNwSpNr1L__RB_069i_UfYVif973wP7-Y91AtxSHm3HVAOVCZZSg1XoceVZ0xv0jYvccre4YMnVo_52ATZdXL9gySf6DXNnAvndP_6UlW7fEQ65AY7Tvsr_vve43FdTcSR30kUYUQY8eT5ICvc_18OABH40uQntgsVAM1nGbuc15-LAdquSU3Pqeyv6Dr4M-qcJxv2ldKEVol1znW6XCd1Y9iNU3XvAfBsbXOuY58qyQBUTPXotb2WX2UxqoTdw1Ldwq_Y2sLOMcay3H5PxcRy7Yin9IxUGsRB4Ep41VPY7cIPiA7_CuzfmLQmMNnlKT9PaTd2KikTl1jApVKTB-X2gm_y_45riebib0EJMHBkD4SA16ewTY2uovhRl1wfzz_zRqt3jPwdgzGe9hFMd0QPy0aQi_ZbR6o4pGl0iYxVDiLnU5PCHeXoAKXa_vQGQALsi0gkWx2Ard4UHsCxFwjoahSU_hFBHkhd6xENbzq-lf_jwC71uJdStvDp-oJTkwYudVSe9ZffFQDub4XNCLlQcPKJyx6YC1hUcLs5EHzMt1e_9FoSUZ-VAqvuUtw_wpIqMXKbIQV1MVtw-3g=w368-h212-no'
                             alt='Finished Parking Garage'
                         />
                     </Grid>
-                    <Grid xs={3} sm={3} md={3} lg={3} xl={3}>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img 
                             className={classes.projectsImageStyle}
                             src='https://lh3.googleusercontent.com/X_9UBwzkg1AN2kOUXwjIe7hMzVcHOjyfmB5hepeeng06pGd8ZCpGHmygbViTP04WAyvtnguItqQg7FDz-bz4Kw3Om8EFHgQRmDtsiepo8uTOpBXHXQ_wSrIeet-SvE9Eho3kmW9jbijugkrttWPt5onwHyuWp8sjJyUTzCAohLI_pN3kYsmynONZ8pta53eiQ8YXZbTOuZjzrWeaRT-RJMvI3GKCZrrtXTplA1L6Me381iYTtCXGiGAma09-35eDVdQpzZ12FIALdtJgnxVgTU_7ObJDNJrlTWZsoXHflJgTkXSMUkOTttHzA0A6-OvwRhBrtPt64z4Jz9cDRRVDi4GMkRtUNEOLcPow7cqL17bsZpU917ujv4I81HGAN8rUxgA_TkOAVA0jin88O48zdcAn1vHHm5ec38F9fADAg8FZdfWx3ovaBlRMkEaZ26qh3xXG-h8MRh6t0hrDA3B2QWusaUfavkEyQNL_pu071LE1dGuKV9Y8swzQqDI42cywA3v8IfNdRwqnN1E7R8BeHj-RE6b2CbNS-iCS-n7xE9TyBsdYje5A3tVc7_j8VBkfP_SUsQR8m0CdPO9ajcswpEiTr0AGke-DNp5dPcPI2tjhSfyBU2NgtgbEL5jNKu6Osp6RdbUDOgzuH1YEjnCCW1R7Wu7zPkfm54vaurpkuKJdKWD3ihlI_1nds4x22g=w348-h214-no'

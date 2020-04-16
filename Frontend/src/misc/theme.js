@@ -5,7 +5,7 @@ let theme = createMuiTheme({
     vranaRed: '#CD2126',
     textWhite: '#FCFEFF',
     nonTextWhite: '#FEF7F7',
-    lightGreyText: '#E3E2E2',
+    lightGrey: '#E3E2E2',
     darkGrey: '#4B4A4A',
   },
   fonts: {
