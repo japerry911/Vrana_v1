@@ -10,7 +10,7 @@ import { ROUTES_OBJECT} from '../../misc/routesObject';
 
 const useStyles = makeStyles(theme => ({
     appBarStyle: {
-        backgroundColor: theme.colors.nonTextGrey,
+        backgroundColor: theme.colors.darkGrey,
         paddingBottom: 10,
         paddingTop: 10
     },
@@ -45,6 +45,7 @@ const MainAppBar = ({ handleDrawerOpen, title, location }) => {
                             <img
                                 src='https://lh3.googleusercontent.com/jgzv--nvrFkTzY0XSvXiV-pXst9Ypf2erbvHUqN3weS0YZge1xssgVqqGT846PbXhlY5vSsZsv2ky5vaGsNrJHET3qv-wRf1e6-0asZhNaCr5bSNzw4tw8p3CyFo2kWkqMMe__1kKp_9kMXk2NtCmhwM-6mT4UsjXW90MGEwNLxinwNvW0TrfJpf1_qduESeDpckMl2XGMpVhRlWoZCJt-2eZ0X8qk741SvSFS24UZdScjOWBVVrspG3b33a1Ik42pjXNKk5gpnIBZlqEmpAHMLSRJ9XTXhUNXxA6QlvcQF_p-z-uegogsfsaiXI81BNLjN1hwZx-46ewkYglEgZR1ve9WC80cYdnjSK9G0tYRwIlf9m_6T1LgcmGPFtUw_-RfhtYFdjLfv1JClI6hD8lXB9RsZiLLiVZmHf7qCEiqBBG38-J0St1xiEpiFpzwEirDF1t4f5TVz5Fds56UG-UQqgD47pzbxff23jbo1oQU-KwkY_jJ09qaFAAUbdkO4hzkj6BdlYHxeGihXZN6uvdZdfxRC7lNWn64xBCwAxd8Li-DWNjRCrNN4eka2wBFZwc2-zqr0USAX26N3d5TomOXUHj9LUwtv6TMfOOFVEC6t8uMSNJZ_DScgSRXUzn8oE6oLqLFpju25SbEdU-rC9EJbUakUVMEqmHdTgpCxI72tA9OZy9Op9RqFqlEcQIQ=w988-h396-no'
                                 className={classes.imageStyle}
+                                alt='Vrana Logo'
                             />
                         </a>
                         <div>

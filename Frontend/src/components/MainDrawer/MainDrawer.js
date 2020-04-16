@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
     drawerPaperStyle: {
         width: '15em',
-        backgroundColor: theme.colors.nonTextGrey,
+        backgroundColor: theme.colors.darkGrey,
         color: theme.colors.textWhite
     },
     drawerHeaderStyle: {
