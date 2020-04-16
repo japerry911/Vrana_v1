@@ -4,11 +4,12 @@ import MainDrawer from '../MainDrawer/MainDrawer';
 
 const Navigation = () => {
     const [open, setOpen] = useState(false);
+    const [title, setTitle] = useState('');
 
     return (
         <div>
-            <MainAppBar handleDrawerOpen={() => setOpen(true)} />
-            <MainDrawer open={open} handleDrawerClose={() => setOpen(false)} />
+            <MainAppBar handleDrawerOpen={() => setOpen(true)} title={title} />
+            <MainDrawer open={open} handleDrawerClose={() => setOpen(false)} handleTitle={(newTitle) => setTitle(newTitle)} />
         </div>
     );
 };

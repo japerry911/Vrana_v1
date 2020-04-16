@@ -5,6 +5,8 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import MenuIcon from '@material-ui/icons/Menu';
 import makeStyles from '@material-ui/styles/makeStyles'
+import { withRouter } from 'react-router-dom';
+import { ROUTES_OBJECT} from '../../misc/routesObject';
 
 const useStyles = makeStyles(theme => ({
     appBarStyle: {
@@ -33,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
-const MainAppBar = ({ handleDrawerOpen }) => {
+const MainAppBar = ({ handleDrawerOpen, title, location }) => {
     const classes = useStyles();
 
     return (
@@ -49,7 +51,7 @@ const MainAppBar = ({ handleDrawerOpen }) => {
                                 display='inline'
                                 className={classes.pageTitleStyle}
                             >
-                                Title of Page Goes Here
+                                {ROUTES_OBJECT[location.pathname]}
                             </Typography>
                             <IconButton 
                                 edge='start' 
@@ -65,4 +67,4 @@ const MainAppBar = ({ handleDrawerOpen }) => {
     );
 };
 
-export default MainAppBar;
+export default withRouter(MainAppBar);
