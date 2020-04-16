@@ -140,5 +140,9 @@ export const useStyles = makeStyles(theme => ({
     ourReasonGridStyle: {
         maxWidth: '100%',
         paddingTop: '3em'
+    },
+    ourReasonImagestyle: {
+        borderRadius: 10,
+        marginTop: '8em'
     }
 }));

@@ -159,7 +159,7 @@ const Home = () => {
                         />
                     </Grid>
                 </Grid>
-                <Grid container spacing={0} className={classes.greyContainerStyle}>
+                <Grid container spacing={0} className={classes.greyContainerStyle} alignItems='center'>
                     <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                         <Grid container spacing={0} className={classes.ourReasonContainerStyle} direction='column'>
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
@@ -235,6 +235,13 @@ const Home = () => {
                                 </div>
                             </Grid>
                         </Grid>
+                    </Grid>
+                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                        <img 
+                            alt='Paving crew in action'
+                            src='https://lh3.googleusercontent.com/onWooBD6LpvB27mrveaMPBMd6HiyoCCOi4v5HtxkUG6jFmmyqiYVHo-7mb0CxncdpPc3zdSLOkCjn7bHN9ksh0dCW1uLFzZCPzzPj3VqTDG_9jkxsEBcAzbE4qnk8PL7Zib-luRCpmzKhGUJoM-3OojReEtFIK6QecNNyR-6JU8g9g-QWrMkDhUl-Lm9cQvCbsv7doIGxGM5fYgq86qINhMVpsnJy5j60VtJnht3kWnqaarSJAMkj3WdLUOJuDW4YChJQLWqKjuVXPQB6szXKQ_rDrDa7-Pr0SJbxOp51bl4onFuJzyX5PSJC70lrPXkCFVvM0E_NILXoU7s9BXLapDSvrfH4saQAEOt6iyj26iUX0vJrxX2GXjj57kGaR9bzqcoUAD99qo96GXFdAP3ATq_vvf3pwplBHc08t-MI-59OZ6q2Pu2sRDG3oM2WS2ZXaCOen_7rKDyExalF0QR2Q7p6tWwb9jiMiOotI6ssAhUngFcPPR5bejYm0swN3mHY3hcw0FTsyh7zmJcuVAlwA1FqXTGAXT_cpKGf51CiGevL6MqsMQ-_4p-hW6CYJV-9hBKhM22-3JXRC2xWuVBgW_QULmogN4vHr2n4PPmYrsJZkxpWAu7Aq3Pv7AxyjMaXFDJhnj8bWgcPyt2boFF6B2yKXJFrsN3_MczQXYn9uaw7F1vkG4VJ2leFM9cHA=w390-h558-no'
+                            className={classes.ourReasonImagestyle}
+                        />
                     </Grid>
                 </Grid>
             </Grid>
