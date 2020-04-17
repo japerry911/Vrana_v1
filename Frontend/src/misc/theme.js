@@ -13,6 +13,10 @@ let theme = createMuiTheme({
     avenirBold: 'Avenir-Bold',
     avenirMedium: 'Avenir-Medium',
     avenir: 'Avenir'
+  },
+  articlePaperStyle: {
+    width: '50%',
+    backgroundColor: 'black'
   }
 });
 

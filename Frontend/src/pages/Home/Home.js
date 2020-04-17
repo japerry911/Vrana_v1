@@ -3,6 +3,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { useStyles } from './HomeStyles';
+import Paper from '@material-ui/core/Paper';
 
 const Home = () => {
     const classes = useStyles();
@@ -242,6 +243,70 @@ const Home = () => {
                             src='https://lh3.googleusercontent.com/onWooBD6LpvB27mrveaMPBMd6HiyoCCOi4v5HtxkUG6jFmmyqiYVHo-7mb0CxncdpPc3zdSLOkCjn7bHN9ksh0dCW1uLFzZCPzzPj3VqTDG_9jkxsEBcAzbE4qnk8PL7Zib-luRCpmzKhGUJoM-3OojReEtFIK6QecNNyR-6JU8g9g-QWrMkDhUl-Lm9cQvCbsv7doIGxGM5fYgq86qINhMVpsnJy5j60VtJnht3kWnqaarSJAMkj3WdLUOJuDW4YChJQLWqKjuVXPQB6szXKQ_rDrDa7-Pr0SJbxOp51bl4onFuJzyX5PSJC70lrPXkCFVvM0E_NILXoU7s9BXLapDSvrfH4saQAEOt6iyj26iUX0vJrxX2GXjj57kGaR9bzqcoUAD99qo96GXFdAP3ATq_vvf3pwplBHc08t-MI-59OZ6q2Pu2sRDG3oM2WS2ZXaCOen_7rKDyExalF0QR2Q7p6tWwb9jiMiOotI6ssAhUngFcPPR5bejYm0swN3mHY3hcw0FTsyh7zmJcuVAlwA1FqXTGAXT_cpKGf51CiGevL6MqsMQ-_4p-hW6CYJV-9hBKhM22-3JXRC2xWuVBgW_QULmogN4vHr2n4PPmYrsJZkxpWAu7Aq3Pv7AxyjMaXFDJhnj8bWgcPyt2boFF6B2yKXJFrsN3_MczQXYn9uaw7F1vkG4VJ2leFM9cHA=w390-h558-no'
                             className={classes.ourReasonImagestyle}
                         />
+                    </Grid>
+                </Grid>
+                <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <Typography variant='body1' className={classes.redSubtitleTextStyle}>
+                            NEWS & BLOG
+                        </Typography>
+                        <Typography variant='h3' className={classes.greyTitleTextStyle}>
+                            IN THE NEWS
+                        </Typography>
+                        <img 
+                            alt='Divider lines'
+                            src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                        />
+                    </Grid>
+                </Grid>
+                <Grid container className={classes.lightWhiteContainerStyle}>
+                    <Grid item xs={6} sm={6} lg={6} xl={6} align='center'>
+                        <Paper 
+                            elevation={3} 
+                            style={{
+                                backgroundColor: '#FEF7F7',
+                                width: '50%'
+                            }}
+                        >
+                            <img   
+                                className={classes.newsImageStyle}
+                                alt='City of Omaha'
+                                src='https://lh3.googleusercontent.com/t3IpmXfsSI_THwB000lEop_-RoDKDHdHix2IW6GsgidbzX-gGRad_S9B1OZlULETWoucrBPk_vmtk8B7KAyA6gUZq-yg7S_EXdOG9mT28AVCIXp5rse9f-InYymCYHEWGnsl8dGg8Hd2282cSCp1-hJ-OO9zarD1gA7g1ne-Sx1N8XzP6CI5ZwffQeqxaHonMJzMydfp5YjMQke-ibahv0pn4X8XmtPRTvdah02Iv61U_EFF18YuUJHzdWsaebKvSb07aFaxsSJkO9H9ivlsWSoFGMCC6oZOCbm4UkSYOODt1VvjX43KKnB7bSPnoS4Uwn7jNh5V2PYpMMlwii_s3rYn66Yu87ycMO32UgQNGvlIHVdWMZeNwKcvrZHi2CDOIgOQHo2h4YlkJhBGxvdHpl0czj1yqnYtYCculVJPD4shp6CcAchPIVT-wKJQ5JWOxYdnsivDviR-Aprmz8gZsjXUy4FFErKixZcWdCUPoQo2bBq_mFPs1KiEx9PV1-YP0Xs3V5-fJ5F_ucSHWu-hgyGILzhQJjKWrXay9DSTy6RcsPQG8IKhozP34aYbMC0W-vBYontNTajAppXsNxVp420AZeynqPYBiOPcxYB38kIsGbkZ6Su-k917sC0uO9jI6sCpx4uVFNF-gtN_jkN7ZLgvzmHkxdHM7YxET-pl-tal6yfB0aSILI-rMFpizw=w480-h274-no'
+                            />
+                            <Typography variant='body1' className={classes.newsArticleTitleStyle}>
+                                "Mini megacites to watch: Omaha Nebraska"
+                            </Typography>
+                            <Typography variant='body2' className={classes.articleItalicizeStyle}>
+                                Construction Dive
+                            </Typography>
+                            <Typography variant='body2' className={classes.articleDateStyle}>
+                                January 15, 2020
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6} sm={6} lg={6} xl={6} align='center'>
+                        <Paper 
+                            elevation={3}
+                            style={{
+                                backgroundColor: '#FEF7F7',
+                                width: '50%'
+                            }}
+                        >
+                            <img
+                                className={classes.newsImageStyle}
+                                alt='Dirt Path Under Bridge'
+                                src='https://lh3.googleusercontent.com/9f0n6El7hmbIhYZoZxdZhtXSCOatqZUwAdkLOcnNQBwhmeQJ8pWwjvLyFLNbxAZDAmo0g-9hHOTneT3W2DWIGTfHVBEZoOB-TfuF4I_FLZMqEkKksz_WPLZS6d39IwQQXTYaaromJQDdX-n1SMcJK6B4sQHGRjwdGWIqaFp05Q_kgkZ-RHavc8BGkMyedebt5jfm4Cflr7qX6e68_kvRDgb4Cb1nEzI217KudLokYsvw7iW6F_oUyUGiBYfVAHB_DbHyRcPvddFtyfz5YOvtWN4MyLvPj_pfZydmz-mV0GvelMqXQNLllvhCkVLm3pUL5wti2jCoY8qUD2DUD0czb9yDlQ2Av0gwwhkyDpK5cBSZS0hqNuW0DzolJ0Npdc41mIi-WKeqwJnk9xHMh2zQ4r_MXO8sUomWjKGNHDZAeZVCft1LF8MPwieqhW5xkGloe9rk0ZAB0zeB9AoE4XQso6rz7kj2h4D059wLpDIu8FVlVZzuVljgv0DZHqeD-wb88KQE8b_f75UTV2kM8zI5z-waSmteCZ5_5NqZSzOdjk8cjIemftKPdLBO0A5ijWYNxaXF3tAEVWbPr9N1TYGrBwyx9ZcfGePWhVpeKTlF3XijEd8rjV7DNdyOPrXj-Iu8ndLmktuszMS9KPn8m0NiRMRVPnQwQbj3SwCq2Wu42W0KM-DA6Tb94-nzSOfNeA=w480-h274-no'
+                            />
+                            <Typography variant='body1' className={classes.newsArticleTitleStyle}>
+                                "Mini megacites to watch: Omaha Nebraska"
+                            </Typography>
+                            <Typography variant='body2' className={classes.articleItalicizeStyle}>
+                                Construction Dive
+                            </Typography>
+                            <Typography variant='body2' className={classes.articleDateStyle}>
+                                January 15, 2020
+                            </Typography>
+                        </Paper>
                     </Grid>
                 </Grid>
             </Grid>

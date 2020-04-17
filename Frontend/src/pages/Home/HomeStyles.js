@@ -98,8 +98,8 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '2em'
     },
     projectsImageStyle: {
-        width: '100%',
-        height: '100%'
+        width: '110%',
+        height: '110%'
     },
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
@@ -144,5 +144,12 @@ export const useStyles = makeStyles(theme => ({
     ourReasonImagestyle: {
         borderRadius: 10,
         marginTop: '8em'
+    },
+    lightWhiteContainerStyle: {
+        backgroundColor: theme.colors.nonTextWhite,
+        width: '100%'
+    },
+    articlePaperStyle: {
+        backgroundColor: theme.colors.nonTextWhite,
     }
 }));
