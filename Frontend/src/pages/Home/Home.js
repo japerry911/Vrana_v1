@@ -28,8 +28,8 @@ const Home = () => {
                         </div>
                     </Grid>
                 </Grid>
-                <Grid container spacing={0}>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'style={{paddingBottom: '2em'}}>
                         <Typography variant='body1' className={classes.redSubtitleTextStyle}>
                             QUALITY CONSTRUCTION
                         </Typography>
@@ -41,8 +41,6 @@ const Home = () => {
                             src='https://lh3.googleusercontent.com/INjEAK2y6tTD1E6E13RpomffqWM3yBCDBWDeyIjm4U640N-PYM61BIm4yEbirqMApY6LEmKx67KxUs4MRK85n-lTdEDBozsf-kz8fl1VmMoAx8wyTwClvjmpgNTiGL7vW0VhuADOluj3HDEo_vMH6b-Vu8r7cJvgRsayIJn_l3L63FNdCY0GylJghT-gx21XNWoWt_vmk8yEGue3ImIo2bBRItqss3lWuDzDdSxvwp-DC1jN5drWuCKvEhpkDkBYhc7k8BA2ScWFMKwBHo_qz0bWcGnuggM5JrqQtaFZ8A5giI3hkBUQb1L_rJeFbZxWs_HruFP5b3rz4a7yk5Sc12rm5WAEmNt017f056LOvre6TayvRpsfQelaB-gq2mtXdkIOmSfqNWuoNIOTAhNy2d1JGHnF93SmrIreXZJUtX1SyAtGEDQmCEmLuUCWlo4yM3uiDIPLmFHCnEfZPXuqQd_UQ2SbIcFO-UYbUQGcg4keJMABfxHjgjnDSx8YPaZaetSvbZDbnjSfJzg7gBAr9MIup3_9BwPdqVNyu5VgFTUndEQ2okVeQDHB_GjqjiBLylLh114ILB5YsATvU_I2Su8XxbaK-OCqrZ-kw0kFWd81F5h6cmoxt3ThL_fd27rQUO34fzXCPBsqXAoWoyFVgxgmC-BsvrUVyP0ilrqhY9H4Yy_si7favNitK_wWBg=w78-h6-no'
                         />
                     </Grid>
-                </Grid>
-                <Grid container spacing={1} className={classes.offerContainerStyle}>
                     <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
                         <img
                             alt='Finished building'
@@ -266,7 +264,8 @@ const Home = () => {
                             style={{
                                 backgroundColor: '#FEF7F7',
                                 width: '70%',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                paddingBottom: '1em'
                             }}
                         >
                             <img   
@@ -291,7 +290,8 @@ const Home = () => {
                             style={{
                                 backgroundColor: '#FEF7F7',
                                 width: '70%',
-                                overflow: 'hidden'
+                                overflow: 'hidden',
+                                paddingBottom: '1em'
                             }}
                         >
                             <img

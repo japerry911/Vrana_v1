@@ -94,7 +94,6 @@ export const useStyles = makeStyles(theme => ({
     containerGreyStyle: {
         backgroundColor: theme.colors.darkGrey,
         width: '100%',
-        marginTop: '5em',
         paddingBottom: '2em'
     },
     projectsImageStyle: {
