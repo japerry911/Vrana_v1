@@ -265,7 +265,8 @@ const Home = () => {
                             elevation={3} 
                             style={{
                                 backgroundColor: '#FEF7F7',
-                                width: '50%'
+                                width: '70%',
+                                overflow: 'hidden'
                             }}
                         >
                             <img   
@@ -289,7 +290,8 @@ const Home = () => {
                             elevation={3}
                             style={{
                                 backgroundColor: '#FEF7F7',
-                                width: '50%'
+                                width: '70%',
+                                overflow: 'hidden'
                             }}
                         >
                             <img

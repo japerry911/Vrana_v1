@@ -147,9 +147,19 @@ export const useStyles = makeStyles(theme => ({
     },
     lightWhiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
-        width: '100%'
+        width: '100%',
+        paddingBottom: '8em'
     },
-    articlePaperStyle: {
-        backgroundColor: theme.colors.nonTextWhite,
+    newsImageStyle: {
+
+    },
+    newsArticleTitleStyle: {
+        fontFamily: 'Avenir-Bold'
+    },
+    articleItalicizeStyle: {
+        fontFamily: 'Avenir-Italicize'
+    },
+    articleDateStyle: {
+        fontFamily: 'Avenir'
     }
 }));
