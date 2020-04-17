@@ -23,7 +23,7 @@ const Home = () => {
                             </Typography>
                             <div className={classes.buttonsDivStyle}>
                                 <Button className={classes.learnMoreButtonStyle}>LEARN MORE</Button>
-                                <Button className={classes.ourProjectsButtonStyle}>OUR PROJECTS</Button>
+                                <Button className={classes.greyButtonStyle}>OUR PROJECTS</Button>
                             </div>
                         </div>
                     </Grid>
@@ -309,6 +309,21 @@ const Home = () => {
                                 January 15, 2020
                             </Typography>
                         </Paper>
+                    </Grid>
+                </Grid>
+                <Grid container spacing={0}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                        <div className={classes.contactUsDiv}>
+                            <Typography variant='h3' className={classes.whiteTitleTextBoldStyle}>
+                                EXCEPTIONAL PEOPLE GIVING YOU EXCEPTIONAL RESULTS
+                            </Typography>
+                            <Typography variant='body2' className={classes.whiteText60Style}>
+                                We offer skilled worksmanship, attentive project management, all at an economical price - which 
+                                means you don't have to compromise. Our clients enjoy a measure of confidence, both in construction quality 
+                                and economy, unique in our industry.
+                            </Typography>
+                            <Button className={classes.greyButtonStyle}>CONTACT US</Button>
+                        </div>
                     </Grid>
                 </Grid>
             </Grid>
