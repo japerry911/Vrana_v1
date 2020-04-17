@@ -326,6 +326,68 @@ const Home = () => {
                         </div>
                     </Grid>
                 </Grid>
+                <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' className={classes.gridBottomPaddingStyle}>
+                        <Typography variant='body1' className={classes.redSubtitleTextStyle}>
+                            CLIENTS
+                        </Typography>
+                        <Typography variant='h3' className={classes.greyTitleTextStyle}>
+                            WHO WE SERVE
+                        </Typography>
+                        <img 
+                            alt='Divider lines'
+                            src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                        />
+                    </Grid>
+                    <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
+                        <img 
+                            alt='Ameristar Logo'
+                            src='https://lh3.googleusercontent.com/-W63qeTR16khMR8de9muzy_QzCDc2sgIMlXQos2iPnqGryJjahH01kprYwLq7fgQnQ4dk8-8qBTQe7ivcuE_A3tnsEZDvhV4qZhTFxJW9St1LkeDWpW4Qdtj9QWd19F8iMBG9C6d7f0P1_L31j6WvZSpVv77q3l7pfLaTzIvxqjkdiqVb4Yc0qEFNG9tt1D-8ufU41vIOJLYkQsDsUYQfaj44YPRGDLwxaNMb0uDnL3gfKqujilVnyQYwQ7Q7olZT0xvm4QCZRkTHwVywuUhubFEK9biKbJF5vrE5yB9YyVhVQEFzeRj4f31-97_8olM5Z6EI6jXJEwvg8WH0C4228gj9pa5uDjEVnQqj03ieEVMFCQX1iO3Pa_B3NuzYYh9NyIaKJ8AVFQNqax91wqn-mCpWKRCgGm4yHLUKXrPV0VF558RIDyrN1NBnPSXXhS7z8BQeaOqrSvuUtGfgEWZlMqNqQDTHy8bPYSv_X-8wY0H-CLkQtwPFtMUICWlL4xYFbnLHlcAt9-luB9niEC3BSJrIVVysfS5fna2rWmNWfNG7Tp6O8Nkx5KoGhhARd_xGnxnuNPxpYLI7SHNELxGFGDQJygg8crJrz3dfMoqJzRn3ERgXKz1IN2YZsBOYGhOrDsgP2ny7pQdO7ilrMDh8G_JEOS0MSqU8-_9OmMxCGR13osDwEHRQcmlMFBrdg=w283-h80-no'
+                        />
+                    </Grid>
+                    <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
+                        <img 
+                            alt='Omaha Steaks Logo'
+                            src='https://lh3.googleusercontent.com/jYwmnXu6QDI1pqok9KBmNIZ26iOrR0DTAU_zc70DfxGbY47Xf18eV3vAj1nGaZqgm-tuBQW2FMmvSYCvLSnQo1CI5pWy_NuMlbsj14XbLSXc8VTN0Qd8s4jS5-t11D34n2lRlMU6a0gHT-V7X7TnQfQ1Y4nbOc4yM8KYfpI_5wXmJbgMwWgSMEYyio3y72oqdOSYbSdDieXNyJ2d-6LvxTarUdSOXN5UOtO9MMkSQwp522unb4x6fHsx7FgrfqQGvArigvzLBqHtg5elLsFca4FnDTeBs7CT__L2HdrY3SZ7adZEQqeZZb0aWu8p2ktR_Ul2WADvSsdNrtAnk-P6wkPSxmdn3TgTEVNU7QS1DBw61KAJmzxFWdNBQIHcmz8DABnZhTLgaN5XkgtZez1ES9TAcGE8gPd6Uzb0yC-_YBkMct0C6nPA-rUJnvsQfllyQkX8k4kcFxgr8ueaBTRHwUhtK-8TYVY_i2U6O2QbxQNCLTg0YvmDxzMvh6yYzpvVFgGhY0pi558TFeEnN5axZtYHU72NcC16oGEBUNuROIr93pD5E2NP4sAdOu_65CTmK2n-8jwBNAvI2zeLYi1qm3SkZStu1aKc1UcA4PXR6IhhNZ_9XDQIdxFaHU1x7zSU8gRu8natmvOIzdTQYu6ZqclizpypWdPwj2pi9GACgB7IUKxHx8aJQBqEBf_NxQ=w1920-h445-no'
+                            className={classes.omahaSteaksLogoStyle}
+                        />
+                    </Grid>
+                    <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
+                        <img 
+                            alt='Streck Logo'
+                            src='https://lh3.googleusercontent.com/MOebDem7BoP2cms2IOQ3gt1TT81RsCyi3OLHRcWiLvVIR6oS2cirVJcLkxzPufa7dpA_WPJDP2gdNhdDf5jMTFRcpxausM48O6u9MfqoP7z05hYQroS7S_7kSJiAWvmhKFXNuEEK0akGgrh-01iA_i20GzqouLxZ-Jets9DzUYjeu3Xwkn2rAAZ5y-NM0LYb6BOoLw1XS_OJdRoi5QYyOYhg_HEaJJhGSDqKbKr9PxgQGPGQNq9hLqPI5j5KngdNfgaFeofVzKbcw6i3ov7kUFUWZuH18jmBwHtOTSWinUcKIXCvPdd9_E_IHbtrSU0CKsLZcg3LI9y_iTL3aJSukmXzLYCPl8hob6Ax_5k1Nkiw2WTQyVdVNdd3AJN_AosQtaA24Udb6s75cgT9K1abrPPabXtU8CxWFnLmeTz0ktbND5l7Iql0mhnmuPomROLfHXgLgBiJ-M_18T4xgUX_0BtDVDPKtD2_aXYcDNipO_6h5dSnJsyU-2KcWePl8cAaIpsjVwLAZOvfhI8PDZAUpxfw05cF4CXpBtAEKgyLwLDD05CX3zZaSpYO90e_e8PvnMAoNDuBP9qSU-vpVZ0eaLnbKV_zl0ymG5yeSsfcsIPoH4UJFuZwvADAmSrx8No0G9CpkPvF6L-R2CndQLp66Ies443aqdA1LN5A8XKzSh1tfIMYqqh0zKMnViZPgQ=w1920-h387-no'
+                            className={classes.streckLogoStyle}
+                        />
+                    </Grid>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
+                        <img
+                            alt="Rotella's Italian Bakery Logo"
+                            src='https://lh3.googleusercontent.com/akJVIEOwLsDotUrzL7S5NShOKUnvYi5o88eLufvnhVrvrW0WfHbj2DufCHOBkCpoeiHP1rWRtmL8omLrWjOLHI6r51pvYeBaNAYua09A94FZsywEfhyUk7VSLtETXeHWrE_j44yF-UplR2VvIlfANXHQIFdIgWCj_RB39sIguzaQwNRn_ejf8wJdzJMVHD6_3Jua6HlEn7xMWv5DQkvJsU1RezfxCwJC98JcftnXT7IWQIEoY1zd5EspRYV2xXtkz6gM7lAVwJ5sr6fCSjn6sXE1SMqvbpg3MmXQFfO9EUR_O_KuqANFKdKg1TUEZMddgaXlY2t0S7rQ_DCuERc7XANzyr2xwtIUXaB8am92SJ4zdpU5U54z8zNoiugxUnt9PEy9C_IV4zr_kSeEVQchDdX9kKHyliNfIIoRrc3Ja2XzTaBC_of-jf_dRi7vDhiSApa0xORWSB6hpBv98SwNdeoPwjzB0DZjg2cuSKA4b8dBBl2cdK3Wi2_t65VtM3u0czJcw7yh96Ne_RP3tuu-CFqsBsl0Qn5LPK68glbRuTDfOqZACf80w-bjgJjETvrzZjWXtaecUhwG-kdL2ugVoyPdBJhnjJqnNyTaLB_ptirOfDQYA4sTBUEB0akHlQyvYbr2u5FuCjz4-oncCkaeOjRolF_6NQJZDkUBVX7Ma-d4hXgBRBjPAftoTGTVHA=w340-h229-no'
+                            className={classes.rotellasLogoStyle}
+                        />
+                    </Grid>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
+                        <img
+                            alt="OMA Logo"
+                            src='https://lh3.googleusercontent.com/kHUeqr65524QYHDLivQe3g7hvss-Q0l4Mp9Pic92kOAEF9mKb9cKr6l_su27MJFqXlG6FrN6dEz_6Y3_MjTJoNdv0OerDd2uTIz-rlzu1HRS1anMYgJjm7cIgDhgO8qYpYQsaZZOC6uv__QJ3o3QhmkGFf9sB0FkUhZRhCZ4VovVZUF2KQvn6t0ajL5jOl0V0faeSPMID1Kd9AKzCHzpJRyWEfwWFgW9zIxr4y_hHp5gZpc_n7MHngP1Ag201jflTdo7RwimS9voQpxM2XQ97iA3JMT8E_FYRFWZ0YjahHdwGSsuiB3Aapks4-DUev3bp2vc2XAY-tqK89N_MqtcBNIgZpQKuMszAM19GBuke9Js82bQs8YA3vDCJL8cMWeE3EW8FSpNMA5x2B6B-uVNnBO4GqX5o1L6fWSKQIWAB_hFL6zlHMesw16KXNPYAgFSvBB62Td1Zj5O_45-d1by2ZhEnkhseKTKPldBCHEeIJcSGmXpz87aAeWxS5ws3z_C3q9eA_RGRpZKGCfhe6lYj6d-YxVMQaQ88FUwesrQJ09JMIwwif3AX0CLKKYXYWjHekemlLF7F_77kD1pzTqAeswfcjQDpWGuIAdhTTEDcxt4ujTt0GOkt3A_nQAsxZA0HlZcvaVy6IICToHvhnKSXY4FwFokiG8evcoTdUOsQoaWyQjf3sKR7DbY51KX_Q=w321-h310-no'
+                            className={classes.omaLogoStyle}
+                        />
+                    </Grid>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
+                        <img
+                            alt="net Sports Logo"
+                            src='https://lh3.googleusercontent.com/Tun4j2quxQwwaZsnT0RI2c55-rU3Wvy808JXsjgePmvmHni6e8iuATx0MvPL0StWqGzRIsbCSISBEBltyXfb53hdsX8wk2-OGlzo3e5PukUburc3FDk1p0oEy9jJYRAbFVb8gW8ZgM5c93o-fjz3GhnjsVeyK0jLur9BpPmR0pVQHsDmQYoTYX9acl1RfZ-FGQHAaNH2lmnfyDMAWy3nzhGY-qQzbAicNeTYkjGLV8Rq2Y7pKwTJOqubw508GNXHOLbPrdIaKvpmBS_uydO8doXoEEu9_r1bhYmHQl1GQb96mAJU2A9_nc10sTOyKVRj-6NeYYpMCwFMWgxq0G8zdKxOEZExQcUTiG2IdYTWY64Or1JlMbQnyWTBswlvWjthZdaomFckTutOIST4tsq1TSQjiTroiDayqst_OFw9VzV8zbg4Mq98tSZRxfH1kphu1ueMV6EvsS9mh8TvUQfV1DWCyB0ZZrqDUJW7BtWz7HYZM-c36sBLQnLxShvF84hPFIjA0ngqop4WggacgHGey9wZ1vn1U7jsVA-xhB_pfEl-vhHYfReILBGAQ86-s-3bZVMQtOdcuQyCgKGeuiIN1vdKmZShB9PV7itDDkF3Gwmzm314dPZ8ywSUyFBu46GRRleDV7hua6W8t2xSjiycRvJ1aUlU3mMmUwIQU76bbL1a1gfTAg6qgo1_E6cMvQ=w831-h295-no'
+                            className={classes.netSportsLogoStyle}
+                        />
+                    </Grid>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
+                        <img
+                            alt="Omaha North High Magnet School Logo"
+                            src='https://lh3.googleusercontent.com/A1drHZ5kQl8G3XwLKbyWgCN9R8u5HerWKSl2FGe6ZQC9_JxWC0T-RpQB8niyDLu07wdHZ85xsnKOlEGBlFPtrKDUU_EHZ-neRWvna5KHO5BzN64dlAXpeFkmlO-9dV8PwNLkdjcjhR4B_9DZGbC4bP0EGawx3fbJHGn11oQOoytWomtcp49EZWXawceidLXtZvDbLy0fWv8BGqIDuv7b-fAo_WDSJDZv-wO6L9Yjfj4miBPofqSATtJoI1bDSqpZtutFsTKdq3v8hpxSpdUK4kkR4Tlb4FLBbOWr3fo-bN0MFuQD1JOzeXgrTBUPTwtEWwNyC-7aEb2J0TV67b3ZASwQG012HHuX84MtuLRS2Uz9XdE4umW7Pv4kjXf5snfX-VCDhqkSgpon1Oo_s_A7qG0fvpcRf4YUqgUXeKX79ZTdd6xZBSJR1Ooij0ML5BV6P1SsF5tuJvB5FIrPaN72chiava6iIJVZzZTjQew1Nl1JfPdlnYvmelvYaSgq9VuPQipz2Nw5-NVFIoX7aTJmgQ08cBoZqk2ce-XZllkAfPYDtMr9lQU-uFyE8DCP_oSTZtUs6WqC9WCI81pj1M8lEvtnOenlbaJtXgCfKwQy1pkya6LaZ9LHdN27cQ3A9OhN7Fbrr9EE_bT6-jqr1Rz5rtpW37HX-TsBM1Yerc99PS0PL8Mse6SFj-C_pH4QNg=w356-h357-no'
+                            className={classes.omahaNorthSchoolLogoStyle}
+                        />
+                    </Grid>
+                </Grid>
             </Grid>
         </div>
     );

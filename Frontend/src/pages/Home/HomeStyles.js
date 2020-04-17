@@ -182,5 +182,34 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir-Medium',
         color: theme.colors.textWhite,
         width: '60%'
+    },
+    streckLogoStyle: {
+        height: 'auto',
+        width: '70%'
+    },
+    omahaSteaksLogoStyle: {
+        width: '70%',
+        height: 'auto'
+    },
+    gridBottomPaddingStyle: {
+        paddingBottom: '3em'
+    },
+    netSportsLogoStyle: {
+        height: 'auto',
+        width: '80%',
+        paddingTop: '3em'
+    },
+    rotellasLogoStyle: {
+        height: 'auto',
+        width: '60%',
+        paddingTop: '2em'
+    },
+    omaLogoStyle: {
+        height: 'auto',
+        width: '50%'
+    },
+    omahaNorthSchoolLogoStyle: {
+        height: 'auto',
+        width: '50%'
     }
 }));
