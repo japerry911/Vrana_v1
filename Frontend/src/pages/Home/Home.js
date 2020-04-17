@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { useStyles } from './HomeStyles';
 import Paper from '@material-ui/core/Paper';
+import Footer from '../../components/Footer/Footer';
 
 const Home = () => {
     const classes = useStyles();
@@ -98,7 +99,7 @@ const Home = () => {
                         />
                     </Grid>
                 </Grid>
-                <Grid container spacing={0}>
+                <Grid container spacing={0} className={classes.ourProjectsContainerStyle}>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img
                             className={classes.projectsImageStyle}
@@ -128,7 +129,7 @@ const Home = () => {
                         />
                     </Grid>
                 </Grid>
-                <Grid container spacing={0}>
+                <Grid container spacing={0} className={classes.ourProjectsContainerStyle}>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <img
                             className={classes.projectsImageStyle}
@@ -388,6 +389,7 @@ const Home = () => {
                         />
                     </Grid>
                 </Grid>
+                <Footer />
             </Grid>
         </div>
     );

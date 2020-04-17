@@ -211,5 +211,8 @@ export const useStyles = makeStyles(theme => ({
     omahaNorthSchoolLogoStyle: {
         height: 'auto',
         width: '50%'
+    },
+    ourProjectsContainerStyle: {
+        overflow: 'hidden'
     }
 }));
