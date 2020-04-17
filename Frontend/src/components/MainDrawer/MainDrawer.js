@@ -1,5 +1,4 @@
 import React from 'react';
-import makeStyles from '@material-ui/core/styles/makeStyles';
 import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -9,33 +8,7 @@ import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
 import { ROUTES_OBJECT } from '../../misc/routesObject';
 import { Link } from 'react-router-dom';
-
-const useStyles = makeStyles(theme => ({
-    drawerStyle: {
-        width: '15em',
-        flexShrink: 0
-    },
-    drawerPaperStyle: {
-        width: '15em',
-        backgroundColor: theme.colors.nonTextGrey,
-        color: theme.colors.textWhite
-    },
-    drawerHeaderStyle: {
-        display: 'flex',
-        alignItems: 'flex-start',
-        padding: theme.spacing(0, 1),
-        ...theme.mixins.toolbar,
-        justifyContent: 'flex-end'
-    },
-    backButtonStyle: {
-        padding: 5,
-        backgroundColor: theme.colors.vranaRed,
-        borderRadius: 10,
-        opacity: .75,
-        color: theme.colors.nonTextWhite,
-        marginTop: 10
-    }
-}));
+import { useStyles } from './MainDrawerStyles';
 
 const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();

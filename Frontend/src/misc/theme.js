@@ -5,14 +5,18 @@ let theme = createMuiTheme({
     vranaRed: '#CD2126',
     textWhite: '#FCFEFF',
     nonTextWhite: '#FEF7F7',
-    greyText: '#E3E2E2',
-    nonTextGrey: '#4B4A4A'
+    lightGrey: '#E3E2E2',
+    darkGrey: '#4B4A4A',
   },
   fonts: {
     avenirItalicize: 'Avenir-Italicize',
     avenirBold: 'Avenir-Bold',
     avenirMedium: 'Avenir-Medium',
     avenir: 'Avenir'
+  },
+  articlePaperStyle: {
+    width: '50%',
+    backgroundColor: 'black'
   }
 });
 
