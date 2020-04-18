@@ -1,10 +1,13 @@
 import React from 'react'
-import './Services.css';
+import { useStyles } from './ServicesStyles';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
 
 const Services = () => {
+    const classes = useStyles();
+
     return (
         <div>
-            <h1>Services</h1>
+            <HeroHeader headerText='WHAT WE DO' />
         </div>
     );
 };

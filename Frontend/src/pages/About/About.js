@@ -3,19 +3,14 @@ import { useStyles } from './AboutStyles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Footer from '../../components/Footer/Footer';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
 
 const About = () => {
     const classes = useStyles();
 
     return (
         <div>
-            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
-                <div className={classes.aboutUsHeaderDiv}>
-                    <Typography variant='h3' className={classes.aboutUsHeaderTextStyle}>
-                        ABOUT US
-                    </Typography>
-                </div>
-            </Grid>
+            <HeroHeader headerText='ABOUT US' />
             <Grid container spacing={0} className={classes.whiteContainerStyle} alignItems='center' justify='center'>
                 <Grid item xs={8} sm={8} md={8} lg={8} xl={8} className={classes.aboutUsGreetingContentGridStyle}>
                     <div className={classes.charIntComHeaderDivStyle}>
