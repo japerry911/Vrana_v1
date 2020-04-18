@@ -14,5 +14,33 @@ export const useStyles = makeStyles(theme => ({
         color: theme.colors.textWhite,
         marginLeft: '10%',
         marginTop: '5%'
+    },
+    aboutUsGreetingContentGridStyle: {
+        maxWidth: '45%',
+        paddingRight: '5%'
+    },
+    charlesAndTroyImageStyle: {
+        paddingTop: '5%',
+        paddingLeft: '5%',
+        borderRadius: 10
+    },
+    blackHeaderTextStyle: {
+        fontFamily: 'Avenir-Bold',
+        color: theme.colors.darkGrey
+    },
+    redHeaderTextStyle: {
+        fontFamily: 'Avenir-Bold',
+        color: theme.colors.vranaRed
+    },
+    charIntComHeaderDivStyle: {
+        paddingBottom: '3%'
+    },
+    aboutUsDescStyle: {
+        fontFamily: 'Avenir',
+        color: theme.colors.darkGrey
+    },
+    whiteContainerStyle: {
+        backgroundColor: theme.colors.nonTextWhite,
+        paddingBottom: '5em'
     }
 }));
