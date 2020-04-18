@@ -47,6 +47,13 @@ const About = () => {
                     />
                 </Grid>
             </Grid>
+            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                <div className={classes.meetTheTeamDiv}>
+                    <Typography variant='h2' className={classes.meetTheTeamHeaderTextStyle}>
+                        MEET THE TEAM
+                    </Typography>
+                </div>
+            </Grid>
         </div>
     );
 };
