@@ -12,22 +12,20 @@ const Home = () => {
     return (
         <div>
             <Grid container spacing={0}>
-                <Grid container spacing={0}>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <div className={classes.greetingDiv}>
-                            <Typography variant='h2' className={classes.greetingHeaderTextStyle}>
-                                BUILDING CONFIDENCE SINCE 1909
-                            </Typography>
-                            <Typography variant='h4' className={classes.greetingSubtitleTextStyle}>
-                                We combine the strength of a large general contractor with the responsiveness
-                                and economic advantages of a closely held family business.
-                            </Typography>
-                            <div className={classes.buttonsDivStyle}>
-                                <Button className={classes.learnMoreButtonStyle}>LEARN MORE</Button>
-                                <Button className={classes.greyButtonStyle}>OUR PROJECTS</Button>
-                            </div>
+                <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <div className={classes.greetingDiv}>
+                        <Typography variant='h2' className={classes.greetingHeaderTextStyle}>
+                            BUILDING CONFIDENCE SINCE 1909
+                        </Typography>
+                        <Typography variant='h4' className={classes.greetingSubtitleTextStyle}>
+                            We combine the strength of a large general contractor with the responsiveness
+                            and economic advantages of a closely held family business.
+                        </Typography>
+                        <div className={classes.buttonsDivStyle}>
+                            <Button className={classes.learnMoreButtonStyle}>LEARN MORE</Button>
+                            <Button className={classes.greyButtonStyle}>OUR PROJECTS</Button>
                         </div>
-                    </Grid>
+                    </div>
                 </Grid>
                 <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'style={{paddingBottom: '2em'}}>
