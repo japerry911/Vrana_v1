@@ -1,6 +1,6 @@
 export const ROUTES_OBJECT = {
     '/': 'Home',
-    '/about': 'About',
+    '/about-us': 'About Us',
     '/services': 'Services',
     '/our-work': 'Our Work',
     '/safety': 'Safety',

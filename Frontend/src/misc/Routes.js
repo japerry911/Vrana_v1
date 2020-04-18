@@ -20,7 +20,7 @@ export default () => (
 
         <Route
             exact
-            path='/about'
+            path='/about-us'
             component={About}
         />
 
