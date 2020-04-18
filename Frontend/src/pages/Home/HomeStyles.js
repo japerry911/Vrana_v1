@@ -149,9 +149,6 @@ export const useStyles = makeStyles(theme => ({
         width: '100%',
         paddingBottom: '8em'
     },
-    newsImageStyle: {
-
-    },
     newsArticleTitleStyle: {
         fontFamily: 'Avenir-Bold'
     },
