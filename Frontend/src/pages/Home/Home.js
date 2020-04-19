@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import { useStyles } from './HomeStyles';
 import Paper from '@material-ui/core/Paper';
 import Footer from '../../components/Footer/Footer';
+import Card from '../../components/Card/Card';
 
 const Home = () => {
     const classes = useStyles();
@@ -40,46 +41,31 @@ const Home = () => {
                     />
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img
-                        alt='Finished building'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/Up28m-Krvje8BjxVjM9rbwg7xO68f7wv1iQsFYQf9bPRpYJ1k8EwlpWU3iKkQfMgsc-2S9OFTEL_V_k6AkoRlELny5JPThu4NRv3WtFMAbHiWP6gxkwmW3NOWhB2WGjEDhiw_vWO7GzTBWjwQS3ZEDEZ9UCql3IfFkh9tNQJTguwLcSEmYxI0rkq8ZfdggjMEqcGwXdt0Hgawx2lmk33olI3IvphVWCN85P1s_msuGcW9k6Sr_o7k-OlRC33vc5h0S4m6bO6F401z6Y_vpNIDfrORaFjmvtbjuVtzFGSvntzkxj11xpaSloa_SqwQ9iTUan9zxxZ0kq_DLpm8cl_cpyAOeCaRzXvnDVU72jBPUngV7SmHLJ9dxU7hSgXwezoXrq2Y-qTI8S-JO38wwJ7Z74zuGLX6PddnUIWCKe9RdSs4IjTZvxnLwSI7HeHTjcGlQ18IU5iUadS5pmwvOdO5se2NCSpt-Gd5XSeXTgDVGnm7gPqFlj59tTA2DNde05K1Zfj4s7ae52xMG1pw6-WF01I6QY9-B7eXaexJeJ-vcF8a3gcnZ5pLX_uTwqrEpT_y7zhd47s1RlsbfvBKrnLG2QIZHBUi3g1Ipf40VxqmQBtXGkRKkrrflkA5bDto93U5u1GPeTycPn3Pyk49v2QfqOIuX4PqMrQP4Y7bV04e0KS7Ldek7GZUPB3As_b7A=w275-h183-no'
+                    <Card
+                        headerText='CONSTRUCTION EXCELLENCE'
+                        bodyText='We deliver both large and small construction projects including Commercial, Retail, Housing, Religious,
+                        Educational, Parking Structures, and Civil.'
+                        imageAlt='Finished building'
+                        imageUrl='https://lh3.googleusercontent.com/Up28m-Krvje8BjxVjM9rbwg7xO68f7wv1iQsFYQf9bPRpYJ1k8EwlpWU3iKkQfMgsc-2S9OFTEL_V_k6AkoRlELny5JPThu4NRv3WtFMAbHiWP6gxkwmW3NOWhB2WGjEDhiw_vWO7GzTBWjwQS3ZEDEZ9UCql3IfFkh9tNQJTguwLcSEmYxI0rkq8ZfdggjMEqcGwXdt0Hgawx2lmk33olI3IvphVWCN85P1s_msuGcW9k6Sr_o7k-OlRC33vc5h0S4m6bO6F401z6Y_vpNIDfrORaFjmvtbjuVtzFGSvntzkxj11xpaSloa_SqwQ9iTUan9zxxZ0kq_DLpm8cl_cpyAOeCaRzXvnDVU72jBPUngV7SmHLJ9dxU7hSgXwezoXrq2Y-qTI8S-JO38wwJ7Z74zuGLX6PddnUIWCKe9RdSs4IjTZvxnLwSI7HeHTjcGlQ18IU5iUadS5pmwvOdO5se2NCSpt-Gd5XSeXTgDVGnm7gPqFlj59tTA2DNde05K1Zfj4s7ae52xMG1pw6-WF01I6QY9-B7eXaexJeJ-vcF8a3gcnZ5pLX_uTwqrEpT_y7zhd47s1RlsbfvBKrnLG2QIZHBUi3g1Ipf40VxqmQBtXGkRKkrrflkA5bDto93U5u1GPeTycPn3Pyk49v2QfqOIuX4PqMrQP4Y7bV04e0KS7Ldek7GZUPB3As_b7A=w275-h183-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        CONSTRUCTION EXCELLENCE
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        We deliver both large and small construction projects including Commercial, Retail, Housing, Religious,
-                        Educational, Parking Structures, and Civil.
-                    </Typography>
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img 
-                        alt='Meeting in Gym'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/LOyEpK6-KmjJsPz8UfjSSudU_aBUaQ_h-w9Pu9pGx9SvZyRv1K0hooWtt83kTtNdfICajaxnZ16CBdQgBsqxd3qSApQa14XyNwC9aa1R1IpkKtwBTEp6G9biFRgl2OgRbo7FcyNHVYOxJuEyhT12BTYcGaX1ZsAha9qPADfNBeN6vbIXW5UNTlj2HkkZnDFDnlQDgMWuURo73_T7xwt72u1sTXh5jifUgjJLcW83AW8jX8XK6L41VDIR_O-djxM_S74kVW0FBXheESOPMeg6PDE99qlX43W3Vys2pXBP2KhNG99BaTSmcxTgfDtrx0E29J3ExYzm6kDiXIIxUBqQh0zNQYCcPUaPctygJJiXf0IkvvVllwyWgHreSgZc3MuzvPR2PexKwKYt38gpIrzrVu1E_0Q5Q_21q9knG9eAHCgXt9WV31p54nmn3YA6mXwVetpMQqnH5f5jrNICCwXr_yORxU2E6dMW1GyLAJwoLFGJiMJ-kLaaXL9PlEAnL1pxHAL55iYKQ0WDlim5BXvabpt9G7wG3rDhahE06C8viFV4hUsR69LbkNFOEGek1cqj2dbbRrKHapJRHlpRTI2tFVYCnQPogbwO8bP6mGvHJSoVcGV0hJbKUsd4eF0IYZerQHcEtLkbKvaHklYEnJBL4fcaZ4iUP-4tCCrz2OMCrLmrRTl3Hp88SXBtKPqHjA=w1200-h800-no'
+                    <Card
+                        headerText='SKILLED WORKMANSHIP'
+                        bodyText='Our experienced team of construction professionals has the skills to deliver high quality projects every time - no matter
+                        the size and scope.'
+                        imageAlt='Meeting in Gym'
+                        imageUrl='https://lh3.googleusercontent.com/LOyEpK6-KmjJsPz8UfjSSudU_aBUaQ_h-w9Pu9pGx9SvZyRv1K0hooWtt83kTtNdfICajaxnZ16CBdQgBsqxd3qSApQa14XyNwC9aa1R1IpkKtwBTEp6G9biFRgl2OgRbo7FcyNHVYOxJuEyhT12BTYcGaX1ZsAha9qPADfNBeN6vbIXW5UNTlj2HkkZnDFDnlQDgMWuURo73_T7xwt72u1sTXh5jifUgjJLcW83AW8jX8XK6L41VDIR_O-djxM_S74kVW0FBXheESOPMeg6PDE99qlX43W3Vys2pXBP2KhNG99BaTSmcxTgfDtrx0E29J3ExYzm6kDiXIIxUBqQh0zNQYCcPUaPctygJJiXf0IkvvVllwyWgHreSgZc3MuzvPR2PexKwKYt38gpIrzrVu1E_0Q5Q_21q9knG9eAHCgXt9WV31p54nmn3YA6mXwVetpMQqnH5f5jrNICCwXr_yORxU2E6dMW1GyLAJwoLFGJiMJ-kLaaXL9PlEAnL1pxHAL55iYKQ0WDlim5BXvabpt9G7wG3rDhahE06C8viFV4hUsR69LbkNFOEGek1cqj2dbbRrKHapJRHlpRTI2tFVYCnQPogbwO8bP6mGvHJSoVcGV0hJbKUsd4eF0IYZerQHcEtLkbKvaHklYEnJBL4fcaZ4iUP-4tCCrz2OMCrLmrRTl3Hp88SXBtKPqHjA=w1200-h800-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        SKILLED WORKMANSHIP
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        Our experienced team of construction professionals has the skills to deliver high quality projects every time - no matter
-                        the size and scope.
-                    </Typography>
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img 
-                        alt='Writing on Clipboard'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/tHaUCHpZRNTnS7eq7Hlo3P9ZcyKy38PuSlAgycHIpPAT3z4vO5AkWRfH_YZ5_vKpVGgLjbkUgatNH5yvE9PXTuE6CUZi9Dw4my7rn5ZCW9cEBh1jq9MBBBm4jewqjVv2VG_fgqv9KxOgePt75_LgCdf0BINs6UPGb7BNlr1Xp94uIRpH87_jKQXgpH3l6ZTkpllZ4xX4P2P2XZ-vE7yVfq5VvauDYjmKYhjkWMaOnuPGeM6Mms4cx7mHhBWA49omXMEuvkDbU2CZDKVjQqNeHrN8ib7XIpkcTHo0-Xe_l5DrtezJ8ICaGwXSTGUcHp4fafeyDkY_tHxS2Le-PWLsKF3mj--NGNw_iLCP5wYugZAbeFeHOpKVsiFK6gv8fZJU-fusY21sVFGDHgajyCHY3ExEHWcWEmHYzMyZltvMNiw-DMROwnl0EZHynuindf_RGrfI7MeseELPL-aH1EaY7uG1chNZor7d4jqcosLEzFjf-XvOLJ7m5fPKCFHvlo3k0HkV0lXGLeahnA0QK5WRq-a54XGRMp3zu_MsyQhtvuBe9p6b4E7HUmyEKeGHZboWuSjyy_QIeHPAFw1f5Xe-5RgmfOrENw0_A4voPIsTKgAlcuTnc31fJr1lpcqktba0YrrbfRqLqKyRMT9c28jk-9KWuuHSD6bx5aqyZ6oJZD5OPtsKqdnRYAkI1ettxQ=w1000-h667-no'
+                    <Card
+                        headerText='PROJECT MANAGEMENT'
+                        bodyText='Our proven and seamless workflow allows us to manage dynamic, time-sensitive construction projects of all sizes on 
+                        time and on budget.'
+                        imageAlt='Writing on Clipboard'
+                        imageUrl='https://lh3.googleusercontent.com/tHaUCHpZRNTnS7eq7Hlo3P9ZcyKy38PuSlAgycHIpPAT3z4vO5AkWRfH_YZ5_vKpVGgLjbkUgatNH5yvE9PXTuE6CUZi9Dw4my7rn5ZCW9cEBh1jq9MBBBm4jewqjVv2VG_fgqv9KxOgePt75_LgCdf0BINs6UPGb7BNlr1Xp94uIRpH87_jKQXgpH3l6ZTkpllZ4xX4P2P2XZ-vE7yVfq5VvauDYjmKYhjkWMaOnuPGeM6Mms4cx7mHhBWA49omXMEuvkDbU2CZDKVjQqNeHrN8ib7XIpkcTHo0-Xe_l5DrtezJ8ICaGwXSTGUcHp4fafeyDkY_tHxS2Le-PWLsKF3mj--NGNw_iLCP5wYugZAbeFeHOpKVsiFK6gv8fZJU-fusY21sVFGDHgajyCHY3ExEHWcWEmHYzMyZltvMNiw-DMROwnl0EZHynuindf_RGrfI7MeseELPL-aH1EaY7uG1chNZor7d4jqcosLEzFjf-XvOLJ7m5fPKCFHvlo3k0HkV0lXGLeahnA0QK5WRq-a54XGRMp3zu_MsyQhtvuBe9p6b4E7HUmyEKeGHZboWuSjyy_QIeHPAFw1f5Xe-5RgmfOrENw0_A4voPIsTKgAlcuTnc31fJr1lpcqktba0YrrbfRqLqKyRMT9c28jk-9KWuuHSD6bx5aqyZ6oJZD5OPtsKqdnRYAkI1ettxQ=w1000-h667-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        PROJECT MANAGEMENT
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        Our proven and seamless workflow allows us to manage dynamic, time-sensitive construction projects of all sizes on 
-                        time and on budget.
-                    </Typography>
                 </Grid>
             </Grid>
             <Grid container spacing={0} className={classes.containerGreyStyle}>
