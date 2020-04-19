@@ -15,7 +15,19 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '5em',
         paddingTop: '2em'
     },
-    gridItemCardStyle: {
-        paddingTop: '3em'
+    gridRightItemCardStyle: {        
+        marginTop: '3em',
+        paddingLeft: '5em'
+    },
+    gridLeftItemCardStyle: {
+        marginTop: '3em',
+        paddingRight: '5em'
+    },
+    darkGreyTitleStyle: {
+        color: theme.colors.darkGrey,
+        fontFamily: 'Avenir-Medium'
+    },
+    gridTopPaddingStyle: {
+        paddingTop: '2em'
     }
 }));
