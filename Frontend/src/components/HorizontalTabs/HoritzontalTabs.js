@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { useStyles } from './VerticalTabsStyles';
+import { useStyles } from './HorizontalTabsStyles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import { TabPanel, a11yProps } from './TabPanel';
 import Commercial from '../../misc/TabContent/OurWork/Commercial/Commercial';
+import Paper from '@material-ui/core/Paper';
+import { TabPanel, a11yProps } from './TabPanel';
 
-const VerticalTabs = () => {
+const HorizontalTabs = () => {
     const classes = useStyles();
-    const[value, setValue] = useState(0);
+    const [value, setValue] = useState(0);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
@@ -16,18 +17,17 @@ const VerticalTabs = () => {
     return (
         <div className={classes.root}>
             <Tabs
-                orientation='vertical'
-                variant='scrollable'
                 value={value}
                 onChange={handleChange}
-                aria-label='Our Work Vertical Tabs'
-                className={classes.tabs}
+                indicatorColor='primary'
+                textColor='primary'
+                centered
             >
-                <Tab label='Item One' {...a11yProps(0)} />
+                <Tab label='Commerical' {...a11yProps(0)} /> 
                 <Tab label='Item Two' {...a11yProps(1)} />
                 <Tab label='Item Three' {...a11yProps(2)} />
             </Tabs>
-            <TabPanel value={value} index={0} style={{width: '100%'}}>
+            <TabPanel value={value} index={0}>
                 <Commercial />
             </TabPanel>
             <TabPanel value={value} index={1}>
@@ -38,6 +38,6 @@ const VerticalTabs = () => {
             </TabPanel>
         </div>
     );
-}
+};
 
-export default VerticalTabs;
+export default HorizontalTabs;

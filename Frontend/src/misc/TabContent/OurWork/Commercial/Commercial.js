@@ -3,6 +3,7 @@ import { useStyles } from './CommercialStyles';
 import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
 import Card from '../../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
+import ImageBannerSection from '../../../../components/ImageBannerSection/ImageBannerSection';
 
 const Commercial = () => {
     const classes = useStyles();
@@ -98,6 +99,11 @@ const Commercial = () => {
                         headerAlign='center'
                     />
                 </Grid>
+            </Grid>
+            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                <ImageBannerSection
+                    imageUrl='https://lh3.googleusercontent.com/PFdcOmTvZpCtDrddCGG7Q04mWW7gdpHuh7kxwSZ2RmFrvDBoj-LF0qijSAhuqCD-MPaX8YZRCw-GmIiCUTYqXfG9Y6rP9LEOK1PYhdQFSC1atmqnMcSWtiwTgogRHE3CZvNSAyOTZBt3fGPKoYI5xZHWWSh7L_eyD_BwbhKE71bYu1CjayyVngsZ6VQKqaaMWnVpcrtb4udkldSJm5lB8xuXR-M9JlrjVwRHtiK5tzYc9ulY2HJ-CE7HbU6XDpbz2bb_XCiGm6YEkPkhjHShgS71GaTBHxsjepaz-GW20FI4FbUV67zjcvnuiwb3yllca--bNqW_b1hEvff-jSfK0ZU_y7T3wJh7MuXfyftc9FEojLYFBBYIcEcV9hp4BOc3qxb5y7f5wwzmOLhFlC_mU2Z_Y3nWjiyZZBrYAbrdDilwJk742-sRdR2UhcRuXI5U0_lARwDAfrbbKX_Za44E6RMZhVsKBvRiDNBNV3AgIaw9sKnou-pcQ7WrkBSeH5TzrcyORDEKUUczUh2PHi8lepJVMZCymzGG5kjRr_HTUUcYWhXDcyCmdaAKQ9gi5S0s4iPvxDENzy7PB_Oblr3O8zMhL7APn11O72aseZpnZRRKkJfKwOqey6YuQjd7BYJFv90tY7WxEcPgmtfhbj_Tpa5S7symn0LFcPCqnmtS-dqlvf2mS4xSiI1jwRfMmw=w1092-h310-no'
+                />
             </Grid>
         </div>
     );
