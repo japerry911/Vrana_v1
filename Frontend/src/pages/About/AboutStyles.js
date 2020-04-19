@@ -45,14 +45,6 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '5em',
         paddingTop: '2em'
     },
-    vranaRedSubtitleTextStyle: {
-        color: theme.colors.vranaRed,
-        fontFamily: 'Avenir-Medium'
-    },
-    darkGreyTitleStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium'
-    },
     ourLeadershipHeaderGridStyle: {
         paddingBottom: '3em'
     },
