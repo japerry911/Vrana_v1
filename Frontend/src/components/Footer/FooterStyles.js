@@ -5,7 +5,7 @@ export const useStyles = makeStyles(theme => ({
         width: '100%',
         backgroundColor: theme.colors.darkGrey,
         paddingTop: '2em',
-        paddingBottom: '3em'
+        paddingBottom: '3em',
     },
     whiteHeaderText: {
         color: theme.colors.textWhite,

@@ -3,6 +3,7 @@ import { useStyles } from './VerticalTabsStyles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import { TabPanel, a11yProps } from './TabPanel';
+import Commercial from '../../misc/TabContent/OurWork/Commercial/Commercial';
 
 const VerticalTabs = () => {
     const classes = useStyles();
@@ -26,8 +27,8 @@ const VerticalTabs = () => {
                 <Tab label='Item Two' {...a11yProps(1)} />
                 <Tab label='Item Three' {...a11yProps(2)} />
             </Tabs>
-            <TabPanel value={value} index={0}>
-                Item One
+            <TabPanel value={value} index={0} style={{width: '100%'}}>
+                <Commercial />
             </TabPanel>
             <TabPanel value={value} index={1}>
                 Item Two
