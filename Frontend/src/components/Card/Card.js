@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
-import { useStyles } from './ServicesCardStyle';
+import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 
-const ServicesCard = ({ readBool, bodyText, headerText, imageUrl, imageAlt }) => {
+const ServicesCard = ({ ctaText, bodyText, headerText, imageUrl, imageAlt }) => {
     const classes = useStyles();
 
     return (
@@ -20,7 +20,7 @@ const ServicesCard = ({ readBool, bodyText, headerText, imageUrl, imageAlt }) =>
                     {bodyText}
                 </Typography>
                 <Typography variant='body2' className={classes.redBodyStyle}>
-                    {readBool ? 'Read More >>' : 'Our Work >>'}
+                    {ctaText}
                 </Typography>
             </div>
         </Fragment>

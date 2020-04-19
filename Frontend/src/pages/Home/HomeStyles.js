@@ -53,35 +53,6 @@ export const useStyles = makeStyles(theme => ({
         borderStyle: 'solid',
         opacity: .77
     },
-    offerImageStyle: {
-        height: '10em',
-        maxWidth: 'auto',
-        borderRadius: 10
-    },
-    offerExTitleStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium',
-        width: '50%',
-        marginTop: '1em'
-    },
-    offerExDescStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir',
-        width: '50%'
-    },
-    redSubtitleTextStyle: {
-        color: theme.colors.vranaRed,
-        width: '100%',
-        fontFamily: 'Avenir-Medium',
-        textAlign: 'center',
-        marginTop: '3em'
-    },
-    greyTitleTextStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium',
-        width: '100%',
-        textAlign: 'center'
-    },
     offerContainerStyle: {
         marginTop: '2em'
     },

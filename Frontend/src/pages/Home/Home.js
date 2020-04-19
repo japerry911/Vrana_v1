@@ -5,6 +5,9 @@ import Button from '@material-ui/core/Button';
 import { useStyles } from './HomeStyles';
 import Paper from '@material-ui/core/Paper';
 import Footer from '../../components/Footer/Footer';
+import Card from '../../components/Card/Card';
+import CommonHeader from '../../components/CommonHeader/CommonHeader';
+import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 
 const Home = () => {
     const classes = useStyles();
@@ -28,71 +31,50 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'style={{paddingBottom: '2em'}}>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        QUALITY CONSTRUCTION
-                    </Typography>
-                    <Typography variant='h3' className={classes.greyTitleTextStyle}>
-                        WHAT WE OFFER
-                    </Typography>
-                    <img
-                        alt='Divider Lines'
-                        src='https://lh3.googleusercontent.com/INjEAK2y6tTD1E6E13RpomffqWM3yBCDBWDeyIjm4U640N-PYM61BIm4yEbirqMApY6LEmKx67KxUs4MRK85n-lTdEDBozsf-kz8fl1VmMoAx8wyTwClvjmpgNTiGL7vW0VhuADOluj3HDEo_vMH6b-Vu8r7cJvgRsayIJn_l3L63FNdCY0GylJghT-gx21XNWoWt_vmk8yEGue3ImIo2bBRItqss3lWuDzDdSxvwp-DC1jN5drWuCKvEhpkDkBYhc7k8BA2ScWFMKwBHo_qz0bWcGnuggM5JrqQtaFZ8A5giI3hkBUQb1L_rJeFbZxWs_HruFP5b3rz4a7yk5Sc12rm5WAEmNt017f056LOvre6TayvRpsfQelaB-gq2mtXdkIOmSfqNWuoNIOTAhNy2d1JGHnF93SmrIreXZJUtX1SyAtGEDQmCEmLuUCWlo4yM3uiDIPLmFHCnEfZPXuqQd_UQ2SbIcFO-UYbUQGcg4keJMABfxHjgjnDSx8YPaZaetSvbZDbnjSfJzg7gBAr9MIup3_9BwPdqVNyu5VgFTUndEQ2okVeQDHB_GjqjiBLylLh114ILB5YsATvU_I2Su8XxbaK-OCqrZ-kw0kFWd81F5h6cmoxt3ThL_fd27rQUO34fzXCPBsqXAoWoyFVgxgmC-BsvrUVyP0ilrqhY9H4Yy_si7favNitK_wWBg=w78-h6-no'
+                    <CommonHeader
+                        headerText='WHAT WE OFFER'
+                        headerTextColor='dark'
+                        subHeaderText='QUALITY CONSTRUCTION'
+                        dividerColor='dark'
+                        align='center'
                     />
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img
-                        alt='Finished building'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/Up28m-Krvje8BjxVjM9rbwg7xO68f7wv1iQsFYQf9bPRpYJ1k8EwlpWU3iKkQfMgsc-2S9OFTEL_V_k6AkoRlELny5JPThu4NRv3WtFMAbHiWP6gxkwmW3NOWhB2WGjEDhiw_vWO7GzTBWjwQS3ZEDEZ9UCql3IfFkh9tNQJTguwLcSEmYxI0rkq8ZfdggjMEqcGwXdt0Hgawx2lmk33olI3IvphVWCN85P1s_msuGcW9k6Sr_o7k-OlRC33vc5h0S4m6bO6F401z6Y_vpNIDfrORaFjmvtbjuVtzFGSvntzkxj11xpaSloa_SqwQ9iTUan9zxxZ0kq_DLpm8cl_cpyAOeCaRzXvnDVU72jBPUngV7SmHLJ9dxU7hSgXwezoXrq2Y-qTI8S-JO38wwJ7Z74zuGLX6PddnUIWCKe9RdSs4IjTZvxnLwSI7HeHTjcGlQ18IU5iUadS5pmwvOdO5se2NCSpt-Gd5XSeXTgDVGnm7gPqFlj59tTA2DNde05K1Zfj4s7ae52xMG1pw6-WF01I6QY9-B7eXaexJeJ-vcF8a3gcnZ5pLX_uTwqrEpT_y7zhd47s1RlsbfvBKrnLG2QIZHBUi3g1Ipf40VxqmQBtXGkRKkrrflkA5bDto93U5u1GPeTycPn3Pyk49v2QfqOIuX4PqMrQP4Y7bV04e0KS7Ldek7GZUPB3As_b7A=w275-h183-no'
+                    <Card
+                        headerText='CONSTRUCTION EXCELLENCE'
+                        bodyText='We deliver both large and small construction projects including Commercial, Retail, Housing, Religious,
+                        Educational, Parking Structures, and Civil.'
+                        imageAlt='Finished building'
+                        imageUrl='https://lh3.googleusercontent.com/Up28m-Krvje8BjxVjM9rbwg7xO68f7wv1iQsFYQf9bPRpYJ1k8EwlpWU3iKkQfMgsc-2S9OFTEL_V_k6AkoRlELny5JPThu4NRv3WtFMAbHiWP6gxkwmW3NOWhB2WGjEDhiw_vWO7GzTBWjwQS3ZEDEZ9UCql3IfFkh9tNQJTguwLcSEmYxI0rkq8ZfdggjMEqcGwXdt0Hgawx2lmk33olI3IvphVWCN85P1s_msuGcW9k6Sr_o7k-OlRC33vc5h0S4m6bO6F401z6Y_vpNIDfrORaFjmvtbjuVtzFGSvntzkxj11xpaSloa_SqwQ9iTUan9zxxZ0kq_DLpm8cl_cpyAOeCaRzXvnDVU72jBPUngV7SmHLJ9dxU7hSgXwezoXrq2Y-qTI8S-JO38wwJ7Z74zuGLX6PddnUIWCKe9RdSs4IjTZvxnLwSI7HeHTjcGlQ18IU5iUadS5pmwvOdO5se2NCSpt-Gd5XSeXTgDVGnm7gPqFlj59tTA2DNde05K1Zfj4s7ae52xMG1pw6-WF01I6QY9-B7eXaexJeJ-vcF8a3gcnZ5pLX_uTwqrEpT_y7zhd47s1RlsbfvBKrnLG2QIZHBUi3g1Ipf40VxqmQBtXGkRKkrrflkA5bDto93U5u1GPeTycPn3Pyk49v2QfqOIuX4PqMrQP4Y7bV04e0KS7Ldek7GZUPB3As_b7A=w275-h183-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        CONSTRUCTION EXCELLENCE
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        We deliver both large and small construction projects including Commercial, Retail, Housing, Religious,
-                        Educational, Parking Structures, and Civil.
-                    </Typography>
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img 
-                        alt='Meeting in Gym'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/LOyEpK6-KmjJsPz8UfjSSudU_aBUaQ_h-w9Pu9pGx9SvZyRv1K0hooWtt83kTtNdfICajaxnZ16CBdQgBsqxd3qSApQa14XyNwC9aa1R1IpkKtwBTEp6G9biFRgl2OgRbo7FcyNHVYOxJuEyhT12BTYcGaX1ZsAha9qPADfNBeN6vbIXW5UNTlj2HkkZnDFDnlQDgMWuURo73_T7xwt72u1sTXh5jifUgjJLcW83AW8jX8XK6L41VDIR_O-djxM_S74kVW0FBXheESOPMeg6PDE99qlX43W3Vys2pXBP2KhNG99BaTSmcxTgfDtrx0E29J3ExYzm6kDiXIIxUBqQh0zNQYCcPUaPctygJJiXf0IkvvVllwyWgHreSgZc3MuzvPR2PexKwKYt38gpIrzrVu1E_0Q5Q_21q9knG9eAHCgXt9WV31p54nmn3YA6mXwVetpMQqnH5f5jrNICCwXr_yORxU2E6dMW1GyLAJwoLFGJiMJ-kLaaXL9PlEAnL1pxHAL55iYKQ0WDlim5BXvabpt9G7wG3rDhahE06C8viFV4hUsR69LbkNFOEGek1cqj2dbbRrKHapJRHlpRTI2tFVYCnQPogbwO8bP6mGvHJSoVcGV0hJbKUsd4eF0IYZerQHcEtLkbKvaHklYEnJBL4fcaZ4iUP-4tCCrz2OMCrLmrRTl3Hp88SXBtKPqHjA=w1200-h800-no'
+                    <Card
+                        headerText='SKILLED WORKMANSHIP'
+                        bodyText='Our experienced team of construction professionals has the skills to deliver high quality projects every time - no matter
+                        the size and scope.'
+                        imageAlt='Meeting in Gym'
+                        imageUrl='https://lh3.googleusercontent.com/LOyEpK6-KmjJsPz8UfjSSudU_aBUaQ_h-w9Pu9pGx9SvZyRv1K0hooWtt83kTtNdfICajaxnZ16CBdQgBsqxd3qSApQa14XyNwC9aa1R1IpkKtwBTEp6G9biFRgl2OgRbo7FcyNHVYOxJuEyhT12BTYcGaX1ZsAha9qPADfNBeN6vbIXW5UNTlj2HkkZnDFDnlQDgMWuURo73_T7xwt72u1sTXh5jifUgjJLcW83AW8jX8XK6L41VDIR_O-djxM_S74kVW0FBXheESOPMeg6PDE99qlX43W3Vys2pXBP2KhNG99BaTSmcxTgfDtrx0E29J3ExYzm6kDiXIIxUBqQh0zNQYCcPUaPctygJJiXf0IkvvVllwyWgHreSgZc3MuzvPR2PexKwKYt38gpIrzrVu1E_0Q5Q_21q9knG9eAHCgXt9WV31p54nmn3YA6mXwVetpMQqnH5f5jrNICCwXr_yORxU2E6dMW1GyLAJwoLFGJiMJ-kLaaXL9PlEAnL1pxHAL55iYKQ0WDlim5BXvabpt9G7wG3rDhahE06C8viFV4hUsR69LbkNFOEGek1cqj2dbbRrKHapJRHlpRTI2tFVYCnQPogbwO8bP6mGvHJSoVcGV0hJbKUsd4eF0IYZerQHcEtLkbKvaHklYEnJBL4fcaZ4iUP-4tCCrz2OMCrLmrRTl3Hp88SXBtKPqHjA=w1200-h800-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        SKILLED WORKMANSHIP
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        Our experienced team of construction professionals has the skills to deliver high quality projects every time - no matter
-                        the size and scope.
-                    </Typography>
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
-                    <img 
-                        alt='Writing on Clipboard'
-                        className={classes.offerImageStyle}
-                        src='https://lh3.googleusercontent.com/tHaUCHpZRNTnS7eq7Hlo3P9ZcyKy38PuSlAgycHIpPAT3z4vO5AkWRfH_YZ5_vKpVGgLjbkUgatNH5yvE9PXTuE6CUZi9Dw4my7rn5ZCW9cEBh1jq9MBBBm4jewqjVv2VG_fgqv9KxOgePt75_LgCdf0BINs6UPGb7BNlr1Xp94uIRpH87_jKQXgpH3l6ZTkpllZ4xX4P2P2XZ-vE7yVfq5VvauDYjmKYhjkWMaOnuPGeM6Mms4cx7mHhBWA49omXMEuvkDbU2CZDKVjQqNeHrN8ib7XIpkcTHo0-Xe_l5DrtezJ8ICaGwXSTGUcHp4fafeyDkY_tHxS2Le-PWLsKF3mj--NGNw_iLCP5wYugZAbeFeHOpKVsiFK6gv8fZJU-fusY21sVFGDHgajyCHY3ExEHWcWEmHYzMyZltvMNiw-DMROwnl0EZHynuindf_RGrfI7MeseELPL-aH1EaY7uG1chNZor7d4jqcosLEzFjf-XvOLJ7m5fPKCFHvlo3k0HkV0lXGLeahnA0QK5WRq-a54XGRMp3zu_MsyQhtvuBe9p6b4E7HUmyEKeGHZboWuSjyy_QIeHPAFw1f5Xe-5RgmfOrENw0_A4voPIsTKgAlcuTnc31fJr1lpcqktba0YrrbfRqLqKyRMT9c28jk-9KWuuHSD6bx5aqyZ6oJZD5OPtsKqdnRYAkI1ettxQ=w1000-h667-no'
+                    <Card
+                        headerText='PROJECT MANAGEMENT'
+                        bodyText='Our proven and seamless workflow allows us to manage dynamic, time-sensitive construction projects of all sizes on 
+                        time and on budget.'
+                        imageAlt='Writing on Clipboard'
+                        imageUrl='https://lh3.googleusercontent.com/tHaUCHpZRNTnS7eq7Hlo3P9ZcyKy38PuSlAgycHIpPAT3z4vO5AkWRfH_YZ5_vKpVGgLjbkUgatNH5yvE9PXTuE6CUZi9Dw4my7rn5ZCW9cEBh1jq9MBBBm4jewqjVv2VG_fgqv9KxOgePt75_LgCdf0BINs6UPGb7BNlr1Xp94uIRpH87_jKQXgpH3l6ZTkpllZ4xX4P2P2XZ-vE7yVfq5VvauDYjmKYhjkWMaOnuPGeM6Mms4cx7mHhBWA49omXMEuvkDbU2CZDKVjQqNeHrN8ib7XIpkcTHo0-Xe_l5DrtezJ8ICaGwXSTGUcHp4fafeyDkY_tHxS2Le-PWLsKF3mj--NGNw_iLCP5wYugZAbeFeHOpKVsiFK6gv8fZJU-fusY21sVFGDHgajyCHY3ExEHWcWEmHYzMyZltvMNiw-DMROwnl0EZHynuindf_RGrfI7MeseELPL-aH1EaY7uG1chNZor7d4jqcosLEzFjf-XvOLJ7m5fPKCFHvlo3k0HkV0lXGLeahnA0QK5WRq-a54XGRMp3zu_MsyQhtvuBe9p6b4E7HUmyEKeGHZboWuSjyy_QIeHPAFw1f5Xe-5RgmfOrENw0_A4voPIsTKgAlcuTnc31fJr1lpcqktba0YrrbfRqLqKyRMT9c28jk-9KWuuHSD6bx5aqyZ6oJZD5OPtsKqdnRYAkI1ettxQ=w1000-h667-no'
                     />
-                    <Typography variant='h6' className={classes.offerExTitleStyle}>
-                        PROJECT MANAGEMENT
-                    </Typography>
-                    <Typography variant='body2' className={classes.offerExDescStyle}>
-                        Our proven and seamless workflow allows us to manage dynamic, time-sensitive construction projects of all sizes on 
-                        time and on budget.
-                    </Typography>
                 </Grid>
             </Grid>
             <Grid container spacing={0} className={classes.containerGreyStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        PORTFOLIO
-                    </Typography>
-                    <Typography variant='h3' className={classes.whiteTitleTextStyle}>
-                        OUR PROJECTS
-                    </Typography>
-                    <img
-                        alt='Divider Lines'
-                        src='https://lh3.googleusercontent.com/eOL4ByNZdsEe5047ZY_tPaUASAddInxOp_n1ey1Cp-y4kopwS8gCSqD6zRfg1RYkdVtuIbSRi4WRVAMcMDT-ybj-s_cfmKujmmrisXuR5xC5qCRMZeNBErgxsAvhgQbtmaLSo6zkGL2xvYlpPjcaqRdDzJzGEzsoMwquIgC7TimXVduaJyYsbr3jTmT1TPf73bNTtGcc3kr9ALXDCCJ2YrGWHbQhObY4muACT2I5pneCOooeYNQIV46Q5CxRFOLHJiwP8__Ow3esZEooHhgh-8ZP1l-EM1WvHi4Z9-ir4K8FOzxn1wintCl2u77nYDWFeuV6rKnvP7C04N1reWiTKESQO6jO56sTt-akuLLVdhrYkw266OK6-4phfiRhd_zhLv-pE6vA5vTU7ipJxe-_ANJsdKICRQXjHcmA7i3hJw0ZtE5VMC8suWsKQ70TYvGKtB8944QL2FM9h4aG77D-WWX9-lW1DVpFiyNY8rs0sjyZCwkuZ90ypTP5gFOG2W22pZkSxuFmrhGLUpBJ5vQhnTLBrwZsHpO2RsOK9h1Q3Hb2ZC9YyEE_fmWC0UUGigcjx1_MDqS4uWTx0fV_iaaoSKqFCZwJOjsRPmuRdumrZO1TnDgusiET-_hOqmLcLcxCJmiadK9q32L2yfOORIOMfzkbrlKHjJ6fXDvSRwHTAqW3qtWSRoJHZzx_pY_WfA=w78-h7-no'
+                    <CommonHeader
+                        headerText='OUR PROJECTS'
+                        headerTextColor='light'
+                        subHeaderText='PORTFOLIO'
+                        dividerColor='light'
+                        align='center'
                     />
                 </Grid>
             </Grid>
@@ -160,21 +142,12 @@ const Home = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Grid container spacing={0} className={classes.ourReasonContainerStyle} direction='column'>
                         <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
-                            <Typography
-                                variant='body1' 
-                                className={classes.redSubtitleTextNoAlignStyle}
-                            >
-                                OUR REASON
-                            </Typography>
-                            <Typography 
-                                variant='h3'
-                                className={classes.greyBoldTitle}
-                            >
-                                WHY CHOOSE US
-                            </Typography>
-                            <img
-                                alt='Divider lines'
-                                src='https://lh3.googleusercontent.com/-WoIRoCsWbNn-w5PicmSo4KQxfX_mnQDYasYHFp046d7lTMlP4Kv6ikQokgzCV9HTazoBaCVP9HRswIbFO8NJD6MKjAwgCa6DaCnVLc9DmrxaphFgetCyAl39GBUN2Zw8fACkDY0nlkPwXkVY16Gk902bUdX_nThviMO6Jn6EOqBTQyNNEJjPDURjtdPtcfVnHdyqrCd8Ua_B9s14ljmpIdbNq9y3Uq5A-rN6LbtsL8DqL7rjdriKqHl72PEnmoW5EqjUXo83SAc0zEoRhvQs733GCkKcDV_W6EgVMX-C4gZ5EXoHbsKVaH2vFBpW0qwM1yiYXXeBChJC_dKAYJBUkC7DJPjnQTMrLcEl0-FlzFzwyYICmQqOylq37VeAqnJrViUfLd9jCOv6nMcPX5SGkRqFts9a8rKJ8V_xue4Pc69ubcgMepachZiyeW01WblpUvA2CXMC-5OkyHPTfLBEMV0vysxrQ_Chye7Pd4hT2GeLmqftj1Ka_JGSf0H8WWdIuphGj0wfXtUcVEktY0bN8pVAjYf2eE8i_asf0lwTKO_FViI3wA17l6nQcD5KVZeM0FUB8P3kNMnULQ_1fbcHMqeHG3yBsJboZh2uOb0YO0nh6-7j04A38sbs58l7IndjwwGwnBM3C7XsVZ0PXCuKtOwGGxL70pUezlJb7OLP9njGNNHHth-5ndF4yCcmw=w79-h6-no'
+                            <CommonHeader
+                                headerText='WHY CHOOSE US'
+                                headerTextColor='dark'
+                                subHeaderText='OUR REASON'
+                                dividerColor='left-dark'
+                                align='left'
                             />
                         </Grid>
                         <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
@@ -243,15 +216,11 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        NEWS & BLOG
-                    </Typography>
-                    <Typography variant='h3' className={classes.greyTitleTextStyle}>
-                        IN THE NEWS
-                    </Typography>
-                    <img 
-                        alt='Divider lines'
-                        src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                    <CommonHeader
+                        headerText='IN THE NEWS'
+                        headerTextColor='dark'
+                        subHeaderText='NEWS & BLOG'
+                        dividerColor='dark'
                     />
                 </Grid>
             </Grid>
@@ -326,15 +295,11 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' className={classes.gridBottomPaddingStyle}>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        CLIENTS
-                    </Typography>
-                    <Typography variant='h3' className={classes.greyTitleTextStyle}>
-                        WHO WE SERVE
-                    </Typography>
-                    <img 
-                        alt='Divider lines'
-                        src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                    <CommonHeader 
+                        headerText='WHO WE SERVE'
+                        subHeaderText='CLIENTS'
+                        dividerColor='dark'
+                        headerTextColor='dark'
                     />
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
