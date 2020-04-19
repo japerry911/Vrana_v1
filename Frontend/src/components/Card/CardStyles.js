@@ -9,7 +9,7 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir-Medium',
         color: theme.colors.darkGrey,
         paddingTop: '1em',
-        textAlign: 'left',
+        textAlign: props => props.headerAlign ? props.headerAlign : 'left',
         width: '50%'
     },
     darkGreyBodyStyle: {

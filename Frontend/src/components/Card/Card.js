@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 
-const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt }) => {
-    const classes = useStyles();
+const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign }) => {
+    const classes = useStyles({ headerAlign });
 
     return (
         <Fragment>
