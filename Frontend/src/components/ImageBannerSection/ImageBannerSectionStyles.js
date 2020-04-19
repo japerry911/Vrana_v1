@@ -15,5 +15,5 @@ export const useStyles = makeStyles(theme => ({
     headerTextStyle: {
         color: theme.colors.textWhite,
         fontFamily: 'Avenir-Bold'
-    },
+    }
 }));

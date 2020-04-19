@@ -7,6 +7,7 @@ import Paper from '@material-ui/core/Paper';
 import Footer from '../../components/Footer/Footer';
 import Card from '../../components/Card/Card';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
+import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 
 const Home = () => {
     const classes = useStyles();
@@ -35,6 +36,7 @@ const Home = () => {
                         headerTextColor='dark'
                         subHeaderText='QUALITY CONSTRUCTION'
                         dividerColor='dark'
+                        align='center'
                     />
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>
@@ -72,6 +74,7 @@ const Home = () => {
                         headerTextColor='light'
                         subHeaderText='PORTFOLIO'
                         dividerColor='light'
+                        align='center'
                     />
                 </Grid>
             </Grid>
@@ -139,21 +142,12 @@ const Home = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                     <Grid container spacing={0} className={classes.ourReasonContainerStyle} direction='column'>
                         <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
-                            <Typography
-                                variant='body1' 
-                                className={classes.redSubtitleTextNoAlignStyle}
-                            >
-                                OUR REASON
-                            </Typography>
-                            <Typography 
-                                variant='h3'
-                                className={classes.greyBoldTitle}
-                            >
-                                WHY CHOOSE US
-                            </Typography>
-                            <img
-                                alt='Divider lines'
-                                src='https://lh3.googleusercontent.com/-WoIRoCsWbNn-w5PicmSo4KQxfX_mnQDYasYHFp046d7lTMlP4Kv6ikQokgzCV9HTazoBaCVP9HRswIbFO8NJD6MKjAwgCa6DaCnVLc9DmrxaphFgetCyAl39GBUN2Zw8fACkDY0nlkPwXkVY16Gk902bUdX_nThviMO6Jn6EOqBTQyNNEJjPDURjtdPtcfVnHdyqrCd8Ua_B9s14ljmpIdbNq9y3Uq5A-rN6LbtsL8DqL7rjdriKqHl72PEnmoW5EqjUXo83SAc0zEoRhvQs733GCkKcDV_W6EgVMX-C4gZ5EXoHbsKVaH2vFBpW0qwM1yiYXXeBChJC_dKAYJBUkC7DJPjnQTMrLcEl0-FlzFzwyYICmQqOylq37VeAqnJrViUfLd9jCOv6nMcPX5SGkRqFts9a8rKJ8V_xue4Pc69ubcgMepachZiyeW01WblpUvA2CXMC-5OkyHPTfLBEMV0vysxrQ_Chye7Pd4hT2GeLmqftj1Ka_JGSf0H8WWdIuphGj0wfXtUcVEktY0bN8pVAjYf2eE8i_asf0lwTKO_FViI3wA17l6nQcD5KVZeM0FUB8P3kNMnULQ_1fbcHMqeHG3yBsJboZh2uOb0YO0nh6-7j04A38sbs58l7IndjwwGwnBM3C7XsVZ0PXCuKtOwGGxL70pUezlJb7OLP9njGNNHHth-5ndF4yCcmw=w79-h6-no'
+                            <CommonHeader
+                                headerText='WHY CHOOSE US'
+                                headerTextColor='dark'
+                                subHeaderText='OUR REASON'
+                                dividerColor='left-dark'
+                                align='left'
                             />
                         </Grid>
                         <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
@@ -222,15 +216,11 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        NEWS & BLOG
-                    </Typography>
-                    <Typography variant='h3' className={classes.greyTitleTextStyle}>
-                        IN THE NEWS
-                    </Typography>
-                    <img 
-                        alt='Divider lines'
-                        src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                    <CommonHeader
+                        headerText='IN THE NEWS'
+                        headerTextColor='dark'
+                        subHeaderText='NEWS & BLOG'
+                        dividerColor='dark'
                     />
                 </Grid>
             </Grid>
@@ -305,15 +295,11 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' className={classes.gridBottomPaddingStyle}>
-                    <Typography variant='body1' className={classes.redSubtitleTextStyle}>
-                        CLIENTS
-                    </Typography>
-                    <Typography variant='h3' className={classes.greyTitleTextStyle}>
-                        WHO WE SERVE
-                    </Typography>
-                    <img 
-                        alt='Divider lines'
-                        src='https://lh3.googleusercontent.com/NKXP1PGyznAL_VrZrcaboRhFoBew6GQM0OleQQqYiHsdiD1bbbJIriWBKHxlYKKr3ZTjFtdnPtQpxFGkmh9j2y1KASvY2xHN0dBkQ65OOCCTwReLhMD5BbputklUTw2whYYyFK1ysAYFr1HLkNezkYZBAAIwpe4u6vnWUjOO1gBnLF1g_vvOu2VvoL82VWpbggDt2uQyuebYaIaEj4lEr3xxCx2RdYqJY8aXiBfQoOZSzX8lMI2f_F-dypVxHuDdrikwE01H69M_Uvukwp51OO_V1Ywfldv2q-V6LY6EvehE3QwFUz99Ly4IispzYImPZiOnd-0nz9dYbEYkdHxOKTYn4n4WbjVq87OkEHxe_BKSqlZonuFjmgukGvVpgB0BGOTy3jpcSZkBaOb5phGxnBmOMIXbCx6WJniQ9xuicSU4Y03SfErLkLrROalaqTb-DKWtucAJhyf-5oJb7JIe-263phN1NmYJ6F8_wZLalmA1FaNE_srJmaxdMo1ICmhD5Be4jXU10RyR8uk1Y7WI_dm3h6TpNNMc9Zw97tg40nefDNWiaJjQrUvqRi_TJSHajvMLwC3bdRT0bCEVW7A0p00aTRGV4l3FeYZ1ve6UnmWT1DrwcLyJe9zWP5CuXPRRFSYtdD7bfH3h_98pMLW8MEjJrSbXkvpvZp7wYQ5oyenOUUzk4rRvzZSP-ccZXQ=w78-h6-no'
+                    <CommonHeader 
+                        headerText='WHO WE SERVE'
+                        subHeaderText='CLIENTS'
+                        dividerColor='dark'
+                        headerTextColor='dark'
                     />
                 </Grid>
                 <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>

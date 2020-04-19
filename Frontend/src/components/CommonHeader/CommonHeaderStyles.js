@@ -5,13 +5,13 @@ export const useStyles = makeStyles(theme => ({
         color: theme.colors.vranaRed,
         width: '100%',
         fontFamily: 'Avenir-Medium',
-        textAlign: 'center',
+        textAlign: props => props.align,
         marginTop: '3em'
     },
     greyTitleTextStyle: {
         color: props => props.headerTextColor === 'dark' ? theme.colors.darkGrey : theme.colors.textWhite,
         fontFamily: 'Avenir-Medium',
         width: '100%',
-        textAlign: 'center'
+        textAlign: props => props.align
     }
 }));
