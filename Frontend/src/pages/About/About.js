@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Footer from '../../components/Footer/Footer';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
+import CommonHeader from '../../components/CommonHeader/CommonHeader';
 
 const About = () => {
     const classes = useStyles();
@@ -53,15 +54,11 @@ const About = () => {
             </Grid>
             <Grid container spacing={0} className={classes.whiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center' className={classes.ourLeadershipHeaderGridStyle}>
-                    <Typography variant='body1' className={classes.vranaRedSubtitleTextStyle}>
-                        TEAM BUILDING
-                    </Typography>
-                    <Typography variant='h3' className={classes.darkGreyTitleStyle}>
-                        OUR LEADERSHIP
-                    </Typography>
-                    <img
-                        alt='Divider lines'
-                        src='https://lh3.googleusercontent.com/uJ0jIQxTAVM1_61xju7n-z0LVVvkFcOaYKW3uX-ikc9rLilUEy7KJ2bQp1Eif8oga0qR69tnp_IW_jCRfgFKGEm8kvhASMqxGWHVX8skyNtszomzQfYXhKMg2NRa-mHnK8DLjU0bj2aG8MTVgH7iGTEfpT1kWDnRLnKvTsDLMv44mMk6N_7h3rRP-ubsnMYTgbVN1cwJV-lXE_ECSDbSRgRtcN4mbge3hONerSKsgv2VG-vEoqjgOgTozOimAGtDVgZrxXhNblk2YSDU-bqQeQeCR0Y0bn1JgWQ5OEoBN13iN2pEFd-zCbFQn-y5DqKJVry9VO0LTWN4mohaYXHlCKBy-IrrwbJDLm0ePjrRHKZhOvgDNh1fOqzpcRnl2FM9-AwqoFoACVvQ5MTOxd55YWPRd50gqAGLl_hjKZ0jidzZQST7Ol1jo7nYr6SmK6uFOjqvbAWCSg3xwlbJJyqtFiy-KXmvNaChRVbCOXDnL51VbDEGrKiP1mNv92BfDp0mJeFtkxwDc_bmMy6g50sx9F9Gtg9xRBinsaD4vK1_KTJ6-mv4OR1B4V2ZjqrAs4ucLv6hiDnEnZYtDemxVynl7nNHaPU-13ieGqqjZX6n-lc8DvyFJAK75m2QzaFahYUwwSJ4axOoBOKwIX1TTS01hsvjI22-EhydDjVxlwzZ9fflmH8KPsiGA7fXekHDyw=w78-h6-no'
+                    <CommonHeader
+                        headerText='OUR LEADERSHIP'
+                        subHeaderText='TEAM BUILDING'
+                        headerTextColor='dark'
+                        dividerColor='dark'
                     />
                 </Grid>
                 <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
