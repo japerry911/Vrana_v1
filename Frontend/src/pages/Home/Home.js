@@ -280,17 +280,17 @@ const Home = () => {
             </Grid>
             <Grid container spacing={0}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
-                    <div className={classes.contactUsDiv}>
-                        <Typography variant='h3' className={classes.whiteTitleTextBoldStyle}>
-                            EXCEPTIONAL PEOPLE GIVING YOU EXCEPTIONAL RESULTS
-                        </Typography>
-                        <Typography variant='body2' className={classes.whiteText60Style}>
-                            We offer skilled worksmanship, attentive project management, all at an economical price - which 
-                            means you don't have to compromise. Our clients enjoy a measure of confidence, both in construction quality 
-                            and economy, unique in our industry.
-                        </Typography>
-                        <Button className={classes.greyButtonStyle}>CONTACT US</Button>
-                    </div>
+                    <ImageBannerSection 
+                        headerText='EXCEPTIONAL PEOPLE GIVING YOU EXCEPTIONAL RESULTS'
+                        bodyText="We offer skilled worksmanship, attentive project management, all at an economical price - which 
+                        means you don't have to compromise. Our clients enjoy a measure of confidence, both in construction quality 
+                        and economy, unique in our industry."
+                        width='60%'
+                        buttonText='CONTACT US'
+                        flexColumn
+                        justify='space-evenly'
+                        imageUrl='https://lh3.googleusercontent.com/azFn18eoovVDbPJpaJ_WDQZRaaBAQaAViqd12iH93VCyMkjDDYeAD1YKOiNXBZL_SUKq0FXrRW-I8WCvbOlRjEKQkC05kSW5zfLu3j2hkUUoxPMWystymKxtoAhNIgKgKIC5UbY5vYuLbw6aCgdRK2D8_PRzX7Kjvp7aAHsjW7lm_riez1rh2rgLNazoa2rqgiuIFixnH93TUk7CAn48Ylq6QI5OLi0MQWA71EbL5Pxm-U9bhkOac34ZtJxWJ07bqP3jWaroqnPyQKa1pmn95yafE5cp6soL43QQ3S4JNpn6TJ1Jh1-lMSWfmZ3PHwtKSz726ZYxdkhu2KB4JMPyi7b0Yau_1NCxULYAidt4kJd0t8ZttIT6hewf0X-kCxewhsqq17dN0od3IddneKvv3pX4l4u8XTlGFInhNhjf-E4IiyUR73eKU-Zy8N6yOgNd-rHIxl_VbNeluazlOUdlMviMOza6_7mRuCnxG3LR6azUtjrL6dfw8jS64kIt_gArsTS5_La0WiFgwAFKkQwMcEBZjjwxsWL4t6a7BvUPFHYzdtOhwwryAf5hqS1bFSDu5QSpm9ceE7PPHXFgCOLuBJ9R8tiOk7LnJtH0Ce6Ann5kYMATOscCRvdEfXzyWpE9eMiPg4jEopDsD1sK4t6Z1JOyR5McNrvH8QCI0l-BS-D6262UWtje5DU3pFUr4g=w1470-h977-no'
+                    />
                 </Grid>
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>

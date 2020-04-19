@@ -46,6 +46,7 @@ const About = () => {
             </Grid>
             <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <ImageBannerSection
+                    justify='center'
                     headerText='MEET OUR TEAM'
                     imageUrl='https://lh3.googleusercontent.com/MoIQkutz9Z3g388yoD6kZLhFFvthDvd7JiIGibptxXTYgD1GCFqxSGHwvakaQUVIjphC42YwUfGot-uzLSWlvaSx3QOx8wmIuM0j9qcdwoymOWZyLqVlaacJ6t7eews2WzBzva__NDHZFYaTzWvqL79bXvdLTIL-0JcC-qqQo4h5pjV8BvhMFh3Km4kjqzFPdDZS7_AbJE736O8j-kiVJBwver2s8b61WxTd5U0jediy_xFFxucVI7M9QnU_Z_-01aFuUc7j8M3stAZiGjyoCLH8BUROZ6LaGmZzpsftmIWFXO4u1Cj8HqlAHax5YIGKTwbiMRriQB-JG4k0sIkGTzTeolLKUL7pbhvV5faaLcQ5sMQCFjWSCjvtPFqlMOuqMPK_-SzG04Zz1V1JodPbzXGNzpIgDIW1LUZKNmzshYOWZU36doCVs2ezBqqZyj4Uyzojwrlh8YnpJptoSoR50db9QdHfXI-gJhjIXIzeXj1BlmombmTaSHhEa4r-2ntFfil69oVxQ5pvXVz-HTetkRFTTDVmTE7GgTQPTfZCt7oMvmTgypbxDiy_Bfa_637mpp3Ft94n9g3Uc7M2rLNWzvtyZzIXCwM-P8G2aBe6aY_D6QOJ1fFP-LeEWGiDywAdwyqCTSuzuRn2bwZylVPuFflBSq9I55W_V6PqMMM99t_dqiqGRHU3MQLEXs4SDw=w512-h240-no'
                 />

@@ -66,6 +66,7 @@ const Services = () => {
             </Grid>
             <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <ImageBannerSection
+                    justify='center'
                     imageUrl='https://lh3.googleusercontent.com/aZpbgePHG7bN05f0ukjNQi4iFgH2kMIGzja0lOxF3dAXnYvMgQ0Zswy1ELjsil-S6xNQFVBql7S7ASMTeYflO6BdYG68yHUg1MwtCEdj6ENheI05e6xY2317cUlXq3AiJIOjVsenOx4dKKBuF0MuiVtbGH0LfwEGbYqamQhIUweCo4alqV1MC5DDpb3uAxg7mwt6PYTywfk_bd7M4W_KfOrXEyypx0sW8ZJ7vei-jNGdPY9xvEtCTuoSnpp2rQHN_sYPio0DSn4Ar1BkBzBxXL6a87GCkPKIpB5a0yc95j3DII3uBGOgSvGi8-AwddPkv0y2XJznpLnfUH3tQv4_kHyU-n1l6ig-n7vC5FIaJryp3ocLRrCXTB6oGYFWwAs2MCcsXh_db2m6EWbaTmnZSkQmrLErg4-UzaZJUN3Tow88gJhk_byhxWqGHbaneX7rTjjV9GcBSSKTSMsX060gZZqA3g_65KMBPb9gQuCyYha21b_ybZZIqd_B69_dJz4Xs8nqhD8QFGpOL2z1CFc7lctYJTQFQFP7PhxQ0OJwn-ZW48Vv676xdDuxPKUtEUbt7OJTTkhpnQMOOI0I9-KSZbph7cNqQagePSUwIXpc1KlYmq3L_oqgQUkGSVlMkwdFuCAVhKUZDMtQoUVwMVUvMitVxr08EC7XdO0RGbWEJWKwFw2G1Qw2f_qocc72Rg=w980-h358-no'
                 />
             </Grid>
