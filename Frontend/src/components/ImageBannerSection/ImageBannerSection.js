@@ -11,9 +11,11 @@ const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, button
             <Typography variant='h2' className={classes.headerTextStyle}>
                 {headerText}
             </Typography>
+            {bodyText ?
             <Typography variant='body2' className={classes.whiteText60Style}>
                 {bodyText}
             </Typography>
+            : null}
             {buttonText ?
             <Button className={classes.greyButtonStyle}>{buttonText}</Button>
             : null}
