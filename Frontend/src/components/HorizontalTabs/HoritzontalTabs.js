@@ -3,7 +3,6 @@ import { useStyles } from './HorizontalTabsStyles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Commercial from '../../misc/TabContent/OurWork/Commercial/Commercial';
-import Paper from '@material-ui/core/Paper';
 import { TabPanel, a11yProps } from './TabPanel';
 
 const HorizontalTabs = () => {

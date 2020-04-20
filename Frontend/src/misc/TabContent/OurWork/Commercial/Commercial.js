@@ -4,6 +4,7 @@ import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
 import Card from '../../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
 import ImageBannerSection from '../../../../components/ImageBannerSection/ImageBannerSection';
+import Typography from '@material-ui/core/Typography';
 
 const Commercial = () => {
     const classes = useStyles();
@@ -100,10 +101,49 @@ const Commercial = () => {
                     />
                 </Grid>
             </Grid>
-            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} align='center' className={classes.imageBannerGridStyle}>
                 <ImageBannerSection
                     imageUrl='https://lh3.googleusercontent.com/PFdcOmTvZpCtDrddCGG7Q04mWW7gdpHuh7kxwSZ2RmFrvDBoj-LF0qijSAhuqCD-MPaX8YZRCw-GmIiCUTYqXfG9Y6rP9LEOK1PYhdQFSC1atmqnMcSWtiwTgogRHE3CZvNSAyOTZBt3fGPKoYI5xZHWWSh7L_eyD_BwbhKE71bYu1CjayyVngsZ6VQKqaaMWnVpcrtb4udkldSJm5lB8xuXR-M9JlrjVwRHtiK5tzYc9ulY2HJ-CE7HbU6XDpbz2bb_XCiGm6YEkPkhjHShgS71GaTBHxsjepaz-GW20FI4FbUV67zjcvnuiwb3yllca--bNqW_b1hEvff-jSfK0ZU_y7T3wJh7MuXfyftc9FEojLYFBBYIcEcV9hp4BOc3qxb5y7f5wwzmOLhFlC_mU2Z_Y3nWjiyZZBrYAbrdDilwJk742-sRdR2UhcRuXI5U0_lARwDAfrbbKX_Za44E6RMZhVsKBvRiDNBNV3AgIaw9sKnou-pcQ7WrkBSeH5TzrcyORDEKUUczUh2PHi8lepJVMZCymzGG5kjRr_HTUUcYWhXDcyCmdaAKQ9gi5S0s4iPvxDENzy7PB_Oblr3O8zMhL7APn11O72aseZpnZRRKkJfKwOqey6YuQjd7BYJFv90tY7WxEcPgmtfhbj_Tpa5S7symn0LFcPCqnmtS-dqlvf2mS4xSiI1jwRfMmw=w1092-h310-no'
+                    imageHeight='20em'
                 />
+            </Grid>
+            <Grid container spacing={0} className={classes.whiteContainerStyle}>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                    <CommonHeader
+                        headerText='ADDITIONAL PROJECTS'
+                        subHeaderText='OUR WORK'
+                        dividerColor='dark'
+                        headerTextColor='dark'
+                    />
+                </Grid>
+                <Grid container spacing={2} item xs={12} sm={12} md={12} lg={12} xl={12} alignItems='center' direction='column'>
+                    <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
+                        <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
+                            <div className={classes.redHightlightDivStyle}>
+                                &#8226;	
+                            </div>
+                            AMERICAN AGRINSURANCE INC.
+                        </Typography>
+                        <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
+                            <div className={classes.redHightlightDivStyle}>
+                                &#8226;	
+                            </div>
+                            SARA LEE BAKERY WAREHOUSE
+                        </Typography>
+                        <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
+                            <div className={classes.redHightlightDivStyle}>
+                                &#8226;	
+                            </div>
+                            INDUSTRIAL LABEL CORPORATION WAREHOUSE
+                        </Typography>
+                        <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
+                            <div className={classes.redHightlightDivStyle}>
+                                &#8226;	
+                            </div>
+                            BELLEVUE FIRE TRAINING TOWER
+                        </Typography>
+                    </Grid>
+                </Grid>
             </Grid>
         </div>
     );

@@ -3,8 +3,8 @@ import { useStyles } from './ImageBannerSectionStyles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, buttonText, width, justify, buttonCta }) => {
-    const classes = useStyles({ imageUrl, flexColumn, width, justify });
+const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, buttonText, width, justify, buttonCta, imageOpacity, imageHeight }) => {
+    const classes = useStyles({ imageUrl, flexColumn, width, justify, imageOpacity, imageHeight });
 
     return (
         <div className={classes.headerDiv}>
