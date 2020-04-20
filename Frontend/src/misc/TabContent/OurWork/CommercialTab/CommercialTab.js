@@ -119,27 +119,27 @@ const CommercialTab = () => {
                 <Grid container spacing={2} item xs={12} sm={12} md={12} lg={12} xl={12} alignItems='center' direction='column'>
                     <Grid item xs={3} sm={3} md={3} lg={3} xl={3}>
                         <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
-                            <div className={classes.redHightlightDivStyle}>
+                            <span className={classes.redHightlightDivStyle}>
                                 &#8226;	
-                            </div>
+                            </span>
                             AMERICAN AGRINSURANCE INC.
                         </Typography>
                         <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
-                            <div className={classes.redHightlightDivStyle}>
+                            <span className={classes.redHightlightDivStyle}>
                                 &#8226;	
-                            </div>
+                            </span>
                             SARA LEE BAKERY WAREHOUSE
                         </Typography>
                         <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
-                            <div className={classes.redHightlightDivStyle}>
+                            <span className={classes.redHightlightDivStyle}>
                                 &#8226;	
-                            </div>
+                            </span>
                             INDUSTRIAL LABEL CORPORATION WAREHOUSE
                         </Typography>
                         <Typography variant='body2' className={classes.additionalProjectsTextStyle}>
-                            <div className={classes.redHightlightDivStyle}>
+                            <span className={classes.redHightlightDivStyle}>
                                 &#8226;	
-                            </div>
+                            </span>
                             BELLEVUE FIRE TRAINING TOWER
                         </Typography>
                     </Grid>
