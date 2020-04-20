@@ -24,8 +24,5 @@ export const useStyles = makeStyles(theme => ({
         display: 'inline',
         paddingRight: '.5em',
         color: theme.colors.vranaRed
-    },
-    imageBannerGridStyle: {
-        marginTop: '2em'
     }
 }));
