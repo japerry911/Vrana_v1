@@ -1,12 +1,12 @@
 import React from 'react';
-import { useStyles } from './CommercialStyles';
+import { useStyles } from './CommercialStylesTab';
 import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
 import Card from '../../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
 import ImageBannerSection from '../../../../components/ImageBannerSection/ImageBannerSection';
 import Typography from '@material-ui/core/Typography';
 
-const Commercial = () => {
+const CommercialTab = () => {
     const classes = useStyles();
     
     return (
@@ -149,4 +149,4 @@ const Commercial = () => {
     );
 };
 
-export default Commercial;
+export default CommercialTab;
