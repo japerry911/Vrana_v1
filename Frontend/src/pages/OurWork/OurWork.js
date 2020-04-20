@@ -24,7 +24,6 @@ const OurWork = () => {
     const classes = useStyles();
 
     const dispatch = useDispatch();
-    const projects = useSelector(state => state.projects.projects);
     const isLoading = useSelector(state => state.projects.loading);
 
     useEffect(() => {

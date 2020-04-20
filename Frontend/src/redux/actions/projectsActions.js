@@ -6,7 +6,13 @@ export const getProjects = () => {
 
         try {
             const getProjectsResponse = await railsServer.get('/projects');
-            dispatch(getProjectsSuccess(getProjectsResponse.data.projects));
+            
+            const projects = getProjectsResponse.data.projects;
+
+            const commercial = projects.filter(project => project.Industry === 'Commercial');
+            const retail = projects.filter(project => project.Industry === 'Retail')
+
+            dispatch(getProjectsSuccess({ commercial, retail }));
         } catch (error) {
             dispatch(getProjectsError(error));
         }
