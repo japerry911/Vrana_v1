@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(version: 2020_04_20_030711) do
     t.string "First_P_Header"
     t.text "First_P_Content"
     t.text "Key_Projects_Content"
+    t.string "Image_Url"
   end
 
 end
