@@ -2,8 +2,8 @@ import React, { Fragment } from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 
-const ServicesCard = ({ ctaText, bodyText, headerText, imageUrl, imageAlt }) => {
-    const classes = useStyles();
+const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign }) => {
+    const classes = useStyles({ headerAlign });
 
     return (
         <Fragment>
@@ -15,6 +15,7 @@ const ServicesCard = ({ ctaText, bodyText, headerText, imageUrl, imageAlt }) => 
             <Typography variant='h6' className={classes.medGreyHeaderStyle}>
                 {headerText}
             </Typography>
+            {bodyText || ctaText ?
             <div className={classes.cardTextDivStyle}>
                 <Typography paragraph variant='body2' className={classes.darkGreyBodyStyle}>
                     {bodyText}
@@ -23,8 +24,9 @@ const ServicesCard = ({ ctaText, bodyText, headerText, imageUrl, imageAlt }) => 
                     {ctaText}
                 </Typography>
             </div>
+            : null}
         </Fragment>
     );
 };
 
-export default ServicesCard;
+export default Card;

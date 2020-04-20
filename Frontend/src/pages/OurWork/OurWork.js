@@ -1,10 +1,29 @@
 import React from 'react';
-import './OurWork.css';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
+import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
+import Footer from '../../components/Footer/Footer';
+import CommercialTab from '../../misc/TabContent/OurWork/CommercialTab/CommercialTab';
+import RetailTab from '../../misc/TabContent/OurWork/RetailTab/RetailTab';
+
+const tabContentArray = [
+    {
+        tabTitle: 'Commercial',
+        tabContent: <CommercialTab />
+    },
+    {
+        tabTitle: 'Retail',
+        tabContent: <RetailTab />
+    }
+];
 
 const OurWork = () => {
     return (
         <div>
-            <h1>Our Work</h1>
+            <HeroHeader 
+                headerText='Our Work'
+            />
+            <HorizontalTabs tabContentArray={tabContentArray} />
+            <Footer />
         </div>
     );
 };

@@ -7,7 +7,7 @@ import theme from './misc/theme';
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       <ThemeProvider theme={theme}>
         <Navigation />
         <Routes />

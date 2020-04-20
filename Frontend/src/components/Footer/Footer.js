@@ -7,7 +7,7 @@ const Footer = () => {
     const classes = useStyles();
 
     return (
-        <Grid container className={classes.greyContainerStyle} align='center'>
+        <Grid container className={classes.greyContainerStyle} align='center' justify='flex-end'>
             <Grid container item xs={4} sm={4} md={4} lg={4} xl={4} direction='column'>
                 <Typography variant='h6' className={classes.whiteHeaderText}>
                     CONTACT US

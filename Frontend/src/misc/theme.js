@@ -1,6 +1,14 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 
 let theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#CD2126'
+    },
+    secondary: {
+      main: '#4B4A4A'
+    }
+  },
   colors: {
     vranaRed: '#CD2126',
     textWhite: '#FCFEFF',

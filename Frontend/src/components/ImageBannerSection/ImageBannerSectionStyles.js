@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     headerDiv: {
         backgroundImage: props => `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(${props.imageUrl})`,
-        minHeight: '30em',
+        minHeight: props => props.imageHeight ? props.imageHeight : '30em',
         backgroundRepeat: 'no-repeat',
         width: '100%',
         backgroundSize: 'cover',
