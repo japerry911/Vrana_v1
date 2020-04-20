@@ -23,13 +23,13 @@ const HorizontalTabs = ({ tabContentArray }) => {
             >
                 {tabContentArray.map((tabContentObject, index) => {
                     return (
-                        <Tab label={tabContentObject.tabTitle} {...a11yProps(index)} /> 
+                        <Tab label={tabContentObject.tabTitle} {...a11yProps(index)} key={index} /> 
                     );
                 })}
             </Tabs>
             {tabContentArray.map((tabContentObject, index) => {
                 return (
-                    <TabPanel value={value} index={index}>
+                    <TabPanel value={value} index={index} key={index}>
                         {tabContentObject.tabContent}
                     </TabPanel>
                 );
