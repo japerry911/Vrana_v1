@@ -9,9 +9,16 @@ import Shop from '../pages/Shop/Shop';
 import News from '../pages/News/News';
 import Careers from '../pages/Careers/Careers';
 import ContactUs from '../pages/ContactUs/ContactUs';
+import Sandbox from './Sandbox.js';
 
 export default () => (
     <Switch>
+        <Route 
+            exact
+            path='/sandbox'
+            component={Sandbox}
+        />
+
         <Route 
             exact 
             path='/'
