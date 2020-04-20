@@ -1,8 +1,8 @@
-import projectsReducer from './projects';
+import projectsReducer from './projectsReducer';
 import { combineReducers } from 'redux';
 
 const allReducers = combineReducers({
-    projectsReducer
+    projects: projectsReducer
 });
 
 export default allReducers;
