@@ -32,6 +32,7 @@ const CommercialTab = () => {
                                 imageUrl={project.Image_Url}
                                 headerText={project.Client_Name.toString().toUpperCase()}
                                 headerAlign='center'
+                                linkId={project.id}
                             />
                         </Grid>
                     );

@@ -1,8 +1,9 @@
 import React from 'react';
 import { useStyles } from './ShowProjectStyles';
 
-const ShowProject = () => {
+const ShowProject = ({ match }) => {
     const classes = useStyles();
+    const id = match.params.id;
 
     return (
         <div>
