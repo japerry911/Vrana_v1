@@ -23,5 +23,9 @@ export const useStyles = makeStyles(theme => ({
     cardTextDivStyle: {
         width: '50%', 
         textAlign: 'left'
+    },
+    linkStyle: {
+        textDecoration: 'none',
+        color: theme.colors.darkGrey
     }
 }));

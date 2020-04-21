@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 
-const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign }) => {
+const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, linkId }) => {
     const classes = useStyles({ headerAlign });
 
     return (
@@ -13,7 +13,11 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign }
                 className={classes.snapshotImageStyle}
             />
             <Typography variant='h6' className={classes.medGreyHeaderStyle}>
-                {headerText}
+                {linkId 
+                ?
+                <a className={classes.linkStyle} href={`/our-work/projects/${linkId}`}>{headerText}</a>
+                :
+                headerText}
             </Typography>
             {bodyText || ctaText ?
             <div className={classes.cardTextDivStyle}>

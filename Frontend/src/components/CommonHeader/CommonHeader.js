@@ -14,9 +14,13 @@ const CommonHeader = ({ headerText, subHeaderText, dividerColor, headerTextColor
 
     return (
         <Fragment>
+            {subHeaderText 
+            ?
             <Typography variant='body1' className={classes.redSubtitleTextStyle}>
                 {subHeaderText}
             </Typography>
+            :
+            null}
             <Typography variant='h3' className={classes.greyTitleTextStyle}>
                 {headerText}
             </Typography>

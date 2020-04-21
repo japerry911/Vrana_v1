@@ -38,3 +38,39 @@ export const getProjectsError = error => {
         error
     };
 };
+
+export const getProject = projectId => {
+    return async dispatch => {
+        dispatch(getProjectPending());
+
+        try {
+            const getProjectResponse = await railsServer.get(`/projects/${projectId}`);
+
+            const project = getProjectResponse.data.project;
+
+            dispatch(getProjectSuccess({ project }));
+        } catch (error) {
+            dispatch(getProjectError({ error }));
+        }
+    };
+};
+
+export const getProjectPending = () => {
+    return {
+        type: 'GET_PROJECT_PENDING'
+    };
+}
+
+export const getProjectSuccess = payload => {
+    return {
+        type: 'GET_PROJECT_SUCCESS',
+        payload 
+    };
+};
+
+export const getProjectError = error => {
+    return {
+        type: 'GET_PROJECT_ERROR',
+        error
+    };
+};
