@@ -28,7 +28,7 @@ const Footer = () => {
             <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
                 <img 
                     alt='Vrana logo'
-                    src='https://lh3.googleusercontent.com/HNoSmx6mXB4EW0WGqJcwa28mzTRztdSrvLak0k1dylHyFz4mQSx8F4fWqfloQicE2BNeHRml3q5ilSrVt-SbJy0Llcc1570MYA7rmWIctIrtJHovRsPfDfgEyuLHoDMyeBdCNdMKpmRldcedCJTSyhSubWVRjUpNbu0wjbw-hh90DEPpRFCAVOQy__uLKIfvuKsJwYA1iHln8HpNPnowPClfwcmT1lqSvKiNhecFU_M4TvR0x4NePWkKUo911zNDtffu37Fu7cN_J5G6XKvHMXQ1EnSMuqHHyJVvvhlkJAiV1HxTcEptuZ463YtDGhVaWudvws7uy0aWk-najBJHqBEbaq2ChqfGtkpicU5HLQ0ns-2Lo5-LNkQFAj1HpFexG1bd9kts--QD0Uh9_uVbJ7vNSBO-BCCI-GkkNGMrkJpmZ8hgCo3hTF4RzJtphtxLySw3KxlyUW3Hk2N7zdADewfVpA1UEvGgu8Bxnhdij2Zg-MeVDHs72Y07KZXqbe1-8vpEuJo5HuSmwRpHO-ldeEKNS6GDlD9ztuI3mXF17l8rck--M0LTBtIGbeAwNqcihDMGr6HPsN7q_1bM_OSfc7fhgBrLL3csu1uvSrDemyz7uqP5OCiDZCPhxg3BA5u-Hf8jWzFjlhZiGa4fSOUzBqkOVeWqSaMrXACA0nJaM9qKWCCHkWn_DABV-4sH8g=w988-h396-no'
+                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/VRANA+Logo_Long+V1.png'
                     className={classes.vranaLogoStyle}
                 />
             </Grid>
