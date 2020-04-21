@@ -9,7 +9,8 @@ export const useStyles = makeStyles(theme => ({
         width: '100%',
         backgroundColor: theme.colors.nonTextWhite,
         paddingLeft: '3em',
-        paddingTop: '2em'
+        paddingTop: '2em',
+        paddingBottom: '2em'
     },
     darkGreyHeaderTextStyle: {
         color: theme.colors.darkGrey,
@@ -17,7 +18,8 @@ export const useStyles = makeStyles(theme => ({
     },
     vranaRedHeaderTextStyle: {
         color: theme.colors.vranaRed,
-        fontFamily: 'Avenir-Bold'
+        fontFamily: 'Avenir-Bold',
+        paddingBottom: '1%'
     },
     boldSpacingStyle: {
         fontFamily: 'Avenir-Bold',
