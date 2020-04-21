@@ -2,8 +2,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export const useStyles = makeStyles(theme => ({
     headerDiv: {
-        backgroundImage: props => props.noOpacity ? `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(${props.imageUrl})`
-                                                  : `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(${props.imageUrl})`,
+        backgroundImage: props => props.noOpacity ? `linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url("${props.imageUrl}")`
+                                                  : `linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("${props.imageUrl}")`,
         minHeight: props => props.imageHeight ? props.imageHeight : '30em',
         backgroundRepeat: 'no-repeat',
         width: '100%',

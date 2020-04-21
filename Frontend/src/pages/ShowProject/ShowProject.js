@@ -43,6 +43,7 @@ const ShowProject = ({ match }) => {
                 </Grid>
                 <ImageBannerSection
                     imageUrl={showProject.Template_Image1_Url}
+                    noOpacity
                 />
                 <Grid container className={classes.whiteContainerStyle}>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
@@ -110,9 +111,9 @@ const ShowProject = ({ match }) => {
                             ?
                             null
                             :
-                            showProject.Key_Projects_Bullets.split('|||').map(bullet => {
+                            showProject.Key_Projects_Bullets.split('|||').map((bullet, index) => {
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <Typography varaint='body1' className={classes.avenirRegStyle} paragraph>
                                             {bullet}
                                         </Typography>
@@ -124,6 +125,7 @@ const ShowProject = ({ match }) => {
                 </Grid>
                 <ImageBannerSection
                     imageUrl={showProject.Template_Image2_Url}
+                    noOpacity
                 />
                 <Footer />
             </div>}

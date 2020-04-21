@@ -2,7 +2,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export const useStyles = makeStyles(theme => ({
     greetingDiv: {
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://lh3.googleusercontent.com/4gK95BUovgvu5cge3KhxMJiAp_kcgbbRM1mhQxQdnZCq7RQXTwJCglzEYTN1yDAZ36mSBHr2VtD4RXLFZZ5jt47-EY0x8E_O7zy2dX_h0_YkfhQc2bDyNvZQRcbsIjvcddqAzAHYOqKmftZ8E7RfyJNVQcGY7KCxfSQR9OKUALw8BCtNdfNM1ZwW9eUjNgRTlfS41vEDJSy-eS5yPl97qgAF16FWApZ9dAtkK_q9Mz5VqVVAT44aXZticvJqskwdq1aIn3cnDmjNEXp5qKcOiJWZ6FLMoeDhJyjuo6rC0C_eKhiLiLR5PaiASfGkknB8E4MxDjq7hnSF3Z89ND0ffPE--5zv7ewKlCcgZsDA78vf6SJo6QMSJhnL3jE3wU4NDK0YeCun49Cc7eYBk7VqFMQ4Sh8kdhaLl8nkT7lxgaOhFlSJlJf38qyf_4YcUyGaiMXeKS910007ylf1TCS4dlmxNd_fE0V8VXDygCfNZO9OZ1lMaS0ABSL4dnNFrO_Tjj0O9VeIcRO85bu-k1Ma-lSubBcwiP1mLLQ-rSG2qBc8NCk6F6Gz837RxoSxFKAwfHtstxnpGV3ljLB4Z39KWIZ_vMyRbVV-yxVnIt18BnuK0ipES3eJXqJhcS6y5bRHcOm74KYV138EMqDWxNOnKL9RsPJCGjr5GNuin7BH01sCHwFI1o7E68oxq8oUJw=w864-h576-no')`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/HW-081616-D-07.jpg')`,
         minHeight: '50em',
         width: 'auto',
         backgroundSize: 'cover',
@@ -68,8 +68,8 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '2em'
     },
     projectsImageStyle: {
-        width: '110%',
-        height: '110%'
+        minWidth: '105%',
+        minHeight: '105%'
     },
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
