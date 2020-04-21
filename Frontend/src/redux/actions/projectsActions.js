@@ -48,7 +48,7 @@ export const getProject = projectId => {
 
             const project = getProjectResponse.data.project;
 
-            dispatch(getProjectSuccess({ payload: project }));
+            dispatch(getProjectSuccess({ project }));
         } catch (error) {
             dispatch(getProjectError({ error }));
         }

@@ -29,7 +29,7 @@ const CommercialTab = () => {
                         <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={cardClass} key={project.id} align={alignSide}>
                             <Card
                                 alt={project.Client_Name}
-                                imageUrl={project.Image_Url}
+                                imageUrl={project.Card_Image_Url}
                                 headerText={project.Client_Name.toString().toUpperCase()}
                                 headerAlign='center'
                                 linkId={project.id}
