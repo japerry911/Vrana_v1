@@ -7,7 +7,9 @@ const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, button
     const classes = useStyles({ imageUrl, flexColumn, width, justify, imageHeight, noOpacity });
 
     return (
-        <div className={classes.headerDiv}>
+        <div 
+            className={classes.headerDiv}
+        >
             <Typography variant='h2' className={classes.headerTextStyle}>
                 {headerText}
             </Typography>

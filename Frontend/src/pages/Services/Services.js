@@ -25,7 +25,7 @@ const Services = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
                     <Card 
                         alt='Pencil on Paper'
-                        imageUrl='https://lh3.googleusercontent.com/_5Kdzmfs3xonjl8p9gtVZhbZjmYRSH9_fNU3dSe4_NssWlp_76nSJQr1vPH9scXGy6Um01jqIaqsWi8WT5XINa6_97UCvkeXem4Nuf7eRiznQYE3sL7n8YCkHL6z9XzP_X7i0cEEuMw-bRb1FLAEuro2pAl8WvotWZ4eXoDLRB5ieTyw4fpK50xQ-zj3hB0zBNkST5pgDVNln4o3Ic-hZt3qGPMBFSUl8d0jl-BYCNwprDAo7tA_8z7nkix-RU2dEh3j9oJMLQdemDgRF14j4ju9pjLh1_U_S6um9bDqUYybFDzjBzzsRvb14esW6Xq87H4Qa-1dnkW7Jj55qA0Ghv36-rNBUEYyM-o1TBQzNebSVgkXwirZW-Mm4sbmMAg9jLjCQPGvS1QFDPBt5ONxxe5JodBAeyP2UTTICWUxKOAYLuK-ssQZ23TQwkrPTWWPxgIyPUFTNO0rxD1CV4eRWL2IbUQjftW9eqsj36WgiAVlkGzjGOHxt06NpC7Lt9mbUrbnUnAzsdfyO0KBOwkYozwqylV7WpT_zZAcZyNxHBqq92jiV-MQLBReO7c0sWeJRCbL4VuqjJOt8JYHJLM_oRCIi1CURag-7I-dOtpby2onalpV4JGvbRBYHmppC_V4SXj5FlVpXk0gUov1VczH66JmetWf1zmOl7aJicz4GXSjO4hDtdXNWUgbVL3wYw=w400-h316-no'
+                        imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(18).png'
                         headerText='PRECONSTRUCTION'
                         bodyText="Vrana's stragetic approach to preconstruction an project management ensures a seamless
                         and successful project delivery. Our experienced leadership team will guide you through
@@ -35,8 +35,8 @@ const Services = () => {
                 </Grid>
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
                     <Card 
-                        alt='Pencil on Paper'
-                        imageUrl='https://lh3.googleusercontent.com/kU2qen6Lf2_w3709VuSQhzSNYRIB-8ba4F7ZAXTZdMeA9MJQf_l0XxiUnpJSPQbcMMqRTTNahcR9haTxAvoaTKAsjE-CuxrTv9GDUNNDAFHOC6i2cu0AS9Xugg7mP7niD3t0rCVZnl-q8eMWeBS0OgfaFRct4cSH_bUy34DNPHtU5bRZsBup9WRfUioeV9dXsswWYrQM-XL60dcOVn-7LDTB6oP5Q3FKJkT2mJmryFNQ37d1JHADYIOwsUJIXD1Kd-cuMCZ8Ogk58b3y6ToZioHQ6SgjLrD76vdBq4yvigm53lEaACkuOUh5oH7sRYk7h5oD-dam_-RDf3RdvuKvrah_Ko24Bu28Lv4At_yGsi2eqIRajGQQlSCH-tTpB-Q6ShGZfiAO5xcUBcXlXTr5kzWw0t7fiTIgELkSoqYc14DGtK7Dm7Kkp2KSABr53efZ5Bf3kJwS6BUf2oVkfelk1fNlHOGr87bwaAWR_g0nfrVsVhavZXAy3SpEMM2zGrjRkZWZ39OvPKa_7eGRGsYVFnqJtsWjgmNDPQwFInJwBX4Tr2O0rZvDIL5lIsPssmTnzr1_AEwX7WlmiuyT-9gUCD7gwUEsISYwF00huq7-4OPHRsKmeUm8RPtWtASIU-ObQ_Dgvf62Zc-Y7VBhzHage8yWMN_hAGvKs6kPqSwEX1xi8hOTxvXJTSV7HzgavA=w400-h314-no'
+                        alt='Cranes'
+                        imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.05.49+PM.jpg'
                         headerText='QUALITY CONSTRUCTION'
                         bodyText="Whether you are planning a large industrial or commercial building, or a small renovation,
                         Vrana clients always enjoy the best of both large and small contractor worlds."
@@ -46,7 +46,7 @@ const Services = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
                     <Card 
                         alt='Constructions workers working'
-                        imageUrl='https://lh3.googleusercontent.com/kpAzfIU3-UO2WIEGNQFL8rTuS0rCP-z0O5tzwWveutRm6Z3KDazznWBdkZrsqSmyZ5nBfhOunR5jvC4Vg_YjPwc4t2o45URwghu27DafHGzB4avX4rwEFtJRSdUSg5lLkMyj_zd8f9KHBpaYPhzwBSpVnIu2o47uErCFZ3WlJbquii4_4ulCVUWMG5eYTqHIpHSZPRu2qgir2UWF1tlFZ9kDpd12WgtUeAMmNjxATHsx1UwsUNug8TaJC2RTYq1DAhhL0Nl6_S0qeGiA1N_z4CkTXnJ4Bbjp5QeIzJM9JxguUNRMIE54CmSixe9JeT5kIYemjcirwHRK0eHfobnrC7KKEJwG6_t2KqOzcakPUlWEe5GSGka8poV9JEHHpPFm3PNBufe2jtUCC3-lHgyGRK6KLdhn3l-RbxMw7KVdUXToi8A_edmJRaYzt4ljkkMdd_XqcG2Z2YBPt5219k-32vtt7Wjmqb5flH0UoybtZ-NP-8QJwpTCpoQo72zYoPoh5sDS54IXPIJ_50KSuOoj2RSU8Uph3utqgFB4CrRPRs3YNmdiBz6bzvGG3IWSYxaPdBFzaXnGDijoZp4lbhh6D_K6lpzEklYNURQzBnBvOLBJPoJ9G6RYgJUF0UiafLhAClsv6nC1MEF8JdSrZa28phZ4WPiCVsmX8aE0_TvRWQgKiU-qiNEUqsGJE_tdjA=w400-h318-no'
+                        imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(17).png'
                         headerText='GENERAL CONTRACTING'
                         bodyText="Vrana's sophisicated approach to general contracting allows us to take on projects of any scale.
                         Our experienced field supervision and labor can fully execute projects of all sizes."
@@ -56,7 +56,7 @@ const Services = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
                     <Card 
                         alt='Excavator shoveling dirt'
-                        imageUrl='https://lh3.googleusercontent.com/ytIBnElcbyXYQGt_K1HAmkQomtGiVjdvde5mnzNZbJaYfi9Sp6QVyA5WB_deACmw4craH4oBepLCZ0MTk-dP08vDLahbHDIe6Vtqlm6ic8BbSooza1sHL7ARFd-HGh7EuNMhVCFPH7w2XQIJ2I1hhBQdjGRnNG_YLiAdz6ay2RsRFuQITEr_9nyzkkDCj2BNr7slacAvNK3Vt0MOVv80OfHehS1EsrbyWIv04pVLBChpnjG87_WECjXdUIsxo4hP1kvkFhNBuQEjEG2jXNH_osE9aRwfX6QFOp27ivFCIsILhtHG3WCu3eDN7kE4h2J8jD3WXeACHXVi5Fd0vF8MT8s22cwyotSfvVlmzJyxt80OkBQq05xt0_0oCITaEHRiZKRO9rxbuspTejI0B_6XJQDy4SyPLgVt5npX3Xr-0HLyXXRUM7VVj1rObr-DXJZU5jRiVQoX3-uu1m4fEw0yyiaLbF6rVBnRmv8OpOtlPR5mSBKPm0LUZddrFMkrl1ZMrJF4gBfeKE9oSD1XZ2lNvVn2Ta1KCeSYeDn1wqviP0-VAhgqLBTPtqLcbinGtpVCayp0pP3zjCINLMkno45qkFH8m98WSOxLpvtXJiNxtvXGp-SpW1Fp3yiXTzYY5UVCj-j_A0Edg0eB53I0t55rbf0lHsBd4TTxpeIAMN1qyrID7-ZxGAtastusYpBTBQ=w398-h314-no'
+                        imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(16).png'
                         headerText='EQUIPMENT SALES'
                         bodyText="With a vast selection of construction equipment for sale, Vrana can help you build your realities
                         from your dreams. Check out our full list of equipment for sale."
@@ -67,7 +67,7 @@ const Services = () => {
             <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <ImageBannerSection
                     justify='center'
-                    imageUrl='https://lh3.googleusercontent.com/aZpbgePHG7bN05f0ukjNQi4iFgH2kMIGzja0lOxF3dAXnYvMgQ0Zswy1ELjsil-S6xNQFVBql7S7ASMTeYflO6BdYG68yHUg1MwtCEdj6ENheI05e6xY2317cUlXq3AiJIOjVsenOx4dKKBuF0MuiVtbGH0LfwEGbYqamQhIUweCo4alqV1MC5DDpb3uAxg7mwt6PYTywfk_bd7M4W_KfOrXEyypx0sW8ZJ7vei-jNGdPY9xvEtCTuoSnpp2rQHN_sYPio0DSn4Ar1BkBzBxXL6a87GCkPKIpB5a0yc95j3DII3uBGOgSvGi8-AwddPkv0y2XJznpLnfUH3tQv4_kHyU-n1l6ig-n7vC5FIaJryp3ocLRrCXTB6oGYFWwAs2MCcsXh_db2m6EWbaTmnZSkQmrLErg4-UzaZJUN3Tow88gJhk_byhxWqGHbaneX7rTjjV9GcBSSKTSMsX060gZZqA3g_65KMBPb9gQuCyYha21b_ybZZIqd_B69_dJz4Xs8nqhD8QFGpOL2z1CFc7lctYJTQFQFP7PhxQ0OJwn-ZW48Vv676xdDuxPKUtEUbt7OJTTkhpnQMOOI0I9-KSZbph7cNqQagePSUwIXpc1KlYmq3L_oqgQUkGSVlMkwdFuCAVhKUZDMtQoUVwMVUvMitVxr08EC7XdO0RGbWEJWKwFw2G1Qw2f_qocc72Rg=w980-h358-no'
+                    imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(15).png'
                 />
             </Grid>
             <Grid container spacing={0} className={classes.whiteContainerStyle}>
@@ -131,7 +131,7 @@ const Services = () => {
                 <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
                     <Card 
                         alt='Highway/Interstate'
-                        imageUrl='https://lh3.googleusercontent.com/FpSWl_vr0WPK9-0WzCHSbX0gjanPuHzmWsKDDe2bGSyH7QCdRrvYxLLCjLE5aLpGnNl85fpPH3C62XaNaqZ3weZSdHwh_UzGWOfRHdcXm9yjxN6l73QueEupshzYcmsCciSneeoEulLPKhaP7a2PpAKzs1XijBSOKj3JApeGdco9JvvsQVjisjubBU5wfVJoMD1N2UgUEBqxC1aXGsTBc6UyI1Iii0pA-Itsd_VkIPDinYWdesCqq3LyaKyfJugsj35RCECf5lvPBcEH5qnVIAT2gDDBt4f_sDUUzw5b4Cs_oVHJZFk2uh2HivtVXb1Gbp_n81jreQewXQWkhl8Gb1kgZ69o-nl7r2qdejT4irp59noetZdO52WGiW7MI5KCIn0sYWLz-weLZRdBdgjSqIoukX-S0qH-mpMXjHx9C_45_WfztWwTJpoogL8LM7FhHU80fjowxrc6TTKjbLsggngzvg2cStm0xmgGTouZNAMtdPP-mE4j9R-kEjsU-WF3kam8vm9W6iD9tknrfDCDugnJ9FaKi2xEMhAxKIuKUjB-My2_nBjf87X9KOea7S3Znq4RT61UOpj0ChPGLSKQ9kWrHQX0cquzfvDPv15GR8UscDjc12SF-3_s0O_yLephJe8cvQE5cjmT6sp8pmtvynbpQG3P4mUDAN0l253woZnvnLvgD5V2JU8Zwo-ZLA=w400-h314-no'
+                        imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(19).png'
                         headerText='CIVIL/HEAVY HIGHWAY'
                         bodyText="From large-scale tenant improvements to ground up construction, we have the experience to execute commercial projects of all sizes."
                         ctaText={'Our Work > >'}
