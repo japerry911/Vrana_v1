@@ -7,9 +7,23 @@ export const useStyles = makeStyles(theme => ({
     },
     whiteContainerStyle: {
         width: '100%',
-        backgroundColor: theme.colors.nonTextWhite
+        backgroundColor: theme.colors.nonTextWhite,
+        paddingLeft: '3em',
+        paddingTop: '2em'
     },
     darkGreyHeaderTextStyle: {
-        color: theme.colors.darkGrey
+        color: theme.colors.darkGrey,
+        fontFamily: 'Avenir-Bold'
+    },
+    vranaRedHeaderTextStyle: {
+        color: theme.colors.vranaRed,
+        fontFamily: 'Avenir-Bold'
+    },
+    boldSpacingStyle: {
+        fontFamily: 'Avenir-Bold',
+        paddingTop: '1em'
+    },
+    avenirRegStyle: {
+        fontFamily: 'Avenir'
     }
 }));

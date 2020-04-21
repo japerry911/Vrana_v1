@@ -18,8 +18,8 @@ const ShowProject = ({ match }) => {
     
     useEffect(() => {
         dispatch(getProject(id));
-    }, [dispatch]); 
-    console.log(showProject);
+    }, [dispatch, id]); 
+
     return (
         <>
             {isLoading
@@ -40,6 +40,55 @@ const ShowProject = ({ match }) => {
                 <ImageBannerSection
                     imageUrl={showProject.Template_Image1_Url}
                 />
+                <Grid container className={classes.whiteContainerStyle}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='h3' className={classes.vranaRedHeaderTextStyle}>
+                            PROJECT SNAPSHOT
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Client Name: <span className={classes.avenirRegStyle}>{showProject.Client_Name}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Size: <span className={classes.avenirRegStyle}>{showProject.Size}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Location: <span className={classes.avenirRegStyle}>{showProject.Location}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Year Completed / Project Status: <span className={classes.avenirRegStyle}>{showProject.YearCompleted_ProjectStatus}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Construction Value: <span className={classes.avenirRegStyle}>{showProject.ConstructionValue}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Scope of Work: <span className={classes.avenirRegStyle}>{showProject.ScopeOfWork}</span>
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='body1' className={classes.boldSpacingStyle}>
+                            Industry: <span className={classes.avenirRegStyle}>{showProject.Industry}</span>
+                        </Typography>
+                    </Grid>
+                </Grid>
+                <Grid container className={classes.whiteContainerStyle}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='h3' className={classes.vranaRedHeaderTextStyle}>
+                            {showProject.First_P_Header}
+                        </Typography>
+                    </Grid>
+                </Grid>
                 <Footer />
             </div>}
         </>
