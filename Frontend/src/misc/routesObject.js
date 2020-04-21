@@ -7,5 +7,6 @@ export const ROUTES_OBJECT = {
     '/shop': 'Shop',
     '/news': 'News',
     '/careers': 'Careers',
-    '/contact-us': 'Contact Us'
+    '/contact-us': 'Contact Us',
+    '/admin': 'Admin Login'
 };

@@ -10,6 +10,7 @@ import News from '../pages/News/News';
 import Careers from '../pages/Careers/Careers';
 import ContactUs from '../pages/ContactUs/ContactUs';
 import ShowProject from '../pages/ShowProject/ShowProject';
+import Admin from '../pages/Admin/Admin';
 import Sandbox from './Sandbox.js';
 
 export default () => (
@@ -18,6 +19,12 @@ export default () => (
             exact
             path='/sandbox'
             component={Sandbox}
+        />
+
+        <Route
+            exact
+            path='/admin'
+            component={Admin}
         />
 
         <Route 
