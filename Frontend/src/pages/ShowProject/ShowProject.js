@@ -105,9 +105,21 @@ const ShowProject = ({ match }) => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                        <Typography varaint='body1' className={classes.avenirRegStyle} paragraph>
-                            {showProject.Key_Projects_Content}
-                        </Typography>
+                        <ul>
+                            {showProject.Key_Projects_Bullets === undefined 
+                            ?
+                            null
+                            :
+                            showProject.Key_Projects_Bullets.split('|||').map(bullet => {
+                                return (
+                                    <li>
+                                        <Typography varaint='body1' className={classes.avenirRegStyle} paragraph>
+                                            {bullet}
+                                        </Typography>
+                                    </li>
+                                );
+                            })}
+                        </ul>
                     </Grid>
                 </Grid>
                 <ImageBannerSection
