@@ -11,7 +11,7 @@ class CreateProjects < ActiveRecord::Migration[6.0]
       t.string :Industry
       t.string :First_P_Header
       t.text :First_P_Content
-      t.text :Key_Projects_Content
+      t.text :Key_Projects_Bullets
       t.string :Card_Image_Url
       t.string :Template_Image1_Url
       t.string :Template_Image2_Url
