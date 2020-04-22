@@ -7,5 +7,9 @@ export const useStyles = makeStyles(theme => ({
     },
     gridItemStyle: {
         paddingTop: '3em'
+    },
+    fieldLabelStyle: {
+        color: theme.colors.darkGrey,
+        fontFamily: 'Avenir-Medium'
     }
 }));

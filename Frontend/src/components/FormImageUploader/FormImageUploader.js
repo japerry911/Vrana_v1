@@ -1,19 +1,20 @@
 import React from 'react';
 import { useStyles } from './FormImageUploaderStyles';
-import ImageUploader from 'react-images-upload';
 import Grid from '@material-ui/core/Grid';
+import Input from '@material-ui/core/Input';
+import Typography from '@material-ui/core/Typography';
 
-const FormImageUploader = ({ buttonText, onChange }) => {
+const FormImageUploader = ({ labelText, onChange }) => {
     const classes = useStyles();
 
     return (
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-            <ImageUploader
-                withIcon={true}
-                buttonText={buttonText}
+            <Typography variant='h6' className={classes.labelStyle}>
+                {labelText}
+            </Typography>
+            <Input 
+                type='file'
                 onChange={onChange}
-                imgExtension={['.jpg', '.png']}
-                className={classes.imageUploaderStyle}
             />
         </Grid>
     );

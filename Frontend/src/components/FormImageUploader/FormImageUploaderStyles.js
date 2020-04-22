@@ -6,5 +6,10 @@ export const useStyles = makeStyles(theme => ({
     },
     imageUploaderStyle: {
         width: '70%'
+    },
+    labelStyle: {
+        color: theme.colors.darkGrey,
+        fontFamily: 'Avenir-Medium',
+        paddingBottom: '1em'
     }
 }));

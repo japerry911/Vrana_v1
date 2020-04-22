@@ -54,16 +54,16 @@ const AddProject = () => {
                     <FormTextareaAutosize labelText='First Paragraph Content' />
                     <FormTextareaAutosize labelText='Key Project Bullets' />
                     <FormImageUploader
-                        onChange={picture => setCardPicture(picture)}
-                        buttonText={'Upload Card Picture'}
+                        onChange={picture => setCardPicture(picture.target.files[0])}
+                        labelText={'Upload Card Picture'}
                     />
                     <FormImageUploader
-                        onChange={picture => setCardPicture(picture)}
-                        buttonText={'Upload Detail Picture Top'}
+                        onChange={picture => setCardPicture(picture.target.files[0])}
+                        labelText={'Upload Detail Picture Top'}
                     />
                     <FormImageUploader
-                        onChange={picture => setCardPicture(picture)}
-                        buttonText={'Upload Detail Picture Bottom'}
+                        onChange={picture => setCardPicture(picture.target.files[0])}
+                        labelText={'Upload Detail Picture Bottom'}
                     />
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                         <Button 
