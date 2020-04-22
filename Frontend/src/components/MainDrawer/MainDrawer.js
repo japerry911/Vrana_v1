@@ -6,12 +6,14 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import List from '@material-ui/core/List';
 import ListItemText from '@material-ui/core/ListItemText';
-import { ROUTES_OBJECT } from '../../misc/routesObject';
+import { ROUTES_OBJECT, AUTHED_ROUTES_OBJECT } from '../../Router/routesObject';
 import { Link } from 'react-router-dom';
 import { useStyles } from './MainDrawerStyles';
+import { useSelector } from 'react-redux';
 
 const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();
+    const authed = useSelector(state => state.admins.authed);
 
     return (
         <Drawer
@@ -26,7 +28,7 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
         >
             <div className={classes.drawerHeaderStyle}>
                 <List>
-                    {Object.keys(ROUTES_OBJECT).map((key, index) => {
+                    {Object.keys(authed ? AUTHED_ROUTES_OBJECT : ROUTES_OBJECT).map((key, index) => {
                         return (
                             <ListItem 
                                 button 
@@ -35,7 +37,7 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
                                 to={key}
                                 onClick={() => handleDrawerClose()}
                             >
-                                <ListItemText primary={ROUTES_OBJECT[key]} />
+                                <ListItemText primary={authed ? AUTHED_ROUTES_OBJECT[key] : ROUTES_OBJECT[key]} />
                             </ListItem>
                         );
                     })}
