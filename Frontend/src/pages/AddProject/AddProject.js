@@ -21,7 +21,10 @@ const AddProject = () => {
     const [industry, setIndustry] = useState('');
     const [firstParagraphHeader, setFirstParagraphHeader] = useState('');
     const [firstParagraphContent, setFirstParagraphContent] = useState('');
+    const [keyProjectBullets, setKeyProjectBullets] = useState([]);
     const [cardPicture, setCardPicture] = useState('');
+    const [detailPictureTop, setDetailPictureTop] = useState('');
+    const [detailPictureBottom, setDetailPictureBottom] = useState('');
 
     console.log(cardPicture);
 
@@ -36,7 +39,11 @@ const AddProject = () => {
                         </Typography>
                         <Divider />
                     </Grid>
-                    <FormTextField label='Client Name' />
+                    <FormTextField 
+                        label='Client Name' 
+                        value={clientName}
+                        onChange={newClientName => setClientName(newClientName.target.value)}
+                    />
                     <FormTextField label='Size' />
                     <FormTextField label='Location' />
                     <FormTextField label='Year Completed / Project Status' />
