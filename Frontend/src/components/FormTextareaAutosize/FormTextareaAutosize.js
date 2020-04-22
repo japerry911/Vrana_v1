@@ -4,9 +4,8 @@ import Typography from '@material-ui/core/Typography';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Grid from '@material-ui/core/Grid';
 
-const FormTextareaAutosize = props => {
+const FormTextareaAutosize = ({ labelText }) => {
     const classes = useStyles();
-    const { labelText } = props;
 
     return (
         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>

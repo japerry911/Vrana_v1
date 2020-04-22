@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStyles } from './AddProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
@@ -8,9 +8,22 @@ import Divider from '@material-ui/core/Divider';
 import Button from '@material-ui/core/Button';
 import FormTextField from '../../components/FormTextField/FormTextField';
 import FormTextareaAutosize from '../../components/FormTextareaAutosize/FormTextareaAutosize';
+import FormImageUploader from '../../components/FormImageUploader/FormImageUploader';
 
 const AddProject = () => {
     const classes = useStyles();
+    const [clientName, setClientName] = useState('');
+    const [size, setSize] = useState('');
+    const [location, setLocation] = useState('');
+    const [yearCompletedProjectStatus, setYearCompletedProjectStatus] = useState('');
+    const [constructionValue, setConstructionValue] = useState('');
+    const [scopeOfWork, setScopeOfWork] = useState('');
+    const [industry, setIndustry] = useState('');
+    const [firstParagraphHeader, setFirstParagraphHeader] = useState('');
+    const [firstParagraphContent, setFirstParagraphContent] = useState('');
+    const [cardPicture, setCardPicture] = useState('');
+
+    console.log(cardPicture);
 
     return (
         <div>
@@ -32,6 +45,19 @@ const AddProject = () => {
                     <FormTextField label='Industry' />
                     <FormTextField label='First Paragraph Header' />
                     <FormTextareaAutosize labelText='First Paragraph Content' />
+                    <FormTextareaAutosize labelText='Key Project Bullets' />
+                    <FormImageUploader
+                        onChange={picture => setCardPicture(picture)}
+                        buttonText={'Upload Card Picture'}
+                    />
+                    <FormImageUploader
+                        onChange={picture => setCardPicture(picture)}
+                        buttonText={'Upload Detail Picture Top'}
+                    />
+                    <FormImageUploader
+                        onChange={picture => setCardPicture(picture)}
+                        buttonText={'Upload Detail Picture Bottom'}
+                    />
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                         <Button 
                             className={classes.buttonStyle} 
