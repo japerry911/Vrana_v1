@@ -10,7 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_20_030711) do
+ActiveRecord::Schema.define(version: 2020_04_21_204808) do
+
+  create_table "admins", id: :string, force: :cascade do |t|
+    t.string "username"
+    t.string "password_digest"
+  end
 
   create_table "projects", id: :string, force: :cascade do |t|
     t.string "Client_Name"

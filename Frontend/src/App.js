@@ -6,6 +6,7 @@ import Navigation from './components/Navigation/Navigation';
 import theme from './misc/theme';
 
 const App = () => {
+
   return (
     <div className='App'>
       <ThemeProvider theme={theme}>
