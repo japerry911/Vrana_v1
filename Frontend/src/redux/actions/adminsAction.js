@@ -25,7 +25,7 @@ export const attemptLogin = (username, password) => {
         dispatch(loginPending());
 
         try {
-            const loginAttemptResponse = await railsServer.post('/login', { username, password });
+            const loginAttemptResponse = await railsServer.post('/login', { admin: { username, password }});
             
             const admin = loginAttemptResponse.data.admin;
 
