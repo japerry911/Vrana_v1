@@ -30,8 +30,10 @@ export const attemptLogin = (username, password) => {
             const admin = loginAttemptResponse.data.admin;
 
             dispatch(loginSuccess({ admin }));
+            return true;
         } catch (error) {
             dispatch(loginFailed({ error }));
+            return false;
         }
     };
 };

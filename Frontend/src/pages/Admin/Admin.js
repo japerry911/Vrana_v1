@@ -7,32 +7,45 @@ import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { attemptLogin } from '../../redux/actions/adminsAction';
+import Snackbar from '@material-ui/core/Snackbar';
+import MuiAlert from '@material-ui/lab/Alert';
+
+const Alert = props => {
+    return (
+        <MuiAlert elevation={6} variant='filled' {...props} />
+    );
+};
 
 const Admin = (props) => {
     const classes = useStyles();
+    const [open, setOpen] = useState(false);
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [validationStatus, setValidationStatus] = useState(false);
-    const authedStatus = useSelector(state => state.admins.authed);
     const dispatch = useDispatch();
 
     useEffect(() => {
         setValidationStatus(username && password);
     }, [username, password]);
 
-    useEffect(() => {
-        if (authedStatus) {
-            props.history.push('/');
-        } else if (!authedStatus && username && password) {
-            console.log('failed!');
-        } 
-    }, [authedStatus, props.history]);
-
-    const handleSubmit = event => {
+    const handleSubmit = async event => {
+        
         event.preventDefault();
-        dispatch(attemptLogin(username, password));
+        const status = await dispatch(attemptLogin(username, password));
+        
+        if (!status) {
+            setOpen(true);
+        } else {
+            props.history.push('/');
+        }
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') return;
+
+        setOpen(false);
     };
 
     return (
@@ -77,6 +90,11 @@ const Admin = (props) => {
                     </Grid>
                 </Grid>
             </form>
+            <Snackbar open={open} onClose={handleClose}>
+                <Alert severity='error' onClose={handleClose}>
+                    Invalid Credentials
+                </Alert>
+            </Snackbar>
             <Footer />
         </div>
     );
