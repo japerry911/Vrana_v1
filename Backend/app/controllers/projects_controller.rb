@@ -14,9 +14,10 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        @new_project = Project.create(project_params)
+        byebug
+        # @new_project = Project.create(project_params)
 
-        render json: { project: @new_project }
+        # render json: { project: @new_project }
     end
 
     private

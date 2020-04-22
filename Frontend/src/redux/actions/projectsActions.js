@@ -74,3 +74,36 @@ export const getProjectError = error => {
         error
     };
 };
+
+export const createProjectPending = () => {
+    return {
+        type: 'CREATE_PROJECT_PENDING'
+    };
+};
+
+export const createProjectSuccess = () => {
+    return {
+        type: 'CREATE_PROJECT_SUCCESS', 
+    };
+};
+
+export const createProjectError = error => {
+    return {
+        type: 'CREATE_PROJECT_ERROR',
+        error
+    };
+};
+
+export const createProject = uploadObject => {
+    return async dispatch => {
+        dispatch(createProjectPending());
+
+        try {
+            await railsServer.post('/projects', { project: uploadObject });
+
+            dispatch(createProjectSuccess());
+        } catch (error) {
+            dispatch(createProjectError(error));
+        }
+    };
+};
