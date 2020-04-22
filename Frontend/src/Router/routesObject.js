@@ -23,6 +23,5 @@ export const AUTHED_ROUTES_OBJECT = {
     '/contact-us': 'Contact Us',
     '/admin/add-project': 'Admin: Add Project',
     '/admin/edit-project': 'Admin: Edit Project',
-    '/admin/delete-project': 'Admin: Delete Project',
-    '/admin/logout': 'Admin Logout'
+    '/admin/delete-project': 'Admin: Delete Project'
 };

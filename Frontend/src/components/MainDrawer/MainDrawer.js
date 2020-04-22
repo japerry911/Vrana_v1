@@ -9,11 +9,13 @@ import ListItemText from '@material-ui/core/ListItemText';
 import { ROUTES_OBJECT, AUTHED_ROUTES_OBJECT } from '../../Router/routesObject';
 import { Link } from 'react-router-dom';
 import { useStyles } from './MainDrawerStyles';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { logOut } from '../../redux/actions/adminsAction';
 
 const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();
     const authed = useSelector(state => state.admins.authed);
+    const dispatch = useDispatch();
 
     return (
         <Drawer
@@ -41,6 +43,21 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
                             </ListItem>
                         );
                     })}
+                    {authed
+                    ?
+                    <ListItem
+                        button
+                        onClick={() => {
+                            dispatch(logOut());
+                            handleDrawerClose();
+                        }}
+                        to={'/'}
+                    >
+                        <ListItemText primary='Admin: Log Out' />
+                    </ListItem>
+                    :
+                    null
+                    }
                 </List>
                 <Divider />
                 <IconButton

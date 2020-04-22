@@ -37,3 +37,9 @@ export const attemptLogin = (username, password) => {
         }
     };
 };
+
+export const logOut = () => {
+    return {
+        type: 'LOG_OUT'
+    };
+};

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 import ProtectedRoute from './ProtectedRoute';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
@@ -19,8 +18,6 @@ import DeleteProject from '../pages/DeleteProject/DeleteProject';
 import Sandbox from '../misc/Sandbox.js';
 
 export default () => {
-    const authed = useSelector(state => state.admins.authed);
-
     return (
         <Switch>
             <Route 

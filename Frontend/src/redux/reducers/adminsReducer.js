@@ -11,7 +11,7 @@ const adminsReducer = (state=INITIAL_STATE, action) => {
         case 'LOGIN_FAILED':
             return { ...state, loading: false, authed: false, error: action.error };
 
-        case 'LOGOUT':
+        case 'LOG_OUT':
             return INITIAL_STATE;
         
         default:
