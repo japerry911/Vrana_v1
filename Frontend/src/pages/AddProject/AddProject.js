@@ -26,8 +26,6 @@ const AddProject = () => {
     const [detailPictureTop, setDetailPictureTop] = useState('');
     const [detailPictureBottom, setDetailPictureBottom] = useState('');
 
-    console.log(cardPicture);
-
     return (
         <div>
             <HeroHeader headerText='Admin: Add Project' />
@@ -44,25 +42,64 @@ const AddProject = () => {
                         value={clientName}
                         onChange={newClientName => setClientName(newClientName.target.value)}
                     />
-                    <FormTextField label='Size' />
-                    <FormTextField label='Location' />
-                    <FormTextField label='Year Completed / Project Status' />
-                    <FormTextField label='Construction Value' />
-                    <FormTextField label='Scope of Work' />
-                    <FormTextField label='Industry' />
-                    <FormTextField label='First Paragraph Header' />
-                    <FormTextareaAutosize labelText='First Paragraph Content' />
-                    <FormTextareaAutosize labelText='Key Project Bullets' />
+                    <FormTextField 
+                        label='Size' 
+                        value={size}
+                        onChange={newSize => setSize(newSize.target.value)}
+                    />
+                    <FormTextField 
+                        label='Location' 
+                        value={location}
+                        onChange={newLocation => setLocation(newLocation.target.value)}
+                    />
+                    <FormTextField 
+                        label='Year Completed / Project Status' 
+                        value={yearCompletedProjectStatus}
+                        onChange={newYearCompletedProjectStatus => setYearCompletedProjectStatus(newYearCompletedProjectStatus.target.value)}
+                    />
+                    <FormTextField 
+                        label='Construction Value' 
+                        value={constructionValue}
+                        onChange={newConstructionValue => setConstructionValue(newConstructionValue.target.value)}
+                    />
+                    <FormTextField 
+                        label='Scope of Work' 
+                        value={scopeOfWork}
+                        onChange={newScopeOfWork => setScopeOfWork(newScopeOfWork.target.value)}
+                    />
+                    <FormTextField 
+                        label='Industry' 
+                        value={industry}
+                        onChange={newIndustry => setIndustry(newIndustry.target.value)}
+                    />
+                    <FormTextField 
+                        label='First Paragraph Header' 
+                        value={firstParagraphHeader}
+                        onChange={newFirstParagraphHeader => setFirstParagraphHeader(newFirstParagraphHeader.target.value)}
+                    />
+                    <FormTextareaAutosize 
+                        labelText='First Paragraph Content' 
+                        value={firstParagraphContent}
+                        onChange={newFirstParagraphContent => setFirstParagraphContent(newFirstParagraphContent.target.value)}
+                    />
+                    <FormTextareaAutosize 
+                        labelText='Key Project Bullets' 
+                        value={keyProjectBullets}
+                        onChange={newKeyProjectBullets => setKeyProjectBullets(newKeyProjectBullets.target.value)}
+                    />
                     <FormImageUploader
                         onChange={picture => setCardPicture(picture.target.files[0])}
+                        value={cardPicture}
                         labelText={'Upload Card Picture'}
                     />
                     <FormImageUploader
-                        onChange={picture => setCardPicture(picture.target.files[0])}
+                        onChange={picture => setDetailPictureTop(picture.target.files[0])}
+                        value={detailPictureTop}
                         labelText={'Upload Detail Picture Top'}
                     />
                     <FormImageUploader
-                        onChange={picture => setCardPicture(picture.target.files[0])}
+                        onChange={picture => setDetailPictureBottom(picture.target.files[0])}
+                        value={detailPictureBottom}
                         labelText={'Upload Detail Picture Bottom'}
                     />
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
