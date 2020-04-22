@@ -11,7 +11,7 @@ import News from '../pages/News/News';
 import Careers from '../pages/Careers/Careers';
 import ContactUs from '../pages/ContactUs/ContactUs';
 import ShowProject from '../pages/ShowProject/ShowProject';
-import Admin from '../pages/Admin/Admin';
+import AdminLogin from '../pages/AdminLogin/AdminLogin';
 import AddProject from '../pages/AddProject/AddProject';
 import EditProject from '../pages/EditProject/EditProject';
 import DeleteProject from '../pages/DeleteProject/DeleteProject';
@@ -29,10 +29,10 @@ export default () => {
             <Route
                 exact
                 path='/admin/login'
-                component={Admin}
+                component={AdminLogin}
             />
 
-            <ProtectedRoute 
+            <Route 
                 exact
                 path='/admin/add-project'
                 component={AddProject}

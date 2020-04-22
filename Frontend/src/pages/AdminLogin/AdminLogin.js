@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useStyles } from './AdminStyles';
+import { useStyles } from './AdminLoginStyles';
 import Grid from '@material-ui/core/Grid';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Footer from '../../components/Footer/Footer';
@@ -18,7 +18,7 @@ const Alert = props => {
     );
 };
 
-const Admin = (props) => {
+const AdminLogin = (props) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [username, setUsername] = useState('');
@@ -51,7 +51,7 @@ const Admin = (props) => {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <HeroHeader />
+                <HeroHeader headerText='Admin Portal' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center'>
                     <Grid container spacing={0} className={classes.whiteContainerStyle}>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
@@ -100,4 +100,4 @@ const Admin = (props) => {
     );
 };
 
-export default Admin;
+export default AdminLogin;
