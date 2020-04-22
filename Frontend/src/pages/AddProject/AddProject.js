@@ -90,17 +90,17 @@ const AddProject = () => {
                     <FormImageUploader
                         onChange={picture => setCardPicture(picture.target.files[0])}
                         value={cardPicture}
-                        labelText={'Upload Card Picture'}
+                        labelText='Upload Card Picture'
                     />
                     <FormImageUploader
                         onChange={picture => setDetailPictureTop(picture.target.files[0])}
                         value={detailPictureTop}
-                        labelText={'Upload Detail Picture Top'}
+                        labelText='Upload Detail Picture Top'
                     />
                     <FormImageUploader
                         onChange={picture => setDetailPictureBottom(picture.target.files[0])}
                         value={detailPictureBottom}
-                        labelText={'Upload Detail Picture Bottom'}
+                        labelText='Upload Detail Picture Bottom'
                     />
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                         <Button 
