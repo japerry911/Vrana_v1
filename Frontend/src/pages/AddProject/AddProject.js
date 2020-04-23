@@ -64,7 +64,7 @@ const AddProject = () => {
             formData.append(key, projectObject[key]);
         });
 
-        //dispatch(createProject(formData, token));
+        dispatch(createProject(formData, token));
     };
 
     return (
