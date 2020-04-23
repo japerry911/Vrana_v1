@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useStyles } from './AddProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
@@ -30,6 +30,18 @@ const AddProject = () => {
     const [cardPicture, setCardPicture] = useState('');
     const [detailPictureTop, setDetailPictureTop] = useState('');
     const [detailPictureBottom, setDetailPictureBottom] = useState('');
+    const [validationStatus, setValidationStatus] = useState(false);
+
+    useEffect(() => {
+        if (clientName  && size  && location  && yearCompletedProjectStatus  && constructionValue  && 
+            scopeOfWork  && industry  && firstParagraphHeader  && firstParagraphContent  && keyProjectBullets  && 
+            cardPicture  && detailPictureTop  && detailPictureBottom ) {
+                setValidationStatus(true);
+            } else {
+                setValidationStatus(false);
+            }
+    }, [clientName, size, location, yearCompletedProjectStatus, constructionValue, scopeOfWork, industry, firstParagraphHeader, firstParagraphContent, keyProjectBullets,
+        cardPicture, detailPictureTop, detailPictureBottom]);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -152,6 +164,7 @@ const AddProject = () => {
                             <Button 
                                 className={classes.buttonStyle} 
                                 type='submit'
+                                disabled={!validationStatus}
                             >
                                 <Typography variant='h6' className={classes.buttonTextStyle}>
                                     Add Project
