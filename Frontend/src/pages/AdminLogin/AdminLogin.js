@@ -31,8 +31,8 @@ const AdminLogin = (props) => {
     }, [username, password]);
 
     const handleSubmit = async event => {
-        
         event.preventDefault();
+        
         const status = await dispatch(attemptLogin(username, password));
         
         if (!status) {
@@ -50,9 +50,9 @@ const AdminLogin = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <HeroHeader headerText='Admin Portal' />
-                <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center'>
+            <HeroHeader headerText='Admin Portal' />
+            <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center'>
+                <form onSubmit={handleSubmit}>
                     <Grid container spacing={0} className={classes.whiteContainerStyle}>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                             <Typography variant='h4' className={classes.headerFontStyle}>
@@ -88,8 +88,8 @@ const AdminLogin = (props) => {
                             </Button>
                         </Grid>
                     </Grid>
-                </Grid>
-            </form>
+                </form>
+            </Grid>
             <Snackbar open={open} onClose={handleClose}>
                 <Alert severity='error' onClose={handleClose}>
                     Invalid Credentials

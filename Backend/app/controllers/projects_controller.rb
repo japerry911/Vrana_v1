@@ -1,5 +1,7 @@
+require "base64"
+
 class ProjectsController < ApplicationController
-    before_action :authenticate, only [:create]
+    # before_action :authenticate, only: [:create]
 
     def index
         @projects = Project.all
@@ -14,10 +16,25 @@ class ProjectsController < ApplicationController
     end
 
     def create
-        byebug
-        # @new_project = Project.create(project_params)
+        s3 = Aws::S3::Resource.new 
 
-        # render json: { project: @new_project }
+        card_image_s3_path = s3.bucket('vranaconstructionwebsiteimages').object("projects/images/#{params[:images_file_client_name]}/card_image#{params[:card_image_filetype]}")
+        card_image_status = card_image_s3_path.upload_file(params[:card_image])
+        if !card_image_status
+            render status: :internal_server_error
+        end
+
+        template_image1_s3_path = s3.bucket('vranaconstructionwebsiteimages').object("projects/images/#{params[:images_file_client_name]}/template1_image#{params[:template_image1_filetype]}")
+        template_image1_status = template_image1_s3_path.upload_file(params[:template_image1])
+        if !template_image1_status
+            render status: :internal_server_error
+        end
+
+        template_image2_s3_path = s3.bucket('vranaconstructionwebsiteimages').object("projects/images/#{params[:images_file_client_name]}/template2_image#{params[:template_image2_filetype]}")
+        template_image2_status = template_image2_s3_path.upload_file(params[:template_image2])
+        if !template_image2_status
+            render status: :internal_server_error
+        end
     end
 
     private

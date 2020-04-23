@@ -94,12 +94,12 @@ export const createProjectError = error => {
     };
 };
 
-export const createProject = uploadObject => {
+export const createProject = (formUploadData, token) => {
     return async dispatch => {
         dispatch(createProjectPending());
 
         try {
-            await railsServer.post('/projects', { project: uploadObject });
+            await railsServer.post('/projects', formUploadData, { headers: { Authorization: `Bearer ${token}` }});
 
             dispatch(createProjectSuccess());
         } catch (error) {
