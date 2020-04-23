@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useStyles } from './AdminStyles';
+import { useStyles } from './AdminLoginStyles';
 import Grid from '@material-ui/core/Grid';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Footer from '../../components/Footer/Footer';
@@ -18,7 +18,7 @@ const Alert = props => {
     );
 };
 
-const Admin = (props) => {
+const AdminLogin = (props) => {
     const classes = useStyles();
     const [open, setOpen] = useState(false);
     const [username, setUsername] = useState('');
@@ -31,8 +31,8 @@ const Admin = (props) => {
     }, [username, password]);
 
     const handleSubmit = async event => {
-        
         event.preventDefault();
+        
         const status = await dispatch(attemptLogin(username, password));
         
         if (!status) {
@@ -50,9 +50,9 @@ const Admin = (props) => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <HeroHeader />
-                <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center'>
+            <HeroHeader headerText='Admin Portal' />
+            <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
+                <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                     <Grid container spacing={0} className={classes.whiteContainerStyle}>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                             <Typography variant='h4' className={classes.headerFontStyle}>
@@ -74,6 +74,7 @@ const Admin = (props) => {
                                 className={classes.textFieldStyle} 
                                 value={password}
                                 onChange={newPassword => setPassword(newPassword.target.value)}
+                                type='password'
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
@@ -88,8 +89,8 @@ const Admin = (props) => {
                             </Button>
                         </Grid>
                     </Grid>
-                </Grid>
-            </form>
+                </form>
+            </Grid>
             <Snackbar open={open} onClose={handleClose}>
                 <Alert severity='error' onClose={handleClose}>
                     Invalid Credentials
@@ -100,4 +101,4 @@ const Admin = (props) => {
     );
 };
 
-export default Admin;
+export default AdminLogin;

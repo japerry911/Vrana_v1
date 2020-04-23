@@ -1,7 +1,7 @@
 Project.destroy_all
 Admin.destroy_all
 
-Admin.create(username: 'VranaAdmin', password: 'ILoveYouDad2658')
+Admin.create(username: 'VranaAdmin', password: 'TEST')
 
 Project.create(
     Client_Name: 'Ameristar',

@@ -73,12 +73,12 @@ const ShowProject = ({ match }) => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <Typography variant='body1' className={classes.boldSpacingStyle}>
-                            Construction Value: <span className={classes.avenirRegStyle}>{showProject.ConstructionValue}</span>
+                            Construction Value: <span className={classes.avenirRegStyle}>{showProject.Construction_Value}</span>
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <Typography variant='body1' className={classes.boldSpacingStyle}>
-                            Scope of Work: <span className={classes.avenirRegStyle}>{showProject.ScopeOfWork}</span>
+                            Scope of Work: <span className={classes.avenirRegStyle}>{showProject.Scope_Of_Work}</span>
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
