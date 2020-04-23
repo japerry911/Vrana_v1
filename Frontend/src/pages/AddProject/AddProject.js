@@ -33,7 +33,7 @@ const AddProject = () => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        
+
         const projectObject = {
             Client_Name: clientName,
             Size: size,
@@ -51,15 +51,17 @@ const AddProject = () => {
         
         formData.append('images_file_client_name', clientName.replace(/ /g, '_').toString().toLowerCase());
 
-        formData.append('card_image_filetype', '.png');
+        formData.append('card_image_filetype', cardPicture.type.replace('image/', ''));
         formData.append('card_image', cardPicture);
 
-        formData.append('template_image1_filetype', '.png');
+        formData.append('template_image1_filetype', detailPictureTop.type.replace('image/', ''));
         formData.append('template_image1', detailPictureTop);
 
-        formData.append('template_image2_filetype', '.png');
+        formData.append('template_image2_filetype', detailPictureBottom.type.replace('image/', ''));
         formData.append('template_image2', detailPictureBottom);
         
+        //formData.append('Project', JSON.parse(projectObject));
+
         Object.keys(projectObject).forEach(key => {
             formData.append(key, projectObject[key]);
         });
