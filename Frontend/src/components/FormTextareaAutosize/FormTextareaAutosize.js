@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 import Grid from '@material-ui/core/Grid';
 
-const FormTextareaAutosize = ({ labelText }) => {
+const FormTextareaAutosize = ({ labelText, value, onChange }) => {
     const classes = useStyles();
 
     return (
@@ -15,6 +15,8 @@ const FormTextareaAutosize = ({ labelText }) => {
             <TextareaAutosize 
                 className={classes.formTextFieldStyle} 
                 rowsMin={3}
+                onChange={onChange}
+                value={value}
             />
         </Grid>
     );

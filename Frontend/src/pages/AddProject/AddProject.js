@@ -26,7 +26,7 @@ const AddProject = () => {
     const [industry, setIndustry] = useState('');
     const [firstParagraphHeader, setFirstParagraphHeader] = useState('');
     const [firstParagraphContent, setFirstParagraphContent] = useState('');
-    const [keyProjectBullets, setKeyProjectBullets] = useState([]);
+    const [keyProjectBullets, setKeyProjectBullets] = useState('');
     const [cardPicture, setCardPicture] = useState('');
     const [detailPictureTop, setDetailPictureTop] = useState('');
     const [detailPictureBottom, setDetailPictureBottom] = useState('');
@@ -60,10 +60,12 @@ const AddProject = () => {
         formData.append('template_image2_filetype', detailPictureBottom.type.replace('image/', ''));
         formData.append('template_image2', detailPictureBottom);
         
-        //formData.append('Project', JSON.parse(projectObject));
-
         Object.keys(projectObject).forEach(key => {
-            formData.append(key, projectObject[key]);
+            if (key === 'Key_Projects_Bullets') {
+                formData.append(key, keyProjectBullets.replace(/- /g, '').replace(/-/g, '').split('\n').join('|||'));
+            } else {
+                formData.append(key, projectObject[key]);
+            }
         });
 
         dispatch(createProject(formData, token));
