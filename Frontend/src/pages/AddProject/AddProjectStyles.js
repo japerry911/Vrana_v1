@@ -28,5 +28,12 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: theme.colors.vranaRed,
         borderRadius: 10,
         width: '25%'
+    },
+    spinnerDiv: {
+        justifyContent: 'center',
+        display: 'flex'
+    },
+    formContainerStyle: {
+        width: '100%'
     }
 }));

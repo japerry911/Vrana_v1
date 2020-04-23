@@ -31,5 +31,8 @@ export const useStyles = makeStyles(theme => ({
     },
     textFieldStyle: {
         width: '70%'
+    },
+    formContainerStyle: {
+        width: '100%'
     }
 }));

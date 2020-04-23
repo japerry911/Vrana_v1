@@ -51,8 +51,8 @@ const AdminLogin = (props) => {
     return (
         <div>
             <HeroHeader headerText='Admin Portal' />
-            <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center'>
-                <form onSubmit={handleSubmit}>
+            <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
+                <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                     <Grid container spacing={0} className={classes.whiteContainerStyle}>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                             <Typography variant='h4' className={classes.headerFontStyle}>
@@ -74,6 +74,7 @@ const AdminLogin = (props) => {
                                 className={classes.textFieldStyle} 
                                 value={password}
                                 onChange={newPassword => setPassword(newPassword.target.value)}
+                                type='password'
                             />
                         </Grid>
                         <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>

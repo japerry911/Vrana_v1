@@ -32,7 +32,7 @@ export default () => {
                 component={AdminLogin}
             />
 
-            <Route 
+            <ProtectedRoute 
                 exact
                 path='/admin/add-project'
                 component={AddProject}
