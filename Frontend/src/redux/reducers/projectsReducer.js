@@ -29,6 +29,15 @@ const projectsReducer = (state=INITIAL_STATE, action) => {
         case 'CREATE_PROJECT_ERROR':
             return { ...state, loading: false, error: action.error };
 
+        case 'DELETE_PROJECT_PENDING':
+            return { ...state, loading: true };
+
+        case 'DELETE_PROJECT_SUCCESS':
+            return { ...state, loading: false };
+
+        case 'DELETE_PROJECT_ERROR':
+            return { ...state, loading: false, error: action.error };
+
         default:
             return state;
     }
