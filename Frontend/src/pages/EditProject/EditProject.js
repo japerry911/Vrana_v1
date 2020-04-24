@@ -14,10 +14,9 @@ import FormTextareaAutosize from '../../components/FormTextareaAutosize/FormText
 import FormImageUploader from '../../components/FormImageUploader/FormImageUploader';
 import Button from '@material-ui/core/Button';
 import { useDispatch, useSelector } from 'react-redux';
-import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
-import { updateProject } from '../../redux/actions/projectsActions';
+import { updateProject, getProjects } from '../../redux/actions/projectsActions';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -143,9 +142,13 @@ const EditProject = ({ history }) => {
             }
         });
 
-        await dispatch(updateProject(projectToEdit.id, formData));
+        setProjectToEdit('');
 
+        await dispatch(updateProject(projectToEdit.id, formData, token));
+        await dispatch(getProjects());
+        
         setFields(INITIAL_STATE);
+        
         history.push('/admin/edit-project');
     };
 

@@ -160,12 +160,12 @@ export const updateProjectError = error => {
     };
 };
 
-export const updateProject = (projectId, formUpdateData) => {
+export const updateProject = (projectId, formUpdateData, token) => {
     return async dispatch => {
         dispatch(updateProjectPending());
 
         try {
-            await railsServer.put(`/projects/${projectId}`, formUpdateData);
+            await railsServer.put(`/projects/${projectId}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }});
 
             dispatch(updateProjectSuccess());
         } catch (error) {

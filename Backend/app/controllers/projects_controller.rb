@@ -50,7 +50,7 @@ class ProjectsController < ApplicationController
             template_image1_url = "#{image_url_base}/#{strong_params[:images_file_client_name]}/template_image1.#{strong_params[:template_image1_filetype]}"
         end
 
-        if strong_params[:template_image1_filetype] != ''
+        if strong_params[:template_image2_filetype] != ''
             template_image2_s3_path = s3.bucket('vranaconstructionwebsiteimages')
                     .object("projects/images/#{strong_params[:images_file_client_name]}/template_image2.#{strong_params[:template_image2_filetype]}")
             template_image2_status = template_image2_s3_path.upload_file(strong_params[:template_image2])
