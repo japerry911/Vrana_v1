@@ -17,6 +17,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
+import { updateProject } from '../../redux/actions/projectsActions';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -34,7 +35,7 @@ const INITIAL_STATE = {
     detailPictureBottom: ''
 };
 
-const EditProject = () => {
+const EditProject = ({ history }) => {
     const classes = useStyles();
 
     const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
@@ -64,6 +65,7 @@ const EditProject = () => {
 
     useEffect(() => {
         if (projectToEdit) {
+            console.log('here');
             const keyProjectBullets = projectToEdit.Key_Projects_Bullets ?
                 '-'.concat(projectToEdit.Key_Projects_Bullets.replace(/\n/g, '').replace(/\s+/g, ' ').replace(/\|\|\|/g, '\n-'))
                 : '';
@@ -87,7 +89,7 @@ const EditProject = () => {
                 detailPictureBottom: ''
             });
         }
-    }, [projectToEdit]);
+    }, [projectToEdit, setFields]);
 
     const handleSubmit = async event => {
         event.preventDefault();
@@ -97,7 +99,7 @@ const EditProject = () => {
             Size: fields.size,
             Location: fields.location,
             YearCompleted_ProjectStatus: fields.yearCompletedProjectStatus,
-            Construction_Value: fields.onstructionValue,
+            Construction_Value: fields.constructionValue,
             Scope_Of_Work: fields.scopeOfWork,
             Industry: fields.industry,
             First_P_Header: fields.firstParagraphHeader,
@@ -140,6 +142,11 @@ const EditProject = () => {
                 formData.append(key, projectObject[key]);
             }
         });
+
+        await dispatch(updateProject(projectToEdit.id, formData));
+
+        setFields(INITIAL_STATE);
+        history.push('/admin/edit-project');
     };
 
     return (

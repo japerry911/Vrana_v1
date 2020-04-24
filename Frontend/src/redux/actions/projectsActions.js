@@ -140,3 +140,36 @@ export const deleteProject = (projectId, token) => {
         }
     };
 };
+
+export const updateProjectPending = () => {
+    return {
+        type: 'UPDATE_PROJECT_PENDING'
+    };
+};
+
+export const updateProjectSuccess = () => {
+    return {
+        type: 'UPDATE_PROJECT_SUCCESS', 
+    };
+};
+
+export const updateProjectError = error => {
+    return {
+        type: 'UPDATE_PROJECT_ERROR',
+        error
+    };
+};
+
+export const updateProject = (projectId, formUpdateData) => {
+    return async dispatch => {
+        dispatch(updateProjectPending());
+
+        try {
+            await railsServer.put(`/projects/${projectId}`, formUpdateData);
+
+            dispatch(updateProjectSuccess());
+        } catch (error) {
+            dispatch(updateProjectError(error));
+        }
+    };
+};

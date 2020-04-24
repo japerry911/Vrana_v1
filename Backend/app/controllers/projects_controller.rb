@@ -24,6 +24,7 @@ class ProjectsController < ApplicationController
     end
 
     def update
+        @project_to_update = Project.find(params[:id])
         strong_params = project_params_exc_image_urls
 
         s3 = Aws::S3::Resource.new 
@@ -59,13 +60,12 @@ class ProjectsController < ApplicationController
             template_image2_url = "#{image_url_base}/#{strong_params[:images_file_client_name]}/template_image2.#{strong_params[:template_image2_filetype]}"
         end
 
-        @project_to_update = Project.find(params[:id])
-
-        @project_to_update.update([Client_Name: strong_params[:Client_Name], Size: strong_params[:Size], Location: strong_params[:Location],
+        @project_to_update.update({Client_Name: strong_params[:Client_Name], Size: strong_params[:Size], Location: strong_params[:Location],
                                     YearCompleted_ProjectStatus: strong_params[:YearCompleted_ProjectStatus], Construction_Value: strong_params[:Construction_Value],
                                     Scope_Of_Work: strong_params[:Scope_Of_Work], Industry: strong_params[:Industry], First_P_Header: strong_params[:First_P_Header],
                                     First_P_Content: strong_params[:First_P_Content], Key_Projects_Bullets: strong_params[:Key_Projects_Bullets],
-                                    Card_Image_Url: card_image_url, Template_Image1_Url: template_image1_url, Template_Image2_Url: template_image2_url])
+                                    Card_Image_Url: card_image_url, Template_Image1_Url: template_image1_url, Template_Image2_Url: template_image2_url}
+                                    .reject {|k, v| v.nil?})
 
         render json: { project: @project_to_update }
     end
