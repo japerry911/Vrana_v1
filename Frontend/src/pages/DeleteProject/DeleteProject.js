@@ -18,7 +18,7 @@ const DeleteProject = ({ history }) => {
     const classes = useStyles();
 
     const [projectToDelete, setProjectToDelete] = useState('');
-    const [combinedProjectsArray, setCombinedProductsArray] = useState([]);
+    const [combinedProjectsArray, setCombinedProjectsArray] = useState([]);
 
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.projects.loading);
@@ -39,7 +39,7 @@ const DeleteProject = ({ history }) => {
             });
         });
 
-        setCombinedProductsArray(tempProjectsArray);
+        setCombinedProjectsArray(tempProjectsArray);
     }, [projects]);
 
     const handleSubmit = async () => {

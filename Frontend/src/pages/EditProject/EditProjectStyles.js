@@ -31,12 +31,18 @@ export const useStyles = makeStyles(theme => ({
     },
     spinnerDiv: {
         justifyContent: 'center',
-        display: 'flex'
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
     },
     formContainerStyle: {
         width: '100%'
     },
     selectProjectStyle: {
         width: '70%'
+    },
+    mainDivStyle: {
+        height: '100%'
     }
 }));
