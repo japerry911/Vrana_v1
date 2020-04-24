@@ -21,14 +21,6 @@ export const useStyles = makeStyles(theme => ({
     gridItemStyle: {
         paddingTop: '3em'
     },
-    buttonTextStyle: {
-        color: theme.colors.textWhite
-    },
-    buttonStyle: {
-        backgroundColor: theme.colors.vranaRed,
-        borderRadius: 10,
-        width: '25%'
-    },
     spinnerDiv: {
         justifyContent: 'center',
         display: 'flex'
