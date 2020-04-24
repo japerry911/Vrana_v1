@@ -35,5 +35,8 @@ export const useStyles = makeStyles(theme => ({
     },
     formContainerStyle: {
         width: '100%'
+    },
+    selectProjectStyle: {
+        width: '60%'
     }
 }));
