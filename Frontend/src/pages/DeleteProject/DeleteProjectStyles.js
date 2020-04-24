@@ -14,29 +14,17 @@ export const useStyles = makeStyles(theme => ({
         width: '60%',
         borderRadius: 10
     },
-    headerFontStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium'
-    },
-    gridItemStyle: {
-        paddingTop: '3em'
-    },
-    buttonTextStyle: {
-        color: theme.colors.textWhite
-    },
-    buttonStyle: {
-        backgroundColor: theme.colors.vranaRed,
-        borderRadius: 10,
-        width: '25%'
-    },
-    spinnerDiv: {
-        justifyContent: 'center',
-        display: 'flex'
-    },
     formContainerStyle: {
         width: '100%'
     },
-    selectProjectStyle: {
-        width: '70%'
+    spinnerDiv: {
+        justifyContent: 'center',
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
+    },
+    mainDivStyle: {
+        height: '100%'
     }
 }));

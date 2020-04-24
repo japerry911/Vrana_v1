@@ -1,16 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { useStyles } from './AddProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Footer from '../../components/Footer/Footer';
-import Divider from '@material-ui/core/Divider';
 import ProjectFormBody from '../../components/ProjectFormBody/ProjectFormBody';
 import { useDispatch, useSelector } from 'react-redux';
 import { createProject } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
 import FormButton from '../../components/FormButton/FormButton';
+import FormHeader from '../../components/FormHeader/FormHeader';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -48,7 +47,7 @@ const AddProject = ({ history }) => {
         }
     }, [fields]);
 
-    const handleSubmit = async event => {
+    const handleSubmit = event => {
         event.preventDefault();
 
         const projectObject = {
@@ -85,7 +84,7 @@ const AddProject = ({ history }) => {
             }
         });
 
-        await dispatch(createProject(formData, token));
+        dispatch(createProject(formData, token));
 
         setFields(INITIAL_STATE);
 
@@ -93,24 +92,19 @@ const AddProject = ({ history }) => {
     };
 
     return (
-        <div>
+        <div className={classes.mainDivStyle}>
             {isLoading
             ?
             <div className={classes.spinnerDiv}>
                 <Spinner />
             </div>
             :         
-            <>  
+            <Fragment>  
                 <HeroHeader headerText='Admin: Add Project' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <Typography variant='h4' className={classes.headerFontStyle}>
-                                    Add Project
-                                </Typography>
-                                <Divider />
-                            </Grid>
+                            <FormHeader headerText='Add Project' />
                             <ProjectFormBody
                                 fields={fields}
                                 setFields={setField}
@@ -124,7 +118,7 @@ const AddProject = ({ history }) => {
                     </form>
                 </Grid>
                 <Footer />
-            </>}
+            </Fragment>}
         </div>
     );
 };

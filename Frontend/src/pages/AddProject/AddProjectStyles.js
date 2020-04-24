@@ -14,18 +14,17 @@ export const useStyles = makeStyles(theme => ({
         width: '60%',
         borderRadius: 10
     },
-    headerFontStyle: {
-        color: theme.colors.darkGrey,
-        fontFamily: 'Avenir-Medium'
-    },
-    gridItemStyle: {
-        paddingTop: '3em'
-    },
     spinnerDiv: {
         justifyContent: 'center',
-        display: 'flex'
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
     },
     formContainerStyle: {
         width: '100%'
+    },
+    mainDivStyle: {
+        height: '100%'
     }
 }));
