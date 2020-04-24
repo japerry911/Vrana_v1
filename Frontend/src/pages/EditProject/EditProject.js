@@ -9,14 +9,11 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
-import FormTextField from '../../components/FormTextField/FormTextField';
-import FormTextareaAutosize from '../../components/FormTextareaAutosize/FormTextareaAutosize';
-import FormImageUploader from '../../components/FormImageUploader/FormImageUploader';
-import Button from '@material-ui/core/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
 import { updateProject, getProjects } from '../../redux/actions/projectsActions';
+import ProjectFormBody from '../../components/ProjectFormBody/ProjectFormBody';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -64,7 +61,6 @@ const EditProject = ({ history }) => {
 
     useEffect(() => {
         if (projectToEdit) {
-            console.log('here');
             const keyProjectBullets = projectToEdit.Key_Projects_Bullets ?
                 '-'.concat(projectToEdit.Key_Projects_Bullets.replace(/\n/g, '').replace(/\s+/g, ' ').replace(/\|\|\|/g, '\n-'))
                 : '';
@@ -143,11 +139,10 @@ const EditProject = ({ history }) => {
         });
 
         setProjectToEdit('');
+        setFields(INITIAL_STATE);
 
         await dispatch(updateProject(projectToEdit.id, formData, token));
         await dispatch(getProjects());
-        
-        setFields(INITIAL_STATE);
         
         history.push('/admin/edit-project');
     };
@@ -197,95 +192,13 @@ const EditProject = ({ history }) => {
                                 </Typography>
                                 <Divider />
                             </Grid>
-                            <FormTextField 
-                                paddingTop='1em'
-                                label='Client Name' 
-                                value={fields.clientName}
-                                onChange={setField}
-                                id='clientName'
+                            <ProjectFormBody
+                                fields={fields}
+                                setField={setField}
+                                setImageField={setImageField}
+                                validationStatus={true}
+                                buttonText='Update Project'
                             />
-                            <FormTextField 
-                                label='Size' 
-                                value={fields.size}
-                                onChange={setField}
-                                id='size'
-                            />
-                            <FormTextField 
-                                label='Location' 
-                                value={fields.location}
-                                onChange={setField}
-                                id='location'
-                            />
-                            <FormTextField 
-                                label='Year Completed / Project Status' 
-                                value={fields.yearCompletedProjectStatus}
-                                onChange={setField}
-                                id='yearCompletedProjectStatus'
-                            />
-                            <FormTextField 
-                                label='Construction Value' 
-                                value={fields.constructionValue}
-                                onChange={setField}
-                                id='constructionValue'
-                            />
-                            <FormTextField 
-                                label='Scope of Work' 
-                                value={fields.scopeOfWork}
-                                onChange={setField}
-                                id='scopeOfWork'
-                            />
-                            <FormTextField 
-                                label='Industry' 
-                                value={fields.industry}
-                                onChange={setField}
-                                id='industry'
-                            />
-                            <FormTextField 
-                                label='First Paragraph Header' 
-                                value={fields.firstParagraphHeader}
-                                onChange={setField}
-                                id='firstParagraphHeader'
-                            />
-                            <FormTextareaAutosize 
-                                labelText='First Paragraph Content' 
-                                value={fields.firstParagraphContent}
-                                onChange={setField}
-                                id='firstParagraphContent'
-                            />
-                            <FormTextareaAutosize 
-                                labelText='Key Project Bullets' 
-                                value={fields.keyProjectBullets}
-                                onChange={setField}
-                                id='keyProjectBullets'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.cardPicture === ''}
-                                labelText='Upload Card Picture'
-                                id='cardPicture'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.detailPictureTop === ''}
-                                labelText='Upload Detail Picture Top'
-                                id='detailPictureTop'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.detailPictureBottom === ''}
-                                labelText='Upload Detail Picture Bottom'
-                                id='detailPictureBottom'
-                            />
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <Button 
-                                    className={classes.buttonStyle} 
-                                    type='submit'
-                                >
-                                    <Typography variant='h6' className={classes.buttonTextStyle}>
-                                        Update Project
-                                    </Typography>
-                                </Button>
-                            </Grid>
                         </Grid>
                     </form>
                 </Grid>
