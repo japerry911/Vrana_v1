@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     snapshotImageStyle: {
         borderRadius: 10,
-        width: '50%'
+        width: '50%',
     },
     medGreyHeaderStyle: {
         fontFamily: 'Avenir-Medium',

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
+import { Link } from 'react-router-dom';
 
 const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, linkId }) => {
     const classes = useStyles({ headerAlign });
@@ -15,7 +16,7 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, 
             <Typography variant='h6' className={classes.medGreyHeaderStyle}>
                 {linkId 
                 ?
-                <a className={classes.linkStyle} href={`/our-work/projects/${linkId}`}>{headerText}</a>
+                <Link className={classes.linkStyle} to={`/our-work/projects/${linkId}`}>{headerText}</Link>
                 :
                 headerText}
             </Typography>
