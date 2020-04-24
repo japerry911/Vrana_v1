@@ -42,7 +42,9 @@ const DeleteProject = ({ history }) => {
         setCombinedProjectsArray(tempProjectsArray);
     }, [projects]);
 
-    const handleSubmit = async () => {
+    const handleSubmit = async event => {
+        event.preventDefault();
+
         await dispatch(deleteProject(projectToDelete, token));
         await dispatch(getProjects());
         
