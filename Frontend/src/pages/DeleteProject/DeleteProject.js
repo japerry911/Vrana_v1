@@ -11,10 +11,10 @@ import MenuItem from '@material-ui/core/MenuItem';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import { useSelector, useDispatch } from 'react-redux';
-import { getProjects } from '../../redux/actions/projectsActions';
+import { getProjects, deleteProject } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 
-const DeleteProject = () => {
+const DeleteProject = ({ history }) => {
     const classes = useStyles();
 
     const [projectToDelete, setProjectToDelete] = useState('');
@@ -39,6 +39,13 @@ const DeleteProject = () => {
         setCombinedProductsArray(tempProjectsArray);
     }, [projects]);
 
+    const handleSubmit = async () => {
+        await dispatch(deleteProject(projectToDelete));
+
+        setProjectToDelete('');
+        history.push('/admin/delete-project');
+    };
+
     return (
         <div>
             {isLoading
@@ -50,7 +57,7 @@ const DeleteProject = () => {
             <>
                 <HeroHeader headerText='Admin: Delete Project' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                                 <Typography variant='h4' className={classes.headerFontStyle}>

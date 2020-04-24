@@ -127,7 +127,7 @@ export const deleteProjectError = error => {
     };
 };
 
-export const deleteProjcet = projectId => {
+export const deleteProject = projectId => {
     return async dispatch => {
         dispatch(deleteProjectPending());
 
