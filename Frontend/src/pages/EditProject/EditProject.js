@@ -14,6 +14,7 @@ import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
 import { updateProject, getProjects } from '../../redux/actions/projectsActions';
 import ProjectFormBody from '../../components/ProjectFormBody/ProjectFormBody';
+import FormButton from '../../components/FormButton/FormButton';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -196,6 +197,8 @@ const EditProject = ({ history }) => {
                                 fields={fields}
                                 setField={setField}
                                 setImageField={setImageField}
+                            />
+                            <FormButton
                                 validationStatus={true}
                                 buttonText='Update Project'
                             />

@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { createProject } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
+import FormButton from '../../components/FormButton/FormButton';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -114,6 +115,8 @@ const AddProject = ({ history }) => {
                                 fields={fields}
                                 setFields={setField}
                                 setImageField={setImageField}
+                            />
+                            <FormButton
                                 buttonText='Create Project'
                                 validationStatus={validationStatus}
                             />

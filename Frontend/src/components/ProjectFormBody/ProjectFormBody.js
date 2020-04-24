@@ -1,15 +1,9 @@
 import React, { Fragment } from 'react';
-import { useStyles } from './ProjectFormBodyStyles';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import FormTextField from '../FormTextField/FormTextField';
 import FormTextareaAutosize from '../FormTextareaAutosize/FormTextareaAutosize';
 import FormImageUploader from '../FormImageUploader/FormImageUploader';
 
-const ProjectFormBody = ({ fields, setField, buttonText, setImageField, validationStatus }) => {
-    const classes = useStyles();
-
+const ProjectFormBody = ({ fields, setField, setImageField }) => {
     return (
         <Fragment>
             <FormTextField 
@@ -91,17 +85,6 @@ const ProjectFormBody = ({ fields, setField, buttonText, setImageField, validati
                 labelText='Upload Detail Picture Bottom'
                 id='detailPictureBottom'
             />
-            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                <Button 
-                    className={classes.buttonStyle} 
-                    type='submit'
-                    disabled={!validationStatus}
-                >
-                    <Typography variant='h6' className={classes.buttonTextStyle}>
-                        {buttonText}
-                    </Typography>
-                </Button>
-            </Grid>
         </Fragment>
     );
 };
