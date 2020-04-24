@@ -23,8 +23,16 @@ class ProjectsController < ApplicationController
         render status: :ok
     end
 
+    def update
+        @project_to_update = Project.find(params[:id])
+
+        @project_to_update.update()
+
+        render status: :ok
+    end
+
     def create
-        strong_params = project_params
+        strong_params = project_params_exc_image_urls
 
         s3 = Aws::S3::Resource.new 
         image_url_base = 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images'
@@ -64,7 +72,7 @@ class ProjectsController < ApplicationController
 
     private
     
-        def project_params
+        def project_params_exc_image_urls
             params.permit([:Client_Name, :Size, :Location, :YearCompleted_ProjectStatus, :Construction_Value,
                             :Scope_Of_Work, :Industry, :First_P_Header, :First_P_Content, :Key_Projects_Bullets,
                             :images_file_client_name, :card_image_filetype, :card_image, :template_image1_filetype,
