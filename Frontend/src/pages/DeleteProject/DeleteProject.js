@@ -18,10 +18,13 @@ const DeleteProject = ({ history }) => {
     const classes = useStyles();
 
     const [projectToDelete, setProjectToDelete] = useState('');
+    const [combinedProjectsArray, setCombinedProductsArray] = useState([]);
+
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.projects.loading);
     const projects = useSelector(state => state.projects.projects);
-    const [combinedProjectsArray, setCombinedProductsArray] = useState([]);
+    const token = useSelector(state => state.admins.admin.token);
+    
 
     useEffect(() => {
         dispatch(getProjects());
@@ -40,8 +43,9 @@ const DeleteProject = ({ history }) => {
     }, [projects]);
 
     const handleSubmit = async () => {
-        await dispatch(deleteProject(projectToDelete));
-
+        await dispatch(deleteProject(projectToDelete, token));
+        await dispatch(getProjects());
+        
         setProjectToDelete('');
         history.push('/admin/delete-project');
     };

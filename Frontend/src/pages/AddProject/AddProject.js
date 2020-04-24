@@ -16,7 +16,7 @@ import Spinner from '../../components/Spinner/Spinner';
 const AddProject = ({ history }) => {
     const classes = useStyles();
     const dispatch = useDispatch();
-    const token = useSelector(state => state.admins.token);
+    const token = useSelector(state => state.admins.admin.token);
     const isLoading = useSelector(state => state.projects.loading);
 
     const [clientName, setClientName] = useState('');

@@ -127,12 +127,12 @@ export const deleteProjectError = error => {
     };
 };
 
-export const deleteProject = projectId => {
+export const deleteProject = (projectId, token) => {
     return async dispatch => {
         dispatch(deleteProjectPending());
 
         try {
-            await railsServer.delete(`/projects/${projectId}`);
+            await railsServer.delete(`/projects/${projectId}`, { headers: { Authorization: `Bearer ${token}` }});
 
             dispatch(deleteProjectSuccess());
         } catch (error) {
