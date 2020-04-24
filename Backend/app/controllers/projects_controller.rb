@@ -15,6 +15,14 @@ class ProjectsController < ApplicationController
         render json: { project: @project }
     end
 
+    def destroy 
+        @project_to_destroy = Project.find(params[:id])
+
+        @project_to_destroy.destroy
+
+        render status: :ok
+    end
+
     def create
         strong_params = project_params
 
