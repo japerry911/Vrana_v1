@@ -12,5 +12,10 @@ export const useStyles = makeStyles(theme => ({
     gridLeftItemCardStyle: {
         marginTop: '3em',
         paddingRight: '5em'
+    },
+    gridCenterCardStyle: {
+        marginTop: '3em',
+        paddingLeft: '2.5em', 
+        paddingRight: '2.5em'
     }
 }));

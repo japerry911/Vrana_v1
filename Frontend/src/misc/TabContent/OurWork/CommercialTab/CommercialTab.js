@@ -47,7 +47,7 @@ const CommercialTab = () => {
                     
                     if (index === commercialProjects.length - 1) {
                         return (
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} key={project.id} align='center'>
+                            <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.gridCenterCardStyle} key={project.id} align='center'>
                                 <Card
                                     alt={project.Client_Name}
                                     imageUrl={project.Card_Image_Url}
