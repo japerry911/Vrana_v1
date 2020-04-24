@@ -161,7 +161,7 @@ const EditProject = ({ history }) => {
                             <FormHeader headerText='Edit Project' />
                             <FormSelect
                                 inputLabelText='Project to Edit'
-                                seelctValue={projectToEdit}
+                                selectValue={projectToEdit}
                                 onChangeSelect={newProjectToEdit => setProjectToEdit(newProjectToEdit.target.value)}
                                 menuItemFunction={combinedProjectsArray.map(project => {
                                                                                 return (

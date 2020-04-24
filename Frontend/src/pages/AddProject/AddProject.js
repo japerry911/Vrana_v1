@@ -107,7 +107,7 @@ const AddProject = ({ history }) => {
                             <FormHeader headerText='Add Project' />
                             <ProjectFormBody
                                 fields={fields}
-                                setFields={setField}
+                                setField={setField}
                                 setImageField={setImageField}
                             />
                             <FormButton
