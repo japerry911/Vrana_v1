@@ -38,6 +38,15 @@ const projectsReducer = (state=INITIAL_STATE, action) => {
         case 'DELETE_PROJECT_ERROR':
             return { ...state, loading: false, error: action.error };
 
+        case 'UPDATE_PROJECT_PENDING':
+            return { ...state, loading: true };
+
+        case 'UPDATE_PROJECT_SUCCESS':
+            return { ...state, loading: false };
+
+        case 'UPDATE_PROJECT_ERROR':
+            return { ...state, loading: false, error: action.error };
+
         default:
             return state;
     }
