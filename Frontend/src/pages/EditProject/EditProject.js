@@ -1,22 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { useStyles } from './EditProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Footer from '../../components/Footer/Footer';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import InputLabel from '@material-ui/core/InputLabel';
-import FormTextField from '../../components/FormTextField/FormTextField';
-import FormTextareaAutosize from '../../components/FormTextareaAutosize/FormTextareaAutosize';
-import FormImageUploader from '../../components/FormImageUploader/FormImageUploader';
-import Button from '@material-ui/core/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
 import { updateProject, getProjects } from '../../redux/actions/projectsActions';
+import ProjectFormBody from '../../components/ProjectFormBody/ProjectFormBody';
+import FormButton from '../../components/FormButton/FormButton';
+import FormHeader from '../../components/FormHeader/FormHeader';
+import FormSelect from '../../components/FormSelect/FormSelect';
 
 const INITIAL_STATE = {
     clientName: '',
@@ -64,7 +59,6 @@ const EditProject = ({ history }) => {
 
     useEffect(() => {
         if (projectToEdit) {
-            console.log('here');
             const keyProjectBullets = projectToEdit.Key_Projects_Bullets ?
                 '-'.concat(projectToEdit.Key_Projects_Bullets.replace(/\n/g, '').replace(/\s+/g, ' ').replace(/\|\|\|/g, '\n-'))
                 : '';
@@ -90,7 +84,7 @@ const EditProject = ({ history }) => {
         }
     }, [projectToEdit, setFields]);
 
-    const handleSubmit = async event => {
+    const handleSubmit = event => {
         event.preventDefault();
 
         const projectObject = {
@@ -143,11 +137,10 @@ const EditProject = ({ history }) => {
         });
 
         setProjectToEdit('');
-
-        await dispatch(updateProject(projectToEdit.id, formData, token));
-        await dispatch(getProjects());
-        
         setFields(INITIAL_STATE);
+
+        dispatch(updateProject(projectToEdit.id, formData, token));
+        dispatch(getProjects());
         
         history.push('/admin/edit-project');
     };
@@ -160,137 +153,42 @@ const EditProject = ({ history }) => {
                 <Spinner />
             </div>
             :
-            <>
+            <Fragment>
                 <HeroHeader headerText='Admin: Edit Project' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <Typography variant='h4' className={classes.headerFontStyle}>
-                                    Edit Project
-                                </Typography>
-                                <Divider />
-                            </Grid>
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <FormControl className={classes.selectProjectStyle}>
-                                    <InputLabel>Project to Edit</InputLabel>
-                                    <Select
-                                        value={projectToEdit}
-                                        onChange={newProjectToEdit => setProjectToEdit(newProjectToEdit.target.value)}
-                                    >
-                                        {combinedProjectsArray.map(project => {
-                                            return (
-                                                <MenuItem 
-                                                    value={project}
-                                                    key={project.id}
-                                                >
-                                                    {project.Client_Name}
-                                                </MenuItem>
-                                            );
-                                        })}   
-                                    </Select>
-                                </FormControl>
-                            </Grid>
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <Typography variant='h6' className={classes.headerFontStyle}>
-                                    Project Fields
-                                </Typography>
-                                <Divider />
-                            </Grid>
-                            <FormTextField 
-                                paddingTop='1em'
-                                label='Client Name' 
-                                value={fields.clientName}
-                                onChange={setField}
-                                id='clientName'
+                            <FormHeader headerText='Edit Project' />
+                            <FormSelect
+                                inputLabelText='Project to Edit'
+                                selectValue={projectToEdit}
+                                onChangeSelect={newProjectToEdit => setProjectToEdit(newProjectToEdit.target.value)}
+                                menuItemFunction={combinedProjectsArray.map(project => {
+                                                                                return (
+                                                                                    <MenuItem 
+                                                                                        value={project}
+                                                                                        key={project.id}
+                                                                                    >
+                                                                                        {project.Client_Name}
+                                                                                    </MenuItem>
+                                                                                );
+                                })}
                             />
-                            <FormTextField 
-                                label='Size' 
-                                value={fields.size}
-                                onChange={setField}
-                                id='size'
+                            <FormHeader headerText='Project Fields' variant='h6' />
+                            <ProjectFormBody
+                                fields={fields}
+                                setField={setField}
+                                setImageField={setImageField}
                             />
-                            <FormTextField 
-                                label='Location' 
-                                value={fields.location}
-                                onChange={setField}
-                                id='location'
+                            <FormButton
+                                validationStatus={true}
+                                buttonText='Update Project'
                             />
-                            <FormTextField 
-                                label='Year Completed / Project Status' 
-                                value={fields.yearCompletedProjectStatus}
-                                onChange={setField}
-                                id='yearCompletedProjectStatus'
-                            />
-                            <FormTextField 
-                                label='Construction Value' 
-                                value={fields.constructionValue}
-                                onChange={setField}
-                                id='constructionValue'
-                            />
-                            <FormTextField 
-                                label='Scope of Work' 
-                                value={fields.scopeOfWork}
-                                onChange={setField}
-                                id='scopeOfWork'
-                            />
-                            <FormTextField 
-                                label='Industry' 
-                                value={fields.industry}
-                                onChange={setField}
-                                id='industry'
-                            />
-                            <FormTextField 
-                                label='First Paragraph Header' 
-                                value={fields.firstParagraphHeader}
-                                onChange={setField}
-                                id='firstParagraphHeader'
-                            />
-                            <FormTextareaAutosize 
-                                labelText='First Paragraph Content' 
-                                value={fields.firstParagraphContent}
-                                onChange={setField}
-                                id='firstParagraphContent'
-                            />
-                            <FormTextareaAutosize 
-                                labelText='Key Project Bullets' 
-                                value={fields.keyProjectBullets}
-                                onChange={setField}
-                                id='keyProjectBullets'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.cardPicture === ''}
-                                labelText='Upload Card Picture'
-                                id='cardPicture'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.detailPictureTop === ''}
-                                labelText='Upload Detail Picture Top'
-                                id='detailPictureTop'
-                            />
-                            <FormImageUploader
-                                onChange={setImageField}
-                                emptyField={fields.detailPictureBottom === ''}
-                                labelText='Upload Detail Picture Bottom'
-                                id='detailPictureBottom'
-                            />
-                            <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
-                                <Button 
-                                    className={classes.buttonStyle} 
-                                    type='submit'
-                                >
-                                    <Typography variant='h6' className={classes.buttonTextStyle}>
-                                        Update Project
-                                    </Typography>
-                                </Button>
-                            </Grid>
                         </Grid>
                     </form>
                 </Grid>
                 <Footer />
-            </>}
+            </Fragment>}
         </div>
     );
 };

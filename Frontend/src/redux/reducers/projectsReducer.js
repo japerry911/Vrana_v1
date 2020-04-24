@@ -1,4 +1,4 @@
-const INITIAL_STATE = { projects: { commercial: [], retails: [] }, showProject: {}, loading: false, error: '' };
+const INITIAL_STATE = { projects: { commercial: [], retails: [] }, showProject: {}, loading: false, error: null };
 
 const projectsReducer = (state=INITIAL_STATE, action) => {
     switch (action.type) {
@@ -20,31 +20,13 @@ const projectsReducer = (state=INITIAL_STATE, action) => {
         case 'GET_PROJECT_ERROR':
             return { ...state, loading: false , showProject: {}, error: action.error };
 
-        case 'CREATE_PROJECT_PENDING':
+        case 'PROJECT_PENDING':
             return { ...state, loading: true };
 
-        case 'CREATE_PROJECT_SUCCESS':
+        case 'PROJECT_SUCCESS':
             return { ...state, loading: false };
 
-        case 'CREATE_PROJECT_ERROR':
-            return { ...state, loading: false, error: action.error };
-
-        case 'DELETE_PROJECT_PENDING':
-            return { ...state, loading: true };
-
-        case 'DELETE_PROJECT_SUCCESS':
-            return { ...state, loading: false };
-
-        case 'DELETE_PROJECT_ERROR':
-            return { ...state, loading: false, error: action.error };
-
-        case 'UPDATE_PROJECT_PENDING':
-            return { ...state, loading: true };
-
-        case 'UPDATE_PROJECT_SUCCESS':
-            return { ...state, loading: false };
-
-        case 'UPDATE_PROJECT_ERROR':
+        case 'PROJECT_ERROR':
             return { ...state, loading: false, error: action.error };
 
         default:

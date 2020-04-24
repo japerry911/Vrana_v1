@@ -2,7 +2,7 @@ import railsServer from '../../api/railsServer';
 
 export const getProjects = () => {
     return async dispatch => {
-        dispatch(getProjectsPending());
+        dispatch(projectPending());
 
         try {
             const getProjectsResponse = await railsServer.get('/projects');
@@ -14,34 +14,14 @@ export const getProjects = () => {
 
             dispatch(getProjectsSuccess({ commercial, retail }));
         } catch (error) {
-            dispatch(getProjectsError(error));
+            dispatch(projectError(error));
         }
-    };
-};
-
-export const getProjectsPending = () => {
-    return {
-        type: 'GET_PROJECTS_PENDING'
-    };
-}
-
-export const getProjectsSuccess = payload => {
-    return {
-        type: 'GET_PROJECTS_SUCCESS',
-        payload 
-    };
-};
-
-export const getProjectsError = error => {
-    return {
-        type: 'GET_PROJECTS_ERROR',
-        error
     };
 };
 
 export const getProject = projectId => {
     return async dispatch => {
-        dispatch(getProjectPending());
+        dispatch(projectPending());
 
         try {
             const getProjectResponse = await railsServer.get(`/projects/${projectId}`);
@@ -50,126 +30,82 @@ export const getProject = projectId => {
 
             dispatch(getProjectSuccess({ project }));
         } catch (error) {
-            dispatch(getProjectError({ error }));
+            dispatch(projectError({ error }));
         }
-    };
-};
-
-export const getProjectPending = () => {
-    return {
-        type: 'GET_PROJECT_PENDING'
-    };
-}
-
-export const getProjectSuccess = payload => {
-    return {
-        type: 'GET_PROJECT_SUCCESS',
-        payload 
-    };
-};
-
-export const getProjectError = error => {
-    return {
-        type: 'GET_PROJECT_ERROR',
-        error
-    };
-};
-
-export const createProjectPending = () => {
-    return {
-        type: 'CREATE_PROJECT_PENDING'
-    };
-};
-
-export const createProjectSuccess = () => {
-    return {
-        type: 'CREATE_PROJECT_SUCCESS', 
-    };
-};
-
-export const createProjectError = error => {
-    return {
-        type: 'CREATE_PROJECT_ERROR',
-        error
     };
 };
 
 export const createProject = (formUploadData, token) => {
     return async dispatch => {
-        dispatch(createProjectPending());
+        dispatch(projectPending());
 
         try {
             await railsServer.post('/projects', formUploadData, { headers: { Authorization: `Bearer ${token}` }});
 
-            dispatch(createProjectSuccess());
+            dispatch(projectSuccess());
         } catch (error) {
-            dispatch(createProjectError(error));
+            dispatch(projectError(error));
         }
-    };
-};
-
-export const deleteProjectPending = () => {
-    return {
-        type: 'DELETE_PROJECT_PENDING'
-    };
-};
-
-export const deleteProjectSuccess = () => {
-    return {
-        type: 'DELETE_PROJECT_SUCCESS', 
-    };
-};
-
-export const deleteProjectError = error => {
-    return {
-        type: 'DELETE_PROJECT_ERROR',
-        error
     };
 };
 
 export const deleteProject = (projectId, token) => {
     return async dispatch => {
-        dispatch(deleteProjectPending());
+        dispatch(projectPending());
 
         try {
             await railsServer.delete(`/projects/${projectId}`, { headers: { Authorization: `Bearer ${token}` }});
 
-            dispatch(deleteProjectSuccess());
+            dispatch(projectSuccess());
         } catch (error) {
-            dispatch(deleteProjectError(error));
+            dispatch(projectError(error));
         }
-    };
-};
-
-export const updateProjectPending = () => {
-    return {
-        type: 'UPDATE_PROJECT_PENDING'
-    };
-};
-
-export const updateProjectSuccess = () => {
-    return {
-        type: 'UPDATE_PROJECT_SUCCESS', 
-    };
-};
-
-export const updateProjectError = error => {
-    return {
-        type: 'UPDATE_PROJECT_ERROR',
-        error
     };
 };
 
 export const updateProject = (projectId, formUpdateData, token) => {
     return async dispatch => {
-        dispatch(updateProjectPending());
+        dispatch(projectPending());
 
         try {
             await railsServer.put(`/projects/${projectId}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }});
 
-            dispatch(updateProjectSuccess());
+            dispatch(projectSuccess());
         } catch (error) {
-            dispatch(updateProjectError(error));
+            dispatch(projectError(error));
         }
+    };
+};
+
+export const projectPending = () => {
+    return {
+        type: 'PROJECT_PENDING'
+    };
+};
+
+export const projectSuccess = () => {
+    return {
+        type: 'PROJECT_SUCCESS',
+    };
+};
+
+export const projectError = error => {
+    return {
+        type: 'PROJECT_SUCCESS',
+        error
+    };
+};
+
+export const getProjectsSuccess = payload => {
+    return {
+        type: 'GET_PROJECTS_SUCCESS',
+        payload 
+    };
+};
+
+export const getProjectSuccess = payload => {
+    return {
+        type: 'GET_PROJECT_SUCCESS',
+        payload 
     };
 };
