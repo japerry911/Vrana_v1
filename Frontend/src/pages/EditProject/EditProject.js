@@ -109,14 +109,29 @@ const EditProject = () => {
         
         formData.append('images_file_client_name', fields.clientName.replace(/ /g, '_').toString().toLowerCase());
 
-        formData.append('card_image_filetype', fields.cardPicture.type.replace('image/', ''));
-        formData.append('card_image', fields.cardPicture);
+        if (fields.cardPicture) {
+            formData.append('card_image_filetype', fields.cardPicture.type.replace('image/', ''));
+            formData.append('card_image', fields.cardPicture);
+        } else {
+            formData.append('card_image_filetype', '');
+            formData.append('card_image', '');
+        }
 
-        formData.append('template_image1_filetype', fields.detailPictureTop.type.replace('image/', ''));
-        formData.append('template_image1', fields.detailPictureTop);
+        if (fields.detailPictureTop) {
+            formData.append('template_image1_filetype', fields.detailPictureTop.type.replace('image/', ''));
+            formData.append('template_image1', fields.detailPictureTop);
+        } else {
+            formData.append('template_image1_filetype', '');
+            formData.append('template_image1', '');
+        }
 
-        formData.append('template_image2_filetype', fields.detailPictureBottom.type.replace('image/', ''));
-        formData.append('template_image2', fields.detailPictureBottom);
+        if (fields.detailPictureBottom) {
+            formData.append('template_image2_filetype', fields.detailPictureBottom.type.replace('image/', ''));
+            formData.append('template_image2', fields.detailPictureBottom);
+        } else {
+            formData.append('template_image2_filetype', '');
+            formData.append('template_image2', '');
+        }
         
         Object.keys(projectObject).forEach(key => {
             if (key === 'Key_Projects_Bullets') {
