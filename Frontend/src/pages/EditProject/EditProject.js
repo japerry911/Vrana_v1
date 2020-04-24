@@ -16,23 +16,28 @@ import Button from '@material-ui/core/Button';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
+import { useFormFields } from '../../hooks/customHooks';
+
+const INITIAL_STATE = {
+    clientName: '',
+    size: '',
+    location: '',
+    yearCompletedProjectStatus: '',
+    constructionValue: '',
+    scopeOfWork: '',
+    industry: '',
+    firstParagraphHeader: '',
+    firstParagraphContent: '',
+    keyProjectBullets: '',
+    cardPicture: '',
+    detailPictureTop: '',
+    detailPictureBottom: ''
+};
 
 const EditProject = () => {
     const classes = useStyles();
 
-    const [clientName, setClientName] = useState('');
-    const [size, setSize] = useState('');
-    const [location, setLocation] = useState('');
-    const [yearCompletedProjectStatus, setYearCompletedProjectStatus] = useState('');
-    const [constructionValue, setConstructionValue] = useState('');
-    const [scopeOfWork, setScopeOfWork] = useState('');
-    const [industry, setIndustry] = useState('');
-    const [firstParagraphHeader, setFirstParagraphHeader] = useState('');
-    const [firstParagraphContent, setFirstParagraphContent] = useState('');
-    const [keyProjectBullets, setKeyProjectBullets] = useState('');
-    const [cardPicture, setCardPicture] = useState('');
-    const [detailPictureTop, setDetailPictureTop] = useState('');
-    const [detailPictureBottom, setDetailPictureBottom] = useState('');
+    const [fields, setFields, setImageFields] = useFormFields(INITIAL_STATE);
     const [validationStatus, setValidationStatus] = useState(false);
     const [combinedProjectsArray, setCombinedProjectsArray] = useState([]);
     const [projectToEdit, setProjectToEdit] = useState('');
@@ -106,67 +111,77 @@ const EditProject = () => {
                             <FormTextField 
                                 paddingTop='1em'
                                 label='Client Name' 
-                                value={clientName}
-                                onChange={newClientName => setClientName(newClientName.target.value)}
+                                value={fields.clientName}
+                                onChange={event => setFields(event)}
+                                id='clientName'
                             />
                             <FormTextField 
                                 label='Size' 
-                                value={size}
-                                onChange={newSize => setSize(newSize.target.value)}
+                                value={fields.size}
+                                onChange={setFields}
+                                id='size'
                             />
                             <FormTextField 
                                 label='Location' 
-                                value={location}
-                                onChange={newLocation => setLocation(newLocation.target.value)}
+                                value={fields.location}
+                                onChange={setFields}
+                                id='location'
                             />
                             <FormTextField 
                                 label='Year Completed / Project Status' 
-                                value={yearCompletedProjectStatus}
-                                onChange={newYearCompletedProjectStatus => setYearCompletedProjectStatus(newYearCompletedProjectStatus.target.value)}
+                                value={fields.yearCompletedProjectStatus}
+                                onChange={setFields}
+                                id='yearCompletedProjectStatus'
                             />
                             <FormTextField 
                                 label='Construction Value' 
-                                value={constructionValue}
-                                onChange={newConstructionValue => setConstructionValue(newConstructionValue.target.value)}
+                                value={fields.constructionValue}
+                                onChange={setFields}
+                                id='constructionValue'
                             />
                             <FormTextField 
                                 label='Scope of Work' 
-                                value={scopeOfWork}
-                                onChange={newScopeOfWork => setScopeOfWork(newScopeOfWork.target.value)}
+                                value={fields.scopeOfWork}
+                                onChange={setFields}
+                                id='scopeOfWork'
                             />
                             <FormTextField 
                                 label='Industry' 
-                                value={industry}
-                                onChange={newIndustry => setIndustry(newIndustry.target.value)}
+                                value={fields.industry}
+                                onChange={setFields}
+                                id='industry'
                             />
                             <FormTextField 
                                 label='First Paragraph Header' 
-                                value={firstParagraphHeader}
-                                onChange={newFirstParagraphHeader => setFirstParagraphHeader(newFirstParagraphHeader.target.value)}
+                                value={fields.firstParagraphHeader}
+                                onChange={setFields}
+                                id='firstParagraphHeader'
                             />
                             <FormTextareaAutosize 
                                 labelText='First Paragraph Content' 
-                                value={firstParagraphContent}
-                                onChange={newFirstParagraphContent => setFirstParagraphContent(newFirstParagraphContent.target.value)}
+                                value={fields.firstParagraphContent}
+                                onChange={setFields}
+                                id='firstParagraphContent'
                             />
                             <FormTextareaAutosize 
                                 labelText='Key Project Bullets' 
-                                value={keyProjectBullets}
-                                onChange={newKeyProjectBullets => setKeyProjectBullets(newKeyProjectBullets.target.value)}
+                                value={fields.keyProjectBullets}
+                                onChange={setFields}
+                                id='keyProjectBullets'
                             />
                             <FormImageUploader
-                                onChange={picture => setCardPicture(picture.target.files[0])}
-                                value={cardPicture}
+                                onChange={setImageFields}
+                                value={fields.cardPicture}
                                 labelText='Upload Card Picture'
                             />
                             <FormImageUploader
-                                onChange={picture => setDetailPictureTop(picture.target.files[0])}
-                                value={detailPictureTop}
+                                onChange={setImageFields}
+                                value={fields.detailPictureTop}
                                 labelText='Upload Detail Picture Top'
                             />
                             <FormImageUploader
-                                onChange={picture => setDetailPictureBottom(picture.target.files[0])}
-                                value={detailPictureBottom}
+                                onChange={setImageFields}
+                                value={fields.detailPictureBottom}
                                 labelText='Upload Detail Picture Bottom'
                             />
                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>

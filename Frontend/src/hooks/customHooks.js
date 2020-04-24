@@ -8,7 +8,13 @@ export const useFormFields = initialState => {
         event => {
             setFields({
                 ...fields,
-                [event.target.name]: event.target.value
+                [event.target.id]: event.target.value
+            });
+        },
+        event => {
+            setFields({
+                ...fields,
+                [event.target.id]: event.target.files[0]
             });
         }
     ];

@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import Input from '@material-ui/core/Input';
 import Typography from '@material-ui/core/Typography';
 
-const FormImageUploader = ({ labelText, onChange }) => {
+const FormImageUploader = ({ labelText, onChange, id }) => {
     const classes = useStyles();
 
     return (
@@ -15,6 +15,7 @@ const FormImageUploader = ({ labelText, onChange }) => {
             <Input 
                 type='file'
                 onChange={onChange}
+                id={id}
             />
         </Grid>
     );
