@@ -37,8 +37,7 @@ const INITIAL_STATE = {
 const EditProject = () => {
     const classes = useStyles();
 
-    const [fields, setFields, setImageFields] = useFormFields(INITIAL_STATE);
-    const [validationStatus, setValidationStatus] = useState(false);
+    const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
     const [combinedProjectsArray, setCombinedProjectsArray] = useState([]);
     const [projectToEdit, setProjectToEdit] = useState('');
 
@@ -62,6 +61,33 @@ const EditProject = () => {
 
         setCombinedProjectsArray(tempProjectsArray);
     }, [projects]);
+
+    useEffect(() => {
+        if (projectToEdit) {
+            const keyProjectBullets = projectToEdit.Key_Projects_Bullets ?
+                '-'.concat(projectToEdit.Key_Projects_Bullets.replace(/\n/g, '').replace(/\s+/g, ' ').replace(/\|\|\|/g, '\n-'))
+                : '';
+            const firstParagraphContent = projectToEdit.First_P_Content ?
+                projectToEdit.First_P_Content.replace(/\s+/g, ' ')
+                : '';
+
+            setFields({
+                clientName: projectToEdit.Client_Name ? projectToEdit.Client_Name : '',
+                size: projectToEdit.Size ? projectToEdit.Size : '',
+                location: projectToEdit.Location ? projectToEdit.Location : '',
+                yearCompletedProjectStatus: projectToEdit.YearCompleted_ProjectStatus ? projectToEdit.YearCompleted_ProjectStatus : '',
+                constructionValue: projectToEdit.Construction_Value ? projectToEdit.Construction_Value : '',
+                scopeOfWork: projectToEdit.Scope_Of_Work ? projectToEdit.Scope_Of_Work : '',
+                industry: projectToEdit.Industry,
+                firstParagraphHeader: projectToEdit.First_P_Header ? projectToEdit.First_P_Header : '',
+                firstParagraphContent,
+                keyProjectBullets,
+                cardPicture: '',
+                detailPictureTop: '',
+                detailPictureBottom: ''
+            });
+        }
+    }, [projectToEdit]);
 
     return (
         <div className={classes.mainDivStyle}>
@@ -92,7 +118,7 @@ const EditProject = () => {
                                         {combinedProjectsArray.map(project => {
                                             return (
                                                 <MenuItem 
-                                                    value={project.id}
+                                                    value={project}
                                                     key={project.id}
                                                 >
                                                     {project.Client_Name}
@@ -112,86 +138,88 @@ const EditProject = () => {
                                 paddingTop='1em'
                                 label='Client Name' 
                                 value={fields.clientName}
-                                onChange={event => setFields(event)}
+                                onChange={setField}
                                 id='clientName'
                             />
                             <FormTextField 
                                 label='Size' 
                                 value={fields.size}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='size'
                             />
                             <FormTextField 
                                 label='Location' 
                                 value={fields.location}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='location'
                             />
                             <FormTextField 
                                 label='Year Completed / Project Status' 
                                 value={fields.yearCompletedProjectStatus}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='yearCompletedProjectStatus'
                             />
                             <FormTextField 
                                 label='Construction Value' 
                                 value={fields.constructionValue}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='constructionValue'
                             />
                             <FormTextField 
                                 label='Scope of Work' 
                                 value={fields.scopeOfWork}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='scopeOfWork'
                             />
                             <FormTextField 
                                 label='Industry' 
                                 value={fields.industry}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='industry'
                             />
                             <FormTextField 
                                 label='First Paragraph Header' 
                                 value={fields.firstParagraphHeader}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='firstParagraphHeader'
                             />
                             <FormTextareaAutosize 
                                 labelText='First Paragraph Content' 
                                 value={fields.firstParagraphContent}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='firstParagraphContent'
                             />
                             <FormTextareaAutosize 
                                 labelText='Key Project Bullets' 
                                 value={fields.keyProjectBullets}
-                                onChange={setFields}
+                                onChange={setField}
                                 id='keyProjectBullets'
                             />
                             <FormImageUploader
-                                onChange={setImageFields}
-                                value={fields.cardPicture}
+                                onChange={setImageField}
+                                emptyField={fields.cardPicture === ''}
                                 labelText='Upload Card Picture'
+                                id='cardPicture'
                             />
                             <FormImageUploader
-                                onChange={setImageFields}
-                                value={fields.detailPictureTop}
+                                onChange={setImageField}
+                                emptyField={fields.detailPictureTop === ''}
                                 labelText='Upload Detail Picture Top'
+                                id='detailPictureTop'
                             />
                             <FormImageUploader
-                                onChange={setImageFields}
-                                value={fields.detailPictureBottom}
+                                onChange={setImageField}
+                                emptyField={fields.detailPictureBottom === ''}
                                 labelText='Upload Detail Picture Bottom'
+                                id='detailPictureBottom'
                             />
                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                                 <Button 
                                     className={classes.buttonStyle} 
                                     type='submit'
-                                    disabled={!validationStatus}
                                 >
                                     <Typography variant='h6' className={classes.buttonTextStyle}>
-                                        Add Project
+                                        Update Project
                                     </Typography>
                                 </Button>
                             </Grid>

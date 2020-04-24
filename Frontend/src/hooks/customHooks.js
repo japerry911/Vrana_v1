@@ -16,6 +16,7 @@ export const useFormFields = initialState => {
                 ...fields,
                 [event.target.id]: event.target.files[0]
             });
-        }
+        },
+        setFields
     ];
 };
