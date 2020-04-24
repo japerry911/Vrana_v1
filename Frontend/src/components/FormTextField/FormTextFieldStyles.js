@@ -5,6 +5,6 @@ export const useStyles = makeStyles(theme => ({
         width: '70%'
     },
     gridItemStyle: {
-        paddingTop: '3em'
+        paddingTop: props => props.paddingTop ? props.paddingTop : '3em'
     }
 }));

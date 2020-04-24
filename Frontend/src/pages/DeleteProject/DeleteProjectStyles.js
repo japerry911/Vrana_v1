@@ -37,6 +37,6 @@ export const useStyles = makeStyles(theme => ({
         width: '100%'
     },
     selectProjectStyle: {
-        width: '60%'
+        width: '70%'
     }
 }));

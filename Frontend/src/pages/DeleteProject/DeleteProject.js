@@ -71,7 +71,7 @@ const DeleteProject = ({ history }) => {
                             </Grid>
                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                                 <FormControl className={classes.selectProjectStyle}>
-                                    <InputLabel>Project</InputLabel>
+                                    <InputLabel>Project to Delete</InputLabel>
                                     <Select
                                         value={projectToDelete}
                                         onChange={newProjectToDelete => setProjectToDelete(newProjectToDelete.target.value)}

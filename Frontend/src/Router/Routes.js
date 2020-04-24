@@ -38,7 +38,7 @@ export default () => {
                 component={AddProject}
             />
 
-            <ProtectedRoute 
+            <Route 
                 exact 
                 path='/admin/edit-project'
                 component={EditProject}
