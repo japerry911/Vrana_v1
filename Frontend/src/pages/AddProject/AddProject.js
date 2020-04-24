@@ -112,7 +112,7 @@ const AddProject = ({ history }) => {
             <>  
                 <HeroHeader headerText='Admin: Add Project' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form onSubmit={handleSubmit} className={classes.formContaienrStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
                                 <Typography variant='h4' className={classes.headerFontStyle}>

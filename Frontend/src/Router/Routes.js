@@ -44,7 +44,7 @@ export default () => {
                 component={EditProject}
             />
 
-            <ProtectedRoute
+            <Route
                 exact 
                 path='/admin/delete-project'
                 component={DeleteProject}
