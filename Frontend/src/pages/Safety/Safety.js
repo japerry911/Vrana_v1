@@ -1,7 +1,9 @@
 import React from 'react';
-import './Safety.css';
+import { useStyles } from './SafetyStyles';
 
 const Safety = () => {
+    const classes = useStyles();
+
     return (
         <div>
             <h1>Safety</h1>
