@@ -350,3 +350,36 @@ Project.create(
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg'
 )
+
+# Religious/Educational
+Project.create(
+    Client_Name: 'North High School',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Religious/Educational',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh3.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Christ Community Church',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Religious/Educational',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity2.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity3.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity1.jpg'
+)
