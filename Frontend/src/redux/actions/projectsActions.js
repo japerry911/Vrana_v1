@@ -12,8 +12,9 @@ export const getProjects = () => {
             const commercial = projects.filter(project => project.Industry === 'Commercial');
             const retail = projects.filter(project => project.Industry === 'Retail');
             const housing = projects.filter(project => project.Industry === 'Housing');
+            const religiousEducational = projects.filter(project => project.Industry === 'Religious/Educational');
 
-            dispatch(getProjectsSuccess({ commercial, retail, housing }));
+            dispatch(getProjectsSuccess({ commercial, retail, housing, religiousEducational }));
         } catch (error) {
             dispatch(projectError(error));
         }
