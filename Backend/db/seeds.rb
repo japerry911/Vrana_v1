@@ -464,3 +464,68 @@ Project.create(
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking2.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking1.jpg'
 )
+
+# Civil/Heavy Highway
+Project.create(
+    Client_Name: 'I-680/West Dodge Road Interchange',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange1.jpg'
+)
+
+Project.create(
+    Client_Name: 'I-680/West Maple Interchange',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange3.jpg'
+)
+
+Project.create(
+    Client_Name: 'Pacific Street and 168th Street Intersection',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Barrington Park Infrastructure',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg'
+)
