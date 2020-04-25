@@ -6,6 +6,7 @@ import Footer from '../../components/Footer/Footer';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
+import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 
 const Safety = () => {
     const classes = useStyles();
@@ -142,6 +143,19 @@ const Safety = () => {
                         className={classes.ourPrinciplesImageStyle}
                     />
                 </Grid>
+            </Grid>
+            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
+                <ImageBannerSection 
+                    headerText='REDEFINING EXTRAORDINARY SERVICE'
+                    bodyText="Vrana's excellent safety record is a direct result of our commitment to continually improving safety
+                    through effective employee planning, training, and monitoring safety at the project level. Contact our Safety Director
+                    today!"
+                    width='60%'
+                    buttonText='CONTACT US'
+                    flexColumn
+                    justify='space-evenly'
+                    imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/2-man-on-construction-site-during-daytime-159306.jpeg'
+                />
             </Grid>
             <Footer />
         </Fragment>
