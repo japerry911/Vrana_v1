@@ -383,3 +383,84 @@ Project.create(
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity3.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity1.jpg'
 )
+
+# Parking Structures
+Project.create(
+    Client_Name: 'Carriage Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Eppley Airfield Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Omni Center Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Morgan Place Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking1+(1).jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking2+(1).jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking2+(1).jpg'
+)
+
+Project.create(
+    Client_Name: 'Omaha Civic Auditorium Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking1.jpg'
+)
