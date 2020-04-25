@@ -14,8 +14,9 @@ export const getProjects = () => {
             const housing = projects.filter(project => project.Industry === 'Housing');
             const religiousEducational = projects.filter(project => project.Industry === 'Religious/Educational');
             const parkingStructures = projects.filter(project => project.Industry === 'Parking Structures');
+            const civilHeavyHighway = projects.filter(project => project.Industry === 'Civil/Heavy Highway');
 
-            dispatch(getProjectsSuccess({ commercial, retail, housing, religiousEducational, parkingStructures }));
+            dispatch(getProjectsSuccess({ commercial, retail, housing, religiousEducational, parkingStructures, civilHeavyHighway }));
         } catch (error) {
             dispatch(projectError(error));
         }
