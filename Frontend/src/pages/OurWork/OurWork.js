@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
 import Footer from '../../components/Footer/Footer';
@@ -31,20 +31,20 @@ const OurWork = () => {
     }, [dispatch]);
 
     return (
-        <>
+        <div className={classes.mainDivStyle}>
             {isLoading ?
             <div className={classes.spinnerDiv}>
                 <Spinner />
             </div>
             :
-            <div>
+            <Fragment>
                 <HeroHeader 
                     headerText='Our Work'
                 />
                 <HorizontalTabs tabContentArray={tabContentArray} />
                 <Footer />
-            </div>}
-        </>
+            </Fragment>}
+        </div>
     );
 };
 
