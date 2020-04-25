@@ -6,6 +6,10 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '5em',
         paddingTop: '2em'
     },
+    greyContainerStyle: {
+        backgroundColor: theme.colors.darkGrey,
+        paddingBottom: '5em'
+    },
     redHeaderTextStyle: {
         fontFamily: 'Avenir-Bold',
         color: theme.colors.vranaRed,
@@ -52,5 +56,36 @@ export const useStyles = makeStyles(theme => ({
     buttonDivStyle: {
         display: 'flex',
         justifyContent: 'center'
+    },
+    ourPrinciplesContainerStyle: {
+        paddingLeft: '8em'
+    },
+    ourPrinciplesIconsStyle: {
+        height: '10%',
+        width: '10%',
+        marginRight: '10%'
+    },
+    ourPrinciplesDiv: {
+        display: 'flex',
+        flexDirection: 'row'
+    },
+    ourPrinciplesHeaderStyle: {
+        color: theme.colors.textWhite,
+        fontFamily: 'Avenir-Medium'
+    },
+    ourPrinciplesDescStyle: {
+        color: theme.colors.textWhite,
+        fontFamily: 'Avenir',
+    },
+    ourPrinciplesGridStyle: {
+        maxWidth: '100%',
+        paddingTop: '3em',
+        paddingLeft: '3em'
+    },
+    ourPrinciplesImageStyle: {
+        borderRadius: 10,
+        marginTop: '8em',
+        height: '30em',
+        width: 'auto'
     }
 }));

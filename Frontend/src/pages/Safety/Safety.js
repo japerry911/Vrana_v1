@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Footer from '../../components/Footer/Footer';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import CommonHeader from '../../components/CommonHeader/CommonHeader';
 
 const Safety = () => {
     const classes = useStyles();
@@ -49,6 +50,96 @@ const Safety = () => {
                         alt='Vrana Safe Site Logo'
                         src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/vrana_safesite_logo3.jpg'
                         className={classes.safeSiteImageStyle}
+                    />
+                </Grid>
+            </Grid>
+            <Grid container spacing={0} className={classes.greyContainerStyle} alignItems='center' justify='center'>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Grid container spacing={0} className={classes.ourPriciplesContainerStyle} direction='column'>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourPrinciplesGridStyle} align='center'> 
+                            <CommonHeader
+                                headerText='OUR PRINCIPLES'
+                                subHeaderText='OUR PROCESS'
+                                headerTextColor='light'
+                                dividerColor='light'
+                                align='center'
+                            />
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourPrinciplesGridStyle}> 
+                            <div className={classes.ourPrinciplesDiv}>
+                                <img
+                                    alt='Clipboard icon'
+                                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ourPrinciples/sport+copy.png'
+                                    className={classes.ourPrinciplesIconsStyle}
+                                />
+                                <div>
+                                    <Typography variant='h6' className={classes.ourPrinciplesHeaderStyle}>
+                                        PLAN
+                                    </Typography>
+                                    <Typography variant='body1' className={classes.ourPrinciplesDescStyle}>
+                                        Our employees research safety guidelines to ensure that work will be performed in the correct manner.
+                                    </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourPrinciplesGridStyle}> 
+                            <div className={classes.ourPrinciplesDiv}>
+                                <img
+                                    alt='Thumbs/Wrench icon'
+                                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ourPrinciples/compliance+(1)+copy.png'
+                                    className={classes.ourPrinciplesIconsStyle}
+                                />
+                                <div>
+                                    <Typography variant='h6' className={classes.ourPrinciplesHeaderStyle}>
+                                        TRAIN
+                                    </Typography>
+                                    <Typography variant='body1' className={classes.ourPrinciplesDescStyle}>
+                                        Training crew members in proper safety gear usage and work guidelines.
+                                    </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourPrinciplesGridStyle}> 
+                            <div className={classes.ourPrinciplesDiv}>
+                                <img
+                                    alt='Dashboard icon'
+                                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ourPrinciples/dashboard+copy.png'
+                                    className={classes.ourPrinciplesIconsStyle}
+                                />
+                                <div>
+                                    <Typography variant='h6' className={classes.ourPrinciplesHeaderStyle}>
+                                        MONITOR
+                                    </Typography>
+                                    <Typography variant='body1' className={classes.ourPrinciplesDescStyle}>
+                                        Monitoring our workplace for safety lapses. If a lapse is found, immediate corrective action will be taken.
+                                    </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                        <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourPrinciplesGridStyle}> 
+                            <div className={classes.ourPrinciplesDiv}>
+                                <img
+                                    alt='Hand on Lightbulb icon'
+                                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ourPrinciples/skill-development+copy.png'
+                                    className={classes.ourPrinciplesIconsStyle}
+                                />
+                                <div>
+                                    <Typography variant='h6' className={classes.ourPrinciplesHeaderStyle}>
+                                        IMPROVE
+                                    </Typography>
+                                    <Typography variant='body1' className={classes.ourPrinciplesDescStyle}>
+                                        Formal reviews of past tasks will ensure continuous improvement in safety means and methods.
+                                    </Typography>
+                                </div>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </Grid>
+                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                    <img 
+                        alt='Vrana worker on trimmer giving thumbs up'
+                        src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ourPrinciples/Safety.png'
+                        className={classes.ourPrinciplesImageStyle}
                     />
                 </Grid>
             </Grid>
