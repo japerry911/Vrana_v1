@@ -3,6 +3,9 @@ Admin.destroy_all
 
 Admin.create(username: 'VranaAdmin', password: 'TEST')
 
+# Our Work
+
+# Commercial 
 Project.create(
     Client_Name: 'Ameristar Casino & Hotel',
     Size: '40,000',
@@ -234,6 +237,7 @@ Project.create(
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyHospital/vrana_project_douglashospital1.jpg'
 )
 
+# Retail
 Project.create(
     Client_Name: "Baker's Supermarkets",
     Size: '',
@@ -296,4 +300,53 @@ Project.create(
     Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific1.jpg',
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific2.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific1.jpg'
+)
+
+# Housing
+Project.create(
+    Client_Name: "Offutt A.F.B - ADL Dining Hall",
+    Size: '',
+    Location: 'Bellevue, Nebraska',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/vrana_project_offutt1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/offutt0_3dbc85be-5056-a36a-090ccd539a515042.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/vrana_project_offutt1.jpg'
+)
+
+Project.create(
+    Client_Name: "Douglas County Jail",
+    Size: '',
+    Location: 'Omaha, Nebraska',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg'
+)
+
+Project.create(
+    Client_Name: "Crown Tower Housing",
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg'
 )
