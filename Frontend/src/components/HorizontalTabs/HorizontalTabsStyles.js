@@ -13,6 +13,7 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: theme.colors.darkGrey
     },
     label: {
-        color: theme.colors.textWhite
+        color: theme.colors.textWhite,
+        fontFamily: 'Avenir-Medium'
     }
 }));
