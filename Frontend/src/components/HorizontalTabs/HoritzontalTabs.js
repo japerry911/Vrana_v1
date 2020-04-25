@@ -14,19 +14,22 @@ const HorizontalTabs = ({ tabContentArray }) => {
 
     return (
         <div className={classes.root}>
-            <Tabs
-                value={value}
-                onChange={handleChange}
-                indicatorColor='primary'
-                textColor='primary'
-                centered
-            >
-                {tabContentArray.map((tabContentObject, index) => {
-                    return (
-                        <Tab label={tabContentObject.tabTitle} {...a11yProps(index)} key={index} /> 
-                    );
-                })}
-            </Tabs>
+            <div className={classes.divAppBarStyle}>
+                <Tabs
+                    value={value}
+                    onChange={handleChange}
+                    indicatorColor='primary'
+                    textColor='primary'
+                    scrollButtons='auto'
+                    variant='scrollable'
+                >
+                    {tabContentArray.map((tabContentObject, index) => {
+                        return (
+                            <Tab label={<span className={classes.label}>{tabContentObject.tabTitle}</span>} {...a11yProps(index)} key={index} /> 
+                        );
+                    })}
+                </Tabs>
+            </div>
             {tabContentArray.map((tabContentObject, index) => {
                 return (
                     <TabPanel value={value} index={index} key={index}>

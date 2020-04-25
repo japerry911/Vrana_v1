@@ -6,8 +6,8 @@ let theme = createMuiTheme({
       main: '#CD2126'
     },
     secondary: {
-      main: '#4B4A4A'
-    }
+      main: '#FCFEFF'
+    },
   },
   colors: {
     vranaRed: '#CD2126',
