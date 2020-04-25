@@ -6,6 +6,7 @@ import CommercialTab from '../../misc/TabContent/OurWork/CommercialTab';
 import RetailTab from '../../misc/TabContent/OurWork/RetailTab';
 import HousingTab from '../../misc/TabContent/OurWork/HousingTab';
 import ReligousEducationalTab from '../../misc/TabContent/OurWork/ReligiousEducationalTab';
+import ParkingStructuresTab from '../../misc/TabContent/OurWork/ParkingStructuresTab';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
@@ -27,6 +28,10 @@ const tabContentArray = [
     {
         tabTitle: 'Religious/Educational',
         tabContent: <ReligousEducationalTab />
+    },
+    {
+        tabTitle: 'Parking Structures',
+        tabContent: <ParkingStructuresTab />
     }
 ];
 
