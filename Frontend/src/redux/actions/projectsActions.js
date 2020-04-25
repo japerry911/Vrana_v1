@@ -10,9 +10,13 @@ export const getProjects = () => {
             const projects = getProjectsResponse.data.projects;
 
             const commercial = projects.filter(project => project.Industry === 'Commercial');
-            const retail = projects.filter(project => project.Industry === 'Retail')
+            const retail = projects.filter(project => project.Industry === 'Retail');
+            const housing = projects.filter(project => project.Industry === 'Housing');
+            const religiousEducational = projects.filter(project => project.Industry === 'Religious/Educational');
+            const parkingStructures = projects.filter(project => project.Industry === 'Parking Structures');
+            const civilHeavyHighway = projects.filter(project => project.Industry === 'Civil/Heavy Highway');
 
-            dispatch(getProjectsSuccess({ commercial, retail }));
+            dispatch(getProjectsSuccess({ commercial, retail, housing, religiousEducational, parkingStructures, civilHeavyHighway }));
         } catch (error) {
             dispatch(projectError(error));
         }

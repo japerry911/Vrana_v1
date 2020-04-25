@@ -3,6 +3,9 @@ Admin.destroy_all
 
 Admin.create(username: 'VranaAdmin', password: 'TEST')
 
+# Our Work
+
+# Commercial 
 Project.create(
     Client_Name: 'Ameristar Casino & Hotel',
     Size: '40,000',
@@ -234,6 +237,7 @@ Project.create(
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyHospital/vrana_project_douglashospital1.jpg'
 )
 
+# Retail
 Project.create(
     Client_Name: "Baker's Supermarkets",
     Size: '',
@@ -296,4 +300,232 @@ Project.create(
     Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific1.jpg',
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific2.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OnePacificPlace/vrana_project_onepacific1.jpg'
+)
+
+# Housing
+Project.create(
+    Client_Name: "Offutt A.F.B - ADL Dining Hall",
+    Size: '',
+    Location: 'Bellevue, Nebraska',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/vrana_project_offutt1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/offutt0_3dbc85be-5056-a36a-090ccd539a515042.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/Offutt/vrana_project_offutt1.jpg'
+)
+
+Project.create(
+    Client_Name: "Douglas County Jail",
+    Size: '',
+    Location: 'Omaha, Nebraska',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/DouglasCountyJail/vrana_project_douglasjail1.jpg'
+)
+
+Project.create(
+    Client_Name: "Crown Tower Housing",
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Housing',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CrownTower/vrana_project_crowntower1.jpg'
+)
+
+# Religious/Educational
+Project.create(
+    Client_Name: 'North High School',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Religious/Educational',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh3.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaNorth/vrana_project_northhigh1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Christ Community Church',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Religious/Educational',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity2.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity3.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/ChristCommunityChurch/vrana_project_christcommunity1.jpg'
+)
+
+# Parking Structures
+Project.create(
+    Client_Name: 'Carriage Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/CarriageParking/vrana_project_carriage1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Eppley Airfield Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/EppleyParking/vrana_project_eppley1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Omni Center Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmniCenterParking/vrana_project_omniparking1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Morgan Place Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking1+(1).jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking2+(1).jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/MorganPlaceParking/vrana_project_morganparking2+(1).jpg'
+)
+
+Project.create(
+    Client_Name: 'Omaha Civic Auditorium Parking Garage',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Parking Structures',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/OmahaCivicParking/vrana_project_civicparking1.jpg'
+)
+
+# Civil/Heavy Highway
+Project.create(
+    Client_Name: 'I-680/West Dodge Road Interchange',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestDodgeRoadInt/vrana_project_680dodgeinterchange1.jpg'
+)
+
+Project.create(
+    Client_Name: 'I-680/West Maple Interchange',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/I680WestMapleInt/vrana_project_680mapleinterchange3.jpg'
+)
+
+Project.create(
+    Client_Name: 'Pacific Street and 168th Street Intersection',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/PacSt168StInt/vrana_project_168pacific1.jpg'
+)
+
+Project.create(
+    Client_Name: 'Barrington Park Infrastructure',
+    Size: '',
+    Location: '',
+    YearCompleted_ProjectStatus: '',
+    Construction_Value: '',
+    Scope_Of_Work: '',
+    Industry: 'Civil/Heavy Highway',
+    First_P_Header: 'First P Header',
+    First_P_Content: 'First P Content',
+    Key_Projects_Bullets: 'FirstBullet',
+    Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg',
+    Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark2.jpg',
+    Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg'
 )

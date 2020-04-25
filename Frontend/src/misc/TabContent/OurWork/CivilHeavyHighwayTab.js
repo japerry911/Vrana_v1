@@ -1,15 +1,15 @@
 import React from 'react';
-import { useStyles } from './RetailTabStyles';
-import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
-import Card from '../../../../components/Card/Card';
+import { useStyles } from './TabContentStyles';
+import CommonHeader from '../../../components/CommonHeader/CommonHeader';
+import Card from '../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
 import { useSelector } from 'react-redux';
 
-const RetailTab = () => {
+const CommercialTab = () => {
     const classes = useStyles();
 
-    const retailProjects = useSelector(state => state.projects.projects.retail);
-    const isEven = retailProjects.length % 2 === 0;
+    const civilHeavyHighwayProjects = useSelector(state => state.projects.projects.civilHeavyHighway);
+    const isEven = civilHeavyHighwayProjects.length % 2 === 0;
 
     return (
         <div className={classes.whiteContainerStyle}>
@@ -24,7 +24,7 @@ const RetailTab = () => {
                 </Grid>
                 {isEven
                 ?
-                retailProjects.map((project, index) => {
+                civilHeavyHighwayProjects.map((project, index) => {
                     const cardClass = index % 2 === 0 ? classes.gridLeftItemCardStyle : classes.gridRightItemCardStyle;
                     const alignSide = index % 2 === 0 ? 'right' : 'left';
 
@@ -41,11 +41,11 @@ const RetailTab = () => {
                     );
                 })
                 :
-                retailProjects.map((project, index) => {
+                civilHeavyHighwayProjects.map((project, index) => {
                     const cardClass = index % 2 === 0 ? classes.gridLeftItemCardStyle : classes.gridRightItemCardStyle;
                     const alignSide = index % 2 === 0 ? 'right' : 'left';
                     
-                    if (index === retailProjects.length - 1) {
+                    if (index === civilHeavyHighwayProjects.length - 1) {
                         return (
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.gridCenterCardStyle} key={project.id} align='center'>
                                 <Card
@@ -76,4 +76,4 @@ const RetailTab = () => {
     );
 };
 
-export default RetailTab;
+export default CommercialTab;

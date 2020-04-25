@@ -2,8 +2,12 @@ import React, { useEffect, Fragment } from 'react';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
 import Footer from '../../components/Footer/Footer';
-import CommercialTab from '../../misc/TabContent/OurWork/CommercialTab/CommercialTab';
-import RetailTab from '../../misc/TabContent/OurWork/RetailTab/RetailTab';
+import CommercialTab from '../../misc/TabContent/OurWork/CommercialTab';
+import RetailTab from '../../misc/TabContent/OurWork/RetailTab';
+import HousingTab from '../../misc/TabContent/OurWork/HousingTab';
+import ReligousEducationalTab from '../../misc/TabContent/OurWork/ReligiousEducationalTab';
+import ParkingStructuresTab from '../../misc/TabContent/OurWork/ParkingStructuresTab';
+import CivilHeavyHighway from '../../misc/TabContent/OurWork/CivilHeavyHighwayTab'
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
@@ -17,6 +21,22 @@ const tabContentArray = [
     {
         tabTitle: 'Retail',
         tabContent: <RetailTab />
+    },
+    {
+        tabTitle: 'Housing',
+        tabContent: <HousingTab />
+    },
+    {
+        tabTitle: 'Religious/Educational',
+        tabContent: <ReligousEducationalTab />
+    },
+    {
+        tabTitle: 'Parking Structures',
+        tabContent: <ParkingStructuresTab />
+    },
+    {
+        tabTitle: 'Civil/Heavy Highway',
+        tabContent: <CivilHeavyHighway />
     }
 ];
 
