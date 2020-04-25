@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useStyles } from './AboutStyles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -11,16 +11,16 @@ const About = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <Fragment>
             <HeroHeader headerText='ABOUT US' />
             <Grid container spacing={0} className={classes.whiteContainerStyle} alignItems='center' justify='center'>
                 <Grid item xs={8} sm={8} md={8} lg={8} xl={8} className={classes.aboutUsGreetingContentGridStyle}>
                     <div className={classes.charIntComHeaderDivStyle}>
                         <Typography variant='h5' className={classes.blackHeaderTextStyle}>
                             CHARACTER.&nbsp;
-                            <div className={classes.redHeaderTextStyle}>
+                            <span className={classes.redHeaderTextStyle}>
                                 INTEGRITY.&nbsp;
-                            </div>
+                            </span>
                             COMMITMENT.
                         </Typography>
                     </div>
@@ -115,7 +115,7 @@ const About = () => {
                 </Grid>
             </Grid>
             <Footer />
-        </div>
+        </Fragment>
     );
 };
 
