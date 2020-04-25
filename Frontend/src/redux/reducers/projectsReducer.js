@@ -1,4 +1,4 @@
-const INITIAL_STATE = { projects: { commercial: [], retails: [] }, showProject: {}, loading: false, error: null };
+const INITIAL_STATE = { projects: { commercial: [], retails: [], housing: [] }, showProject: {}, loading: false, error: null };
 
 const projectsReducer = (state=INITIAL_STATE, action) => {
     switch (action.type) {
@@ -6,7 +6,7 @@ const projectsReducer = (state=INITIAL_STATE, action) => {
             return { ...state, loading: true };
 
         case 'GET_PROJECTS_SUCCESS':
-            return { ...state, loading: false, projects: { commercial: action.payload.commercial, retail: action.payload.retail }};
+            return { ...state, loading: false, projects: action.payload };
 
         case 'GET_PROJECTS_ERROR':
             return { ...state, loading: false , projects: [], error: action.error };

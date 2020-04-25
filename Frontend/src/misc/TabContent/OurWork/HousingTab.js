@@ -1,22 +1,22 @@
 import React from 'react';
-import { useStyles } from './CommercialStylesTab';
-import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
-import Card from '../../../../components/Card/Card';
+import { useStyles } from './TabContentStyles';
+import CommonHeader from '../../../components/CommonHeader/CommonHeader';
+import Card from '../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
 import { useSelector } from 'react-redux';
 
-const CommercialTab = () => {
+const HousingTab = () => {
     const classes = useStyles();
 
-    const commercialProjects = useSelector(state => state.projects.projects.commercial);
-    const isEven = commercialProjects.length % 2 === 0;
+    const housingProjects = useSelector(state => state.projects.projects.housing);
+    const isEven = housingProjects.length % 2 === 0;
 
     return (
         <div className={classes.whiteContainerStyle}>
             <Grid container spacing={0} justify='center'>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                     <CommonHeader
-                        headerText='COMMERCIAL'
+                        headerText='HOUSING'
                         subHeaderText='OUR WORK'
                         headerTextColor='dark'
                         dividerColor='dark'
@@ -24,7 +24,7 @@ const CommercialTab = () => {
                 </Grid>
                 {isEven
                 ?
-                commercialProjects.map((project, index) => {
+                housingProjects.map((project, index) => {
                     const cardClass = index % 2 === 0 ? classes.gridLeftItemCardStyle : classes.gridRightItemCardStyle;
                     const alignSide = index % 2 === 0 ? 'right' : 'left';
 
@@ -41,11 +41,11 @@ const CommercialTab = () => {
                     );
                 })
                 :
-                commercialProjects.map((project, index) => {
+                housingProjects.map((project, index) => {
                     const cardClass = index % 2 === 0 ? classes.gridLeftItemCardStyle : classes.gridRightItemCardStyle;
                     const alignSide = index % 2 === 0 ? 'right' : 'left';
                     
-                    if (index === commercialProjects.length - 1) {
+                    if (index === housingProjects.length - 1) {
                         return (
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.gridCenterCardStyle} key={project.id} align='center'>
                                 <Card
@@ -76,4 +76,4 @@ const CommercialTab = () => {
     );
 };
 
-export default CommercialTab;
+export default HousingTab;

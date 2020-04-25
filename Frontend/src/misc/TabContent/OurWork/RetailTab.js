@@ -1,7 +1,7 @@
 import React from 'react';
-import { useStyles } from './RetailTabStyles';
-import CommonHeader from '../../../../components/CommonHeader/CommonHeader';
-import Card from '../../../../components/Card/Card';
+import { useStyles } from './TabContentStyles';
+import CommonHeader from '../../../components/CommonHeader/CommonHeader';
+import Card from '../../../components/Card/Card';
 import Grid from '@material-ui/core/Grid';
 import { useSelector } from 'react-redux';
 
