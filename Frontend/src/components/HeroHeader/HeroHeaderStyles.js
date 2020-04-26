@@ -7,12 +7,14 @@ export const useStyles = makeStyles(theme => ({
         width: '100%',
         backgroundSize: 'cover',
         paddingBottom: '5em',
-        backgroundPosition: '0 33%'
+        backgroundPosition: '0 33%',
+        alignItems: 'center',
+        display: 'flex'
     },
     headerTextStyle: {
         fontFamily: 'Avenir-Bold',
         color: theme.colors.textWhite,
         marginLeft: '10%',
-        marginTop: '5%'
+        marginTop: '2em'
     }
 }));

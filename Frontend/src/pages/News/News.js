@@ -4,6 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getNewsArticles } from '../../redux/actions/newsActions';
 import TabContentTemplate from '../../misc/TabContent/News/TabContentTemplate';
 import Spinner from '../../components/Spinner/Spinner.js';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
+import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
 
 const News = () => {
     const classes = useStyles();
@@ -50,7 +52,8 @@ const News = () => {
             </div>
             :
             <Fragment>
-                
+                <HeroHeader headerText='News' />
+                <HorizontalTabs tabContentArray={tabContentArray} />
             </Fragment>
             }
         </div>
