@@ -50,7 +50,7 @@ const News = () => {
         <div className={classes.mainDivStyle}>
             {isLoading
             ?
-            <div className={classes.spinnerDivStyle}>
+            <div className={classes.spinnerDiv}>
                 <Spinner />
             </div>
             :
