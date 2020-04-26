@@ -1,54 +1,51 @@
-import React, { useEffect, Fragment } from 'react';
+import React, { useEffect, Fragment, useState } from 'react';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
 import Footer from '../../components/Footer/Footer';
-import CommercialTab from '../../misc/TabContent/OurWork/CommercialTab';
-import RetailTab from '../../misc/TabContent/OurWork/RetailTab';
-import HousingTab from '../../misc/TabContent/OurWork/HousingTab';
-import ReligousEducationalTab from '../../misc/TabContent/OurWork/ReligiousEducationalTab';
-import ParkingStructuresTab from '../../misc/TabContent/OurWork/ParkingStructuresTab';
-import CivilHeavyHighway from '../../misc/TabContent/OurWork/CivilHeavyHighwayTab'
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import { useStyles } from './OurWorkStyles';
-
-const tabContentArray = [
-    {
-        tabTitle: 'Commercial',
-        tabContent: <CommercialTab />
-    },
-    {
-        tabTitle: 'Retail',
-        tabContent: <RetailTab />
-    },
-    {
-        tabTitle: 'Housing',
-        tabContent: <HousingTab />
-    },
-    {
-        tabTitle: 'Religious/Educational',
-        tabContent: <ReligousEducationalTab />
-    },
-    {
-        tabTitle: 'Parking Structures',
-        tabContent: <ParkingStructuresTab />
-    },
-    {
-        tabTitle: 'Civil/Heavy Highway',
-        tabContent: <CivilHeavyHighway />
-    }
-];
+import OurWorkTabContentTemplate from '../../misc/TabContent/OurWork/OurWorkTabContentTemplate';
 
 const OurWork = () => {
     const classes = useStyles();
 
-    const dispatch = useDispatch();
+    const [tabContentArray, setTabContentArray] = useState([]);
+
     const isLoading = useSelector(state => state.projects.loading);
+    const projects = useSelector(state => state.projects.projects);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getProjects());
     }, [dispatch]);
+
+    useEffect(() => {
+        if (projects.length > 0) {
+            const tempArrayOfObjectOfArrays = {};
+            for (let i = 0; i < projects.length; i++) {
+                if (tempArrayOfObjectOfArrays[projects[i].Industry]) {
+                    tempArrayOfObjectOfArrays[projects[i].Industry].push(projects[i]);
+                } else {
+                    tempArrayOfObjectOfArrays[projects[i].Industry] = [projects[i]];
+                }
+            }
+
+            const tempTabContentArray = [];
+
+            for (let i = 0; i < Object.keys(tempArrayOfObjectOfArrays).length; i++) {
+                const currentIndustryKey = Object.keys(tempArrayOfObjectOfArrays)[i];
+                
+                tempTabContentArray.push({ tabTitle: currentIndustryKey.toString(), tabContent: <OurWorkTabContentTemplate 
+                                                                                                    tabContent={tempArrayOfObjectOfArrays[currentIndustryKey]}
+                                                                                                    industry={currentIndustryKey}
+                                                                                                /> });
+            }
+
+            setTabContentArray(tempTabContentArray);
+        }
+    }, [projects]);
 
     return (
         <div className={classes.mainDivStyle}>

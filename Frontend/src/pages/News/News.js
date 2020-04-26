@@ -2,10 +2,11 @@ import React, { useEffect, useState, Fragment } from 'react';
 import { useStyles } from './NewsStyles.js';
 import { useSelector, useDispatch } from 'react-redux';
 import { getNewsArticles } from '../../redux/actions/newsActions';
-import TabContentTemplate from '../../misc/TabContent/News/TabContentTemplate';
+import NewsTabContentTemplate from '../../misc/TabContent/News/NewsTabContentTemplate';
 import Spinner from '../../components/Spinner/Spinner.js';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
+import Footer from '../../components/Footer/Footer';
 
 const News = () => {
     const classes = useStyles();
@@ -36,7 +37,7 @@ const News = () => {
             for (let i = 0; i < Object.keys(tempArrayOfObjectOfArrays).length; i++) {
                 const currentYearKey = Object.keys(tempArrayOfObjectOfArrays)[i];
                 
-                tempTabContentArray.push({ tabTitle: currentYearKey.toString(), tabContent: <TabContentTemplate 
+                tempTabContentArray.push({ tabTitle: currentYearKey.toString(), tabContent: <NewsTabContentTemplate 
                                                                                                 tabContent={tempArrayOfObjectOfArrays[currentYearKey]}
                                                                                                 year={currentYearKey}
                                                                                             /> });
@@ -57,6 +58,7 @@ const News = () => {
             <Fragment>
                 <HeroHeader headerText='News' />
                 <HorizontalTabs tabContentArray={tabContentArray} />
+                <Footer />
             </Fragment>
             }
         </div>

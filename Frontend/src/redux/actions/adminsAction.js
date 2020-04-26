@@ -21,20 +21,19 @@ export const loginFailed = error => {
 };
 
 export const attemptLogin = (username, password) => {
-    return async dispatch => {
+    return dispatch => {
         dispatch(loginPending());
 
-        try {
-            const loginAttemptResponse = await railsServer.post('/login', { admin: { username, password }});
-            
-            const admin = loginAttemptResponse.data.admin;
-
-            dispatch(loginSuccess({ admin }));
-            return true;
-        } catch (error) {
-            dispatch(loginFailed({ error }));
-            return false;
-        }
+        return railsServer.post('/login', { admin: { username, password }}).then(
+            response => {
+                dispatch(loginSuccess({ admin: response.data.admin }));
+                return true;
+            },
+            error => {
+                dispatch(loginFailed(error));
+                return false;
+            }
+        );
     };
 };
 

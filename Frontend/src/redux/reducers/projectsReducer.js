@@ -1,4 +1,4 @@
-const INITIAL_STATE = { projects: { commercial: [], retails: [], housing: [] }, showProject: {}, loading: false, error: null };
+const INITIAL_STATE = { projects: [], showProject: {}, loading: false, error: null };
 
 const projectsReducer = (state=INITIAL_STATE, action) => {
     switch (action.type) {

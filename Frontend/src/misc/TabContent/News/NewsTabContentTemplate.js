@@ -1,10 +1,10 @@
 import React from 'react';
-import { useStyles } from './TabContentTemplateStyles';
+import { useStyles } from './TemplateStyles';
 import Grid from '@material-ui/core/Grid';
 import CommonHeader from '../../../components/CommonHeader/CommonHeader';
 import NewsCard from '../../../components/NewsCard/NewsCard';
 
-const TabContentTemplate = ({ tabContent, year }) => {
+const NewsTabContentTemplate = ({ tabContent, year }) => {
     const classes = useStyles();
 
     const isEven = tabContent.length % 2 === 0;
@@ -74,4 +74,4 @@ const TabContentTemplate = ({ tabContent, year }) => {
     );
 };
 
-export default TabContentTemplate;
+export default NewsTabContentTemplate;

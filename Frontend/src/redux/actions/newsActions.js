@@ -1,16 +1,13 @@
 import railsServer from '../../api/railsServer';
 
 export const getNewsArticles = () => {
-    return async dispatch => {
+    return dispatch => {
         dispatch(newsPending());
 
-        try {
-            const newsArticlesResponse = await railsServer.get('/news_articles');
-
-            dispatch(getNewsArticlesSuccess(newsArticlesResponse.data.articles));
-        } catch (error) {
-            dispatch(newsError(error));
-        }
+        return railsServer.get('/news_articles').then(
+            response => dispatch(getNewsArticlesSuccess(response.data.articles)),
+            error => dispatch(newsError(error))
+        );
     };
 };
 
@@ -41,16 +38,13 @@ export const newsSuccess = () => {
 };
 
 export const createNews = (formUploadData, token) => {
-    return async dispatch => {
+    return dispatch => {
         dispatch(newsPending());
 
-        try {
-            await railsServer.post('/news_articles', formUploadData);
-
-            dispatch(newsSuccess());
-        } catch (error) {
-            dispatch(newsError(error));
-        }
+        return railsServer.post('/news_articles', formUploadData).then(
+            response => dispatch(newsSuccess()),
+            error => dispatch(newsError(error))
+        );
     };
 };
 
@@ -64,17 +58,3 @@ export const deleteNews = (id, token) => {
         );
     };
 };
-
-/*export const deleteNews = (id, token) => {
-    return async dispatch => {
-        dispatch(newsPending());
-
-        try {
-            await railsServer.delete(`/news_articles/${id}`);
-
-            dispatch(newsSuccess());
-        } catch (error) {
-            dispatch(newsError(error));
-        }
-    };
-};*/
