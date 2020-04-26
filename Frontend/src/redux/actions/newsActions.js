@@ -53,3 +53,28 @@ export const createNews = (formUploadData, token) => {
         }
     };
 };
+
+export const deleteNews = (id, token) => {
+    return dispatch => {
+        dispatch(newsPending());
+
+        return railsServer.delete(`/news_articles/${id}`).then(
+            response => dispatch(newsSuccess()),
+            error => dispatch(newsError(error))
+        );
+    };
+};
+
+/*export const deleteNews = (id, token) => {
+    return async dispatch => {
+        dispatch(newsPending());
+
+        try {
+            await railsServer.delete(`/news_articles/${id}`);
+
+            dispatch(newsSuccess());
+        } catch (error) {
+            dispatch(newsError(error));
+        }
+    };
+};*/
