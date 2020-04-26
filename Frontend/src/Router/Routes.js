@@ -35,7 +35,7 @@ export default () => {
                 component={AdminLogin}
             />
 
-            <Route
+            <ProtectedRoute
                 exact 
                 path='/admin/edit-news'
                 component={EditNews}

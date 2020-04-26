@@ -41,7 +41,7 @@ export const createNews = (formUploadData, token) => {
     return dispatch => {
         dispatch(newsPending());
 
-        return railsServer.post('/news_articles', formUploadData).then(
+        return railsServer.post('/news_articles', formUploadData, { header: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(newsSuccess()),
             error => dispatch(newsError(error))
         );
@@ -52,7 +52,7 @@ export const deleteNews = (id, token) => {
     return dispatch => {
         dispatch(newsPending());
 
-        return railsServer.delete(`/news_articles/${id}`).then(
+        return railsServer.delete(`/news_articles/${id}`, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(newsSuccess()),
             error => dispatch(newsError(error))
         );
@@ -63,7 +63,7 @@ export const updateNews = (id, formUpdateData, token) => {
     return dispatch => {
         dispatch(newsPending());
 
-        return railsServer.put(`/news_articles/${id}`, formUpdateData).then(
+        return railsServer.put(`/news_articles/${id}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(newsSuccess()),
             error => newsError(error)
         );
