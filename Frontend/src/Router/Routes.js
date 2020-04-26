@@ -18,6 +18,7 @@ import EditProject from '../pages/EditProject/EditProject';
 import DeleteProject from '../pages/DeleteProject/DeleteProject';
 import AddNews from '../pages/AddNews/AddNews';
 import DeleteNews from '../pages/DeleteNews/DeleteNews';
+import EditNews from '../pages/EditNews/EditNews';
 
 export default () => {
     return (
@@ -32,6 +33,12 @@ export default () => {
                 exact
                 path='/admin/login'
                 component={AdminLogin}
+            />
+
+            <Route
+                exact 
+                path='/admin/edit-news'
+                component={EditNews}
             />
 
             <ProtectedRoute

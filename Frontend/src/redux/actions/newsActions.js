@@ -58,3 +58,14 @@ export const deleteNews = (id, token) => {
         );
     };
 };
+
+export const updateNews = (id, formUpdateData, token) => {
+    return dispatch => {
+        dispatch(newsPending());
+
+        return railsServer.put(`/news_articles/${id}`, formUpdateData).then(
+            response => dispatch(newsSuccess()),
+            error => newsError(error)
+        );
+    };
+};
