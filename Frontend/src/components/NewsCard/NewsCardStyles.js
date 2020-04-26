@@ -4,8 +4,9 @@ export const useStyles = makeStyles(theme => ({
     paperStyle: {
         backgroundColor: theme.colors.nonTextWhite,
         width: '30vh',
+        height: '50vh',
         overflow: 'hidden',
-        paddingBottom: '1em'
+        marginTop: '2em'
     },
     newsArticleTitleStyle: {
         fontFamily: 'Avenir-Bold'
@@ -17,12 +18,18 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir'
     },
     newsImageStyle: {
-        borderRadius: 10,
         width: '30vh',
         height: '30vh',
         objectFit: 'cover'
     },
     linkStyle: {
         cursor: 'pointer'
+    },
+    cardTextDivStyle: {
+        textAlign: 'center',
+        height: '19vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between'
     }
 }));

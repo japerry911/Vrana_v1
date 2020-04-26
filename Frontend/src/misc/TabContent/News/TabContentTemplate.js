@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import CommonHeader from '../../../components/CommonHeader/CommonHeader';
 import NewsCard from '../../../components/NewsCard/NewsCard';
 
-const TabContentTemplate = ({ tabContent }) => {
+const TabContentTemplate = ({ tabContent, year }) => {
     const classes = useStyles();
 
     const isEven = tabContent.length % 2 === 0;
@@ -14,8 +14,8 @@ const TabContentTemplate = ({ tabContent }) => {
             <Grid container spacing={0} justify='center'>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                     <CommonHeader
-                        headerText='COMMERCIAL'
-                        subHeaderText='OUR WORK'
+                        headerText='NEWS'
+                        subHeaderText={year}
                         headerTextColor='dark'
                         dividerColor='dark'
                     />

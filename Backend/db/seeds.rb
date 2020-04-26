@@ -548,3 +548,11 @@ NewsArticle.create(
     Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/55f6fb465f3f1.image.jpg',
     Article_Link: 'https://www.omaha.com/news/local/a-progress-report-on-south-omaha-bike-trail-being-built/article_2684ef07-1243-5c1b-965c-46d5a7603507.html'
 )
+
+NewsArticle.create(
+    Headline: "New warehouse to aid Rotella’s growth",
+    Source: 'Omaha World-Herald',
+    Date_Published: '2015-01-29',
+    Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/54c970df7c6b6.image.jpg',
+    Article_Link: 'https://www.omaha.com/money/new-warehouse-to-aid-rotella-s-growth/article_422a34b3-57a6-5777-8322-d49d827f0e58.html'
+)

@@ -36,7 +36,10 @@ const News = () => {
             for (let i = 0; i < Object.keys(tempArrayOfObjectOfArrays).length; i++) {
                 const currentYearKey = Object.keys(tempArrayOfObjectOfArrays)[i];
                 
-                tempTabContentArray.push({ tabTitle: currentYearKey.toString(), tabContent: <TabContentTemplate tabContent={tempArrayOfObjectOfArrays[currentYearKey]} /> });
+                tempTabContentArray.push({ tabTitle: currentYearKey.toString(), tabContent: <TabContentTemplate 
+                                                                                                tabContent={tempArrayOfObjectOfArrays[currentYearKey]}
+                                                                                                year={currentYearKey}
+                                                                                            /> });
             }
 
             setTabContentArray(tempTabContentArray);
