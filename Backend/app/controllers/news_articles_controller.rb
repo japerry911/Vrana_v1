@@ -5,6 +5,14 @@ class NewsArticlesController < ApplicationController
         render json: { articles: @news_articles }
     end
 
+    def destroy
+        @article_to_destroy = NewsArticle.find(params[:id])
+
+        @article_to_destroy.destroy
+
+        render status: :ok
+    end
+
     def create
         strong_params = article_params_exc_image_urls
 
