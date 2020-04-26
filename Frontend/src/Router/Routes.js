@@ -17,6 +17,7 @@ import AddProject from '../pages/AddProject/AddProject';
 import EditProject from '../pages/EditProject/EditProject';
 import DeleteProject from '../pages/DeleteProject/DeleteProject';
 import AddNews from '../pages/AddNews/AddNews';
+import DeleteNews from '../pages/DeleteNews/DeleteNews';
 
 export default () => {
     return (
@@ -34,6 +35,12 @@ export default () => {
             />
 
             <Route
+                exact
+                path='/admin/delete-news'
+                component={DeleteNews}
+            />
+
+            <ProtectedRoute
                 exact
                 path='/admin/add-news'
                 component={AddNews}
