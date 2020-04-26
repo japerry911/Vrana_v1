@@ -17,7 +17,10 @@ export const useStyles = makeStyles(theme => ({
         marginLeft: '1em'
     },
     iconButtonStyle: {
-        color: theme.colors.textWhite
+        color: theme.colors.textWhite,
+        '&:hover': {
+            backgroundColor: theme.colors.vranaRed
+        }
     },
     pageTitleStyle: {
         color: theme.colors.textWhite
