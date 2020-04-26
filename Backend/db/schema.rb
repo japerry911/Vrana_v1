@@ -10,11 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_21_204808) do
+ActiveRecord::Schema.define(version: 2020_04_25_231020) do
 
   create_table "admins", id: :string, force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+  end
+
+  create_table "news_articles", id: :string, force: :cascade do |t|
+    t.string "Headline"
+    t.string "Source"
+    t.datetime "Date_Published"
+    t.string "Feature_Image_Url"
+    t.string "Article_Link"
   end
 
   create_table "projects", id: :string, force: :cascade do |t|

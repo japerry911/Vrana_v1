@@ -1,5 +1,6 @@
 Project.destroy_all
 Admin.destroy_all
+NewsArticle.destroy_all
 
 Admin.create(username: 'VranaAdmin', password: 'TEST')
 
@@ -528,4 +529,30 @@ Project.create(
     Card_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg',
     Template_Image1_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark2.jpg',
     Template_Image2_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images/BarringtonParkInf/vrana_project_barringtonpark1.jpg'
+)
+
+# News_Articles
+
+NewsArticle.create(
+    Headline: "Construction Dive's 'mini megacities' to watch: Omaha, Nebraska",
+    Source: 'Construction Dive',
+    Date_Published: '2020-01-15',
+    Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/15a0149dc3f41f4aaa533f2b41554d61.jpg',
+    Article_Link: 'https://www.constructiondive.com/news/construction-dives-mini-megacities-to-watch-omaha-nebraska/570308/'
+)
+
+NewsArticle.create(
+    Headline: "A progress report on South Omaha bike trail being built at 35th, Vinton Streets",
+    Source: 'Omaha World-Herald',
+    Date_Published: '2015-09-14',
+    Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/55f6fb465f3f1.image.jpg',
+    Article_Link: 'https://www.omaha.com/news/local/a-progress-report-on-south-omaha-bike-trail-being-built/article_2684ef07-1243-5c1b-965c-46d5a7603507.html'
+)
+
+NewsArticle.create(
+    Headline: "New warehouse to aid Rotella’s growth",
+    Source: 'Omaha World-Herald',
+    Date_Published: '2015-01-29',
+    Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/54c970df7c6b6.image.jpg',
+    Article_Link: 'https://www.omaha.com/money/new-warehouse-to-aid-rotella-s-growth/article_422a34b3-57a6-5777-8322-d49d827f0e58.html'
 )
