@@ -24,7 +24,7 @@ const NewsCard = ({ headline, imageUrl, source, date}) => {
                     {source}}
                 </Typography>
                 <Typography variant='body2' className={classes.articleDateStyle}>
-                    {source}
+                    {date}
                 </Typography>
             </Paper>
         </Fragment>
