@@ -27,7 +27,7 @@ class ProjectsController < ApplicationController
         @project_to_update = Project.find(params[:id])
         strong_params = project_params_exc_image_urls
 
-        s3 = Aws::S3::Resource.new 
+        s3 = Aws::S3::Resource.new({ region: 'us-east-2' })  
         image_url_base = 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images'
 
         if strong_params[:card_image_filetype] != ''
@@ -73,7 +73,7 @@ class ProjectsController < ApplicationController
     def create
         strong_params = project_params_exc_image_urls
 
-        s3 = Aws::S3::Resource.new 
+        s3 = Aws::S3::Resource.new({ region: 'us-east-2' })  
         image_url_base = 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/projects/images'
 
         card_image_s3_path = s3.bucket('vranaconstructionwebsiteimages')

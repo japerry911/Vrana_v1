@@ -3,7 +3,7 @@ import { useStyles } from './FormTextFieldStyles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 
-const FormTextField = ({ label, value, onChange, paddingTop, id, type='text' }) => {
+const FormTextField = ({ label, value, onChange, paddingTop, id, type='text', inputLabelProps={} }) => {
     const classes = useStyles({ paddingTop });
 
     return (
@@ -15,6 +15,7 @@ const FormTextField = ({ label, value, onChange, paddingTop, id, type='text' }) 
                 className={classes.textFieldStyle} 
                 id={id}
                 type={type}
+                InputLabelProps={inputLabelProps}
             />
         </Grid>
     );

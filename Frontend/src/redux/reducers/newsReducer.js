@@ -8,6 +8,9 @@ const newsReducer = (state=INITIAL_STATE, action) => {
         case 'NEWS_ERROR':
             return { ...state, loading: false, error: action.error };
 
+        case 'NEWS_SUCCESS':
+            return { ...state, loading: false };
+
         case 'GET_NEWS_ARTICLES_SUCCESS':
             return { newsArticles: action.payload, loading: false };
 

@@ -25,10 +25,12 @@ const NewsFormBody = ({ fields, setField, setImageField }) => {
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <FormTextField
-                    label='Date Published (yyyy-MM-dd)' 
+                    label='Date Published' 
                     value={fields.datePublished}
                     onChange={setField}
                     id='datePublished'
+                    type='date'
+                    inputLabelProps={{ shrink: true }}
                 />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
