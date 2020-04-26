@@ -25,5 +25,8 @@ export const useStyles = makeStyles(theme => ({
         display: 'inline',
         paddingRight: '.5em',
         color: theme.colors.vranaRed
+    },
+    gridCenterCardStyle: {
+        marginTop: '3em'
     }
 }));
