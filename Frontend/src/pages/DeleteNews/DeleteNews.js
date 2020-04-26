@@ -11,18 +11,28 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Spinner from '../../components/Spinner/Spinner';
 import Footer from '../../components/Footer/Footer';
 
-const DeleteNews = () => {
+const DeleteNews = ({ history }) => {
     const classes = useStyles();
 
     const [articleToDelete, setArticleToDelete] = useState('');
 
     const isLoading = useSelector(state => state.news.loading);
     const articles = useSelector(state => state.news.newsArticles);
+    const token = useSelector(state => state.admins.admin.token);
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getNewsArticles());
     }, [dispatch]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        dispatch(deleteNews(articleToDelete, token)).then(() => dispatch(getNewsArticles()));
+
+        setArticleToDelete('');
+        history.push('/admin/delete-news');
+    };
     
     return (
         <div className={classes.mainDivStyle}>
@@ -35,7 +45,7 @@ const DeleteNews = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Delete News' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Delete News Article' />
                             <FormSelect

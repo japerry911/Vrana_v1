@@ -42,7 +42,7 @@ const DeleteProject = ({ history }) => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        dispatch(deleteProject(projectToDelete, token));
+        dispatch(deleteProject(projectToDelete, token))
         dispatch(getProjects());
         
         setProjectToDelete('');
