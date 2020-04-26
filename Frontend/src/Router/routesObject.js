@@ -8,7 +8,8 @@ export const ROUTES_OBJECT = {
     '/news': 'News',
     '/careers': 'Careers',
     '/contact-us': 'Contact Us',
-    '/admin/login': 'Admin Login'
+    '/admin/login': 'Admin Login',
+    '/admin/add-news': 'Admin: Add News'
 };
 
 export const AUTHED_ROUTES_OBJECT = {
@@ -23,5 +24,6 @@ export const AUTHED_ROUTES_OBJECT = {
     '/contact-us': 'Contact Us',
     '/admin/add-project': 'Admin: Add Project',
     '/admin/edit-project': 'Admin: Edit Project',
-    '/admin/delete-project': 'Admin: Delete Project'
+    '/admin/delete-project': 'Admin: Delete Project',
+    '/admin/add-news': 'Admin: Add News'
 };

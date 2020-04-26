@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
+import Sandbox from '../misc/Sandbox.js';
 import Home from '../pages/Home/Home';
 import About from '../pages/About/About';
 import Services from '../pages/Services/Services';
@@ -15,7 +16,7 @@ import AdminLogin from '../pages/AdminLogin/AdminLogin';
 import AddProject from '../pages/AddProject/AddProject';
 import EditProject from '../pages/EditProject/EditProject';
 import DeleteProject from '../pages/DeleteProject/DeleteProject';
-import Sandbox from '../misc/Sandbox.js';
+import AddNews from '../pages/AddNews/AddNews';
 
 export default () => {
     return (
@@ -30,6 +31,12 @@ export default () => {
                 exact
                 path='/admin/login'
                 component={AdminLogin}
+            />
+
+            <Route
+                exact
+                path='/admin/add-news'
+                component={AddNews}
             />
 
             <ProtectedRoute 
