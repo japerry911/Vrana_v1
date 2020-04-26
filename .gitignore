@@ -50,4 +50,4 @@
 # Ignore master key for decrypting credentials and more.
 /Backend/config/master.key
 
-/Backend/.env
+/Backend/config/credentials.yml.enc

@@ -8,7 +8,7 @@ const NewsCard = ({ headline, imageUrl, source, date, linkUrl}) => {
     const classes = useStyles();
 
     return (
-        <div>
+        <Fragment>
             <Paper 
                 elevation={3} 
                 className={classes.paperStyle}
@@ -33,7 +33,7 @@ const NewsCard = ({ headline, imageUrl, source, date, linkUrl}) => {
                     </Link>
                 </div>
             </Paper>
-        </div>
+        </Fragment>
     );
 };
 
