@@ -49,5 +49,4 @@
 
 # Ignore master key for decrypting credentials and more.
 /Backend/config/master.key
-
 /Backend/config/credentials.yml.enc
