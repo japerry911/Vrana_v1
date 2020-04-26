@@ -6,13 +6,14 @@ class NewsArticlesController < ApplicationController
     end
 
     def create
-        a = Rails.application.credentials.aws[:region]
-        puts a
-        return 
-
         strong_params = article_params_exc_image_urls
 
-        s3 = Aws::S3::Resource.new({ region: 'us-east-2' }) 
+        s3 = Aws::S3::Resource.new(
+            access_key_id: Rails.application.credentials.aws[:access_key_id],
+            secret_access_key: Rails.application.credentials.aws[:secret_access_key],
+            region: Rails.application.credentials.aws[:region] 
+        ) 
+
         image_url_base = 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles'
 
         image_s3_path = s3.bucket('vranaconstructionwebsiteimages')
