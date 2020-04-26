@@ -11,61 +11,47 @@ export const getProjects = () => {
     };
 };
 
-export const getProject = projectId => {
-    return async dispatch => {
+export const getProject = id => {
+    return dispatch => {
         dispatch(projectPending());
 
-        try {
-            const getProjectResponse = await railsServer.get(`/projects/${projectId}`);
-
-            const project = getProjectResponse.data.project;
-
-            dispatch(getProjectSuccess({ project }));
-        } catch (error) {
-            dispatch(projectError({ error }));
-        }
+        return railsServer.get(`/projects/${id}`).then(
+            response => dispatch(getProjectSuccess(response.data.project)),
+            error => projectError(error)
+        );
     };
 };
 
 export const createProject = (formUploadData, token) => {
-    return async dispatch => {
+    return dispatch => {
         dispatch(projectPending());
 
-        try {
-            await railsServer.post('/projects', formUploadData, { headers: { Authorization: `Bearer ${token}` }});
-
-            dispatch(projectSuccess());
-        } catch (error) {
-            dispatch(projectError(error));
-        }
+        return railsServer.post('/projects', formUploadData, { headers: { Authorization: `Bearer ${token}` }}).then(
+            response => dispatch(projectSuccess()),
+            error => dispatch(projectError(error))
+        );
     };
 };
 
-export const deleteProject = (projectId, token) => {
-    return async dispatch => {
+export const deleteProject = (id, token) => {
+    return dispatch => {
         dispatch(projectPending());
 
-        try {
-            await railsServer.delete(`/projects/${projectId}`, { headers: { Authorization: `Bearer ${token}` }});
-
-            dispatch(projectSuccess());
-        } catch (error) {
-            dispatch(projectError(error));
-        }
+        return railsServer.delete(`/projects/${id}`, { headers: { Authorization: `Bearer ${token}` }}).then(
+            response => dispatch(projectSuccess()),
+            error => dispatch(projectError(error))
+        );
     };
 };
 
-export const updateProject = (projectId, formUpdateData, token) => {
-    return async dispatch => {
+export const updateProject = (id, formUpdateData, token) => {
+    return dispatch => {
         dispatch(projectPending());
 
-        try {
-            await railsServer.put(`/projects/${projectId}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }});
-
-            dispatch(projectSuccess());
-        } catch (error) {
-            dispatch(projectError(error));
-        }
+        return railsServer.put(`/projects/${id}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }}).then(
+            response => dispatch(projectSuccess()),
+            error => dispatch(projectError(error))
+        );
     };
 };
 

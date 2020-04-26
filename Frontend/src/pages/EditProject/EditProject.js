@@ -33,7 +33,6 @@ const EditProject = ({ history }) => {
     const classes = useStyles();
 
     const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
-    const [combinedProjectsArray, setCombinedProjectsArray] = useState([]);
     const [projectToEdit, setProjectToEdit] = useState('');
 
     const dispatch = useDispatch();
@@ -44,18 +43,6 @@ const EditProject = ({ history }) => {
     useEffect(() => {
         dispatch(getProjects());
     }, [dispatch]);
-
-    useEffect(() => {
-        const tempProjectsArray = [];
-
-        Object.keys(projects).forEach(industry => {
-            projects[industry].forEach(project => {
-                tempProjectsArray.push(project);
-            });
-        });
-
-        setCombinedProjectsArray(tempProjectsArray);
-    }, [projects]);
 
     useEffect(() => {
         if (projectToEdit) {
@@ -163,7 +150,7 @@ const EditProject = ({ history }) => {
                                 inputLabelText='Project to Edit'
                                 selectValue={projectToEdit}
                                 onChangeSelect={newProjectToEdit => setProjectToEdit(newProjectToEdit.target.value)}
-                                menuItemFunction={combinedProjectsArray.map(project => {
+                                menuItemFunction={projects.map(project => {
                                                                                 return (
                                                                                     <MenuItem 
                                                                                         value={project}

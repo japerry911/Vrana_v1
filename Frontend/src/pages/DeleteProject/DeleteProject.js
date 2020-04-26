@@ -15,7 +15,6 @@ const DeleteProject = ({ history }) => {
     const classes = useStyles();
 
     const [projectToDelete, setProjectToDelete] = useState('');
-    const [combinedProjectsArray, setCombinedProjectsArray] = useState([]);
 
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.projects.loading);
@@ -26,18 +25,6 @@ const DeleteProject = ({ history }) => {
     useEffect(() => {
         dispatch(getProjects());
     }, [dispatch]);
-
-    useEffect(() => {
-        const tempProjectsArray = [];
-
-        Object.keys(projects).forEach(industry => {
-            projects[industry].forEach(project => {
-                tempProjectsArray.push(project);
-            });
-        });
-
-        setCombinedProjectsArray(tempProjectsArray);
-    }, [projects]);
 
     const handleSubmit = event => {
         event.preventDefault();
@@ -67,7 +54,7 @@ const DeleteProject = ({ history }) => {
                                 inputLabelText='Project to Delete'
                                 selectValue={projectToDelete}
                                 onChangeSelect={newProjectToDelete => setProjectToDelete(newProjectToDelete.target.value)}
-                                menuItemFunction={combinedProjectsArray.map(project => {
+                                menuItemFunction={projects.map(project => {
                                                                                 return (
                                                                                     <MenuItem 
                                                                                         value={project.id}

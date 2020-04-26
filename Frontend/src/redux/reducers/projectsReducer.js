@@ -15,7 +15,7 @@ const projectsReducer = (state=INITIAL_STATE, action) => {
             return { ...state, loading: true };
 
         case 'GET_PROJECT_SUCCESS':
-            return { ...state, loading: false, showProject: action.payload.project };
+            return { ...state, loading: false, showProject: action.payload };
 
         case 'GET_PROJECT_ERROR':
             return { ...state, loading: false , showProject: {}, error: action.error };
