@@ -1,9 +1,10 @@
-import React, { Fragnent } from 'react';
+import React, { Fragment } from 'react';
 import { useStyles } from './NewsCardStyles';
-import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Paper from '@material-ui/core/Paper';
+import Link from '@material-ui/core/Link';
 
-const NewsCard = ({ headline, imageUrl, source, date}) => {
+const NewsCard = ({ headline, imageUrl, source, date, linkUrl}) => {
     const classes = useStyles();
 
     return (
@@ -18,14 +19,17 @@ const NewsCard = ({ headline, imageUrl, source, date}) => {
                     src={imageUrl}
                 />
                 <Typography variant='body1' className={classes.newsArticleTitleStyle}>
-                    {headline}}
+                    {headline}
                 </Typography>
                 <Typography variant='body2' className={classes.articleItalicizeStyle}>
-                    {source}}
+                    {source}
                 </Typography>
                 <Typography variant='body2' className={classes.articleDateStyle}>
                     {date}
                 </Typography>
+                <Link href={linkUrl} className={classes.linkStyle} target='_blank'>
+                    Read More
+                </Link>
             </Paper>
         </Fragment>
     );

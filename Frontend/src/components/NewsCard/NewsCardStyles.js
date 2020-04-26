@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     paperStyle: {
         backgroundColor: theme.colors.nonTextWhite,
-        width: '70%',
+        width: '30vh',
         overflow: 'hidden',
         paddingBottom: '1em'
     },
@@ -15,5 +15,14 @@ export const useStyles = makeStyles(theme => ({
     },
     articleDateStyle: {
         fontFamily: 'Avenir'
+    },
+    newsImageStyle: {
+        borderRadius: 10,
+        width: '30vh',
+        height: '30vh',
+        objectFit: 'cover'
+    },
+    linkStyle: {
+        cursor: 'pointer'
     }
 }));
