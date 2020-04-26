@@ -3,8 +3,8 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     paperStyle: {
         backgroundColor: theme.colors.nonTextWhite,
-        width: '30vh',
-        height: '50vh',
+        width: '60%',
+        height: '30em',
         overflow: 'hidden',
         marginTop: '2em'
     },
@@ -18,8 +18,8 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir'
     },
     newsImageStyle: {
-        width: '30vh',
-        height: '30vh',
+        width: '100%',
+        height: '15em',
         objectFit: 'cover'
     },
     linkStyle: {
@@ -27,7 +27,7 @@ export const useStyles = makeStyles(theme => ({
     },
     cardTextDivStyle: {
         textAlign: 'center',
-        height: '19vh',
+        height: '13em',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'space-between'
