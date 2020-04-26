@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
@@ -23,7 +23,8 @@ const MainAppBar = ({ handleDrawerOpen, location }) => {
                         alt='Vrana Logo'
                     />
                 </a>
-                <div>
+                <div className={classes.divGrowStyle} />
+                <Fragment>
                     <Typography 
                         variant='h6' 
                         display='inline'
@@ -31,6 +32,8 @@ const MainAppBar = ({ handleDrawerOpen, location }) => {
                     >
                         {authed ? AUTHED_ROUTES_OBJECT[location.pathname] : ROUTES_OBJECT[location.pathname]}
                     </Typography>
+                </Fragment>
+                <div className={classes.iconDivStyle}>
                     <IconButton 
                         edge='start' 
                         aria-label='menu'

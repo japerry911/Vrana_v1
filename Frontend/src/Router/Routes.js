@@ -34,7 +34,7 @@ export default () => {
                 component={AdminLogin}
             />
 
-            <Route
+            <ProtectedRoute
                 exact
                 path='/admin/delete-news'
                 component={DeleteNews}
