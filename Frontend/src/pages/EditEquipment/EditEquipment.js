@@ -48,7 +48,7 @@ const EditEquipment = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Edit Equipment' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
+                    <form className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Edit Equipment' />
                             <FormSelect
