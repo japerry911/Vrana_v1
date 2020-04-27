@@ -5,6 +5,7 @@ class CreateEquipment < ActiveRecord::Migration[6.0]
       t.string :Name
       t.string :Year
       t.decimal :Price
+      t.string :Image_Url
     end
   end
 end
