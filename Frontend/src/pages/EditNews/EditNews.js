@@ -69,8 +69,11 @@ const EditNews = ({ history }) => {
             formData.append(key, articleObject[key]);
         });
 
-        dispatch(updateNews(articleToEdit.id, formData, token));
+        dispatch(updateNews(articleToEdit.id, formData, token)).then(
+            () => dispatch(getNewsArticles())
+        );
 
+        setArticleToEdit('');
         setFields(INITIAL_STATE);
 
         history.push('/admin/edit-news');

@@ -92,8 +92,11 @@ const EditEquipment = ({ history }) => {
             formData.append(key, equipmentObject[key]);
         });
 
-        dispatch(updateEquipment(equipmentToEdit.id, formData, token));
+        dispatch(updateEquipment(equipmentToEdit.id, formData, token)).then(
+            () => dispatch(getEquipment())
+        );
 
+        setEquipmentToEdit('');
         setFields(INITIAL_STATE);
 
         history.push('/admin/edit-equipment');
