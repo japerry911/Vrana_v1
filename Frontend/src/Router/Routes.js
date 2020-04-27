@@ -156,7 +156,7 @@ export default () => {
             <Route 
                 exact 
                 path='/contact-us'
-                compoennt={ContactUs}
+                component={ContactUs}
             />
         </Switch>
     );
