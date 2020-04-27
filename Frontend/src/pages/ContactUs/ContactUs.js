@@ -59,6 +59,7 @@ const ContactUs = () => {
                         <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
                             <FormButton
                                 buttonText='CONTACT US'
+                                validationStatus={true}
                             />
                         </Grid>
                     </Grid>
