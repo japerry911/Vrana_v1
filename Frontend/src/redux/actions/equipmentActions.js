@@ -54,3 +54,14 @@ export const getSpecificEquipment = id => {
         );
     };
 }
+
+export const createEquipment = (formUploadData, token) => {
+    return dispatch => {
+        dispatch(equipmentPending());
+
+        return railsServer.post('/equipment', formUploadData).then(
+            response => dispatch(equipmentSuccess()),
+            error => dispatch(equipmentError(error))
+        );
+    };
+};
