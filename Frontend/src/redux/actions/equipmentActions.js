@@ -59,7 +59,7 @@ export const createEquipment = (formUploadData, token) => {
     return dispatch => {
         dispatch(equipmentPending());
 
-        return railsServer.post('/equipment', formUploadData).then(
+        return railsServer.post('/equipment', formUploadData, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(equipmentSuccess()),
             error => dispatch(equipmentError(error))
         );

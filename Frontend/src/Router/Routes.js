@@ -121,7 +121,7 @@ export default () => {
                 component={ShowEquipment}
             />
 
-            <Route
+            <ProtectedRoute
                 exact
                 path='/admin/add-equipment'
                 component={AddEquipment}
