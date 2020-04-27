@@ -9,6 +9,7 @@ export const useStyles = makeStyles(theme => ({
         width: '100%'
     },
     mainDivStyle: {
+        backgroundColor: theme.colors.nonTextWhite,
         height: '100%'
     }
 }));
