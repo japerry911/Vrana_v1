@@ -7,13 +7,13 @@ const NewsFormBody = ({ fields, setField, setImageField }) => {
     return (
         <Fragment>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-            <FormTextField 
-                paddingTop='1em'
-                label='Headline' 
-                value={fields.headline}
-                onChange={setField}
-                id='headline'
-            />
+                <FormTextField 
+                    paddingTop='1em'
+                    label='Headline' 
+                    value={fields.headline}
+                    onChange={setField}
+                    id='headline'
+                />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <FormTextField

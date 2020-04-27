@@ -51,8 +51,7 @@ class EquipmentController < ApplicationController
         end
 
         @new_equipment = Equipment.create([Name: strong_params[:Name], Year: strong_params[:Year], Price: strong_params[:Price], Description: strong_params[:Description],
-                                            Card_Image: card_image_url, Image_Left: image_left_url, image_right_url]
-                                            .reject {|k, v| v.null?})
+                                            Card_Image: card_image_url, Image_Left: image_left_url, Image_Right: image_right_url])
 
         render json: { equipment: @new_equipment }
     end
@@ -62,4 +61,6 @@ class EquipmentController < ApplicationController
         def equipment_params_exc_image_urls
             params.permit([:Name, :Year, :Price, :Description, :card_image_filetype, :card_image_filename, :card_image, :template_image1_filetype,
                             :template_image1_filename, :template_image1, :template_image2_filetype, :template_image2])
+            
+        end
 end
