@@ -38,7 +38,7 @@ export const useStyles = makeStyles(theme => ({
     },
     imageStyle: {
         height: '80%',
-        width: 'auto',
+        width: '50%',
         borderRadius: 10,
         marginBottom: '3em',
         marginTop: '3em'

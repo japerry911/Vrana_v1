@@ -45,9 +45,9 @@ const EquipmentFormBody = ({ fields, setField, setImageField }) => {
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <FormImageUploader
                     onChange={setImageField}
-                    emptyField={fields.cardPicture === ''}
+                    emptyField={fields.cardImage === ''}
                     labelText='Upload Card Picture'
-                    id='cardPicture'
+                    id='cardImage'
                 />
             </Grid>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>

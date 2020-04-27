@@ -30,7 +30,7 @@ class EquipmentController < ApplicationController
         end
         card_image_url = "#{image_url_base}/#{strong_params[:card_image_filename]}.#{strong_params[:card_image_filetype]}"
 
-        if :template_image1_filetype != ''
+        if strong_params[:template_image1_filetype] != ''
             template_image1_s3_path = s3.bucket('vranaconstructionwebsiteimages')
                 .object("Equipment/#{strong_params[:template_image1_filename]}.#{strong_params[:template_image1_filetype]}")
             template_image1_status = template_image1_s3_path.upload_file(strong_params[:template_image1])
@@ -38,9 +38,11 @@ class EquipmentController < ApplicationController
                 render status: :internal_server_error
             end
             image_left_url = "#{image_url_base}/#{strong_params[:template_image1_filename]}.#{strong_params[:template_image1_filetype]}"
+        else
+            image_left_url = ''
         end
 
-        if :template_image2_filetype != ''
+        if strong_params[:template_image2_filetype] != ''
             template_image2_s3_path = s3.bucket('vranaconstructionwebsiteimages')
                 .object("Equipment/#{strong_params[:template_image2_filename]}.#{strong_params[:template_image2_filetype]}")
             template_image2_status = template_image2_s3_path.upload_file(strong_params[:template_image2])
@@ -48,6 +50,8 @@ class EquipmentController < ApplicationController
                 render status: :internal_server_error
             end
             image_right_url = "#{image_url_base}/#{strong_params[:template_image2_filename]}.#{strong_params[:template_image2_filetype]}"
+        else
+            image_right_url = ''
         end
 
         @new_equipment = Equipment.create([Name: strong_params[:Name], Year: strong_params[:Year], Price: strong_params[:Price], Description: strong_params[:Description],
@@ -60,7 +64,7 @@ class EquipmentController < ApplicationController
 
         def equipment_params_exc_image_urls
             params.permit([:Name, :Year, :Price, :Description, :card_image_filetype, :card_image_filename, :card_image, :template_image1_filetype,
-                            :template_image1_filename, :template_image1, :template_image2_filetype, :template_image2])
+                            :template_image1_filename, :template_image1, :template_image2_filename, :template_image2_filetype, :template_image2])
             
         end
 end
