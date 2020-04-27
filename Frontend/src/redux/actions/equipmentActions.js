@@ -65,3 +65,14 @@ export const createEquipment = (formUploadData, token) => {
         );
     };
 };
+
+export const deleteEquipment = (id, token) => {
+    return dispatch => {
+        dispatch(equipmentPending());
+
+        return railsServer.delete(`/equipment/${id}`).then(
+            response => dispatch(equipmentSuccess()),
+            error => dispatch(equipmentError(error))
+        );
+    };
+};
