@@ -10,7 +10,7 @@ import { ROUTES_OBJECT, AUTHED_ROUTES_OBJECT } from '../../Router/routesObject';
 import { Link } from 'react-router-dom';
 import { useStyles } from './MainDrawerStyles';
 import { useSelector, useDispatch } from 'react-redux';
-import { logOut } from '../../redux/actions/adminsAction';
+import { logOut } from '../../redux/actions/adminsActions';
 
 const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();
