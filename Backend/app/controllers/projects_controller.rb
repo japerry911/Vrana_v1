@@ -1,7 +1,5 @@
-require "base64"
-
 class ProjectsController < ApplicationController
-    #before_action :authenticate, only: [:create, :destroy]
+    before_action :authenticate, only: [:create, :destroy, :update]
 
     def index
         @projects = Project.all

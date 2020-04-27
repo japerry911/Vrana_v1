@@ -1,4 +1,6 @@
 class NewsArticlesController < ApplicationController
+    before_action :authenticate, only: [:create, :destroy, :update]
+
     def index
         @news_articles = NewsArticle.all 
 

@@ -1,4 +1,6 @@
 class EquipmentController < ApplicationController
+    before_action :authenticate, only: [:create]
+
     def index
         @equipment = Equipment.all
 
