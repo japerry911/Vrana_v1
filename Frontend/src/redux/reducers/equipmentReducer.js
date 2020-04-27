@@ -1,4 +1,4 @@
-const INITIAL_STATE = { equipment: [], loading: false, error: null };
+const INITIAL_STATE = { equipment: [], showEquipment: {}, loading: false, error: null };
 
 const equipmentReducer = (state=INITIAL_STATE, action) => {
     switch (action.type) {
@@ -13,6 +13,9 @@ const equipmentReducer = (state=INITIAL_STATE, action) => {
 
         case 'GET_EQUIPMENT_SUCCESS':
             return { ...state, loading: false, equipment: action.payload };
+
+        case 'GET_SPECIFIC_EQUIPMENT_SUCCESS':
+            return { ...state, loading: false, showEquipment: action.payload };
         
         default:
             return state;

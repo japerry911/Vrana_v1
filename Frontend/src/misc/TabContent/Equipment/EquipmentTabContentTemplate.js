@@ -30,10 +30,11 @@ const NewsTabContentTemplate = ({ tabContent, year }) => {
                         <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={cardClass} key={equipment.id} align={alignSide}>
                             <Card 
                                 alt={equipment.Name}
-                                imageUrl={equipment.Image_Url}
+                                imageUrl={equipment.Card_Image}
                                 headerText={equipment.Name.toString().toUpperCase()}
                                 headerAlign='center'
                                 linkId={equipment.id}
+                                extension='equipment'
                             />
                         </Grid>
                     );
@@ -48,10 +49,11 @@ const NewsTabContentTemplate = ({ tabContent, year }) => {
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={classes.gridCenterCardStyle} key={equipment.id} align='center'>
                                 <Card 
                                     alt={equipment.Name}
-                                    imageUrl={equipment.Image_Url}
+                                    imageUrl={equipment.Card_Image}
                                     headerText={equipment.Name.toString().toUpperCase()}
                                     headerAlign='center'
                                     linkId={equipment.id}
+                                    extension='equipment'
                                 />
                             </Grid>
                         );
@@ -60,10 +62,11 @@ const NewsTabContentTemplate = ({ tabContent, year }) => {
                             <Grid item xs={6} sm={6} md={6} lg={6} xl={6} className={cardClass} key={equipment.id} align={alignSide}>
                                 <Card 
                                     alt={equipment.Name}
-                                    imageUrl={equipment.Image_Url}
+                                    imageUrl={equipment.Card_Image}
                                     headerText={equipment.Name.toString().toUpperCase()}
                                     headerAlign='center'
                                     linkId={equipment.id}
+                                    extension='equipment'
                                 />
                             </Grid>
                         );

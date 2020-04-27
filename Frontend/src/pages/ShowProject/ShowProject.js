@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Fragment } from 'react';
 import { useStyles } from './ShowProjectStyles';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProject } from '../../redux/actions/projectsActions';
@@ -12,24 +12,26 @@ import CommonHeader from '../../components/CommonHeader/CommonHeader';
 
 const ShowProject = ({ match }) => {
     const classes = useStyles();
+    
     const id = match.params.id;
-    const dispatch = useDispatch();
+
     const isLoading = useSelector(state => state.projects.loading);
     const showProject = useSelector(state => state.projects.showProject);
+    const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(getProject(id));
     }, [dispatch, id]); 
 
     return (
-        <>
+        <div className={classes.mainDivStyle}>
             {isLoading
             ?
             <div className={classes.spinnerDiv}>
                 <Spinner />
             </div>
             :
-            <div>
+            <Fragment>
                 <HeroHeader 
                     headerText='Our Work'
                 />
@@ -128,8 +130,8 @@ const ShowProject = ({ match }) => {
                     noOpacity
                 />
                 <Footer />
-            </div>}
-        </>
+            </Fragment>}
+        </div>
     );
 };
 

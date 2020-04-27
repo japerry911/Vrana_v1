@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(version: 2020_04_27_000536) do
     t.string "Name"
     t.string "Year"
     t.decimal "Price"
-    t.string "Image_Url"
+    t.string "Card_Image"
+    t.text "Description"
+    t.string "Image_Left"
+    t.string "Image_Right"
   end
 
   create_table "news_articles", id: :string, force: :cascade do |t|

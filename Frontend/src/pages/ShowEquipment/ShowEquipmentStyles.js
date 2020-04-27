@@ -26,7 +26,8 @@ export const useStyles = makeStyles(theme => ({
     vranaRedHeaderTextStyle: {
         color: theme.colors.vranaRed,
         fontFamily: 'Avenir-Bold',
-        paddingBottom: '1%'
+        paddingBottom: '1em',
+        paddingTop: '3em'
     },
     boldSpacingStyle: {
         fontFamily: 'Avenir-Bold',
@@ -34,5 +35,12 @@ export const useStyles = makeStyles(theme => ({
     },
     avenirRegStyle: {
         fontFamily: 'Avenir'
+    },
+    imageStyle: {
+        height: '80%',
+        width: 'auto',
+        borderRadius: 10,
+        marginBottom: '3em',
+        marginTop: '3em'
     }
 }));

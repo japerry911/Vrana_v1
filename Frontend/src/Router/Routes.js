@@ -19,6 +19,7 @@ import DeleteProject from '../pages/DeleteProject/DeleteProject';
 import AddNews from '../pages/AddNews/AddNews';
 import DeleteNews from '../pages/DeleteNews/DeleteNews';
 import EditNews from '../pages/EditNews/EditNews';
+import ShowEquipment from '../pages/ShowEquipment/ShowEquipment';
 
 export default () => {
     return (
@@ -111,6 +112,12 @@ export default () => {
                 exact
                 path='/equipment'
                 component={Equipment}
+            />
+
+            <Route
+                exact 
+                path='/equipment/:id'
+                component={ShowEquipment}
             />
 
             <Route 

@@ -1,6 +1,7 @@
 Project.destroy_all
 Admin.destroy_all
 NewsArticle.destroy_all
+Equipment.destroy_all
 
 Admin.create(username: 'VranaAdmin', password: 'TEST')
 
@@ -562,5 +563,10 @@ Equipment.create(
     Name: 'Harrington 2 Ton Electric Chain Hoist',
     Price: 3950.00,
     Year: '2003',
-    Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+6.09.46+PM.png'
+    Card_Image: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+6.09.46+PM.png',
+    Description: 'For sale: Used Harrington 2 Electric Chain Hoist and Manual Trolley. Specs - 2 ton electric hoist, 3 phrase, 60` of lift, 20` pendant,
+                2 speed with chain bag and manual trolley. This piece of equipment is rocking!!! Come buy yourself a fricken chain hoist! I NEED SLEEP! WHAT I DO FOR YOU DAD,
+                IT`S 4:29 AM!!!! AHHH I LOVE YOU!',
+    Image_Left: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+7.57.53+PM.png',
+    Image_Right: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+7.58.03+PM.png'
 )

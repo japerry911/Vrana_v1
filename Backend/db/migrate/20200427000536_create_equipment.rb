@@ -5,7 +5,10 @@ class CreateEquipment < ActiveRecord::Migration[6.0]
       t.string :Name
       t.string :Year
       t.decimal :Price
-      t.string :Image_Url
+      t.string :Card_Image
+      t.text :Description
+      t.string :Image_Left
+      t.string :Image_Right
     end
   end
 end
