@@ -34,6 +34,7 @@ const OurWorkTabContentTemplate = ({ tabContent, industry }) => {
                                 headerText={project.Client_Name.toString().toUpperCase()}
                                 headerAlign='center'
                                 linkId={project.id}
+                                extension='our-work/projects'
                             />
                         </Grid>
                     );
@@ -52,6 +53,7 @@ const OurWorkTabContentTemplate = ({ tabContent, industry }) => {
                                     headerText={project.Client_Name.toString().toUpperCase()}
                                     headerAlign='center'
                                     linkId={project.id}
+                                    extension='our-work/projects'
                                 />
                             </Grid>
                         );
@@ -64,6 +66,7 @@ const OurWorkTabContentTemplate = ({ tabContent, industry }) => {
                                     headerText={project.Client_Name.toString().toUpperCase()}
                                     headerAlign='center'
                                     linkId={project.id}
+                                    extension='our-work/projects'
                                 />
                             </Grid>
                         );

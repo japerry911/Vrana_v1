@@ -36,3 +36,21 @@ export const getEquipment = () => {
         );
     };
 };
+
+export const getSpecificEquipmentSuccess = payload => {
+    return {
+        type: 'GET_SPECIFIC_EQUIPMENT_SUCCESS',
+        payload 
+    };
+};
+
+export const getSpecificEquipment = id => {
+    return dispatch => {
+        dispatch(equipmentPending());
+
+        return railsServer.get(`/equipment/${id}`).then(
+            response => dispatch(getSpecificEquipmentSuccess(response.data.equipment)),
+            error => dispatch(equipmentError(error))
+        );
+    };
+}

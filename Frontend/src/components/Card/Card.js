@@ -3,7 +3,7 @@ import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
 
-const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, linkId }) => {
+const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, linkId, extension }) => {
     const classes = useStyles({ headerAlign });
 
     return (
@@ -16,7 +16,7 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, 
             <Typography variant='h6' className={classes.medGreyHeaderStyle}>
                 {linkId 
                 ?
-                <Link className={classes.linkStyle} to={`/our-work/projects/${linkId}`}>{headerText}</Link>
+                <Link className={classes.linkStyle} to={`/${extension}/${linkId}`}>{headerText}</Link>
                 :
                 headerText}
             </Typography>
