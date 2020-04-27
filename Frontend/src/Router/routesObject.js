@@ -4,7 +4,7 @@ export const ROUTES_OBJECT = {
     '/services': 'Services',
     '/our-work': 'Our Work',
     '/safety': 'Safety',
-    '/shop': 'Shop',
+    '/equipment': 'Equipment',
     '/news': 'News',
     '/careers': 'Careers',
     '/contact-us': 'Contact Us',

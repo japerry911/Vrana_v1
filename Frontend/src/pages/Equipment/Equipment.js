@@ -1,10 +1,10 @@
 import React from 'react';
-import './Shop.css';
+import './EquipmentStyles.js';
 
 const Shop = () => {
     return (
         <div>
-            <h1>Shop</h1>
+            <h1>Equipment</h1>
         </div>
     );
 };

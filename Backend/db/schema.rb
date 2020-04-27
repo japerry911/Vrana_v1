@@ -10,11 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_25_231020) do
+ActiveRecord::Schema.define(version: 2020_04_27_000536) do
 
   create_table "admins", id: :string, force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
+  end
+
+  create_table "equipment", id: :string, force: :cascade do |t|
+    t.string "Name"
+    t.string "Year"
+    t.decimal "Price"
   end
 
   create_table "news_articles", id: :string, force: :cascade do |t|
