@@ -7,6 +7,10 @@ export const useStyles = makeStyles(theme => ({
         paddingTop: '5em',
         paddingBottom: '5em'
     },
+    headerMedCentStyle: {
+        fomtFamily: 'Avenir-Bold',
+        textAlign: 'center'
+    },
     whiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
         width: '80%',
@@ -20,5 +24,22 @@ export const useStyles = makeStyles(theme => ({
     headerMedStyle: {
         fontFamily: 'Avenir-Medium',
         textAlign: 'left'
+    },
+    mapImageStyle: {
+        height: 'auto',
+        width: '50%',
+        borderRadius: 10,
+        border: '1pt solid black'
+    },
+    gridTopMarginStyle: {
+        marginTop: '3em'
+    },
+    contentMedCentStyle: {
+        fontFamily: 'Avenir-Medium',
+        textAlign: 'center'
+    },
+    headerBoldCentStyle: {
+        fontFamily: 'Avenir-Bold',
+        textAlign: 'center'
     }
 }));
