@@ -15,9 +15,9 @@ const ShowProject = ({ match }) => {
     
     const id = match.params.id;
 
-    const dispatch = useDispatch();
     const isLoading = useSelector(state => state.projects.loading);
     const showProject = useSelector(state => state.projects.showProject);
+    const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(getProject(id));
