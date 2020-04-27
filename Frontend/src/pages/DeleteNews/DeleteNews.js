@@ -28,7 +28,8 @@ const DeleteNews = ({ history }) => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        dispatch(deleteNews(articleToDelete, token)).then(() => dispatch(getNewsArticles()));
+        dispatch(deleteNews(articleToDelete, token)).then(
+            () => dispatch(getNewsArticles()));
 
         setArticleToDelete('');
         history.push('/admin/delete-news');

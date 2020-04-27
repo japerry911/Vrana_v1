@@ -29,8 +29,9 @@ const DeleteProject = ({ history }) => {
     const handleSubmit = event => {
         event.preventDefault();
 
-        dispatch(deleteProject(projectToDelete, token))
-        dispatch(getProjects());
+        dispatch(deleteProject(projectToDelete, token)).then(
+            () => dispatch(getProjects())
+        );
         
         setProjectToDelete('');
         history.push('/admin/delete-project');

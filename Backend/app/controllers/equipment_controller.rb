@@ -1,5 +1,5 @@
 class EquipmentController < ApplicationController
-    before_action :authenticate, only: [:create]
+    before_action :authenticate, only: [:create, :destroy]
 
     def index
         @equipment = Equipment.all
@@ -11,6 +11,12 @@ class EquipmentController < ApplicationController
         @specific_equipment = Equipment.find(params[:id])
 
         render json: { equipment: @specific_equipment }
+    end
+
+    def destroy
+        @equipment_to_destroy = Equipment.find(params[:id])
+
+        @equipment_to_destroy.destroy 
     end
 
     def create
