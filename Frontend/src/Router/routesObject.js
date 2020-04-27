@@ -26,5 +26,6 @@ export const AUTHED_ROUTES_OBJECT = {
     '/admin/delete-project': 'Admin: Delete Project',
     '/admin/add-news': 'Admin: Add News',
     '/admin/delete-news': 'Admin: Delete News',
-    '/admin/edit-news': 'Admin: Edit News'
+    '/admin/edit-news': 'Admin: Edit News',
+    '/admin/add-equipment': 'Admin: Add Equipment'
 };
