@@ -123,7 +123,7 @@ export default () => {
                 component={ShowEquipment}
             />
 
-            <Route 
+            <ProtectedRoute 
                 exact 
                 path='/admin/edit-equipment'
                 component={EditEquipment}

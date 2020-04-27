@@ -1,7 +1,9 @@
 import React from 'react';
-import './ContactUs.css';
+import { useStyles } from './ContactUsStyles';
 
 const ContactUs = () => {
+    const classes = useStyles();
+
     return (
         <div>
             <h1>Contact Us</h1>
