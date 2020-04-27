@@ -7,7 +7,7 @@ import About from '../pages/About/About';
 import Services from '../pages/Services/Services';
 import OurWork from '../pages/OurWork/OurWork';
 import Safety from '../pages/Safety/Safety';
-import Shop from '../pages/Shop/Shop';
+import Equipment from '../pages/Equipment/Equipment';
 import News from '../pages/News/News';
 import Careers from '../pages/Careers/Careers';
 import ContactUs from '../pages/ContactUs/ContactUs';
@@ -109,8 +109,8 @@ export default () => {
 
             <Route 
                 exact
-                path='/shop'
-                component={Shop}
+                path='/equipment'
+                component={Equipment}
             />
 
             <Route 

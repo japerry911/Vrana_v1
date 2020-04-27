@@ -556,3 +556,11 @@ NewsArticle.create(
     Feature_Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/News_Articles/54c970df7c6b6.image.jpg',
     Article_Link: 'https://www.omaha.com/money/new-warehouse-to-aid-rotella-s-growth/article_422a34b3-57a6-5777-8322-d49d827f0e58.html'
 )
+
+# Equipment
+Equipment.create(
+    Name: 'Harrington 2 Ton Electric Chain Hoist',
+    Price: 3950.00,
+    Year: '2003',
+    Image_Url: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+6.09.46+PM.png'
+)

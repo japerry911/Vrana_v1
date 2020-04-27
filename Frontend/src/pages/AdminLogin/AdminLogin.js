@@ -4,7 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Footer from '../../components/Footer/Footer';
 import { useDispatch } from 'react-redux';
-import { attemptLogin } from '../../redux/actions/adminsAction';
+import { attemptLogin } from '../../redux/actions/adminsActions';
 import Snackbar from '@material-ui/core/Snackbar';
 import MuiAlert from '@material-ui/lab/Alert';
 import FormButton from '../../components/FormButton/FormButton';
