@@ -13,6 +13,12 @@ class EquipmentController < ApplicationController
         render json: { equipment: @specific_equipment }
     end
 
+    def destroy
+        @equipment_to_destroy = Equipment.find(params[:id])
+
+        @equipment_to_destroy.destroy 
+    end
+
     def create
         strong_params = equipment_params_exc_image_urls
         
