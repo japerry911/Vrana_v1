@@ -9,15 +9,31 @@ import FormSelect from '../../components/FormSelect/FormSelect';
 import FormButton from '../../components/FormButton/FormButton';
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
+import Footer from '../../components/Footer/Footer';
 
-const DeleteEquipment = () => {
+const DeleteEquipment = ({ history }) => {
     const classes = useStyles();
 
     const [equipmentToDelete, setEquipmentToDelete] = useState('');
 
     const isLoading = useSelector(state => state.equipment.loading);
     const equipment = useSelector(state => state.equipment.equipment);
+    const token = useSelector(state => state.admins.admin.token);
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getEquipment());
+    }, [dispatch]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        dispatch(deleteEquipment(equipmentToDelete, token)).then(
+            () => dispatch(getEquipment()));
+
+        setEquipmentToDelete('');
+        history.push('/admin/delete-equipment');
+    };    
 
     return (
         <div className={classes.mainDivStyle}>
@@ -30,7 +46,7 @@ const DeleteEquipment = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Delete Equipment' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Delete Equipment' />
                             <FormSelect
@@ -55,6 +71,7 @@ const DeleteEquipment = () => {
                         </Grid>
                     </form>
                 </Grid>
+                <Footer />
             </Fragment>}
         </div>
     );

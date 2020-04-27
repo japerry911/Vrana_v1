@@ -122,7 +122,7 @@ export default () => {
                 component={ShowEquipment}
             />
 
-            <Route
+            <ProtectedRoute
                 exact 
                 path='/admin/delete-equipment'
                 component={DeleteEquipment}

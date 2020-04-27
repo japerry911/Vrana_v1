@@ -70,7 +70,7 @@ export const deleteEquipment = (id, token) => {
     return dispatch => {
         dispatch(equipmentPending());
 
-        return railsServer.delete(`/equipment/${id}`).then(
+        return railsServer.delete(`/equipment/${id}`, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(equipmentSuccess()),
             error => dispatch(equipmentError(error))
         );

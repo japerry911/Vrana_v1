@@ -8,8 +8,7 @@ export const ROUTES_OBJECT = {
     '/news': 'News',
     '/careers': 'Careers',
     '/contact-us': 'Contact Us',
-    '/admin/login': 'Admin: Login',
-    '/admin/delete-equipment': 'Admin: Delete Equipment'
+    '/admin/login': 'Admin: Login'
 };
 
 export const AUTHED_ROUTES_OBJECT = {
@@ -18,7 +17,7 @@ export const AUTHED_ROUTES_OBJECT = {
     '/services': 'Services',
     '/our-work': 'Our Work',
     '/safety': 'Safety',
-    '/shop': 'Shop',
+    '/equipment': 'Equipment',
     '/news': 'News',
     '/careers': 'Careers',
     '/contact-us': 'Contact Us',
@@ -28,5 +27,6 @@ export const AUTHED_ROUTES_OBJECT = {
     '/admin/add-news': 'Admin: Add News',
     '/admin/delete-news': 'Admin: Delete News',
     '/admin/edit-news': 'Admin: Edit News',
-    '/admin/add-equipment': 'Admin: Add Equipment'
+    '/admin/add-equipment': 'Admin: Add Equipment',
+    '/admin/delete-equipment': 'Admin: Delete Equipment'
 };
