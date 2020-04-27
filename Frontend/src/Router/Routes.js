@@ -22,6 +22,7 @@ import EditNews from '../pages/EditNews/EditNews';
 import ShowEquipment from '../pages/ShowEquipment/ShowEquipment';
 import AddEquipment from '../pages/AddEquipment/AddEquipment';
 import DeleteEquipment from '../pages/DeleteEquipment/DeleteEquipment';
+import EditEquipment from '../pages/EditEquipment/EditEquipment';
 
 export default () => {
     return (
@@ -120,6 +121,12 @@ export default () => {
                 exact 
                 path='/equipment/:id'
                 component={ShowEquipment}
+            />
+
+            <Route 
+                exact 
+                path='/admin/edit-equipment'
+                component={EditEquipment}
             />
 
             <ProtectedRoute

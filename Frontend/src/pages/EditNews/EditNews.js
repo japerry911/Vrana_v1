@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { useStyles } from './EditNewsStyles';
 import { useFormFields } from '../../hooks/customHooks';
 import { useSelector, useDispatch } from 'react-redux';
-import { getNewsArticles } from '../../redux/actions/newsActions';
+import { getNewsArticles, updateNews } from '../../redux/actions/newsActions';
 import Spinner from '../../components/Spinner/Spinner';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import FormHeader from '../../components/FormHeader/FormHeader';
@@ -11,7 +11,6 @@ import NewsFormBody from '../../components/NewsFormBody/NewsFormBody';
 import Grid from '@material-ui/core/Grid';
 import FormSelect from '../../components/FormSelect/FormSelect';
 import MenuItem from '@material-ui/core/MenuItem/MenuItem';
-import { updateNews } from '../../redux/actions/newsActions';
 
 const INITIAL_STATE = {
     headline: '',
@@ -70,8 +69,11 @@ const EditNews = ({ history }) => {
             formData.append(key, articleObject[key]);
         });
 
-        dispatch(updateNews(articleToEdit.id, formData, token));
+        dispatch(updateNews(articleToEdit.id, formData, token)).then(
+            () => dispatch(getNewsArticles())
+        );
 
+        setArticleToEdit('');
         setFields(INITIAL_STATE);
 
         history.push('/admin/edit-news');

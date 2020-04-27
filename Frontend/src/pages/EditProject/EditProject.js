@@ -123,11 +123,12 @@ const EditProject = ({ history }) => {
             }
         });
 
+        dispatch(updateProject(projectToEdit.id, formData, token)).then(
+            () => dispatch(getProjects())
+        );
+
         setProjectToEdit('');
         setFields(INITIAL_STATE);
-
-        dispatch(updateProject(projectToEdit.id, formData, token));
-        dispatch(getProjects());
         
         history.push('/admin/edit-project');
     };
