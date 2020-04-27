@@ -22,7 +22,7 @@ const INITIAL_STATE = {
     rightImage: ''
 }
 
-const EditEquipment = () => {
+const EditEquipment = ({ history }) => {
     const classes = useStyles();
 
     const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
@@ -37,6 +37,68 @@ const EditEquipment = () => {
         dispatch(getEquipment());
     }, [dispatch]);
 
+    useEffect(() => {
+        if (equipmentToEdit) {
+
+            const description = equipmentToEdit.Description
+                ?
+                equipmentToEdit.Description.replace(/\s+/g, ' ')
+                :
+                '';
+
+            setFields({
+                name: equipmentToEdit.Name ? equipmentToEdit.Name : '',
+                price: equipmentToEdit.Price ? equipmentToEdit.Price : 0.0,
+                year: equipmentToEdit.Year ? equipmentToEdit.Year : '',
+                description,
+                cardImage: '',
+                leftImage: '',
+                rightImage: ''
+            });
+        }
+    }, [equipmentToEdit, setFields]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        const equipmentObject = {
+            Name: fields.name,
+            Price: fields.price,
+            Year: fields.year,
+            Description: fields.description
+        };
+
+        const formData = new FormData();
+
+        if (fields.cardImage) {
+            formData.append('card_image_filename', `card_image_${Date.now()}`);
+            formData.append('card_image_filetype', fields.cardImage.type.replace('image/', ''));
+            formData.append('card_image', fields.cardImage);
+        }
+
+        if (fields.leftImage) {
+            formData.append('template_image1_filename', `template_image1_${Date.now()}`);
+            formData.append('template_image1_filetype', fields.leftImage.type.replace('image/', ''));
+            formData.append('template_image1', fields.leftImage);
+        }
+
+        if (fields.rightImage) {
+            formData.append('template_image2_filename', `template_image2_${Date.now()}`);
+            formData.append('template_image2_filetype', fields.rightImage.type.replace('image/', ''));
+            formData.append('template_image2', fields.rightImage);
+        }
+
+        Object.keys(equipmentObject).forEach(key => {
+            formData.append(key, equipmentObject[key]);
+        });
+
+        dispatch(updateEquipment(equipmentToEdit.id, formData, token));
+
+        setFields(INITIAL_STATE);
+
+        history.push('/admin/edit-equipment');
+    };
+
     return (
         <div className={classes.mainDivStyle}>
             {isLoading
@@ -48,7 +110,7 @@ const EditEquipment = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Edit Equipment' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Edit Equipment' />
                             <FormSelect

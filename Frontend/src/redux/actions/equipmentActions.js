@@ -77,7 +77,7 @@ export const deleteEquipment = (id, token) => {
     };
 };
 
-export const editEquipment = (id, formUpdateBody, token) => {
+export const updateEquipment = (id, formUpdateBody, token) => {
     return dispatch => {
         dispatch(equipmentPending());
 
