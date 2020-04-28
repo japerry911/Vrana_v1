@@ -658,28 +658,28 @@ Career.create(
 
 Career.create(
     Title: 'Project Manager / Engineer - Civil Construction',
-    Department: 'Field',
+    Department: 'Operations',
     Location: 'Omaha, NE',
     Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711eoak2'
 )
 
 Career.create(
     Title: 'Project Manager - Commercial Building Projects',
-    Department: 'Field',
+    Department: 'Operations',
     Location: 'Omaha, NE',
     Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711zhpj8'
 )
 
 Career.create(
     Title: 'Superintendent (General Building Construction)',
-    Department: 'Field',
+    Department: 'Operations',
     Location: 'Omaha, NE',
     Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm71170ujp'
 )
 
 Career.create(
     Title: 'Superintendent (Heavy & Highway Construction)',
-    Department: 'Field',
+    Department: 'Operations',
     Location: 'Omaha, NE',
     Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711wthhw'
 )
