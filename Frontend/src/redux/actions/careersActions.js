@@ -20,6 +20,23 @@ export const getCareersSuccess = payload => {
     };
 };
 
+export const careersSuccess = () => {
+    return {
+        type: 'CAREERS_SUCCESS'
+    };
+};
+
+export const createCareer = (formUploadData, token) => {
+    return dispatch => {
+        dispatch(careersPending());
+
+        return railsServer.post('/careers', formUploadData).then(
+            response => dispatch(careersSuccess()),
+            error => dispatch(careersError(error))
+        );
+    };
+};
+
 export const getCareers = () => {
     return dispatch => {
         dispatch(careersPending());
