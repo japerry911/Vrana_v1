@@ -27,12 +27,12 @@ export const useStyles = makeStyles(theme => ({
     },
     mapImageStyle: {
         height: 'auto',
-        width: '50%',
+        width: '70%',
         borderRadius: 10,
         border: '1pt solid black'
     },
     gridTopMarginStyle: {
-        marginTop: '3em'
+        marginTop: '1em'
     },
     contentMedCentStyle: {
         fontFamily: 'Avenir-Medium',
@@ -54,5 +54,8 @@ export const useStyles = makeStyles(theme => ({
     },
     mainDivStyle: {
         height: '100%'
+    },
+    pinIconStyle: {
+        width: '10%'
     }
 }));

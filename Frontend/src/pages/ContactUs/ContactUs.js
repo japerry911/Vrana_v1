@@ -65,7 +65,7 @@ const ContactUs = ({ history }) => {
                         <Grid container spacing={0} item xs={6} sm={6} md={6} lg={6} xl={6}>
                             <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
-                                    <Typography variant='h5' className={classes.headerMedStyle} paragraph>
+                                    <Typography variant='h4' className={classes.headerMedStyle} paragraph>
                                         Contact Us.    
                                     </Typography>
                                     <Typography variant='body1' className={classes.regAvenirStyle}>
@@ -129,8 +129,13 @@ const ContactUs = ({ history }) => {
                         </Grid>
                         <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
                             <Grid container spacing={0}>
-                                <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                                <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridTopMarginStyle}>
                                     <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                                        <img
+                                            alt='map pin icon'
+                                            src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/pin+(1)+copy.png'
+                                            className={classes.pinIconStyle}
+                                        />
                                         <Typography variant='body1' className={classes.headerBoldCentStyle}>
                                             Address
                                         </Typography>
@@ -145,6 +150,11 @@ const ContactUs = ({ history }) => {
                                         </Typography>
                                     </Grid>
                                     <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                                        <img
+                                            alt='map pin icon'
+                                            src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/pin+(1)+copy.png'
+                                            className={classes.pinIconStyle}
+                                        />
                                         <Typography variant='body1' className={classes.headerBoldCentStyle}>
                                             Contact Info
                                         </Typography>
