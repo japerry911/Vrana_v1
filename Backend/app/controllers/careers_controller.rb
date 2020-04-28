@@ -2,6 +2,6 @@ class CareersController < ApplicationController
     def index
         @careers = Career.all 
 
-        render json: { career: @careers }
+        render json: { careers: @careers }
     end
 end
