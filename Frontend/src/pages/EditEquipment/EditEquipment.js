@@ -27,6 +27,7 @@ const EditEquipment = ({ history }) => {
 
     const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [equipmentToEdit, setEquipmentToEdit] = useState('');
+    const [validationStatus, setValidationStatus] = useState(false);
 
     const isLoading = useSelector(state => state.equipment.loading);
     const token = useSelector(state => state.admins.admin.token);
@@ -36,6 +37,10 @@ const EditEquipment = ({ history }) => {
     useEffect(() => {
         dispatch(getEquipment());
     }, [dispatch]);
+
+    useEffect(() => {
+        setValidationStatus(fields.name && fields.price > 0 && fields.year && fields.description)
+    }, [fields]);
 
     useEffect(() => {
         if (equipmentToEdit) {
@@ -138,7 +143,7 @@ const EditEquipment = ({ history }) => {
                                 setImageField={setImageField}
                             />
                             <FormButton
-                                validationStatus={true}
+                                validationStatus={validationStatus}
                                 buttonText='Update Equipment'
                             />
                         </Grid>

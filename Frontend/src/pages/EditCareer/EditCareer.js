@@ -36,11 +36,7 @@ const EditCareer = ({ history }) => {
     }, [dispatch]);
 
     useEffect(() => {
-        if (fields.title && fields.department && fields.location && fields.jobUrl) {
-            setValidationStatus(true);
-        } else {
-            setValidationStatus(false);
-        }
+        setValidationStatus(fields.title && fields.department && fields.location && fields.jobUrl);
     }, [fields]);
 
     useEffect(() => {

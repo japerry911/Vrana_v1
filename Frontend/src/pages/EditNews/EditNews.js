@@ -25,6 +25,7 @@ const EditNews = ({ history }) => {
 
     const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [articleToEdit, setArticleToEdit] = useState('');
+    const [validationStatus, setValidationStatus] = useState(false);
 
     const isLoading = useSelector(state => state.news.loading);
     const token = useSelector(state => state.admins.admin.token);
@@ -34,6 +35,10 @@ const EditNews = ({ history }) => {
     useEffect(() => {
         dispatch(getNewsArticles());
     }, [dispatch]);
+
+    useEffect(() => {
+        setValidationStatus(fields.headline && fields.source && fields.datePublished && fields.articleLink);
+    }, [fields]);
 
     useEffect(() => {
         if (articleToEdit) {
@@ -115,7 +120,7 @@ const EditNews = ({ history }) => {
                                 setImageField={setImageField}
                             />
                             <FormButton
-                                validationStatus={true}
+                                validationStatus={validationStatus}
                                 buttonText='Update Article'
                             />
                         </Grid>

@@ -34,6 +34,7 @@ const EditProject = ({ history }) => {
 
     const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [projectToEdit, setProjectToEdit] = useState('');
+    const [validationStatus, setValidationStatus] = useState(false);
 
     const dispatch = useDispatch();
     const isLoading = useSelector(state => state.projects.loading);
@@ -43,6 +44,11 @@ const EditProject = ({ history }) => {
     useEffect(() => {
         dispatch(getProjects());
     }, [dispatch]);
+
+    useEffect(() => {
+        setValidationStatus(fields.clientName && fields.size && fields.location && fields.yearCompletedProjectStatus && fields.constructionValue &&
+            fields.scopeOfWork && fields.industry && fields.firstParagraphHeader && fields.firstParagraphContent && fields.keyProjectBullets);
+    }, [fields]);
 
     useEffect(() => {
         if (projectToEdit) {
@@ -169,7 +175,7 @@ const EditProject = ({ history }) => {
                                 setImageField={setImageField}
                             />
                             <FormButton
-                                validationStatus={true}
+                                validationStatus={validationStatus}
                                 buttonText='Update Project'
                             />
                         </Grid>
