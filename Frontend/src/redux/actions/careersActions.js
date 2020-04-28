@@ -47,3 +47,14 @@ export const getCareers = () => {
         );
     };
 };
+
+export const deleteCareer = (id, token) => {
+    return dispatch => {
+        dispatch(careersPending());
+
+        return railsServer.delete(`/careers/${id}`).then(
+            response => dispatch(careersSuccess()),
+            error => dispatch(careersError(error))
+        );
+    };
+};

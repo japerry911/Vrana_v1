@@ -7,8 +7,15 @@ export const useStyles = makeStyles(theme => ({
         paddingTop: '5em',
         paddingBottom: '5em'
     },
-    mainDivStyle: {
-        height: '100%'
+    whiteContainerStyle: {
+        paddingTop: '1em',
+        paddingBottom: '5em',
+        backgroundColor: theme.colors.nonTextWhite,
+        width: '60%',
+        borderRadius: 10
+    },
+    formContainerStyle: {
+        width: '100%'
     },
     spinnerDiv: {
         justifyContent: 'center',
@@ -16,5 +23,8 @@ export const useStyles = makeStyles(theme => ({
         backgroundColor: theme.colors.nonTextWhite,
         height: '100%',
         width: '100%'
+    },
+    mainDivStyle: {
+        height: '100%'
     }
 }));
