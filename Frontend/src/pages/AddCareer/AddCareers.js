@@ -18,13 +18,14 @@ const INITIAL_STATE = {
     jobUrl: ''
 };
 
-const AddCareers = () => {
+const AddCareers = ({ history }) => {
     const classes = useStyles();
 
     const [fields, setField, setFields] = useFormFields(INITIAL_STATE);
     const [validationStatus, setValidationStatus] = useState(false);
 
     const isLoading = useSelector(state => state.careers.loading);
+    const token = useSelector(state => state.admins.admin.token);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -34,6 +35,29 @@ const AddCareers = () => {
             setValidationStatus(false);
         }
     }, [fields]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        const careerObject = {
+            Title: fields.title,
+            Department: fields.department,
+            Location: fields.location,
+            Job_Url: fields.jobUrl
+        };
+
+        const formData = new FormData();
+
+        Object.keys(careerObject).forEach(key => {
+            formData.append(key, careerObject[key]);
+        });
+
+        dispatch(createCareer(formData, token));
+
+        setFields(INITIAL_STATE);
+
+        history.push('/admin/add-career');
+    };
 
     return (
         <div className={classes.mainDivStyle}>
@@ -46,7 +70,7 @@ const AddCareers = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Add Careers' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Add Career' />
                             <CareersFormBody

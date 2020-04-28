@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import FormTextField from '../FormTextField/FormTextField';
 import Grid from '@material-ui/core/Grid';
 
-const CareersFormBody = (fields, setField) => {
+const CareersFormBody = ({ fields, setField }) => {
     return (
         <Fragment>
             <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
