@@ -24,6 +24,7 @@ import AddEquipment from '../pages/AddEquipment/AddEquipment';
 import DeleteEquipment from '../pages/DeleteEquipment/DeleteEquipment';
 import EditEquipment from '../pages/EditEquipment/EditEquipment';
 import AddCareers from '../pages/AddCareer/AddCareers';
+import DeleteCareer from '../pages/DeleteCareer/DeleteCareer';
 
 export default () => {
     return (
@@ -158,6 +159,12 @@ export default () => {
                 exact
                 path='/admin/add-career'
                 component={AddCareers}
+            />
+
+            <Route 
+                exact
+                path='/admin/delete-career'
+                component={DeleteCareer}
             />
 
             <Route 

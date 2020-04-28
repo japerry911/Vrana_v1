@@ -9,5 +9,12 @@ export const useStyles = makeStyles(theme => ({
     },
     mainDivStyle: {
         height: '100%'
+    },
+    spinnerDiv: {
+        justifyContent: 'center',
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
     }
 }));
