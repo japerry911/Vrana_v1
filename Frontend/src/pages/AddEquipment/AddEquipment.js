@@ -24,7 +24,7 @@ const INITIAL_STATE = {
 const AddEquipment = ({ history }) => {
     const classes = useStyles();
 
-    const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
+    const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [validationStatus, setValidationStatus] = useState(false);
 
     const isLoading = useSelector(state => state.equipment.loading);

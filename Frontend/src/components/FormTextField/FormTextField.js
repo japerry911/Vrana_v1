@@ -3,11 +3,15 @@ import { useStyles } from './FormTextFieldStyles';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 
-const FormTextField = ({ label, value, onChange, paddingTop, id, type='text', inputLabelProps={} }) => {
-    const classes = useStyles({ paddingTop });
+const FormTextField = ({ label, value, onChange, paddingTop, id, type='text', inputLabelProps={}, width, gridLength }) => {
+    const classes = useStyles({ paddingTop, width });
+
+    if (!gridLength) {
+        gridLength = 12;
+    }
 
     return (
-        <Grid item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridItemStyle} align='center'>
+        <Grid item xs={gridLength} sm={gridLength} md={gridLength} lg={gridLength} xl={gridLength} className={classes.gridItemStyle} align='center'>
             <TextField 
                 label={label}
                 value={value}

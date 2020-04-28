@@ -11,12 +11,12 @@ export const useFormFields = initialState => {
                 [event.target.id]: event.target.value
             });
         },
+        setFields,
         event => {
             setFields({
                 ...fields,
                 [event.target.id]: event.target.files[0]
             });
-        },
-        setFields
+        }
     ];
 };

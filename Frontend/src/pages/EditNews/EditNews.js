@@ -23,7 +23,7 @@ const INITIAL_STATE = {
 const EditNews = ({ history }) => {
     const classes = useStyles();
 
-    const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
+    const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [articleToEdit, setArticleToEdit] = useState('');
 
     const isLoading = useSelector(state => state.news.loading);
