@@ -10,6 +10,9 @@ const careersReducer = (state=INITIAL_STATE, action) => {
 
         case 'GET_CAREERS_SUCCESS':
             return { ...state, loading: false, careers: action.payload };
+
+        case 'CAREERS_SUCCESS':
+            return { ...state, loading: false };
         
         default: 
             return state;
