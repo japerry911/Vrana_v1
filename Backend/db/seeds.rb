@@ -2,6 +2,7 @@ Project.destroy_all
 Admin.destroy_all
 NewsArticle.destroy_all
 Equipment.destroy_all
+Career.destroy_all
 
 Admin.create(username: 'VranaAdmin', password: 'TEST')
 
