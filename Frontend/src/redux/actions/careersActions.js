@@ -30,7 +30,7 @@ export const createCareer = (formUploadData, token) => {
     return dispatch => {
         dispatch(careersPending());
 
-        return railsServer.post('/careers', formUploadData).then(
+        return railsServer.post('/careers', formUploadData, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(careersSuccess()),
             error => dispatch(careersError(error))
         );

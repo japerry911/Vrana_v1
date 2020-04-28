@@ -154,7 +154,7 @@ export default () => {
                 component={Careers}
             />
 
-            <Route
+            <ProtectedRoute
                 exact
                 path='/admin/add-career'
                 component={AddCareers}
