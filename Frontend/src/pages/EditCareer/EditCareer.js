@@ -8,7 +8,7 @@ import FormHeader from '../../components/FormHeader/FormHeader';
 import FormButton from '../../components/FormButton/FormButton';
 import CareersFormBody from '../../components/CareersFormBody/CareersFormBody';
 import Grid from '@material-ui/core/Grid';
-import { getCareers } from '../../redux/actions/careersActions';
+import { getCareers, updateCareer } from '../../redux/actions/careersActions';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useFormFields } from '../../hooks/customHooks';
 
@@ -19,7 +19,7 @@ const INITIAL_STATE = {
     jobUrl: ''
 };
 
-const EditCareer = () => {
+const EditCareer = ({ history }) => {
     const classes = useStyles();
 
     const [fields, setField, setFields] = useFormFields(INITIAL_STATE);
@@ -35,6 +35,51 @@ const EditCareer = () => {
         dispatch(getCareers());
     }, [dispatch]);
 
+    useEffect(() => {
+        if (fields.title && fields.department && fields.location && fields.jobUrl) {
+            setValidationStatus(true);
+        } else {
+            setValidationStatus(false);
+        }
+    }, [fields]);
+
+    useEffect(() => {
+        if (careerToEdit) {
+            setFields({
+                title: careerToEdit.Title ? careerToEdit.Title : '',
+                department: careerToEdit.Department ? careerToEdit.Department : '',
+                location: careerToEdit.Location ? careerToEdit.Location : '',
+                jobUrl: careerToEdit.Job_Url ? careerToEdit.Job_Url : ''
+            });
+        }
+    }, [careerToEdit, setFields]);
+
+    const handleSubmit = event => {
+        event.preventDefault();
+
+        const careerObject = {
+            Title: fields.title,
+            Department: fields.department,
+            Location: fields.location,
+            Job_Url: fields.jobUrl
+        };
+
+        const formData = new FormData();
+
+        Object.keys(careerObject).forEach(key => {
+            formData.append(key, careerObject[key]);
+        });
+
+        dispatch(updateCareer(careerToEdit.id, formData, token)).then(
+            () => dispatch(getCareers())
+        );
+
+        setFields(INITIAL_STATE);
+        setCareerToEdit('');
+
+        history.push('/admin/edit-career');
+    };
+
     return (
         <div className={classes.mainDivStyle}>
             {isLoading
@@ -46,7 +91,7 @@ const EditCareer = () => {
             <Fragment>
                 <HeroHeader headerText='Admin: Edit Career' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <form className={classes.formContainerStyle}>
+                    <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                         <Grid container spacing={0} className={classes.whiteContainerStyle}>
                             <FormHeader headerText='Edit Career' />
                             <FormSelect
