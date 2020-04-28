@@ -41,5 +41,18 @@ export const useStyles = makeStyles(theme => ({
     headerBoldCentStyle: {
         fontFamily: 'Avenir-Bold',
         textAlign: 'center'
+    },
+    spinnerDiv: {
+        justifyContent: 'center',
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
+    },
+    formContainerStyle: {
+        width: '100%'
+    },
+    mainDivStyle: {
+        height: '100%'
     }
 }));

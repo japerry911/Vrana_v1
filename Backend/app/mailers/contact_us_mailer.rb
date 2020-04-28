@@ -1,5 +1,6 @@
 class ContactUsMailer < ApplicationMailer
-    def send_email
-        mail(subject: 'Test')
+    def send_email(email_contents)
+        @email_contents = email_contents
+        mail(subject: 'Website Contact Us Submission')
     end
 end

@@ -32,7 +32,7 @@ const INITIAL_STATE = {
 const EditProject = ({ history }) => {
     const classes = useStyles();
 
-    const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
+    const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [projectToEdit, setProjectToEdit] = useState('');
 
     const dispatch = useDispatch();

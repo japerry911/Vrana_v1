@@ -34,7 +34,7 @@ const AddProject = ({ history }) => {
     const token = useSelector(state => state.admins.admin.token);
     const isLoading = useSelector(state => state.projects.loading);
 
-    const [fields, setField, setImageField, setFields] = useFormFields(INITIAL_STATE);
+    const [fields, setField, setFields, setImageField] = useFormFields(INITIAL_STATE);
     const [validationStatus, setValidationStatus] = useState(false);
 
     useEffect(() => {
