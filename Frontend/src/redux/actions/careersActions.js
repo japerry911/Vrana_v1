@@ -58,3 +58,14 @@ export const deleteCareer = (id, token) => {
         );
     };
 };
+
+export const updateCareer = (id, formUpdateData, token) => {
+    return dispatch => {
+        dispatch(careersPending());
+
+        return railsServer.put(`/careers/${id}`, formUpdateData).then(
+            response => dispatch(careersSuccess()),
+            error => dispatch(careersError(error))
+        );
+    };
+};
