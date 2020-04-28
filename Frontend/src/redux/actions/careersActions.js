@@ -52,7 +52,7 @@ export const deleteCareer = (id, token) => {
     return dispatch => {
         dispatch(careersPending());
 
-        return railsServer.delete(`/careers/${id}`).then(
+        return railsServer.delete(`/careers/${id}`, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(careersSuccess()),
             error => dispatch(careersError(error))
         );
@@ -63,7 +63,7 @@ export const updateCareer = (id, formUpdateData, token) => {
     return dispatch => {
         dispatch(careersPending());
 
-        return railsServer.put(`/careers/${id}`, formUpdateData).then(
+        return railsServer.put(`/careers/${id}`, formUpdateData, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(careersSuccess()),
             error => dispatch(careersError(error))
         );
