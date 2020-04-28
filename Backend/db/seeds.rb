@@ -570,3 +570,123 @@ Equipment.create(
     Image_Left: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+7.57.53+PM.png',
     Image_Right: 'https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Equipment/Screen+Shot+2020-04-26+at+7.58.03+PM.png'
 )
+
+# Careers
+Career.create(
+    Title: 'Application - General',
+    Department: 'TBD',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711fw5gn'
+)
+
+Career.create(
+    Title: 'Carpenter',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711whjrz'
+)
+
+Career.create(
+    Title: 'Carpenter (Formwork)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711ceh5t'
+)
+
+Career.create(
+    Title: 'Cement Finisher',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm7110rb7z'
+)
+
+Career.create(
+    Title: 'Concrete Saw & Sealant Operator',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711gcyip'
+)
+
+Career.create(
+    Title: 'Equipment Operator',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm71120it0'
+)
+
+Career.create(
+    Title: 'Equipment Operator (Concrete Paving Equipment)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711be5c7'
+)
+
+Career.create(
+    Title: 'Fuel Lube Oiler',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm7118tpqg'
+)
+
+Career.create(
+    Title: 'General Laborer',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711aqq0l'
+)
+
+Career.create(
+    Title: 'Grade Crew / Form Setters (Highway Construction)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711s4kj2'
+)
+
+Career.create(
+    Title: 'Mechanic (Heavy Equipment & Trucks)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711xpbha'
+)
+
+Career.create(
+    Title: 'Pipe Layer',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711glt8z'
+)
+
+Career.create(
+    Title: 'Project Manager / Engineer - Civil Construction',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711eoak2'
+)
+
+Career.create(
+    Title: 'Project Manager - Commercial Building Projects',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711zhpj8'
+)
+
+Career.create(
+    Title: 'Superintendent (General Building Construction)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm71170ujp'
+)
+
+Career.create(
+    Title: 'Superintendent (Heavy & Highway Construction)',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711wthhw'
+)
+
+Career.create(
+    Title: 'Truck Driver',
+    Department: 'Field',
+    Location: 'Omaha, NE',
+    Job_Url: 'http://vrana.applicantstack.com/x/detail/a2wm711w6kz4'
+)
