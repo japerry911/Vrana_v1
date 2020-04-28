@@ -11,6 +11,9 @@ import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
 import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import Footer from '../../components/Footer/Footer';
+import HeroHeader from '../../components/HeroHeader/HeroHeader';
 
 const Careers = () => {
     const classes = useStyles();
@@ -32,30 +35,34 @@ const Careers = () => {
             </div>
             :
             <Fragment>
-                <TableContainer component={Paper}>
-                    <Table className={classes.tableStyle}>
-                        <TableHead>
-                            <TableRow>
-                                <TableCell>Title</TableCell>
-                                <TableCell>Department</TableCell>
-                                <TableCell>Location</TableCell>
-                            </TableRow>
-                        </TableHead>
-                        <TableBody>
-                            {careers.map(career => {
-                                return (
-                                    <TableRow key={career.id}>
-                                        <TableCell component='th' scope='row'>
-                                            <Link href={career.Job_Url} target='_blank'>{career.Title}</Link>
-                                        </TableCell>
-                                        <TableCell align='right'>{career.Department}</TableCell>
-                                        <TableCell align='right'>{career.Location}</TableCell>
-                                    </TableRow>
-                                );
-                            })}
-                        </TableBody>
-                    </Table>
-                </TableContainer>
+                <HeroHeader headerText='Careers' />
+                <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <TableContainer component={Paper} style={{ width: '60%' }}>
+                        <Table className={classes.tableStyle}>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell style={{ fontFamily: 'Avenir-Bold' }}>Title</TableCell>
+                                    <TableCell style={{ fontFamily: 'Avenir-Bold' }}>Department</TableCell>
+                                    <TableCell style={{ fontFamily: 'Avenir-Bold' }}>Location</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {careers.map(career => {
+                                    return (
+                                        <TableRow key={career.id}>
+                                            <TableCell component='th' scope='row' style={{ fontFamily: 'Avenir' }}>
+                                                <Link href={career.Job_Url} target='_blank'>{career.Title}</Link>
+                                            </TableCell>
+                                            <TableCell style={{ fontFamily: 'Avenir' }}>{career.Department}</TableCell>
+                                            <TableCell style={{ fontFamily: 'Avenir' }}>{career.Location}</TableCell>
+                                        </TableRow>
+                                    );
+                                })}
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Grid>
+                <Footer />
             </Fragment>}
         </div>
     );
