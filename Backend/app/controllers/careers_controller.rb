@@ -19,6 +19,14 @@ class CareersController < ApplicationController
         render status: :ok
     end
 
+    def update
+        @career_to_update = Career.find(params[:id])
+
+        @career_to_update.update(career_params)
+
+        render json: { career: @career_to_update }
+    end
+
     private
 
         def career_params

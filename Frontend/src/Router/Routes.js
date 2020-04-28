@@ -25,6 +25,7 @@ import DeleteEquipment from '../pages/DeleteEquipment/DeleteEquipment';
 import EditEquipment from '../pages/EditEquipment/EditEquipment';
 import AddCareers from '../pages/AddCareer/AddCareers';
 import DeleteCareer from '../pages/DeleteCareer/DeleteCareer';
+import EditCareer from '../pages/EditCareer/EditCareer';
 
 export default () => {
     return (
@@ -161,7 +162,13 @@ export default () => {
                 component={AddCareers}
             />
 
-            <Route 
+            <Route
+                exact
+                path='/admin/edit-career'
+                component={EditCareer}
+            />
+
+            <ProtectedRoute 
                 exact
                 path='/admin/delete-career'
                 component={DeleteCareer}
