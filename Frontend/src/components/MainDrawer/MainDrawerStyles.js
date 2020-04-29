@@ -24,5 +24,35 @@ export const useStyles = makeStyles(theme => ({
         opacity: .75,
         color: theme.colors.nonTextWhite,
         marginTop: 10
+    },
+    listSubheaderStyle: {
+        textAlign: 'center',
+        fontFamily: 'Avenir-Medium',
+        padding: 0,
+        width: '10em',
+        color: 'inherit',
+        cursor: 'pointer',
+        '&:hover': {
+            background: theme.colors.vranaRed,
+            opacity: .75
+        }
+    },
+    listSubheaderMasterStyle: {
+        textAlign: 'center',
+        fontFamily: 'Avenir-Bold',
+        padding: 0,
+        width: '10em',
+        color: 'inherit',
+        cursor: 'pointer',
+        '&:hover': {
+            background: theme.colors.vranaRed,
+            opacity: .75
+        }
+    },
+    dividerStyle: {
+        width: '10em'
+    },
+    listIconStyle: {
+        color: theme.colors.nonTextWhite
     }
 }));

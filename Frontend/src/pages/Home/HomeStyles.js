@@ -12,6 +12,16 @@ export const useStyles = makeStyles(theme => ({
         justifyContent: 'space-evenly',
         paddingBottom: '5em'
     },
+    spinnerDiv: {
+        justifyContent: 'center',
+        display: 'flex',
+        backgroundColor: theme.colors.nonTextWhite,
+        height: '100%',
+        width: '100%'
+    },
+    mainDivStyle: {
+        height: '100%'
+    },
     greetingHeaderTextStyle: {
         fontFamily: 'Avenir-Bold',
         color: theme.colors.textWhite,

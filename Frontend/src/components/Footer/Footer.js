@@ -26,11 +26,13 @@ const Footer = () => {
                 </Typography>
             </Grid>
             <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
-                <img 
-                    alt='Vrana logo'
-                    src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/VRANA+Logo_Long+V1.png'
-                    className={classes.vranaLogoStyle}
-                />
+                <a href='/'>
+                    <img 
+                        alt='Vrana logo'
+                        src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/VRANA+Logo_Long+V1.png'
+                        className={classes.vranaLogoStyle}
+                    />
+                </a>
             </Grid>
             <Grid container item xs={4} sm={4} md={4} lg={4} xl={4} direction='column'>
                 <Typography variant='h6' className={classes.whiteHeaderText}>

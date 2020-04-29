@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 
-const Safety = () => {
+const Safety = ({ history }) => {
     const classes = useStyles();
 
     return (
@@ -39,7 +39,10 @@ const Safety = () => {
                         assets while building a stronger and more productive workforce.
                     </Typography>
                     <div className={classes.buttonDivStyle}>
-                        <Button className={classes.buttonStyle}>
+                        <Button 
+                            className={classes.buttonStyle}
+                            onClick={() => history.push('/contact-us')}
+                        >
                             <Typography className={classes.buttonTextStyle}>
                                 CONTACT US
                             </Typography>
@@ -155,6 +158,7 @@ const Safety = () => {
                     flexColumn
                     justify='space-evenly'
                     imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/2-man-on-construction-site-during-daytime-159306.jpeg'
+                    buttonCta={() => history.push('/contact-us')}
                 />
             </Grid>
             <Footer />
