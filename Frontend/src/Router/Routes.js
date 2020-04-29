@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import ScrollToTop from '../misc/ScrollToTop';
 import { Route, Switch } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute';
 import Sandbox from '../misc/Sandbox.js';
@@ -29,6 +30,8 @@ import EditCareer from '../pages/EditCareer/EditCareer';
 
 export default () => {
     return (
+        <Fragment>
+        <ScrollToTop />
         <Switch>
             <Route 
                 exact
@@ -180,5 +183,6 @@ export default () => {
                 component={ContactUs}
             />
         </Switch>
+        </Fragment>
     );
 };

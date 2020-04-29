@@ -3,7 +3,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { useStyles } from './HomeStyles';
-import Paper from '@material-ui/core/Paper';
 import Footer from '../../components/Footer/Footer';
 import Card from '../../components/Card/Card';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
@@ -60,19 +59,13 @@ const Home = ({ history }) => {
                     <div className={classes.buttonsDivStyle}>
                         <Button 
                             className={classes.learnMoreButtonStyle}
-                            onClick={() => {
-                                history.push('/about-us');
-                                window.scrollTo(0, 0);
-                            }}
+                            onClick={() => history.push('/about-us')}
                         >
                             LEARN MORE
                         </Button>
                         <Button 
                             className={classes.greyButtonStyle}
-                            onClick={() => {
-                                history.push('/our-work');
-                                window.scrollTo(0, 0);
-                            }}
+                            onClick={() => history.push('/our-work')}
                         >
                             OUR PROJECTS
                         </Button>
@@ -302,10 +295,7 @@ const Home = ({ history }) => {
                     flexColumn
                     justify='space-evenly'
                     imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Messages+Image(1327665301).jpg'
-                    buttonCta={() => {
-                        history.push('/contact-us');
-                        window.scrollTo(0, 0);
-                    }}
+                    buttonCta={() => history.push('/contact-us')}
                 />
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>

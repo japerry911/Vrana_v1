@@ -41,10 +41,7 @@ const Safety = ({ history }) => {
                     <div className={classes.buttonDivStyle}>
                         <Button 
                             className={classes.buttonStyle}
-                            onClick={() => {
-                                history.push('/contact-us');
-                                window.scrollTo(0, 0);
-                            }}
+                            onClick={() => history.push('/contact-us')}
                         >
                             <Typography className={classes.buttonTextStyle}>
                                 CONTACT US
@@ -161,10 +158,7 @@ const Safety = ({ history }) => {
                     flexColumn
                     justify='space-evenly'
                     imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/2-man-on-construction-site-during-daytime-159306.jpeg'
-                    buttonCta={() => {
-                        history.push('/contact-us');
-                        window.scrollTo(0, 0);
-                    }}
+                    buttonCta={() => history.push('/contact-us')}
                 />
             </Grid>
             <Footer />
