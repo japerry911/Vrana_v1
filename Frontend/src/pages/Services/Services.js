@@ -69,6 +69,7 @@ const Services = () => {
                 <ImageBannerSection
                     justify='center'
                     imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(15).png'
+                    noOpacity
                 />
             </Grid>
             <Grid container spacing={0} className={classes.whiteContainerStyle}>
