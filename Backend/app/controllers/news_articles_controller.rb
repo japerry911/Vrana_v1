@@ -19,7 +19,7 @@ class NewsArticlesController < ApplicationController
         @article_to_update = NewsArticle.find(params[:id])
         strong_params = article_params_exc_image_urls
 
-        if strong_params[:image_filetype] != ''
+        if strong_params[:image_filetype] != nil
             if ENV['RAILS_ENV'] == 'production'
                 s3 = Aws::S3::Resource.new(
                     access_key_id: ENV['ACCESS_KEY_ID'],

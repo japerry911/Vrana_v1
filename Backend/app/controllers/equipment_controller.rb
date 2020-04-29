@@ -21,6 +21,7 @@ class EquipmentController < ApplicationController
 
     def update
         strong_params = equipment_params_exc_image_urls
+        @equipment_to_update = Equipment.find(params[:id])
 
         if ENV['RAILS_ENV'] == 'production'
             s3 = Aws::S3::Resource.new(
@@ -68,7 +69,7 @@ class EquipmentController < ApplicationController
             image_right_url = "#{image_url_base}/#{strong_params[:template_image2_filename]}.#{strong_params[:template_image2_filetype]}"
         end
 
-        @updated_equipment = Equipment.update({Name: strong_params[:Name], Year: strong_params[:Year], Price: strong_params[:Price], Description: strong_params[:Description],
+        @updated_equipment = @equipment_to_update.update({Name: strong_params[:Name], Year: strong_params[:Year], Price: strong_params[:Price], Description: strong_params[:Description],
                                                 Card_Image: card_image_url, Image_Left: image_left_url, Image_Right: image_right_url}
                                                 .reject {|k, v| v.nil?})
 
