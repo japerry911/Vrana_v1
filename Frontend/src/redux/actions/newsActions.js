@@ -41,7 +41,7 @@ export const createNews = (formUploadData, token) => {
     return dispatch => {
         dispatch(newsPending());
 
-        return railsServer.post('/news_articles', formUploadData, { header: { Authorization: `Bearer ${token}` }}).then(
+        return railsServer.post('/news_articles', formUploadData, { headers: { Authorization: `Bearer ${token}` }}).then(
             response => dispatch(newsSuccess()),
             error => dispatch(newsError(error))
         );

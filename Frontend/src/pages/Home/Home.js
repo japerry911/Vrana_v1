@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState, Fragment } from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -8,12 +8,46 @@ import Footer from '../../components/Footer/Footer';
 import Card from '../../components/Card/Card';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
+import { useSelector, useDispatch } from 'react-redux';
+import { getNewsArticles } from '../../redux/actions/newsActions';
+import NewsCard from '../../components/NewsCard/NewsCard';
+import Spinner from '../../components/Spinner/Spinner';
 
 const Home = ({ history }) => {
     const classes = useStyles();
 
+    const [twoRecentNewsArticles, setTwoRecentNewsArticles] = useState([]);
+
+    const isLoading = useSelector(state => state.news.isLoading);
+    const articles = useSelector(state => state.news.newsArticles);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getNewsArticles());
+    }, [dispatch]);
+
+    useEffect(() => {
+        if (articles.length > 0) {
+            const length = articles.length < 2 ? 1 : 2;
+            const tempArray = [];
+
+            for (let i = 0; i < length; i++) {
+                tempArray.push(articles[i]);
+            }
+
+            setTwoRecentNewsArticles(tempArray);
+        }
+    }, [articles]);
+
     return (
-        <div>
+        <div className={classes.mainDivStyle}>
+            {isLoading
+            ?
+            <div className={classes.spinnerDiv}>
+                <Spinner />
+            </div>
+            :
+            <Fragment>
             <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
                 <div className={classes.greetingDiv}>
                     <Typography variant='h2' className={classes.greetingHeaderTextStyle}>
@@ -241,58 +275,21 @@ const Home = ({ history }) => {
                 </Grid>
             </Grid>
             <Grid container className={classes.lightWhiteContainerStyle}>
-                <Grid item xs={6} sm={6} lg={6} xl={6} align='center'>
-                    <Paper 
-                        elevation={3} 
-                        style={{
-                            backgroundColor: '#FEF7F7',
-                            width: '70%',
-                            overflow: 'hidden',
-                            paddingBottom: '1em'
-                        }}
-                    >
-                        <img   
-                            className={classes.newsImageStyle}
-                            alt='City of Omaha'
-                            src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-16+at+4.15.26+PM.jpg'
-                        />
-                        <Typography variant='body1' className={classes.newsArticleTitleStyle}>
-                            "Mini megacites to watch: Omaha Nebraska"
-                        </Typography>
-                        <Typography variant='body2' className={classes.articleItalicizeStyle}>
-                            Construction Dive
-                        </Typography>
-                        <Typography variant='body2' className={classes.articleDateStyle}>
-                            January 15, 2020
-                        </Typography>
-                    </Paper>
-                </Grid>
-                <Grid item xs={6} sm={6} lg={6} xl={6} align='center'>
-                    <Paper 
-                        elevation={3}
-                        style={{
-                            backgroundColor: '#FEF7F7',
-                            width: '70%',
-                            overflow: 'hidden',
-                            paddingBottom: '1em'
-                        }}
-                    >
-                        <img
-                            className={classes.newsImageStyle}
-                            alt='Dirt Path Under Bridge'
-                            src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-16+at+4.15.35+PM.jpg'
-                        />
-                        <Typography variant='body1' className={classes.newsArticleTitleStyle}>
-                            "Mini megacites to watch: Omaha Nebraska"
-                        </Typography>
-                        <Typography variant='body2' className={classes.articleItalicizeStyle}>
-                            Construction Dive
-                        </Typography>
-                        <Typography variant='body2' className={classes.articleDateStyle}>
-                            January 15, 2020
-                        </Typography>
-                    </Paper>
-                </Grid>
+                {twoRecentNewsArticles.map(article => {
+                    const gridSize = twoRecentNewsArticles.length < 2 ? 12 : 6;
+
+                    return (
+                        <Grid item xs={gridSize} sm={gridSize} lg={gridSize} xl={gridSize} align='center' key={article.id}>
+                            <NewsCard 
+                                headline={article.Headline}
+                                source={article.Source}
+                                imageUrl={article.Feature_Image_Url}
+                                date={article.Date_Published.toString().substring(0, 10)}
+                                linkUrl={article.Article_Link}
+                            />
+                        </Grid>
+                    );
+                })}
             </Grid>
             <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                 <ImageBannerSection 
@@ -370,6 +367,7 @@ const Home = ({ history }) => {
                 </Grid>
             </Grid>
             <Footer />
+            </Fragment>}
         </div>
     );
 };

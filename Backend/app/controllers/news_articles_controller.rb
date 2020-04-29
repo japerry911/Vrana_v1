@@ -2,7 +2,7 @@ class NewsArticlesController < ApplicationController
     before_action :authenticate, only: [:create, :destroy, :update]
 
     def index
-        @news_articles = NewsArticle.all 
+        @news_articles = NewsArticle.all.order(Date_Published: :desc)
 
         render json: { articles: @news_articles }
     end
