@@ -13,13 +13,25 @@ import { useStyles } from './MainDrawerStyles';
 import { useSelector, useDispatch } from 'react-redux';
 import { logOut } from '../../redux/actions/adminsActions';
 import Collapse from '@material-ui/core/Collapse';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
 
 const MainDrawer = ({ open, handleDrawerClose }) => {
     const classes = useStyles();
     const authed = useSelector(state => state.admins.authed);
     const dispatch = useDispatch();
 
-    const [adminSection, setAdminSection] = useState(false);
+    const [sections, setSections] = useState({
+        Admins: false,
+        Projects: false,
+        News: false, 
+        Equipment: false,
+        Careers: false 
+    });
+
+    const toggleSection = name => {
+        setSections({ ...sections, [name]: !sections[name] });
+    };
     
     return (
         <Drawer
@@ -47,8 +59,8 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
                                 to={routeObject.link}
                                 onClick={() => handleDrawerClose()}
                             >
+                                {routeObject.Icon ? <ListItemIcon style={{ color: 'white' }}><routeObject.Icon /></ListItemIcon> : null}
                                 <ListItemText primary={routeObject.title} />
-                                {routeObject.Icon ? <routeObject.Icon /> : null}
                             </ListItem>
                         );
                     })}
@@ -56,20 +68,40 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
                     ?
                     <Fragment>
                         <Divider className={classes.dividerStyle} />
-                        <ListSubheader onClick={() => setAdminSection(!adminSection)} className={classes.listSubheaderStyle}>Admin</ListSubheader>
-                        <Collapse in={adminSection}>
-                            {AUTHED_ROUTES_ARRAY.map((routeObject, index) => {
+                        <ListSubheader 
+                            onClick={() => toggleSection('Admins')} 
+                            className={classes.listSubheaderMasterStyle}
+                        >
+                            Admin
+                        </ListSubheader>
+                        <Collapse in={sections['Admins']}>
+                            {AUTHED_ROUTES_ARRAY.map((routeSection, index) => {
                                 return (
-                                    <ListItem
-                                        button
-                                        key={index}
-                                        component={Link}
-                                        to={routeObject.link}
-                                        onClick={() => handleDrawerClose()}
-                                    >
-                                        <ListItemText primary={routeObject.title} />
-                                        {routeObject.Icon ? <routeObject.Icon /> : null}
-                                    </ListItem>
+                                    <Fragment key={index}>
+                                        <ListSubheader 
+                                            key={index}
+                                            onClick={() => toggleSection(routeSection.title)}
+                                            className={classes.listSubheaderStyle}
+                                        >
+                                            {routeSection.title}
+                                        </ListSubheader>
+                                        <Collapse in={sections[routeSection.title]}>
+                                            {routeSection.items.map((routeObject, index) => {
+                                                return (
+                                                    <ListItem
+                                                        button
+                                                        key={index}
+                                                        component={Link}
+                                                        to={routeObject.link}
+                                                        onClick={() => handleDrawerClose()}
+                                                    >
+                                                        {routeObject.Icon ? <ListItemIcon style={{ color: 'white' }}><routeObject.Icon /></ListItemIcon> : null}
+                                                        <ListItemText primary={routeObject.title} />
+                                                    </ListItem>
+                                                ); 
+                                            })}
+                                        </Collapse>
+                                    </Fragment>
                                 );
                             })}
                         </Collapse>
@@ -86,6 +118,7 @@ const MainDrawer = ({ open, handleDrawerClose }) => {
                         }}
                         to={'/'}
                     >
+                        <ListItemIcon style={{ color: 'white' }}><ExitToAppIcon /></ListItemIcon>
                         <ListItemText primary='Admin: Log Out' />
                     </ListItem>
                     :

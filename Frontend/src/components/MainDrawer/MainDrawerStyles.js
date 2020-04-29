@@ -27,6 +27,18 @@ export const useStyles = makeStyles(theme => ({
     },
     listSubheaderStyle: {
         textAlign: 'center',
+        fontFamily: 'Avenir-Medium',
+        padding: 0,
+        width: '10em',
+        color: 'inherit',
+        cursor: 'pointer',
+        '&:hover': {
+            background: theme.colors.vranaRed,
+            opacity: .75
+        }
+    },
+    listSubheaderMasterStyle: {
+        textAlign: 'center',
         fontFamily: 'Avenir-Bold',
         padding: 0,
         width: '10em',
@@ -39,5 +51,8 @@ export const useStyles = makeStyles(theme => ({
     },
     dividerStyle: {
         width: '10em'
+    },
+    listIconStyle: {
+        color: theme.colors.nonTextWhite
     }
 }));
