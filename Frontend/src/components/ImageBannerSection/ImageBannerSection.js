@@ -3,7 +3,7 @@ import { useStyles } from './ImageBannerSectionStyles';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 
-const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, buttonText, width, justify, buttonCta, imageHeight, noOpacity }) => {
+const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, buttonText, width, justify, buttonCta=null, imageHeight, noOpacity }) => {
     const classes = useStyles({ imageUrl, flexColumn, width, justify, imageHeight, noOpacity });
 
     return (
@@ -19,7 +19,12 @@ const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, button
             </Typography>
             : null}
             {buttonText ?
-            <Button className={classes.greyButtonStyle}>{buttonText}</Button>
+            <Button 
+                className={classes.greyButtonStyle}
+                onClick={buttonCta}
+            >
+                {buttonText}
+            </Button>
             : null}
         </div>
     );

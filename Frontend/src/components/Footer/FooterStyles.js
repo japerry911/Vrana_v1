@@ -9,7 +9,8 @@ export const useStyles = makeStyles(theme => ({
     },
     whiteHeaderText: {
         color: theme.colors.textWhite,
-        fontFamily: 'Avenir-Medium'
+        fontFamily: 'Avenir-Medium',
+        textDecoration: 'none'
     },
     whiteDescText: {
         color: theme.colors.textWhite,

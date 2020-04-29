@@ -9,7 +9,7 @@ import Card from '../../components/Card/Card';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 
-const Home = () => {
+const Home = ({ history }) => {
     const classes = useStyles();
 
     return (
@@ -24,8 +24,24 @@ const Home = () => {
                         and economic advantages of a closely held family business.
                     </Typography>
                     <div className={classes.buttonsDivStyle}>
-                        <Button className={classes.learnMoreButtonStyle}>LEARN MORE</Button>
-                        <Button className={classes.greyButtonStyle}>OUR PROJECTS</Button>
+                        <Button 
+                            className={classes.learnMoreButtonStyle}
+                            onClick={() => {
+                                history.push('/about-us');
+                                window.scrollTo(0, 0);
+                            }}
+                        >
+                            LEARN MORE
+                        </Button>
+                        <Button 
+                            className={classes.greyButtonStyle}
+                            onClick={() => {
+                                history.push('/our-work');
+                                window.scrollTo(0, 0);
+                            }}
+                        >
+                            OUR PROJECTS
+                        </Button>
                     </div>
                 </div>
             </Grid>
@@ -289,6 +305,10 @@ const Home = () => {
                     flexColumn
                     justify='space-evenly'
                     imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Messages+Image(1327665301).jpg'
+                    buttonCta={() => {
+                        history.push('/contact-us');
+                        window.scrollTo(0, 0);
+                    }}
                 />
             </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
