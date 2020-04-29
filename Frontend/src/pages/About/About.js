@@ -64,7 +64,7 @@ const About = () => {
                 <Grid item xs={3} sm={3} md={3} lg={3} xl={3} align='center'>
                     <img
                         alt='Troy - CEO & President'
-                        src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.01.33+PM.jpg'
+                        src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/IMG_5465.jpeg'
                         className={classes.profileImageStyle}
                     />
                     <Typography variant='subtitle1' className={classes.profileTitleStyle}>

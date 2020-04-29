@@ -50,8 +50,8 @@ export const useStyles = makeStyles(theme => ({
     },
     profileImageStyle: {
         borderRadius: 10,
-        maxHeight: '100%',
-        maxWidth: '100%'
+        height: 400,
+        width: 'auto'
     },
     profileTitleStyle: {
         color: theme.colors.darkGrey,

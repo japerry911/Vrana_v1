@@ -15,7 +15,9 @@ const MainAppBar = ({ handleDrawerOpen, location }) => {
 
     useEffect(() => {
         const combined = ROUTES_ARRAY.concat(...AUTHED_ROUTES_ARRAY.map(routeObject => routeObject.items));
-        setTitle(combined.find(routeObject => routeObject.link === location.pathname).title); 
+        if (combined.find(routeObject => routeObject.link === location.pathname)) {
+            setTitle(combined.find(routeObject => routeObject.link === location.pathname).title); 
+        }
     }, [location]);    
 
     return (
