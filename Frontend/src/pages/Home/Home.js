@@ -188,7 +188,7 @@ const Home = ({ history }) => {
                     </Grid>
                 </Grid>
                 <Grid container spacing={0} className={classes.greyContainerStyle} alignItems='center'>
-                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                         <Grid container spacing={0} className={classes.ourReasonContainerStyle} direction='column'>
                             <Grid item xs={3} sm={3} md={3} lg={3} xl={3} className={classes.ourReasonGridStyle}> 
                                 <CommonHeader
@@ -255,7 +255,7 @@ const Home = ({ history }) => {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                         <img 
                             alt='Paving crew in action'
                             src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-16+at+12.54.02+PM.jpg'

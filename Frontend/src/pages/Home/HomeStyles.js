@@ -81,7 +81,7 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '2em'
     },
     ourReasonContainerStyle: {
-        paddingLeft: '8em'
+        paddingLeft: '8rem', [theme.breakpoints.down('sm')]: { paddingLeft: '1rem' }
     },
     greyBoldTitle: {
         color: theme.colors.darkGrey,
@@ -97,7 +97,7 @@ export const useStyles = makeStyles(theme => ({
     ourReasonIconsStyle: {
         height: '10%',
         width: '10%',
-        marginRight: '10%'
+        marginRight: '2.25%'
     },
     ourReasonDiv: {
         display: 'flex',
@@ -117,7 +117,9 @@ export const useStyles = makeStyles(theme => ({
     },
     ourReasonImagestyle: {
         borderRadius: 10,
-        marginTop: '8em'
+        marginTop: '8rem', [theme.breakpoints.down('sm')]: { marginTop: '2rem' },
+        height: 'auto',
+        width: '60%', [theme.breakpoints.up('lg')]: { width: '40%' }
     },
     lightWhiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
