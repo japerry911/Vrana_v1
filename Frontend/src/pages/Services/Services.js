@@ -14,7 +14,7 @@ const Services = () => {
     return (
         <div>
             <HeroHeader headerText='WHAT WE DO' />
-            <Grid container spacing={0} className={classes.whiteContainerStyle}>
+            <Grid container spacing={0} className={classes.whiteContainerPaddingStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'>
                     <Typography variant='h5' className={classes.darkGreyHeaderStyle}>
                         Quality Construction.&nbsp;
@@ -23,7 +23,7 @@ const Services = () => {
                         </div>
                     </Typography>
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Pencil on Paper'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(18).png'
@@ -34,7 +34,7 @@ const Services = () => {
                         ctaText={'Read More > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Cranes'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.05.49+PM.jpg'
@@ -44,7 +44,7 @@ const Services = () => {
                         ctaText={'Read More > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Constructions workers working'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(17).png'
@@ -54,7 +54,7 @@ const Services = () => {
                         ctaText={'Read More > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Excavator shoveling dirt'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(16).png'
@@ -81,7 +81,7 @@ const Services = () => {
                         dividerColor='dark'
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Omaha Steaks building'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.06.42+PM.jpeg'
@@ -90,7 +90,7 @@ const Services = () => {
                         ctaText={'Our Work > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt="Baker's Grocery Store"
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.09.53+PM.jpeg'
@@ -99,7 +99,7 @@ const Services = () => {
                         ctaText={'Our Work > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Apartment building'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.07.15+PM.jpg'
@@ -108,7 +108,7 @@ const Services = () => {
                         ctaText={'Our Work > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Office building'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+2.07.28+PM.jpeg'
@@ -117,7 +117,7 @@ const Services = () => {
                         ctaText={'Our Work > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='right' className={classes.gridLeftItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Parking garage'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/Screen+Shot+2020-04-18+at+7.09.33+PM.jpg'
@@ -126,7 +126,7 @@ const Services = () => {
                         ctaText={'Our Work > >'}
                     />
                 </Grid>
-                <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='left' className={classes.gridRightItemCardStyle}>
+                <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                     <Card 
                         alt='Highway/Interstate'
                         imageUrl='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/image(19).png'

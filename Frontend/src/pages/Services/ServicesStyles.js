@@ -10,18 +10,13 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir-Bold',
         color: theme.colors.darkGrey
     },
-    whiteContainerStyle: {
+    whiteContainerPaddingStyle: {
         backgroundColor: theme.colors.nonTextWhite,
-        paddingBottom: '5em',
+        paddingBottom: '3em',
         paddingTop: '2em'
     },
-    gridRightItemCardStyle: {        
-        marginTop: '3em',
-        paddingLeft: '5em'
-    },
-    gridLeftItemCardStyle: {
-        marginTop: '3em',
-        paddingRight: '5em'
+    whiteContainerStyle: {
+        backgroundColor: theme.colors.nonTextWhite
     },
     darkGreyTitleStyle: {
         color: theme.colors.darkGrey,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
@@ -21,14 +21,14 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, 
                 headerText}
             </Typography>
             {bodyText || ctaText ?
-            <div className={classes.cardTextDivStyle}>
-                <Typography paragraph variant='body2' className={classes.darkGreyBodyStyle}>
+            <Fragment>
+                <Typography paragraph variant='body1' className={classes.darkGreyBodyStyle}>
                     {bodyText}
                 </Typography>
-                <Typography variant='body2' className={classes.redBodyStyle}>
+                <Typography variant='body1' className={classes.redBodyStyle}>
                     {ctaText}
                 </Typography>
-            </div>
+            </Fragment>
             : null}
         </div>
     );
