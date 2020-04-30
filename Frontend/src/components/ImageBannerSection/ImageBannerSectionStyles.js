@@ -12,7 +12,8 @@ export const useStyles = makeStyles(theme => ({
         justifyContent: props => props.justify,
         alignItems: 'center',
         backgroundPosition: '0 62%',
-        flexDirection: props => props.flexColumn ? 'column' : 'row'
+        flexDirection: props => props.flexColumn ? 'column' : 'row',
+        paddingTop: 0, [theme.breakpoints.down('sm')]: { paddingTop: '3rem' }
     },
     headerTextStyle: {
         color: theme.colors.textWhite,
@@ -22,8 +23,8 @@ export const useStyles = makeStyles(theme => ({
     greyButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.darkGrey,
-        height: '5em',
-        width: '15em',
+        height: '5rem',
+        width: '15rem', [theme.breakpoints.down('sm')]: { width: '8rem' },
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         borderColor: theme.colors.nonTextWhite,

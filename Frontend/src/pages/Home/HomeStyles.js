@@ -3,14 +3,13 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     greetingDiv: {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/HW-081616-D-07.jpg')`,
-        minHeight: '50em',
-        width: 'auto',
+        minHeight: '45rem',
+        width: '100%',
         backgroundSize: 'cover',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
-        paddingBottom: '5em'
+        justifyContent: 'space-evenly'
     },
     spinnerDiv: {
         justifyContent: 'center',
@@ -25,25 +24,20 @@ export const useStyles = makeStyles(theme => ({
     greetingHeaderTextStyle: {
         fontFamily: 'Avenir-Bold',
         color: theme.colors.textWhite,
-        width: '40%',
+        width: '90%',
         textAlign: 'center'
     },
     greetingSubtitleTextStyle: {
         fontFamily: 'Avenir-Medium',
         color: theme.colors.textWhite,
-        width: '40%',
+        width: '90%',
         textAlign: 'center'
-    },
-    buttonsDivStyle: {
-        display: 'flex',
-        width: '50%',
-        justifyContent: 'space-between'
     },
     learnMoreButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.vranaRed,
-        height: '5em',
-        width: '15em',
+        height: '4rem',
+        width: '10rem', [theme.breakpoints.down('sm')]: { width: '7rem' },
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         opacity: .77,
@@ -54,8 +48,8 @@ export const useStyles = makeStyles(theme => ({
     greyButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.darkGrey,
-        height: '5em',
-        width: '15em',
+        height: '4rem',
+        width: '10rem', [theme.breakpoints.down('sm')]: { width: '7rem' },
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         borderColor: theme.colors.nonTextWhite,
@@ -64,7 +58,7 @@ export const useStyles = makeStyles(theme => ({
         opacity: .77
     },
     offerContainerStyle: {
-        marginTop: '2em'
+        marginTop: '2rem'
     },
     whiteTitleTextStyle: {
         color: theme.colors.textWhite,
@@ -75,19 +69,19 @@ export const useStyles = makeStyles(theme => ({
     containerGreyStyle: {
         backgroundColor: theme.colors.darkGrey,
         width: '100%',
-        paddingBottom: '2em'
+        paddingBottom: '2rem'
     },
     projectsImageStyle: {
-        minWidth: '105%',
-        minHeight: '105%'
+        minWidth: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' },
+        minHeight: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' }
     },
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
         width: '100%',
-        paddingBottom: '2em'
+        paddingBottom: '2rem'
     },
     ourReasonContainerStyle: {
-        paddingLeft: '8em'
+        paddingLeft: '8rem', [theme.breakpoints.down('sm')]: { paddingLeft: '1rem' }
     },
     greyBoldTitle: {
         color: theme.colors.darkGrey,
@@ -98,12 +92,12 @@ export const useStyles = makeStyles(theme => ({
         color: theme.colors.vranaRed,
         width: '100%',
         fontFamily: 'Avenir-Medium',
-        marginTop: '3em'
+        marginTop: '3rem'
     },
     ourReasonIconsStyle: {
         height: '10%',
         width: '10%',
-        marginRight: '10%'
+        marginRight: '2.25%'
     },
     ourReasonDiv: {
         display: 'flex',
@@ -119,16 +113,18 @@ export const useStyles = makeStyles(theme => ({
     },
     ourReasonGridStyle: {
         maxWidth: '100%',
-        paddingTop: '3em'
+        paddingTop: '3rem'
     },
     ourReasonImagestyle: {
         borderRadius: 10,
-        marginTop: '8em'
+        marginTop: '8rem', [theme.breakpoints.down('sm')]: { marginTop: '2rem' },
+        height: 'auto',
+        width: '60%', [theme.breakpoints.up('lg')]: { width: '40%' }
     },
     lightWhiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
         width: '100%',
-        paddingBottom: '8em'
+        paddingBottom: '2rem'
     },
     newsArticleTitleStyle: {
         fontFamily: 'Avenir-Bold'
@@ -148,17 +144,17 @@ export const useStyles = makeStyles(theme => ({
         height: 'auto'
     },
     gridBottomPaddingStyle: {
-        paddingBottom: '3em'
+        paddingBottom: '3rem'
     },
     netSportsLogoStyle: {
         height: 'auto',
         width: '80%',
-        paddingTop: '3em'
+        paddingTop: '3rem'
     },
     rotellasLogoStyle: {
         height: 'auto',
         width: '60%',
-        paddingTop: '2em'
+        paddingTop: '2rem'
     },
     omaLogoStyle: {
         height: 'auto',
@@ -167,6 +163,10 @@ export const useStyles = makeStyles(theme => ({
     omahaNorthSchoolLogoStyle: {
         height: 'auto',
         width: '50%'
+    },
+    ameristarLogoStyle: {
+        height: 'auto',
+        width: '75%'
     },
     ourProjectsContainerStyle: {
         overflow: 'hidden'

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { useStyles } from './CardStyles';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'react-router-dom';
@@ -7,7 +7,7 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, 
     const classes = useStyles({ headerAlign });
 
     return (
-        <Fragment>
+        <div className={classes.mainDivStyle}>
             <img
                 alt={imageAlt}
                 src={imageUrl}
@@ -30,7 +30,7 @@ const Card = ({ ctaText, bodyText, headerText, imageUrl, imageAlt, headerAlign, 
                 </Typography>
             </div>
             : null}
-        </Fragment>
+        </div>
     );
 };
 
