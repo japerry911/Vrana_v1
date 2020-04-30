@@ -18,6 +18,6 @@ export const useStyles = makeStyles(theme => ({
     },
     vranaLogoStyle: {
         height: 'auto',
-        width: '50%'
+        width: '40%', [theme.breakpoints.down('sm')]: { paddingTop: '1rem', paddingBottom: '1rem' }
     }
 }));
