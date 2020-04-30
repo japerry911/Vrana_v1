@@ -11,7 +11,7 @@ const FormTextField = ({ label, value, onChange, paddingTop, id, type='text', in
     }
 
     return (
-        <Grid item xs={gridLength} sm={gridLength} md={gridLength} lg={gridLength} xl={gridLength} className={classes.gridItemStyle} align='center'>
+        <Grid item xs={gridLength * 2} sm={gridLength * 2} md={gridLength} lg={gridLength} xl={gridLength} className={classes.gridItemStyle} align='center'>
             <TextField 
                 label={label}
                 value={value}
