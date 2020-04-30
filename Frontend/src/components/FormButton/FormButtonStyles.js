@@ -10,6 +10,7 @@ export const useStyles = makeStyles(theme => ({
     buttonStyle: {
         backgroundColor: theme.colors.vranaRed,
         borderRadius: 10,
-        width: '25%'
+        width: '25%', [theme.breakpoints.down('sm')]: { width: '55%' },
+                      [theme.breakpoints.only('md')]: { width: '45%' }
     }
 }));

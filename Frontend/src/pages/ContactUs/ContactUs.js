@@ -3,7 +3,6 @@ import { useStyles } from './ContactUsStyles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
-import Footer from '../../components/Footer/Footer';
 import FormTextField from '../../components/FormTextField/FormTextField';
 import FormTextareaAutosize from '../../components/FormTextareaAutosize/FormTextareaAutosize';
 import FormButton from '../../components/FormButton/FormButton';
@@ -62,7 +61,7 @@ const ContactUs = ({ history }) => {
                 <HeroHeader headerText='Contact Us' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
                     <Grid container spacing={0} className={classes.whiteContainerStyle} alignItems='center'>
-                        <Grid container spacing={0} item xs={6} sm={6} md={6} lg={6} xl={6}>
+                        <Grid container spacing={0} item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <form onSubmit={handleSubmit} className={classes.formContainerStyle}>
                                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                                     <Typography variant='h4' className={classes.headerMedStyle} paragraph>
@@ -127,7 +126,7 @@ const ContactUs = ({ history }) => {
                                 </Grid>
                             </form>
                         </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <Grid container spacing={0}>
                                 <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12} className={classes.gridTopMarginStyle}>
                                     <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
@@ -180,7 +179,6 @@ const ContactUs = ({ history }) => {
                         </Grid>
                     </Grid>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

@@ -29,7 +29,7 @@ export const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '70%',
         borderRadius: 10,
-        border: '1pt solid black'
+        border: '1pt solid black', [theme.breakpoints.down('md')]: { width: '90%' }
     },
     gridTopMarginStyle: {
         marginTop: '1em'
