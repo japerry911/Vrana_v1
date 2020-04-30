@@ -58,7 +58,7 @@ export const useStyles = makeStyles(theme => ({
         opacity: .77
     },
     offerContainerStyle: {
-        marginTop: '2em'
+        marginTop: '2rem'
     },
     whiteTitleTextStyle: {
         color: theme.colors.textWhite,
@@ -69,7 +69,7 @@ export const useStyles = makeStyles(theme => ({
     containerGreyStyle: {
         backgroundColor: theme.colors.darkGrey,
         width: '100%',
-        paddingBottom: '2em'
+        paddingBottom: '2rem'
     },
     projectsImageStyle: {
         minWidth: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' },
@@ -78,7 +78,7 @@ export const useStyles = makeStyles(theme => ({
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
         width: '100%',
-        paddingBottom: '2em'
+        paddingBottom: '2rem'
     },
     ourReasonContainerStyle: {
         paddingLeft: '8rem', [theme.breakpoints.down('sm')]: { paddingLeft: '1rem' }
@@ -92,7 +92,7 @@ export const useStyles = makeStyles(theme => ({
         color: theme.colors.vranaRed,
         width: '100%',
         fontFamily: 'Avenir-Medium',
-        marginTop: '3em'
+        marginTop: '3rem'
     },
     ourReasonIconsStyle: {
         height: '10%',
@@ -113,7 +113,7 @@ export const useStyles = makeStyles(theme => ({
     },
     ourReasonGridStyle: {
         maxWidth: '100%',
-        paddingTop: '3em'
+        paddingTop: '3rem'
     },
     ourReasonImagestyle: {
         borderRadius: 10,
@@ -144,17 +144,17 @@ export const useStyles = makeStyles(theme => ({
         height: 'auto'
     },
     gridBottomPaddingStyle: {
-        paddingBottom: '3em'
+        paddingBottom: '3rem'
     },
     netSportsLogoStyle: {
         height: 'auto',
         width: '80%',
-        paddingTop: '3em'
+        paddingTop: '3rem'
     },
     rotellasLogoStyle: {
         height: 'auto',
         width: '60%',
-        paddingTop: '2em'
+        paddingTop: '2rem'
     },
     omaLogoStyle: {
         height: 'auto',

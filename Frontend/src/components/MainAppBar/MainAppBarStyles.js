@@ -3,9 +3,9 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     imageStyle: {
         width: 'auto',
-        height: '5em',
-        paddingTop: '1em',
-        paddingBottom: '1em'
+        height: '5rem', [theme.breakpoints.down('sm')]: { height: '3rem' },
+        paddingTop: '1rem',
+        paddingBottom: '1rem'
     },
     appBarStyle: {
         backgroundColor: theme.colors.darkGrey,
@@ -14,7 +14,7 @@ export const useStyles = makeStyles(theme => ({
         flexGrow: 1
     },
     iconDivStyle: {
-        marginLeft: '1em'
+        marginLeft: '1rem'
     },
     iconButtonStyle: {
         color: theme.colors.textWhite,
