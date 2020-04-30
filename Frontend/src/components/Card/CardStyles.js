@@ -4,7 +4,7 @@ export const useStyles = makeStyles(theme => ({
     snapshotImageStyle: {
         borderRadius: 10,
         width: '30vh',
-        height: '30vh',
+        height: '30vh', 
         objectFit: 'cover'
     },
     medGreyHeaderStyle: {
@@ -29,5 +29,8 @@ export const useStyles = makeStyles(theme => ({
     linkStyle: {
         textDecoration: 'none',
         color: theme.colors.darkGrey
+    },
+    mainDivStyle: {
+        marginBottom: '3rem'
     }
 }));

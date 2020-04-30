@@ -72,8 +72,8 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '2em'
     },
     projectsImageStyle: {
-        minWidth: '105%',
-        minHeight: '105%'
+        minWidth: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' },
+        minHeight: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' }
     },
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
@@ -122,7 +122,7 @@ export const useStyles = makeStyles(theme => ({
     lightWhiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
         width: '100%',
-        paddingBottom: '8em'
+        paddingBottom: '2rem'
     },
     newsArticleTitleStyle: {
         fontFamily: 'Avenir-Bold'
