@@ -12,7 +12,6 @@ import TableCell from '@material-ui/core/TableCell';
 import TableBody from '@material-ui/core/TableBody';
 import Link from '@material-ui/core/Link';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 
 const Careers = () => {
@@ -37,7 +36,7 @@ const Careers = () => {
             <Fragment>
                 <HeroHeader headerText='Careers' />
                 <Grid container spacing={0} className={classes.darkGreyContainerStyle}  justify='center' align='center' item xs={12} sm={12} md={12} lg={12} xl={12}>
-                    <TableContainer component={Paper} style={{ width: '60%' }}>
+                    <TableContainer component={Paper} style={{ width: '80%' }}>
                         <Table className={classes.tableStyle}>
                             <TableHead>
                                 <TableRow>
@@ -62,7 +61,6 @@ const Careers = () => {
                         </Table>
                     </TableContainer>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );
