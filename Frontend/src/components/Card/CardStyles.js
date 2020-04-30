@@ -3,14 +3,15 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     snapshotImageStyle: {
         borderRadius: 10,
-        height: 'auto',
-        width: '60%',
-        objectFit: 'cover'
+        height: '35vh',
+        width: '50%',
+        objectFit: 'cover', [theme.breakpoints.down('md')]: { height: '20vh', width: '55%' }
     },
     medGreyHeaderStyle: {
         fontFamily: 'Avenir-Medium',
         color: theme.colors.darkGrey,
         paddingTop: '1rem',
+        width: '50%',
         fontSize: '1.125rem', [theme.breakpoints.down('sm')]: { fontSize: '1rem' }
     },
     darkGreyBodyStyle: {
