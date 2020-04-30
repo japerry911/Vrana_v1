@@ -8,7 +8,7 @@ const Footer = () => {
 
     return (
         <Grid container className={classes.greyContainerStyle} align='center' justify='flex-end'>
-            <Grid container item xs={4} sm={4} md={4} lg={4} xl={4} direction='column'>
+            <Grid container item xs={12} sm={12} md={4} lg={4} xl={4} direction='column'>
                 <Typography variant='h6' className={classes.whiteHeaderText}>
                     CONTACT US
                 </Typography>
@@ -25,7 +25,7 @@ const Footer = () => {
                     Fax: (402) 733-5203
                 </Typography>
             </Grid>
-            <Grid item xs={4} sm={4} md={4} lg={4} xl={4}>
+            <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
                 <a href='/'>
                     <img 
                         alt='Vrana logo'
@@ -34,7 +34,7 @@ const Footer = () => {
                     />
                 </a>
             </Grid>
-            <Grid container item xs={4} sm={4} md={4} lg={4} xl={4} direction='column'>
+            <Grid container item xs={12} sm={12} md={4} lg={4} xl={4} direction='column'>
                 <Typography variant='h6' className={classes.whiteHeaderText}>
                     RESOURCES
                 </Typography>

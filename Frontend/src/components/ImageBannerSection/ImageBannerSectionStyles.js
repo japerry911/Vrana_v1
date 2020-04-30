@@ -18,19 +18,19 @@ export const useStyles = makeStyles(theme => ({
     headerTextStyle: {
         color: theme.colors.textWhite,
         fontFamily: 'Avenir-Bold',
-        width: props => props.width ? props.width : 'auto'
+        width: props => props.width ? props.width : 'auto', [theme.breakpoints.down('sm')]: { fontSize: '1.5rem' }
     },
     greyButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.darkGrey,
         height: '5rem',
-        width: '15rem', [theme.breakpoints.down('sm')]: { width: '8rem' },
+        width: '15rem',
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         borderColor: theme.colors.nonTextWhite,
         borderWidth: '1pt',
         borderStyle: 'solid',
-        opacity: .77
+        opacity: .77, [theme.breakpoints.down('sm')]: { width: '8rem', height: '3rem' }
     },
     whiteText60Style: {
         fontFamily: 'Avenir-Medium',
