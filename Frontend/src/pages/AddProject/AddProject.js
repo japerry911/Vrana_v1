@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { useStyles } from './AddProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import ProjectFormBody from '../../components/ProjectFormBody/ProjectFormBody';
 import { useDispatch, useSelector } from 'react-redux';
 import { createProject } from '../../redux/actions/projectsActions';
@@ -117,7 +116,6 @@ const AddProject = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

@@ -2,7 +2,6 @@ import React, { useState, useEffect, Fragment } from 'react';
 import { useStyles } from './DeleteProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useSelector, useDispatch } from 'react-redux';
 import { getProjects, deleteProject } from '../../redux/actions/projectsActions';
@@ -73,7 +72,6 @@ const DeleteProject = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

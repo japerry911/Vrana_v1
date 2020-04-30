@@ -1,7 +1,6 @@
 import React, { useState, useEffect, Fragment } from 'react';
 import { useStyles } from './EditProjectStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
-import Footer from '../../components/Footer/Footer';
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
 import { useDispatch, useSelector } from 'react-redux';
@@ -181,7 +180,6 @@ const EditProject = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

@@ -6,7 +6,6 @@ import Spinner from '../../components/Spinner/Spinner';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import FormHeader from '../../components/FormHeader/FormHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import { useFormFields } from '../../hooks/customHooks';
 import CareersFormBody from '../../components/CareersFormBody/CareersFormBody';
 import FormButton from '../../components/FormButton/FormButton';
@@ -84,7 +83,6 @@ const AddCareers = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

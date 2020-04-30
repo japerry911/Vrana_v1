@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { deleteNews, getNewsArticles } from '../../redux/actions/newsActions';
 import MenuItem from '@material-ui/core/MenuItem';
 import Spinner from '../../components/Spinner/Spinner';
-import Footer from '../../components/Footer/Footer';
 
 const DeleteNews = ({ history }) => {
     const classes = useStyles();
@@ -71,7 +70,6 @@ const DeleteNews = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

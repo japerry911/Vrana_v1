@@ -3,7 +3,6 @@ import { useStyles } from './AddEquipmentStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import FormHeader from '../../components/FormHeader/FormHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from '../../components/Spinner/Spinner';
 import { useFormFields } from '../../hooks/customHooks';
@@ -108,7 +107,6 @@ const AddEquipment = ({ history }) => {
                     </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

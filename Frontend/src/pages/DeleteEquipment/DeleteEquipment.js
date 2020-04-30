@@ -9,7 +9,6 @@ import FormSelect from '../../components/FormSelect/FormSelect';
 import FormButton from '../../components/FormButton/FormButton';
 import Grid from '@material-ui/core/Grid';
 import MenuItem from '@material-ui/core/MenuItem';
-import Footer from '../../components/Footer/Footer';
 
 const DeleteEquipment = ({ history }) => {
     const classes = useStyles();
@@ -71,7 +70,6 @@ const DeleteEquipment = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

@@ -3,7 +3,6 @@ import { useStyles } from './AddNewsStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import FormHeader from '../../components/FormHeader/FormHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import { useSelector, useDispatch } from 'react-redux';
 import Spinner from '../../components/Spinner/Spinner';
 import NewsFormBody from '../../components/NewsFormBody/NewsFormBody';
@@ -90,7 +89,6 @@ const AddNews = ({ history }) => {
                         </Grid>
                     </form>
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );
