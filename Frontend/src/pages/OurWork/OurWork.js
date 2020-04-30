@@ -1,7 +1,6 @@
 import React, { useEffect, Fragment, useState } from 'react';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
-import Footer from '../../components/Footer/Footer';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProjects } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
@@ -59,7 +58,6 @@ const OurWork = () => {
                     headerText='Our Work'
                 />
                 <HorizontalTabs tabContentArray={tabContentArray} />
-                <Footer />
             </Fragment>}
         </div>
     );

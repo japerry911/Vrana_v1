@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import Routes from './Router/Routes';
 import Navigation from './components/Navigation/Navigation';
 import theme from './misc/theme';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <Navigation />
         <Routes />
+        <Footer />
       </ThemeProvider>
     </div>
   );

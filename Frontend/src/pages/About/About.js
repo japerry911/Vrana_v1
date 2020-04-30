@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { useStyles } from './AboutStyles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import Footer from '../../components/Footer/Footer';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
@@ -114,7 +113,6 @@ const About = () => {
                     </Typography>
                 </Grid>
             </Grid>
-            <Footer />
         </Fragment>
     );
 };
