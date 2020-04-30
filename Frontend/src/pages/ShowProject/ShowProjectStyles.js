@@ -13,7 +13,7 @@ export const useStyles = makeStyles(theme => ({
         height: '100%'
     },
     whiteContainerStyle: {
-        width: '100%',
+        width: '90%',
         backgroundColor: theme.colors.nonTextWhite,
         paddingLeft: '3em',
         paddingTop: '2em',
