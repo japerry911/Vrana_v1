@@ -72,8 +72,9 @@ export const useStyles = makeStyles(theme => ({
         paddingBottom: '2rem'
     },
     projectsImageStyle: {
-        minWidth: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxWidth: '45%' },
-        minHeight: '105%', [theme.breakpoints.down('md')]: { maxWidth: '70%' }, [theme.breakpoints.down('sm')]: { maxHeight: '45%' }
+        minWidth: '105%',
+        minHeight: '105%', [theme.breakpoints.down('md')]: { maxHeight: '70%', maxWidth: '70%' },
+                           [theme.breakpoints.down('sm')]: { maxHeight: '45%', maxWidth: '45%' }
     },
     greyContainerStyle: {
         backgroundColor: theme.colors.lightGrey,
@@ -117,9 +118,10 @@ export const useStyles = makeStyles(theme => ({
     },
     ourReasonImagestyle: {
         borderRadius: 10,
-        marginTop: '8rem', [theme.breakpoints.down('sm')]: { marginTop: '2rem' },
+        marginTop: '8rem',
         height: 'auto',
-        width: '60%', [theme.breakpoints.up('lg')]: { width: '40%' }
+        width: '60%', [theme.breakpoints.up('lg')]: { width: '40%' }, 
+                      [theme.breakpoints.down('sm')]: { marginTop: '2rem' }
     },
     lightWhiteContainerStyle: {
         backgroundColor: theme.colors.nonTextWhite,
