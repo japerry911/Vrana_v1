@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getEquipment } from '../../redux/actions/equipmentActions';
 import Spinner from '../../components/Spinner/Spinner';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
-import Footer from '../../components/Footer/Footer';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
 import EquipmentTabContentTabTemplate from '../../misc/TabContent/Equipment/EquipmentTabContentTemplate';
 
@@ -58,7 +57,6 @@ const Shop = () => {
             <Fragment>
                 <HeroHeader headerText='Equipment' />
                 <HorizontalTabs tabContentArray={tabContentArray} />
-                <Footer />
             </Fragment>}
         </div>
     );

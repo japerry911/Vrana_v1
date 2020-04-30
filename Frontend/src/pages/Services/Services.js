@@ -5,7 +5,6 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import Card from '../../components/Card/Card';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
-import Footer from '../../components/Footer/Footer';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
 
 const Services = () => {
@@ -136,7 +135,6 @@ const Services = () => {
                     />
                 </Grid>
             </Grid>
-            <Footer />
         </div>
     );
 };

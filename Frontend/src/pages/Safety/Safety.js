@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { useStyles } from './SafetyStyles';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
-import Footer from '../../components/Footer/Footer';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
@@ -159,7 +158,6 @@ const Safety = ({ history }) => {
                     buttonCta={() => history.push('/contact-us')}
                 />
             </Grid>
-            <Footer />
         </Fragment>
     );
 };

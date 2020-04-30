@@ -13,11 +13,11 @@ export const useStyles = makeStyles(theme => ({
         height: '100%'
     },
     whiteContainerStyle: {
-        width: '100%',
+        width: '90%',
         backgroundColor: theme.colors.nonTextWhite,
         paddingLeft: '3em',
         paddingTop: '2em',
-        paddingBottom: '2em'
+        paddingBottom: '2em', [theme.breakpoints.down('sm')]: { paddingLeft: '1rem' }
     },
     darkGreyHeaderTextStyle: {
         color: theme.colors.darkGrey,
@@ -37,10 +37,10 @@ export const useStyles = makeStyles(theme => ({
         fontFamily: 'Avenir'
     },
     imageStyle: {
-        height: '80%',
+        height: 'auto',
         width: '50%',
         borderRadius: 10,
         marginBottom: '3em',
-        marginTop: '3em'
+        marginTop: '3em', [theme.breakpoints.down('md')]: { width: '70%' }
     }
 }));
