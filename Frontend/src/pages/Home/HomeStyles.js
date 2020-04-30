@@ -164,6 +164,10 @@ export const useStyles = makeStyles(theme => ({
         height: 'auto',
         width: '50%'
     },
+    ameristarLogoStyle: {
+        height: 'auto',
+        width: '75%'
+    },
     ourProjectsContainerStyle: {
         overflow: 'hidden'
     }

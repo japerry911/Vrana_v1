@@ -275,10 +275,10 @@ const Home = ({ history }) => {
                 </Grid>
                 <Grid container className={classes.lightWhiteContainerStyle}>
                     {twoRecentNewsArticles.map(article => {
-                        const gridSize = twoRecentNewsArticles.length < 2 ? 12 : 6;
+                        const mdLgXlGridSize = twoRecentNewsArticles.length < 2 ? 12 : 6;
 
                         return (
-                            <Grid item xs={gridSize} sm={gridSize} lg={gridSize} xl={gridSize} align='center' key={article.id}>
+                            <Grid item xs={12} sm={12} md={mdLgXlGridSize} lg={mdLgXlGridSize} xl={mdLgXlGridSize} align='center' key={article.id}>
                                 <NewsCard 
                                     headline={article.Headline}
                                     source={article.Source}
@@ -317,6 +317,7 @@ const Home = ({ history }) => {
                         <img 
                             alt='Ameristar Logo'
                             src='https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/ameristar-council-bluffs-logo-283x80.png'
+                            className={classes.ameristarLogoStyle}
                         />
                     </Grid>
                     <Grid item xs={4} sm={4} md={4} lg={4} xl={4} align='center'>

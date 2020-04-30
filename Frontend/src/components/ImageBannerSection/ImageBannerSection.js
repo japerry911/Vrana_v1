@@ -10,7 +10,7 @@ const ImageBannerSection = ({ headerText, imageUrl, bodyText, flexColumn, button
         <div 
             className={classes.headerDiv}
         >
-            <Typography variant='h2' className={classes.headerTextStyle}>
+            <Typography variant='h3' className={classes.headerTextStyle}>
                 {headerText}
             </Typography>
             {bodyText ?
