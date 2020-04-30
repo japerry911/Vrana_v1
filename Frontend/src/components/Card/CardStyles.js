@@ -3,34 +3,38 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     snapshotImageStyle: {
         borderRadius: 10,
-        width: '30vh',
-        height: '30vh', 
+        height: 'auto',
+        width: '60%',
         objectFit: 'cover'
     },
     medGreyHeaderStyle: {
         fontFamily: 'Avenir-Medium',
         color: theme.colors.darkGrey,
-        paddingTop: '1em',
-        textAlign: props => props.headerAlign ? props.headerAlign : 'left',
-        width: '30vh'
+        paddingTop: '1rem',
+        fontSize: '1.125rem', [theme.breakpoints.down('sm')]: { fontSize: '1rem' }
     },
     darkGreyBodyStyle: {
         fontFamily: 'Avenir',
-        color: theme.colors.darkGrey
+        color: theme.colors.darkGrey,
+        fontSize: '1rem', [theme.breakpoints.down('sm')]: { fontSize: '.75rem' },
+        paddingRight: '20%',
+        paddingLeft: '20%'
     },
     redBodyStyle: {
         fontFamily: 'Avenir-medium',
-        color: theme.colors.vranaRed
+        color: theme.colors.vranaRed,
+        fontSize: '1rem', [theme.breakpoints.down('sm')]: { fontSize: '.75rem' },
+        textAlign: 'center'
     },
     cardTextDivStyle: {
-        width: '30vh', 
-        textAlign: 'left'
+        width: '100%'
     },
     linkStyle: {
         textDecoration: 'none',
         color: theme.colors.darkGrey
     },
     mainDivStyle: {
-        marginBottom: '3rem'
+        marginBottom: '3rem',
+        marginTop: '3rem'
     }
 }));
