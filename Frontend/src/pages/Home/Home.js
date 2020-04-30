@@ -47,31 +47,37 @@ const Home = ({ history }) => {
             </div>
             :
             <Fragment>
-            <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
-                <div className={classes.greetingDiv}>
-                    <Typography variant='h2' className={classes.greetingHeaderTextStyle}>
-                        BUILDING CONFIDENCE SINCE 1909
-                    </Typography>
-                    <Typography variant='h4' className={classes.greetingSubtitleTextStyle}>
-                        We combine the strength of a large general contractor with the responsiveness
-                        and economic advantages of a closely held family business.
-                    </Typography>
-                    <div className={classes.buttonsDivStyle}>
-                        <Button 
-                            className={classes.learnMoreButtonStyle}
-                            onClick={() => history.push('/about-us')}
-                        >
-                            LEARN MORE
-                        </Button>
-                        <Button 
-                            className={classes.greyButtonStyle}
-                            onClick={() => history.push('/our-work')}
-                        >
-                            OUR PROJECTS
-                        </Button>
-                    </div>
-                </div>
-            </Grid>
+                <Grid container spacing={0} className={classes.greetingDiv} align='center'>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='h3' className={classes.greetingHeaderTextStyle}>
+                            BUILDING CONFIDENCE SINCE 1909
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Typography variant='h6' className={classes.greetingSubtitleTextStyle}>
+                            We combine the strength of a large general contractor with the responsiveness
+                            and economic advantages of a closely held family business.
+                        </Typography>
+                    </Grid>
+                    <Grid container spacing={0} item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                            <Button 
+                                className={classes.learnMoreButtonStyle}
+                                onClick={() => history.push('/about-us')}
+                            >
+                                LEARN MORE
+                            </Button>
+                        </Grid>
+                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                            <Button 
+                                className={classes.greyButtonStyle}
+                                onClick={() => history.push('/our-work')}
+                            >
+                                OUR PROJECTS
+                            </Button>
+                        </Grid>
+                    </Grid>
+                </Grid>
             <Grid container spacing={0} className={classes.lightWhiteContainerStyle}>
                 <Grid item xs={12} sm={12} md={12} lg={12} xl={12} align='center'style={{paddingBottom: '2em'}}>
                     <CommonHeader

@@ -3,14 +3,13 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 export const useStyles = makeStyles(theme => ({
     greetingDiv: {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://vranaconstructionwebsiteimages.s3.us-east-2.amazonaws.com/HW-081616-D-07.jpg')`,
-        minHeight: '50em',
-        width: 'auto',
+        minHeight: '45rem',
+        width: '100%',
         backgroundSize: 'cover',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'space-evenly',
-        paddingBottom: '5em'
+        justifyContent: 'space-evenly'
     },
     spinnerDiv: {
         justifyContent: 'center',
@@ -25,25 +24,20 @@ export const useStyles = makeStyles(theme => ({
     greetingHeaderTextStyle: {
         fontFamily: 'Avenir-Bold',
         color: theme.colors.textWhite,
-        width: '40%',
+        width: '90%',
         textAlign: 'center'
     },
     greetingSubtitleTextStyle: {
         fontFamily: 'Avenir-Medium',
         color: theme.colors.textWhite,
-        width: '40%',
+        width: '90%',
         textAlign: 'center'
-    },
-    buttonsDivStyle: {
-        display: 'flex',
-        width: '50%',
-        justifyContent: 'space-between'
     },
     learnMoreButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.vranaRed,
-        height: '5em',
-        width: '15em',
+        height: '4rem',
+        width: '10rem', [theme.breakpoints.down('sm')]: { width: '7rem' },
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         opacity: .77,
@@ -54,8 +48,8 @@ export const useStyles = makeStyles(theme => ({
     greyButtonStyle: {
         color: theme.colors.textWhite,
         backgroundColor: theme.colors.darkGrey,
-        height: '5em',
-        width: '15em',
+        height: '4rem',
+        width: '10rem', [theme.breakpoints.down('sm')]: { width: '7rem' },
         borderRadius: 10,
         fontFamily: 'Avenir-Bold',
         borderColor: theme.colors.nonTextWhite,
