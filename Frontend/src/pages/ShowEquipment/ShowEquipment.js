@@ -7,7 +7,6 @@ import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import Grid from '@material-ui/core/Grid';
 import CommonHeader from '../../components/CommonHeader/CommonHeader';
 import Typography from '@material-ui/core/Typography';
-import Footer from '../../components/Footer/Footer';
 
 const ShowEquipment = ({ match }) => {
     const classes = useStyles();
@@ -67,14 +66,14 @@ const ShowEquipment = ({ match }) => {
                     {showEquipment.Image_Left && showEquipment.Image_Right 
                     ?
                     <Fragment>
-                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                             <img
                                 alt={`${showEquipment.Name}`}
                                 src={showEquipment.Image_Left}
                                 className={classes.imageStyle}
                             />
                         </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} align='center'>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} align='center'>
                             <img
                                 alt={`${showEquipment.Name}`}
                                 src={showEquipment.Image_Right}
@@ -97,7 +96,6 @@ const ShowEquipment = ({ match }) => {
                     null}
                     </Fragment>}
                 </Grid>
-                <Footer />
             </Fragment>}
         </div>
     );

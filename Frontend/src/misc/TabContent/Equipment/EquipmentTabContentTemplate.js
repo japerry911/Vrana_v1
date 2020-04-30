@@ -20,7 +20,7 @@ const NewsTabContentTemplate = ({ tabContent, year }) => {
                 </Grid>
                 {tabContent.map(equipment => {
                     return (
-                        <Grid item xs={6} sm={6} md={6} lg={6} xl={6} key={equipment.id} align='center'>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} key={equipment.id} align='center'>
                             <Card 
                                 alt={equipment.Name}
                                 imageUrl={equipment.Card_Image}

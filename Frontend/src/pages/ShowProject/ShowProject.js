@@ -3,7 +3,6 @@ import { useStyles } from './ShowProjectStyles';
 import { useDispatch, useSelector } from 'react-redux';
 import { getProject } from '../../redux/actions/projectsActions';
 import Spinner from '../../components/Spinner/Spinner';
-import Footer from '../../components/Footer/Footer';
 import Grid from '@material-ui/core/Grid';
 import ImageBannerSection from '../../components/ImageBannerSection/ImageBannerSection';
 import Typography from '@material-ui/core/Typography';
@@ -129,7 +128,6 @@ const ShowProject = ({ match }) => {
                     imageUrl={showProject.Template_Image2_Url}
                     noOpacity
                 />
-                <Footer />
             </Fragment>}
         </div>
     );
