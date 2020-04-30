@@ -6,7 +6,6 @@ import NewsTabContentTemplate from '../../misc/TabContent/News/NewsTabContentTem
 import Spinner from '../../components/Spinner/Spinner.js';
 import HeroHeader from '../../components/HeroHeader/HeroHeader';
 import HorizontalTabs from '../../components/HorizontalTabs/HoritzontalTabs';
-import Footer from '../../components/Footer/Footer';
 
 const News = () => {
     const classes = useStyles();
@@ -58,7 +57,6 @@ const News = () => {
             <Fragment>
                 <HeroHeader headerText='News' />
                 <HorizontalTabs tabContentArray={tabContentArray} />
-                <Footer />
             </Fragment>
             }
         </div>
