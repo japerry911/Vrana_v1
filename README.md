@@ -68,7 +68,7 @@ Visit `http://localhost:3000/`
 
 ### Video Demo
 
-...Coming Soon...
+[![Vrana Website Walkthrough](https://img.youtube.com/vi/oTsT9zg0lbA/0.jpg)](https://www.youtube.com/watch?v=oTsT9zg0lbA)
 
 ### Authors
 
