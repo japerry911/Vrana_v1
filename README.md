@@ -73,8 +73,3 @@ Visit `http://localhost:3000/`
 ### Authors
 
 * **Jack Perry**  - [Jack Perry's Github](https://github.com/japerry911)
-
-### License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
